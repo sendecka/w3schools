@@ -1,2 +1,2 @@
 ### Python tutorial 
-gggggggghhhhhhhhhhhh
+# <p style="text-align: center;">Python tutorial </p>
