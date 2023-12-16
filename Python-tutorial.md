@@ -132,3 +132,67 @@ print(type(x))
 x = int(20)
 y = str("Hello world")
 ```
+### Python - Numbers
+- są trzy typy numeryczne w Pythonie:
+  Int - liczba całkowita dodatnia lub ujemna, bez miejsc dziesiętnych o nieograniczonej długości.
+  ```
+  x = 1
+  print(x)
+  ```
+  Float - Liczba zmiennoprzecinkowa to liczba dodatnia lub ujemna zawierająca jedną lub więcej miejsc po przecinku.
+  ```
+  x = 1.1
+  print(x)
+  ```
+  Complex - liczby zespolone, zapisuje się je z literą j jako część urojoną.
+  ```
+  x = 3+5j
+  print(x)
+  ```
+  - można dokonać konwersji z jednego typu danych na inny metodą int(), float(), complex().
+  - nie można konwertować liczb zespolonych na inne.
+
+### Python - Random Number
+  - Python nie ma random() funkcji do tworzenia liczb losowych, ale ma wbudowany moduł o nazwie random, którego można używać do tworzenia liczb losowych.
+ ```
+import random
+print(random.randrange(1,10))
+```
+
+### Python - Casting
+- można sięzdażyć, że trzeba będzie określić typ zmiennej. Można to zrobić za pomocą castingu. Python jest językiem obiektowym i jako taki używa klas do definiowania typów danych, w tym tyów pierwotnych.
+- rzutowanie odbywa się za pomocą funkcji konstruktora:
+  int() - konstruuje liczbęcałkowitą z literału całkowitego, literału zmiennoprzecinkowego(usuwa wszystkie miejsca dziesiętne) lub iterału łańcuchowego (pod warunkiem, zę reprezentuje liczbę całkowitą)
+  float() - konstruuje zmienną zmiennoprzecinkową z literału całkowitego, zmiennoprzecinkowego lub literału łańcuchowego (pod warunkiem, że ciąg reprezentuje liczbę zmiennoprzecinkową lub liczbę całkowitą).
+  str() - konstruuje ciąg znaków z szerokiej gamy typów danych w tym ciągów znaków, literałów całkowitych i iterałów zmiennoprzecinkowego.
+
+### Python - Strings
+- w Pythonie ciągi są ujmowane w "" lub ''
+- ciągi wielowierszowe można przypisać do zmiennej używając trzech cudzysłowów """ lub trzech pojedyńczych cudzysłowów ''' w efekcie podział wiersza jest w tym samym miejscu co w kodzie.
+- ciągi są tablicami, pojedyńczy znak to po prostu ciąg znaków o długości 1, aby uzyskać dostęp do znaków można użyć nawiasów kwadratowych (liczymy od 0)
+```
+a = "Hello world"
+print(a[1])
+```
+- pętla przez ciąg, ponieważ ciągi znaków są tablicami, może przechodzić przez znaki w ciągu za pomocą pętli for.
+```
+for x in "banana": print(x)
+```
+- aby uzyskać długość łańcucha użyj len()
+```
+a = "Hello world"
+print(len(x))
+```
+- aby sprawdzić czy w ciągu znaków występuje dana fraza lub znak, możemy użyć słowa kluczowego in
+```
+txt = "The best things in life are free!"
+print("free" in txt)
+True
+```
+- aby sprawczić czy dana fraza nie występuje w ciągu znaków użyj słowa not in
+```
+txt = "The best things in life are free!"
+print("expensive" in txt)
+True
+```
+  
