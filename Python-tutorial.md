@@ -5,6 +5,7 @@
 - mogą służyć do zwiększenia czytelności kodu,
 - mogą służyć do zapobiegania wykonywania kodu podczas testowania.
 
-``` # komentarz jednowierszowy
-# """ comment """ komentarz wielowierszowy
+``` #
+komentarz jednowierszowy
+ """ comment """ komentarz wielowierszowy
 ```
