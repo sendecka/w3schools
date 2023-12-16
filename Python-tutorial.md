@@ -13,7 +13,9 @@
 - zmienne są kontenerami do przechowywania danych,
 - w python nie ma polecenia deklarowania zmiennych,
 - zmienna jest tworzona w momęcie pierwszego przyisania jej wartości.
-``` x = 5
+```
+x = 5
 y = "john"
 print(x)
 print(y)
+```
