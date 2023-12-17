@@ -304,7 +304,7 @@ txt = "We are the so-called \"Wikings"\ from the north."
 
 ### Python - String Methods
 - Python ma zestaw wbudowanych metod, których można używać na ciągach znaków.
-capitalize()	- Converts the first character to upper case
+capitalize()	- konwertuj pierwszy znak na wielką literę,
 casefold()	- Converts string into lower case
 center()	- Returns a centered string
 count()	- Returns the number of times a specified value occurs in a string
