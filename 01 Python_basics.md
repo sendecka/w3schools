@@ -195,4 +195,81 @@ txt = "The best things in life are free!"
 print("expensive" in txt)
 True
 ```
-  
+### Python - Slicing Stribgs
+- możesz zwrócić zakres znaków używając składni slice. Określ indeks początkowy i indeks końcowy, oddzielone dwukropkiem aby zwrócić część ciągu.
+```
+b = "Hello world"
+print(b[2:5])
+```
+- pominięcie indeksu początkowego spowoduje, że zakres zacznie się od pierwszego znaku.
+```
+b = "Hello world"
+print(b[ :5])
+```
+- pominięcie indeksu końcowego spowoduje przesunięcie zakresu do końca.
+```
+b = "Hello world"
+print(b[2: ])
+```
+- indeksowanie negatywne, użyj indeksów ujemnych, aby rozpocząć od końca ciągu.
+```
+b = "Hello world"
+print(b[-5:-2])
+```
+### Python - Modify Strings
+- Upper Case - metoda ta zwraca string w dużych literach.
+```
+a = "Hello world"
+print(a.upper())
+```
+- Lower Case - metoda ta zwraca string w małych literach.
+```
+a = "Hello world"
+print(a.lower())
+```
+- Remowe whitespace - metoda ta usuwa spacje przde i po tekscie.
+```
+a = "Hello world"
+print(a.strip())
+```
+- Replace string - metoda ta zastępuje string innym stringiem
+```
+a = "Hello world"
+print(a.replace("H", "J"))
+```
+-Split Strings - zwraca listę, w której tekst znajdujący się pomiędzy określonym separatorem staje się elementem listy.
+```
+a = "Hello world"
+print(a.split(","))
+```
+### Python - Strings łączenie
+- aby połączyć dwa ciągi znaków możesz użyć operatora "+"
+```
+a = "Hello"
+b = "world"
+print(a + b)
+```
+- aby dodać odstęp między nimi dodajemy " "
+```
+a = "Hello"
+b = "world"
+print(a + " " + b)
+```
+### Python - Format
+- tak jak siędowiedzieliśmy w rozdziale o zmiennych, nie możemyłączyć ciągów i liczb w ten sam sposób, bo będzie błąd.
+- za pomocą metody format() można łączyć ciągi i liczby razem.
+- metoda ta pobiera przekazane argumenty, formatuje je i umieszcza w ciągu znaków, w którym znajdująsięsymbole zastępcze {},
+```
+age = 36
+text = "My name is John, i am {}"
+print(txt.format(age))
+```
+- metoda format() przyjmuje nieograniczoną liczbę argumentów i jest umieszczana w {},
+- można używać numerów indeksów {0} aby mieć pewność, że argumenty są umieszczane we właściwych symbolach zastępczych
+```
+quantity = 3
+itemno = 567
+price = 49.55
+my_orede = "I wont to pay {2} dollars for {0} price of item{1}."
+print(my_order.format(quantity, itemno, price))
+```
