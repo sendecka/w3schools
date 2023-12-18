@@ -78,3 +78,26 @@ x = 5
 - | and | - zwraca True gry obie wartości są prawdziwe x < 5 and x < 10
 - | or | - zrwaza True gdy jedno ze stwierdzeń jest prawdziwe x < 5 or x< 10
 - | not | - zwraca False jeżeli rezultat to True
+
+#### - Operatory Tożsamości:
+Służą do porównywania obiektów nie wtedy, gdy są równe, ale jeśli w rzeczywistości są tym samym obiektem z tą samą lokalizacją w pamięci.
+- | is |
+- | is not |
+
+#### - Operatory Członkostwa:
+Służą do sprawdzania czy sekwencja jest prezentowana w obiekcie.
+- | in |
+- | not in |
+
+#### - Operatory Bitowe:
+Służą do porównywania liczb binarnych.
+- | & | AND
+- | | | OR
+- | ^ | XOR
+- | ~ | NOT
+- | << | Zero fill left shift
+- | >> | Signed right shift
+
+### Python Pierwszeństwo operatorów:
+- nawiasy mająnajwyższy priorytet,
+- pierwszeństwo podobne jak w matematyce.
