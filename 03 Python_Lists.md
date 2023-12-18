@@ -16,3 +16,14 @@ print(thislist)
 - ponieważ listy są indeksowane, mogą zawierać elementy o tej samej wartości,
 - aby określić ile elementów ma lista użyj len()
 - elementy listy mogą mieć dowolny typ danych: string, int, boolean
+```
+list1 = ['apple', 'banana', 'cherry']
+list2 = [1, 5, 7, 9, 3]
+list3 = [True, False, True]
+```
+- jedna lista może zawierać różne typy danych,
+```
+list1 = ['abc', 34, True, 40, 'male']
+```
+- z perspektywy Python listy definiuje się jako obiekty z typem danych "lista" <class, "list">
+- 
