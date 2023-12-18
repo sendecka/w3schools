@@ -40,4 +40,14 @@ print(myFunction)
 ### Python operatory:
 - operatory służą do wykonywania operacji na zmiennych,
 - mamy kilka grup operatorów:
-#### Operatory Arytmetyczne:
+#### - Operatory Arytmetyczne:
+Będą używane z wartościami numerycznymi do operacji typowo matematycznych.
+- | + | - dodawanie | x + y | 3 + 2 | 5
+- | - | - odejmowanie | x - y | 3 - 2 | 1
+- | * | - mnożenie | x * y | 3 * 2 | 6
+- | / | - dzielenie | x / y | 3 / 2 | 1.5
+- | % | - modulo | x % y | 3 % 2 | 1
+- | ** | - potęgowanie | x ** y | 3 ** 2 | 9
+- | // | - dzielenie bez reszty | x // y | 3 // 2 | 1
+#### - Operatory Przypisania:
+Służą do przypisania wartości zmiennym
