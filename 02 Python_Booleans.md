@@ -50,4 +50,31 @@ Będą używane z wartościami numerycznymi do operacji typowo matematycznych.
 - | ** | - potęgowanie | x ** y | 3 ** 2 | 9
 - | // | - dzielenie bez reszty | x // y | 3 // 2 | 1
 #### - Operatory Przypisania:
-Służą do przypisania wartości zmiennym
+Służą do przypisania wartości zmiennym.
+x = 5
+ - |  = | x = 5 | x = 5
+ - | += | x += 3 | x = x + 3 | x = 8
+ - | -= | x -+ 3 | x = x - 3 | x = 2
+ - | *= | x *+ 3 | x = x * 3 | x = 15
+ - | /= | x /+ 3 | x = x / 3 | x = 1.6666666666666667
+ - | %= | x %+ 3 | x = x % 3 | x = 2
+ - | //= | x //+ 3 | x = x // 3 | x = 1
+ - | **= | x **+ 3 | x = x ** 3 | x = 125
+ - | &= | x &+ 3 | x = x & 3 | x = 1
+ - | |= | x |+ 3 | x = x | 3 | x = 7
+ - | ^= | x ^+ 3 | x = x ^ 3 | x = 6
+ - | >>= | x >>+ 3 | x = x >> 3 | x = 0
+ - | <<= | x <<+ 3 | x = x << 3 | x = 40
+
+#### - Operatory Porównania:
+ - |  == | - równe
+ - |  != | - nierówne
+ - |  > | - większe
+ - |  < | - mniejsze
+ - |  >= | - większe lub równe
+ - |  <= | - mniejsze lub równe
+
+#### - Operatory Logiczne:
+- | and | - zwraca True gry obie wartości są prawdziwe x < 5 and x < 10
+- | or | - zrwaza True gdy jedno ze stwierdzeń jest prawdziwe x < 5 or x< 10
+- | not | - zwraca False jeżeli rezultat to True
