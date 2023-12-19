@@ -155,9 +155,18 @@ while i < len(thislist) :
   print(thislist[i])
 i = i + 1
 ```
-- list comprehension - oferuje najkrótszą składnię do przeglądania list w pętli
+### Python list comprehension:
+- oferuje najkrótszą składnię do przeglądania list w pętli
 ```
 [print(x) for x in thislist]
 ```
 
-
+x
+x
+x
+x
+x
+x
+x
+### Python sort lists:
+- sortuj listę alfanumerycznie -
