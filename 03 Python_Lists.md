@@ -80,10 +80,84 @@ print(thislist)
 - jeśli wstawisz więcej elementów niż zastępujesz, nowe elementy zostaną wstawione w określonym miejscu, a pozostałe zostaną odpowiednio przesunięte,
 - jeśli wstawisz mniej elementów niż zastępujesz, nowe zostaną wstawione w określonym miejscu, a pozostałe zostaną odpowiednio przesunięte,
 - aby wstawić element do listy, bez zastępowania żadniej z istniejących wartości, możemy skożystać z insert(). Metoda ta wstawia element o określonym indeksie,
+
+### Python chenge list items:
+- dołącz elementy
+```
+thislist = ['apple', 'banana', 'cherry']
+thislist.append('orange')
+print(thislist)
+['apple', 'banana', 'cherry', 'orange']
+```
+- wstaw element o określonym indeksie
 ```
 thislist = ['apple', 'banana', 'cherry']
 thislist.insert(2, 'watermelon')
 print(thislist)
 ['apple', 'banana', 'watermelon', 'cherry']
 ```
-### Python chenge list items:
+- dołącz elementy z innej listy
+```
+thislist = ['apple', 'banana', 'cherry']
+tropical = ['mango', pineapple', 'papaya']
+print(thislist.extend(tropical))
+['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+```
+- dodaj dowolną iterację, metoda extend() nie wymaga dołączania list, można dodać dowolny obiekt iterowalny,
+- 
+### Python remove list items:
+- usuń określony element
+```
+thislist = ['apple', 'banana', 'cherry']
+thislist.remove('banana')
+print(thislist)
+```
+Jeżeli istnieje więcej niż jeden element o podanej wartości, remove() usuwa pierwsze wystąpienie,
+- usuń określony indeks pop()
+```
+thislist = ['apple', 'banana', 'cherry']
+thislist.pop(1)
+print(thislist)
+```
+Jeśli nie określisz indeksu, pop() metoda usunie ostatni element.
+- słowo del również usuwa określony index
+```
+del thislist(0)
+```
+- słowo del również może usunąć całą listę
+```
+del thislist
+```
+- metoda clear() opróżnia listę, lista nadal istnieje, ale nie zawiera elementów
+```
+thislist = ['apple', 'banana', 'cherry']
+thislist.clear()
+print(thislist)
+```
+### Python loop list:
+- pętla po liście - możesz przeglądać elementy listy za pomocą pętli for
+```
+thislist = ['apple', 'banana', 'cherry']
+for x in thislist :
+  print(x)
+```
+- możesz również przejżeć elementy listy odwołując się do ich numerów indexów. Użyj funkcji range() i len(), aby utworzyć odpowiednią iterację
+```
+thislist = ['apple', 'banana', 'cherry']
+for i in range(len(thislist)) :
+  print((thislist[i])
+```
+- możesz przeglądać elementy listy za pomocą pętli while. Użyj len(), aby określić długość listy, nasępnie zacznij od 0 i przeglądaj elementy listy, odwołując siędo ich indeksów. Pamiętaj aby po każdej iteracji zmienić indeks o 1
+```
+thislist = ['apple', 'banana', 'cherry']
+i = 0
+while i < len(thislist) :
+  print(thislist[i])
+i = i + 1
+```
+- list comprehension - oferuje najkrótszą składnię do przeglądania list w pętli
+```
+[print(x) for x in thislist]
+```
+
+
