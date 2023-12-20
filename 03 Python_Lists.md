@@ -156,18 +156,33 @@ while i < len(thislist) :
 i = i + 1
 ```
 ### Python list comprehension:
-- oferuje najkrótszą składnię do przeglądania list w pętli
+- jeśli chcesz utworzyć krótsząskładnię, jeśli chcesz utworzyć nową listę na podstawie wartości istniejącej listy.
 ```
-[print(x) for x in thislist]
+fruits = ['apple', 'banana', 'cherry']
+newlist = [x for x in fruits if "a" in x]
+print(newlist)
+```
+- składnia - zwracaną wartością jest nowa lista, pozostawiając starą bez zmian.
+```
+newlist = [expression for item in iterable if condition == True]
+```
+- condition - warunek działa jak filtr, który akceptuje tylko elementy których wartości wynosi True
+```
+newlist = [x for x in fruits if x != "apple"]
+```
+- warunek if x!= "apple" powróci True po wszystkich elementach inne niż "apple", dzięki czemu lista będzie zawierała wszystkie owoce z wyjątkiem "apple". Warunek jest opcjonalny i można go pominąć.
+```
+newlist = [x for x in fruits]
+```
+- iterable - iterowalny może być dowolny iterowalny obiekt, tak jak lista, krotka czy zestaw.
+```
+newlist = [x for x in range(10)]
+```
+- lub z warunkiem
+```
+newlist = [x for x in range(10) if x < 10]
 ```
 
-x
-x
-x
-x
-x
-x
-x
 ### Python sort lists:
 - sortuj listę alfanumerycznie - obiekty listy mają metodę sort(), która domyślnie sortuje listę alfanumerycznie rosnąco
 ```
