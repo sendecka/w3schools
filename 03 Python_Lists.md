@@ -169,4 +169,72 @@ x
 x
 x
 ### Python sort lists:
-- sortuj listę alfanumerycznie -
+- sortuj listę alfanumerycznie - obiekty listy mają metodę sort(), która domyślnie sortuje listę alfanumerycznie rosnąco
+```
+thislist = ['apple', 'banana', 'cherry']
+thislist.sort()
+print(thislist)
+```
+- sortuj listę malejąco - aby posortować listę malejąca, użyj argumentu słowa kluczowego reverse=True
+```
+thislist = ['apple', 'banana', 'cherry']
+thislist.sort(reverse = True)
+print(thislist)
+```
+- dostosuj funkcjęsortowania - możesz również dostosować własne funkcje, używając argumentu słowa kluczowego key= function. Funkcja zwróci liczbę, która posłóży do sortowania listy.
+```
+def myfunc(n) :
+  return abs (n - 50)
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist)
+[50, 65, 23, 82, 100]
+```
+- sortowanie bez uwzględnienia wielkości liter - domyślnie w sort() rozróżnia wielkość liter, co powoduje, że wszystkie duże litery są sortowane przed małymi. Możemy użyć wbudowanej funkcji podczas sortowania listy. Jeśli chcesz, aby funkcja nie uwzględniła wielkości liter, użyj str.lower jako funkcji kluczowej.
+```
+thislist = ['apple', 'Apple','banana', 'cherry']
+thislist.sort(key = str.lower)
+print(thislist)
+```
+### Python copy lists:
+- nie możesz skopiować listy wpisując list1 = list2, ponieważ będzie tylko odniesieniem do listy1, a zmiany na liście1 zostaną automatycznie wprowadzone w list2. Do tego celów jest metoda copy()
+```
+thislist = ['apple', 'Apple','banana', 'cherry']
+mylist = thislist.copy()
+print(mylist)
+```
+- Innym sposobej jest użycie metody wbudowanej listy()
+```
+thislist = ['apple', 'Apple','banana', 'cherry']
+mylist = list(thislist)
+print(mylist)
+```
+### Python join lists:
+- można łączyć dwie lub więcej list. Jednym ze sposobów jest użycie operatora +
+```
+thislist1 = ['apple', 'Apple','banana', 'cherry']
+thislist2 = ['apple', 'a','b', 'c']
+thislist3 = thislist1 + thislist2
+print(thislist3)
+```
+- innym sposobem jest dodanie wszystkich elementów z listy1 do listy2, jeden po drugim
+```
+thislist1 = ['apple', 'Apple','banana', 'cherry']
+thislist2 = ['apple', 'a','b', 'c']
+for x in list2 :
+  list1.append(x)
+print(thislist1)
+```
+### Python metody:
+- python ma zestaw wbudowanych metod, które można używać na listach
+> - append() -> dodaj nowy element na końcu listy
+> - clear() -> usuwa wszystkie elementy listy
+> - copy() -> zwraca kopię listy
+> - count() -> zwraca liczbę elementów o określonej wartości
+> - extend() -> dodaje elementy listy na końcu bieżącej listy
+> - index() -> zwraca index pierwszego elementu o określonej wartości
+> - insert(() -> dodaje element w określonej pozycji
+> - pop() -> usuwa element na określonej pozycji
+> - remove() -> usuwa element o określonej wartości
+> - reverse() -> odwraca kolejność listy
+> - sort() -> sortuje listę
