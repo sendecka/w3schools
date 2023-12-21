@@ -22,6 +22,7 @@ print(thistuple)
 ```
 - elementy krotki mogą mieć dowolny typ danych
 - z perspektywy python krotka definiowana jest jako obiekt z typem danych tuple
+
 ### Python Tuple dostęp:
 - uzyskaj dostęp do elementów krotki odwołując się do numeru indeksu w nawiasach kwadratowych
 ```
@@ -58,3 +59,53 @@ print(thistuple[-1:-2])
 if "apple" in thistuple :
 print("Yes")
 ```
+
+### Python Tuple update:
+- krotki są niezmienne, co oznacza, że po utworzeniu nie można ich zmienić, dodawać ani usuwać. Są jednak pewne obejścia
+- zmień wartość krotki - możesz przekonwertować krotkęna listę, zmienić listę i przekonwertować spowrotem na krotkę
+```
+x = ('apple, 'banana', 'cherry')
+y = list(x)
+y[1] = 'kiwi'
+x = tuple(y)
+print(x)
+```
+- Dodaj elementy - są inne sposoby aby dodać elementy do krotki:
+  > - konwertuj na listę
+  ```
+  thistuple = ("apple", "banana", "cherry")
+  y = list(thistuple)
+  y.append("orange")
+  thistuple = tuple(y)
+  ```
+  > - dodaj krotkędo krotki
+  ```
+  thistuple += y
+  print(thistuple)
+  ```
+- Usuń elementy - tak samo jak wyżej
+```
+y = remove("apple")
+thistuple = tuple(y)
+```
+- Całkowite usunięcie
+```
+del(thistuple)
+```
+### Python Unpack Tuple:
+- Unpacking Tuple - kiedy tworzymy krotkię, zwykle przypisujemy jej wartości. Nazywa sięto pakowaniem krotki.
+```
+fruits = ('apple', 'banana', 'cherry')
+```
+- W Pythonie możemy również rozpakować wartości z powrotem do zmiennych.
+```
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+```
+- Liczba zmiennych musi odpowiadać liczbie wartości w krotce w przeciwnym razie należy użyć gwiazdki, aby zebrać pozostałe wartości w formie listy.
+- Korzystanie z * -
