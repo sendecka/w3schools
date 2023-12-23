@@ -108,4 +108,53 @@ print(yellow)
 print(red)
 ```
 - Liczba zmiennych musi odpowiadać liczbie wartości w krotce w przeciwnym razie należy użyć gwiazdki, aby zebrać pozostałe wartości w formie listy.
-- Korzystanie z * -
+- Korzystanie z * - jeśli liczba zmiennych jest mniejsza niż liczba wartości, możesz dodać gwiazdkę do nazwy zmiennej, a wartości zostaną przypisane do zmiennej w formie listy.
+```
+(green, yellow, *red) = fruits
+```
+- Jeśli gwiazdka zostanie dodana do innej nazwy niż ostatnia, python będzie przypisywał wartość do zmiennej, aż liczba pozostałych wartości będzie równa liczbie pozostałych zmiennych.
+```
+(green, *yellow, red) = fruits
+```
+### Python Loop Tuple:
+- Pętla przez krotkę - możesz przeglądać elementy krotki przez pętlę for.
+```
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple :
+  print(x)
+```
+- Wykonaj pętlę po numerach indeksów - możesz przejrzeć elementy odwołując się do ich numerów indeksów. Użyj funkcji range() i len()
+```
+thistuple = ("apple", "banana", "cherry")
+for i in range(len(thistuple)) :
+  print(thistuple[i])
+```
+- Korzystanie z pętli while - możesz również przejrzeć pętlę za pomocą pętli while. Użyj funkcji len, aby określić długość krotki, a następnie zacznij od 0 i przeglądaj elementy krotki odwołując siię do ich indeksów, zwiększając o jeden.
+```
+thistuple = ("apple", "banana", "cherry")
+i = 0
+while i < len(thistuple) :
+print(thistuple[i])
+i = i + 1
+```
+
+### Python Join Tuples:
+- połącz dwie krotki - możesz w tym celu użyć +
+```
+tuple1 = ("a", "b", "c")
+tuple2 = (1, 2, 3)
+tuple3 = tuple1 + tuple1
+print(tuple3)
+```
+- Pomnóż krotki - jeśli chcesz pomnożyć krotki użyj *
+```
+mytuple = tuple1 * 2
+print(mytuple)
+```
+
+### Python Tuple methods:
+
+- Metody krotki - python ma dwie wbudowane metody, które można używać.
+  > - count() - zwraca liczbę wystąpień określonej wartości w krotce,
+  > - index() - przeszukuje krotkę, pod kontem określonej wartości i zwraca pozycję w której została znaleziona.
+
