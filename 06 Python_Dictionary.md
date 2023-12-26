@@ -155,8 +155,8 @@ print(myfamily["child2"]["name"})
 ```
 
 ### Python Dictionary Methods:
-> - clear()
 >   - copy()
+>   - clear()
 >   - fromkeys()
 >   - get()
 >   - items()
