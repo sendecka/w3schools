@@ -87,4 +87,24 @@ print(next(myiter))
 print(next(myiter))
 print(next(myiter))
 ```
-- Zatrzymaj iterację - 
+- Zatrzymaj iterację - powyższy przykład będzie kontynuowany w nieskończoność, jeśli będziesz mieć wystarczającą liczbę instrukcji next() lub jeśli zostanie użyty w pętli for. Aby zapobiec ciągnięciu iteracji w nieskończonoość, możemy użyć StopIteration. W metodzie __next__() możemy dodać warunek zakończenia, który zgłosi błąd jeśli iteracja zostanie wykonana określoną ilość razy.
+```
+class MyNumbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+
+  def __next__(self):
+    if self.a <= 20:
+      x = self.a
+      self.a += 1
+      return x
+    else:
+      raise StopIteration
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+for x in myiter:
+  print(x)
+```
