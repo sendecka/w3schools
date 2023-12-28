@@ -96,3 +96,41 @@ def tri_recursion(k):
 print("\n\nRecursion Example Results")
 tri_recursion(6)
 ``` 
+
+# <p style="text-align: center;">Python Lambda </p>
+
+Funkcja Lambda - jest małą funkcją anonimową. Może przyjmować dowolną liczbę argumentów, ale może mieć tylko jedno wyrażenie. Wyrażenie jest wykonywane i zwracany jest wynik.
+lambda arguments : expression
+```
+x = lambda a : a + 10
+print(x(5))
+```
+Funkcje lambda mogą przyjmować dowolną liczbę argumentów.
+```
+x = lambda a, b : a * b
+print(x(5, 6))
+```
+Dlaczego warto używać funkcji lambda - siłę lambdy lepiej widać, gdy używasz jej jako funkcji anonimowej wewnątrz innej funkcji. Załóżmy, że masz definicję funkcji, która przyjmuje jeden argument ten zostanie pomnożony przez nieznaną liczbę.
+```
+def myfunc(n):
+  return lambda a : a * n
+```
+- Użyj tej definicji funkcji, aby utworzyć funkcję, która zawsze podwaja wysyłaną liczbę.
+```
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+
+print(mydoubler(11))
+```
+Możesz użyć tej samej definicji funkcji, aby utworzyć funkcję, która zawsze potroi liczbę, którą wysyłasz.
+```
+def myfunc(n):
+  return lambda a : a * n
+
+mytripler = myfunc(3)
+
+print(mytripler(11))
+````
+Możesz również użyć tej samej funkcji, aby utworzyć obie funkcje w tym samym programie.
