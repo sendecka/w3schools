@@ -48,6 +48,20 @@ import datetime
 x = datetime.datetime.now()
 print(x)
 ```
-- Tworzenie obiektów daty -
+- Tworzenie obiektów daty - do stworzenia daty możemy wykorzystać datatime() klasę (konstruktora) moduł datatime. Wymaga ona trzech parametrów, abyutworzyć datę: rok, miesiąc i dzień.
+```
+import datetime
+x = datetime.datetime(2020, 5, 17)
+print(x)
+```
+Klasa datatime() przyjmóje również parametry czasu i strefy czasowej, ale sąone opcjonalne i mają domyślną wartość 0.
+
+- Metoda strftime() - obiekt datatime posiada metodę formatowania obiektów daty w czytelne ciągi znaków. Metoda nazywa się strftime() i przyjmuje jeden parametr format, określający format zwracanego ciągu.
+```
+import datetime
+x = datetime.datetime(2018, 6, 1)
+print(x.strftime("%B"))
+```
+Istnieje szereg odniesień do wszystkich kodów formatu.
 
 
