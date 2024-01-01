@@ -8,4 +8,6 @@ Python ma kilka funkcji do tworzenia, odczytywania, aktualizowania i usuwania pl
 Obsługa plików
 Kluczową funkcją do pracy z plikami jest funkcja open(), przyjmuje ona dwa parametry: nazwa pliku i tryb. Istnieją cztery różne metody (tryby) otwierania pliku:
   - " r " - odczyt - wartośćdomyślna. Otwiera plik do odczytu, błąd jeśliplik nie istnieje.
-  - " a " - dołącz - 
+  - " a " - dołącz -
+  - " w " -
+  - " x " -
