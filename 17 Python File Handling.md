@@ -11,3 +11,14 @@ Kluczową funkcją do pracy z plikami jest funkcja open(), przyjmuje ona dwa par
   - " a " - dołącz - otwiera plik do dołączenia, tworzy plik jeśli nie istnieje.
   - " w " - zapis - otwiera pliki do zapisu, twozy plik jeśli nie istnieje.
   - " x " - utwórz - tworzy określony plik, zwraca błąd jeśli plik istnieje.
+
+Dodatkowo można określić czy plik ma być obsługiwany w trybie binarnym czy tekstowym.
+  - " t " - text - wartość domyślna. Tryb tekstowy
+  - " b " - binarny - tryb binarny np. obraz
+
+Składnia: 
+  f = open("demofile.txt")
+  f = open("demofile.txt", "rt")
+
+  # Python file open
+
