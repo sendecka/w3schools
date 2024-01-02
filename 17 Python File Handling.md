@@ -23,12 +23,16 @@ Składnia:
   # Python file open
 Otwórz plik na serwerze - aby otworzyć plik, użyj wbudowanej funkcji open(). Funkcja open() zwraca obiekt pliku, który posiada read() metodę odczytu zawartości pliku.
 
+  ```
   f = open("demofile.txt","r")
+  ```
 
 Jeśli plik znajduje się w innej lokalizacji, musisz określić ścieżkę.
 
+  ```
   f = open("D:\\myfiles\welcome.txt", "r")
   print(f.read())
+  ```
 
 Odczyt tylko części pliku - domyślnie read() zwraca cały text, ale może także określić, ile znaków chcesz zwrócić.
 
