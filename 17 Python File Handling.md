@@ -36,3 +36,30 @@ Jeśli plik znajduje się w innej lokalizacji, musisz określić ścieżkę.
 
 Odczyt tylko części pliku - domyślnie read() zwraca cały text, ale może także określić, ile znaków chcesz zwrócić.
 
+  ```
+  f = open("D:\\myfiles\welcome.txt", "r")
+  print(f.read(5))
+  ```
+
+Przeczytaj linię - możesz zwrócić jedną linię korzystając z readline().
+
+  ```
+  f = open("D:\\myfiles\welcome.txt", "r")
+  print(f.readline())
+  f.close()
+  ```
+
+  # Python zapis plików
+
+Zapis do istniejącego pliku: należy dodać do funkcji open() parametr.
+  - " a " - dołącz - dołącz na końcu pliku
+  - " w " - zapisz - nadpisz istniejące treści
+
+  ```
+  f = open("demofile.txt", "a")
+  f.write("Now the file has more content!")
+  f.close()
+  ```
+
+Utwórz nowy plik, użyj open() z jednym z następujących parametrów:
+  - " x " - utwórz - 
