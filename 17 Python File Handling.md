@@ -62,4 +62,26 @@ Zapis do istniejącego pliku: należy dodać do funkcji open() parametr.
   ```
 
 Utwórz nowy plik, użyj open() z jednym z następujących parametrów:
-  - " x " - utwórz - 
+  - " x " - utwórz - utwórz plik, zwróć błąd jeśli plik istnieje
+  - " a " - dołącz - utwórz plik, jeśli określony pliknie istnieje
+  - " w " - zapis - utwórz plik jeśli określony plik nie istnieje
+
+  # Python usuń pliki
+
+Aby usunąć pliki należy zaimportować moduł os i uruchomić jego funkcję os.remove() .
+
+  ```
+  import os
+  os.remove("demofile.txt")
+  ```
+
+Sprawdź czy plik istnieje, aby uniknąć błędu można najpierw sprawdzić czy plik istnieje.
+
+```
+import os
+if os.path.exist("demofile.txt") :
+  os.remove("demofile.txt")
+else :
+  print("plik nie istnieje")
+```
+
