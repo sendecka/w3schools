@@ -51,5 +51,34 @@ Parametr 2 jest tablicą zawierającą punkty na osi y
 
 Jeśli chcemy wykreślić linię od (1, 3) do (8, 10) musimy przekazać dwie tablice [1, 8] i [3, 10] do funkcji plot.
 
-Przykład:
+> Przykład:
   Narysuj linięna diagramie od pozycji (1, 3) do pozycji (8, 10)
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints = np.array([1, 8])
+ypoints = np.array([3, 10])
+
+plt.plot(xpoints, ypoints)
+plt.show()
+```
+
+### Rysowanie bez linii
+
+Aby wykreślić tylko znaczniki, można użyć parametru skrótu "o" co oznacza "pierścienie".
+
+> Przykład: Narysuj dwa punkty na diagramie, jeden w pozycji (1,3) drugi (8, 10)
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints = np.array([1, 8])
+ypoints = np.array([3, 10])
+
+plt.plot(xpoints, ypoints, "o")
+plt.show()
+```
+
+
