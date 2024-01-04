@@ -81,4 +81,53 @@ plt.plot(xpoints, ypoints, "o")
 plt.show()
 ```
 
+### Wiele punktów
+
+Możesz wykreślić dowolną liczbę punktów, upewnij się tylko, że masz tą samą liczbę punktów na obu osiach.
+
+> Przykład: Narysuj linię na diagramie od pozycji (1, 3) do (2, 8), następnie do (6, 1) i na koniec (8, 10).
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+xpoints = np.array([1, 2, 6, 8])
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(xpoints, ypoints)
+plt.show()
+```
+
+### Domyślne punkty x
+
+Jeśli nie określimy punktów na osi x, otrzymają one domyślne wartości 0, 1, 2, 3, 4, itp. w zależności od długości punktów y. Jeśli więc weźniemy ten przykład co powyżej i pominiemy x. 
+
+> Przykład: Wykres bez punktów x
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10, 5, 7])
+
+plt.plot(ypoints)
+plt.show()
+```
+
+### Matplotlib markers
+
+Markery - możesz użyć argumentu słowa kluczowego "marker" aby podkreślić każdy punkt określonym znacznikiem.
+
+> Przykład: Zaznacz każdy punkt kółkiem
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker="o")
+plt.show()
+```
+
 
