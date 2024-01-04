@@ -130,4 +130,67 @@ plt.plot(ypoints, marker="o")
 plt.show()
 ```
 
+### Matplotlib Markers
 
+Istnieje wiele znaczników
+
+'o'	Circle	
+'*'	Star	
+'.'	Point	
+','	Pixel	
+'x'	X	
+'X'	X (filled)	
+'+'	Plus	
+'P'	Plus (filled)	
+'s'	Square	
+'D'	Diamond	
+'d'	Diamond (thin)	
+'p'	Pentagon	
+'H'	Hexagon	
+'h'	Hexagon	
+'v'	Triangle Down	
+'^'	Triangle Up	
+'<'	Triangle Left	
+'>'	Triangle Right	
+'1'	Tri Down	
+'2'	Tri Up	
+'3'	Tri Left	
+'4'	Tri Right	
+'|'	Vline	
+'_'	Hline
+
+### Format Strings fmt
+
+Do określenia znacznika można także użyć parametru zapisu ciągu skrótu. Ten parametr jest również fmt i jest zapisywany wg. składni.
+
+> Przykład: Zaznacz każdy punkt kółkiem
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, "o:r")
+plt.show()
+```
+
+Wartość znacznika może być dowolna z powyższego odniesienia do znacznika. Wartość wiersza może mieć jedną z następujących wartości:
+- Odniesienie do linii:
+  - "-" - pełna linia
+  - ":" - linia kropkowana
+  - "--" - linia przerywana
+  - "-." - linia kropkowano - przerywana
+- Odniesienie do koloru:
+  - "r" - czerwony
+  - "g" - zielony
+  - "b" - niebieski
+  - "c" - cyan
+  - "m" - magenta
+  - "y" - żółty
+  - "k" - czarny
+  - "w" - biały
+
+### Rozmiar znacznika
+
+Aby ustawić rozmiar znacznika
