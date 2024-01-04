@@ -31,6 +31,7 @@ import matplotlib.pyplot as plt
 Teraz pakiet Python można nazwać plt.
 
 Przykład:
+  Narysuj linię na diagramie od pozycji (0, 0) do pozycji (6, 250)
 ```
 import matplotlib.pyplot as plt
 import numpy as np
@@ -41,3 +42,14 @@ ypoints = np.array([0, 250])
 plt.plot(xpoints, ypoints)
 plt.show()
 ```
+
+### Wykres Matplotlib
+
+Rysowanie punktów x i y. Funkcja plot() służy do rysowania punktów (znaczników) na diagramie. Domyślnie plot() rysuje linię od punktu do punktu. Funkcja pobiera parametry służące do określania punktów na diagramie.
+Parametr 1 jest tablicą zawierającą punkty na osi x
+Parametr 2 jest tablicą zawierającą punkty na osi y
+
+Jeśli chcemy wykreślić linię od (1, 3) do (8, 10) musimy przekazać dwie tablice [1, 8] i [3, 10] do funkcji plot.
+
+Przykład:
+  Narysuj linięna diagramie od pozycji (1, 3) do pozycji (8, 10)
