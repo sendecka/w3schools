@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 ```
 Teraz pakiet Python można nazwać plt.
 
-Przykład:
+> Przykład:
   Narysuj linię na diagramie od pozycji (0, 0) do pozycji (6, 250)
 ```
 import matplotlib.pyplot as plt
