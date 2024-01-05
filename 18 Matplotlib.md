@@ -265,7 +265,7 @@ plt.show()
 
 Styl linii można zapisać w krótszej składni: linestyle -> ls, dotted -> :, dashed -> --
 
-# Style linii
+### Style linii
 
 Możesz wybrać z kilku różnych styli.
   > - 'solid' (default)	'-'	
@@ -274,7 +274,7 @@ Możesz wybrać z kilku różnych styli.
   > - 'dashdot'	'-.'	
   > - 'None'	'' or ' '
 
-# Kolor linii
+### Kolor linii
 
 Możesz użyć argumentu słowa kluczowego color lub skrót c, aby ustalić kolor linii.
 
@@ -285,4 +285,4 @@ plt.show()
 
 Możesz użyć koloru w układzie szesnastkowym.
 
-# Szerokość linii
+### Szerokość linii
