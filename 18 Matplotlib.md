@@ -286,3 +286,25 @@ plt.show()
 Możesz użyć koloru w układzie szesnastkowym.
 
 ### Szerokość linii
+
+Aby zmienić szerokość linii, możesz użyć argumentu linewidth lub lw. Wartość jest zmiennoprzecinkowa wyrażoną w punktach.
+```
+plt.plot(ypoints, linewidth="20.5")
+```
+
+### Wiele linii
+
+Możesz narysować wiele linii, dodając więcej plt.plot()
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+y1 = np.array([3, 8, 1, 10])
+y2 = np.array([6, 2, 7, 11])
+
+plt.plot(y1)
+plt.plot(y2)
+plt.show()
+```
+
+Można
