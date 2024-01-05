@@ -193,4 +193,31 @@ Wartość znacznika może być dowolna z powyższego odniesienia do znacznika. W
 
 ### Rozmiar znacznika
 
-Aby ustawić rozmiar znacznika
+Aby ustawić rozmiar znacznika, możesz użyć argumentów słowa kluczowego markersize lub skróconej wersji ms.
+
+> Przykład: Ustaw rozmiar znaczników na 20.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker="o", ms=20)
+plt.show()
+```
+
+### Kolor znacznika
+
+Możesz użyć argumentu słowa kluczowego markeredgecolor lub krótszego mec, aby ustalić kolor krawędzi znacznika.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker="o", ms=20, mec="r")
+plt.show()
+```
+ Możesz użyć argumentu słowa kluczowego markerfacecolor lub 
