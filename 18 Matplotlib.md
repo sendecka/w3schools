@@ -220,4 +220,69 @@ ypoints = np.array([3, 8, 1, 10])
 plt.plot(ypoints, marker="o", ms=20, mec="r")
 plt.show()
 ```
- Możesz użyć argumentu słowa kluczowego markerfacecolor lub 
+ Możesz użyć argumentu słowa kluczowego markerfacecolor lub skrót mfc, aby ustalić kolor wewnątrz krawędzi znaczników.
+
+> Przykład: Ustaw kolor powierzchni znacznika na czerwony.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, marker="o", ms=20, mfc="r")
+plt.show()
+```
+
+Użyj argumentów mec i mfc aby pokolorować cały znacznik.
+
+```
+plt.plot(ypoints, marker="o", ms=20, mfc="r", mec="r")
+```
+Można użyć szesnastkowych wartości kolorów.
+```
+mec="#4CAF50"
+mfc="4CAF50"
+```
+
+### Matplotlib line
+
+Styl linii - można użyć argumentu słowa kluczowego linestyle lub skrót ls aby zmienić styl kreślonej linii.
+
+> Przykład: Użyj linii przerywanej.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+ypoints = np.array([3, 8, 1, 10])
+
+plt.plot(ypoints, linestyle="dotteso")
+plt.show()
+```
+
+### Matplotlib line Krótsza składnia
+
+Styl linii można zapisać w krótszej składni: linestyle -> ls, dotted -> :, dashed -> --
+
+# Style linii
+
+Możesz wybrać z kilku różnych styli.
+  > - 'solid' (default)	'-'	
+  > - 'dotted'	':'	
+  > - 'dashed'	'--'	
+  > - 'dashdot'	'-.'	
+  > - 'None'	'' or ' '
+
+# Kolor linii
+
+Możesz użyć argumentu słowa kluczowego color lub skrót c, aby ustalić kolor linii.
+
+```
+plt.plot(ypoints, color="r")
+plt.show()
+```
+
+Możesz użyć koloru w układzie szesnastkowym.
+
+# Szerokość linii
