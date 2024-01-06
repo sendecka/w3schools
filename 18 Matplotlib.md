@@ -533,3 +533,146 @@ plt.plot(x,y)
 
 plt.show()
 ```
+
+### Matplotlib Scatter
+
+Tworzenie wykresów punktowych - możesz użć funkcji scatter() do narysowania wykresu punktowego. Funkcja scatter() wykreśla jedną kropkę dla każdej obserwacji. Potrzebuje dwóch tablic o tej samej długości, jednej dla x drugiej dla y.
+
+> Przykład: Wyrysuj wykres scatter.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+
+plt.scatter(x, y)
+plt.show()
+```
+Zabarwienie - możesz ustalić własny kolor dla wykresu za pomocą argumentu color lub c.
+
+> Przykład: Ustaw własny kolor znaczników.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+plt.scatter(x, y, color = 'hotpink')
+
+x = np.array([2,2,8,1,15,8,12,9,7,3,11,4,7,14,12])
+y = np.array([100,105,84,105,90,99,90,95,94,100,79,112,91,80,85])
+plt.scatter(x, y, color = '#88c999')
+
+plt.show()
+```
+Pokoloruj każdą kropkę - możesz pokolorować każdą kropkę, używając tablicy jako wartości argumentu c.
+
+
+> Przykład: Ustaw własny kolor znaczników.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+colors = np.array(["red","green","blue","yellow","pink","black","orange","purple","beige","brown","gray","cyan","magenta"])
+
+plt.scatter(x, y, c=colors)
+
+plt.show()
+```
+
+Mapa kolorów - modół matplotlib posiada szereg dostępnych map kolorów. Mapa kolorów przypomina listę kolorów gdzie każdy kolor ma wartość z zakresu od 0 do 100.
+Jak korzystać z mapy kolorów - możesz określić mapę kolorów za pomocą argumentu cmap z wartością mapy kolorów w tym przypadku, 'viridis' jest to jedna z wbudowanych map kolorów dostępnych w matplotlib. Dodatkowo musisz utworzyć tablicę z wartościami (od 0 do 100) po jednej wartości na każdy punkt na wykresie punktowym.
+
+> Przykład: Utwórz tablicę kolorów i określ mapę kolorów na wykresie punktowym.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+colors = np.array([0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
+
+plt.scatter(x, y, c=colors, cmap='viridis')
+
+plt.show()
+```
+Możesz dołączyć mapę kolorów dołanczając instrukcję plt.colorbar(). Istnieje wiele domyślnych map kolorów.
+
+> Przykład: Dołącz rzeczywistą mapę kolorów.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+colors = np.array([0, 10, 20, 30, 40, 45, 50, 55, 60, 70, 80, 90, 100])
+
+plt.scatter(x, y, c=colors, cmap='viridis')
+
+plt.colorbar()
+
+plt.show()
+```
+
+Rozmiar - za pomocą argumentu możesz zmienić rozmiar kropek s. Podobnie jak koloru, upewnij się, że tablica rozmiarów ma tę samą długość co tablice x i y.
+
+> Przykład: Ustaw własny rozmiar znaczników.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+sizes = np.array([20,50,100,200,500,1000,60,90,10,300,600,800,75])
+
+plt.scatter(x, y, s=sizes)
+
+plt.show()
+```
+Alfa - za pomocą argumentu alpha możesz dostosować przezroczystość kropek. Podobnie jak kolory upewnij się, że ma tą samą długość co x i y.
+
+> Przykład: Ustaw własny rozmiar znaczników.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+sizes = np.array([20,50,100,200,500,1000,60,90,10,300,600,800,75])
+
+plt.scatter(x, y, s=sizes, alpha=0.5)
+
+plt.show()
+```
+
+Połącz rozmiar koloru i alfa - możesz łączyć mapę kolorów kropek z różnymi rozmiarami kropek.
+
+> Przykład: Twórz losowe tablice zawierające 100 wartości punktów x, punktów y, kolorów i rozmiarów.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.randint(100, size=(100))
+y = np.random.randint(100, size=(100))
+colors = np.random.randint(100, size=(100))
+sizes = 10 * np.random.randint(100, size=(100))
+
+plt.scatter(x, y, c=colors, s=sizes, alpha=0.5, cmap='nipy_spectral')
+
+plt.colorbar()
+
+plt.show()
+```
+
+### 
