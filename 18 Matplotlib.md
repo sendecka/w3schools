@@ -307,4 +307,80 @@ plt.plot(y2)
 plt.show()
 ```
 
-Można
+Można także wykreślić wiele linii, dodając punkty na osi x i y dla każdej linii w tej samej funkcji plt.plot().
+
+### Matplotlib Labels and title
+
+Utwórz etykiety dla plot - w Python możesz używać funkcji xlabel() i ylabel() do ustawienia etykiety dla osi x i y.
+
+> Przykład: Utwórz etykiety dla osi x i y
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([3, 8, 1, 10, 20, 25, 30, 35, 40])
+y = np.array([6, 2, 7, 11, 21, 26, 31, 36, 41])
+
+plt.plot(x,y)
+plt.xlabel("Averange Pulse")
+plt.ylabel("Calorie burnage")
+
+plt.show()
+```
+Utwórz tytuł - możesz użyć funkcji title(), aby ustalić tytuł wykresu.
+
+> Przykład: Ustaw tytuł wykresu.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([3, 8, 1, 10, 20, 25, 30, 35, 40])
+y = np.array([6, 2, 7, 11, 21, 26, 31, 36, 41])
+
+plt.plot(x,y)
+plt.tittle("Sports watch data")
+plt.xlabel("Averange Pulse")
+plt.ylabel("Calorie burnage")
+
+plt.show()
+```
+Ustawienie właściwości czcionki dla tytułu i etykiety.
+Możesz ustawić parametr fontdict w xlabel() i ylabel i tittle() i ustalić właściwości dla tytułu i etykiety.
+
+> Przykład: Ustaw właściwości czcionki tytułu i etykiet.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array([3, 8, 1, 10, 20, 25, 30, 35, 40])
+y = np.array([6, 2, 7, 11, 21, 26, 31, 36, 41])
+
+font1 = {'family':'serif','color':'blue','size':20}
+font2 = {'family':'serif','color':'darkred','size':15}
+
+plt.tittle("Sports watch data")
+plt.xlabel("Averange Pulse")
+plt.ylabel("Calorie burnage")
+
+plt.plot(x,y)
+plt.show()
+```
+Umieść tytuł - możesz użyć parametru loc tittle() aby rozmieścić tytuł. Wartości to: left, right, center. Deaful center.
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data", loc = 'left')
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+plt.show()
+```
