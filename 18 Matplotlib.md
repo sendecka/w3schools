@@ -675,4 +675,112 @@ plt.colorbar()
 plt.show()
 ```
 
-### 
+### Matplotlib Bars
+
+Tworzenie pasków wykresów - możesz użyć funkcji bar() do rysowania wykresów słupkowych.
+
+> Przykład: Narysuj 4 wykresy słupkowe.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x,y)
+plt.show()
+```
+Funkcja bar() pobiera argumenty opisujące układ słupków. Kategorie i ich wartości reprezentowane przez pierwszy i drugi argument jako tablice.
+
+Horizontal bar -  jeśli chcesz aby słupki wyświetlały się poziomo a nie pionowo użyj funkcji barh().
+
+> Przykład: Narysuj 4 poziome paski.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.barh(x, y)
+plt.show()
+```
+
+Kolor paska - bar() i barh() przyjmują argumenty słowa kluczowe color, aby ustawić kolor słupków.
+
+> Przykład: Narysuj 4 czerwone słupki.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y, color = "red")
+plt.show()
+```
+
+Szerokość paska - argument bar() przyjmuje słowo kluczowe width, aby ustawić szerokość słupków.
+
+> Przykład: Narysuj 4 bardzo cienkie paski.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x, y, width = 0.1)
+plt.show()
+```
+Domyślna wartość szerokości to 0.8 w przypadku poziomych pasków height zamiast width.
+
+Wysokość paska - Przyjmuje barh() argument słowa kluczowego height, aby ustawić wysokość słupków.
+
+> Przykład: Narysuj 4 bardzo cienkie paski.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.barh(x, y, height = 0.1)
+plt.show()
+```
+
+### Matplotlib Histogram
+
+Histogram - to wykres przedstawiający rozkład częstotliwości. Jest to wykres przedstawiający liczbę obserwacji w każdym zadanym przedziale.
+
+Utwórz histogram - w matplotlib używa się hist() do tworzenia histogramów. Funkcja hist() użyje tablicy liczb do utworzenia histogramu, tablica zostanie wysłana do funkcji jako argument.
+
+Dla uproszczenia używamy do losowego generowania tablic zawierającej 250 wartości, gdzie wartości będą się skupiać wokół 170, a odchylenie standardowe wynosi 10.
+
+> Przykład: Normalna dystrybucja danych przez NumPy.
+
+```
+import numpy as np
+
+x = np.random.normal(170, 10, 250)
+
+print(x)
+```
+Funkcja hist() odczyta tablicę i wygeneruje histogram.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.normal(170, 10, 250)
+
+plt.hist(x)
+plt.show()
+```
+
+### Matplotlib
