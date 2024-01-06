@@ -783,4 +783,131 @@ plt.hist(x)
 plt.show()
 ```
 
-### Matplotlib
+### Matplotlib Pie charts
+
+Tworzenie wykresów kołowych - w Python możesz użyć funkcji pie() do rysowania wykresów kołowych.
+
+> Przykład: Prosty wykres kołowy.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+
+plt.pie(y)
+plt.show()
+```
+
+Rysowany jest jeden element dla każdej wartości w tablicy. Domyślnie rysowanie pierwszego klina zaczya się od osi x i przesuwa się w kierunku przeciwnym do ruchu wskazuwek zegara.
+
+Etykiety - dodaj etykiety do wykresu kołowego z parametrem label. Parametr label musi być tablicą z jedną etykietą dla każdego klina.
+
+> Przykład: Prosty wykres kołowy.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels = mylabels)
+plt.show()
+```
+
+Kąt początkowy - można zmienić kont początkowy, określając parametr startangle. Parametr startangle jest definiowany za pomocą kąta w stopniach, domyślny kąt to 0.
+
+> Przykład: Rozpocznij pierwszy klin pod kątem 90 stopni.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels = mylabels, startangle = 90)
+plt.show()
+```
+
+Parametr explode - chcesz aby któryś z parametrów sięwyróżnił? Parametr explode pozwala na to. Parametr explode jeśli jest określany musi zawierać wartość dla każdego klina. Wartość ta reprezentuje odległość od środka każdego klina.
+
+> Przykład: Wyciągnij klin „Jabłka” 0,2 ze środka ciasta.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.2, 0, 0, 0]
+
+plt.pie(y, labels = mylabels, explode = myexplode)
+plt.show()
+```
+
+Cień - dodaj cień do wykresu kołowego ustalając parametr shadows na True.
+
+> Przykład: Dodaj cień.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.2, 0, 0, 0]
+
+plt.pie(y, labels = mylabels, explode = myexplode, shadow = True)
+plt.show()
+```
+
+Zabarwienie - za pomocą parametru colors możesz ustalić kolor każdego klina wykresu kołowego. Parametr ten musi zawierać jeden parametr dla każdego klina.
+
+> Przykład: Określ nowy kolor dla każdego klina.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+mycolors = ["black", "hotpink", "b", "#4CAF50"]
+
+plt.pie(y, labels = mylabels, colors = mycolors)
+plt.show()
+```
+
+Legenda - aby dodać listę wyjaśnień dla każdego klina użyj funkcji legend().
+
+> Przykład: Dodaj legendę.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels = mylabels)
+plt.legend()
+plt.show()
+```
+
+Legenda z nagłówkiem - aby dodać nagłówek do legendy należy dodać parametr title do funkcji legend().
+
+> Przykład: Dodaj legendę z nagłówkiem.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+plt.pie(y, labels = mylabels)
+plt.legend(title = "Four Fruits:")
+plt.show()
+```
+
