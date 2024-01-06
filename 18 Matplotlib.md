@@ -384,3 +384,152 @@ plt.ylabel("Calorie Burnage")
 plt.plot(x, y)
 plt.show()
 ```
+
+### Matplotlib Adding grid lines
+
+Dodawanie linii siatki do wykresu - można to zrobić za pomocą funkcji grid(). 
+
+> Przykład: Wyświetl linie siatki do wykresu.
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data", loc = 'left')
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+plt.grid()
+plt.show()
+```
+
+Określ które linie siatki mają być wyświetlone - możesz użyć axis parametru w funkcji grid(), aby określić które linie siatki mają być wyświetlane.
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+
+plt.grid(axis = 'y')
+
+plt.show()
+```
+lub
+```
+plt.grid(axis = 'x')
+```
+Ustaw właściwości linii dla siatki - możesz ustalić właściwości siatki w sposób: grid(color = 'color', linestyle = 'linestyle', linewidth = number)
+
+> Przykład: Ustaw właściwości linii siatki
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.array([80, 85, 90, 95, 100, 105, 110, 115, 120, 125])
+y = np.array([240, 250, 260, 270, 280, 290, 300, 310, 320, 330])
+
+plt.title("Sports Watch Data")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x, y)
+
+plt.grid(color = 'green', linestyle = '--', linewidth = 0.5)
+
+plt.show()
+```
+
+### Matplotlib subplot
+
+Wyświetl wiele wykresów - dzięki subplot() możesz narysować wiele wykresów na jednym rysunku.
+
+> Przykład: Narysuj 2 wykresy.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+#plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(1, 2, 1)
+plt.plot(x,y)
+
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(1, 2, 2)
+plt.plot(x,y)
+
+plt.show()
+```
+Funkcja subplot() przyjmuje trzy argumenty opisujące układ figur. Układ jest zorganizowany w wiersze i kolumny, które są reprezentowane przez pierwszy i drugi argument. Trzeci argument reprezentuje indeks bieżącego wykresu.
+```
+plt.subplot(1,2,1)
+```
+figura ma 1 wiersz 2 kolumny i jest pierwszym wykresem
+```
+plt.subplot(1,2,2)
+```
+figura ma 1 wiersz, 2 kolumny i jest 2
+
+> Przykład: Narysuj dwa wykresy jeden nad drugim.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+#plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 1, 1)
+plt.plot(x,y)
+
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 1, 2)
+plt.plot(x,y)
+
+plt.show()
+```
+Tytuł całej przestrzeni gdzie sąwykresy - możesz dodać tytuł całej figury za pomocą subtitle()
+> Przykład: podaj tytuł całej figury.
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+#plot 1:
+x = np.array([0, 1, 2, 3])
+y = np.array([3, 8, 1, 10])
+
+plt.subplot(2, 1, 1)
+plt.plot(x,y)
+
+#plot 2:
+x = np.array([0, 1, 2, 3])
+y = np.array([10, 20, 30, 40])
+
+plt.subplot(2, 1, 2)
+plt.plot(x,y)
+
+plt.show()
+```
