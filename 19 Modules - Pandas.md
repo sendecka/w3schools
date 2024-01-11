@@ -1,3 +1,5 @@
 # Pandas Tutorial
 - Pandas to biblioteka pythona
-- służy do analizy danych
+- Służy do analizy danych
+
+## Pandas Wprowadzenie
