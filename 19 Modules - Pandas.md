@@ -20,4 +20,12 @@
 - Oczyszcza dane.
 
 ## Instalacja Pandas
-- 
+Jeżeli masz zainstalowany Python i PIP w systemie, instalacja Pandas jest łatwa. Zainstaluj Pandas według tego polecenia:
+```
+C:\Users\Your Name\pip install pandas
+```
+Po zainstalowaniu Pandas zaimportuj go do swojej aplikacji
+```
+import pandas
+```
+
