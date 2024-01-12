@@ -8,8 +8,16 @@
 - Została stworzona w 2008r przez Wesa McKinneya.
 
 ## Dlaczego warto używać pandas?
+- Pozwala nam analizować duże zbiory danych i wyciągać wnioski w oparciu o teorie statystyczne,
+- Może czyścić niechlujnie zestawy danych i sprawić, że będą czytelne i istotne,
+- Odpowiednie dane są ważne w nauce danych.
+
+## Co potrafi Pandas?
 - Sprawdza czy istnieje koleracja między dwiema lub większą liczbą kolumn,
 - Sprawdza jaka jest wartość średnia,
 - Sprawdza jaka jest maksymalna wartość,
 - Sprawdza wartość minimalną,
 - Oczyszcza dane.
+
+## Instalacja Pandas
+- 
