@@ -32,5 +32,9 @@ Pandas jest zazwyczaj importowane jako pd (jako alians)
 ```
 import pandas as pd
 ```
-Teraz pakiet można używać jako pd zamiast pandas
+Teraz pakiet można używać jako pd zamiast Pandas.
+Sprawdzenie wersjii pd 
+```
+print(pd.__version__)
+```
 
