@@ -28,4 +28,9 @@ Po zainstalowaniu Pandas zaimportuj go do swojej aplikacji
 ```
 import pandas
 ```
+Pandas jest zazwyczaj importowane jako pd (jako alians)
+```
+import pandas as pd
+```
+Teraz pakiet można używać jako pd zamiast pandas
 
