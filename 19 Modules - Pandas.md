@@ -44,5 +44,9 @@ a = [1, 7, 2]
 myvar = pd.Series(a)
 print(myvar)
 ```
-Etykiety -
+Etykiety - jeśli nieokreślono inaczej, wartości są oznaczone numerem indeksu. Pierwsza wartość ma numer 0. Za pomocą tej etykiety można uzyskać dostęp do określonej wartości.
+```
+print(myvar[0])
+```
+
 
