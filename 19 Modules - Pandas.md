@@ -37,4 +37,12 @@ Sprawdzenie wersjii pd
 ```
 print(pd.__version__)
 ```
+Pandas Series - przypomina kolumnę w tabeli, jest to jednowymiarowa tablica przechowująca dane dowolnego typu.
+```
+import pandas as pd
+a = [1, 7, 2]
+myvar = pd.Series(a)
+print(myvar)
+```
+Etykiety -
 
