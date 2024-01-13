@@ -59,6 +59,14 @@ Po utworzeniu etykiety można odwołaś cię do elementu za pomocą etykiety.
 ```
 print(myvar["y"]
 ```
+Obiekty kluczowe \ wartościowe jako serie - podczas tworzenia serii możesz także użyć obiektu klucza \ wartości, takiego jak słownik.
+```
+import pandas as pd
+calories = {"day1": 420, "day2": 390}
+myvar = pd.Series(calories)
+print(myvar)
+```
+
 
 
 
