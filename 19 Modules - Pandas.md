@@ -48,5 +48,17 @@ Etykiety - jeśli nieokreślono inaczej, wartości są oznaczone numerem indeksu
 ```
 print(myvar[0])
 ```
+Utwórz etykietę - za pomocą argumentu index możesz nazwać własne etykiety.
+```
+import pandas as pd
+a = [1, 7, 2]
+myvar - pd.Series(a, index = ["x", "y", "z"])
+print(myvar)
+```
+Po utworzeniu etykiety można odwołaś cię do elementu za pomocą etykiety.
+```
+print(myvar["y"]
+```
+
 
 
