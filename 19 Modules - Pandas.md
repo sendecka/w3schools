@@ -66,6 +66,20 @@ calories = {"day1": 420, "day2": 390}
 myvar = pd.Series(calories)
 print(myvar)
 ```
+Aby wybrać tylko część pozycji ze słownika, użyj index argumentu i określ tylko te pozycje, które chcesz uwzględnić w serii.
+```
+myvar = pd.Series(calories, index=["day1", "day2"]
+```
+Ramki danych - zestawy danych w Pandas to zazwyczaj wielowymiarowe tabele, zwane DataFrame. Seria jest jak kolumna, DataFrame jak cała tabela.
+```
+import pandas as pd
+data = {
+    "calories": [420, 380, 390]
+    "duration": [50, 40, 45]
+}
+myvar = pd.DataFrame(data)
+print(myvar)
+```
 
 
 
