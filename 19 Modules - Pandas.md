@@ -81,6 +81,21 @@ myvar = pd.DataFrame(data)
 print(myvar)
 ```
 
+## Pandas DataFrame
+Pandas DataFrames to dwuwymiarowa struktura danych, podobna do dwuwymiarowej tablicy lub tabeli z wierszami i kolumnami.
+```
+import pandas as pd
+data = {
+    "calories": [420, 380, 390]
+    "duration": [50, 40, 45]
+}
+df = pd.DataFrame(data)
+print(df)
+```
+Znajdź wiersz - jak widać z powyższego wyniku, DataFrame przypomina tabelę z wierszami i kolumnami. Pandas używa atrybut loc, aby zwrócić jeden lub więcej określonych wierszy.
+```
+print(df.loc[0])
+```
 
 
 
