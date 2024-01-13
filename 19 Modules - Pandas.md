@@ -96,6 +96,16 @@ Znajdź wiersz - jak widać z powyższego wyniku, DataFrame przypomina tabelę z
 ```
 print(df.loc[0])
 ```
+Nazwane indeksy - za pomocą argumentu index możesz nazwać własne indeksy.
+```
+import pandas as pd
+data = {
+    "calories": [420, 380, 390]
+    "duration": [50, 40, 45]
+}
+df = df.DataFrame(data, index=["day1", "day2", "day3"])
+print(df)
+```
 
 
 
