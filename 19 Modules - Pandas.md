@@ -131,6 +131,22 @@ import pandas as pd
 print(pd.options.display.max_rows)
 ```
 Za pomocą tej samej funkcji można zmienić ustawienia. Zwiększ maksymalną liczbę wierszy, tak aby wyświetlić całą ramkę danych.
+```
+import pandas as pd
+pd.options.display.max_rows = 9999
+df = pd.read_csv("data.csv")
+print(df)
+```
+
+## Pandas Read JSON
+Duże zbiory danych są często przechowywane w formacie JSON. JSON to zwykły tekst, ale ma format obiektu i jest dobrze znany w świecie programowania.
+```
+import pandas as pd
+df = pd.read_json("data.json")
+print(df.to_string())
+```
+Użyj to_string() aby wydrukować całą ramkę danych DF.
+Obiekty JSON mają ten sam format co słowniki Pythona.
 
 
 
