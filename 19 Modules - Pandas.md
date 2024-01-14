@@ -167,4 +167,15 @@ print(df.info())
 Wynik wyjaśniony - wynik mówi nam, że jest 169 wierszy i 4 kolumny oraz nazwa każdej z typem danych.
 Warości zerowe - metoda info() mówi nam również ile wartości innych niż null znajduje się w każdej kolumnie, a w naszym zestawie danych wygląda na to, że w kolumnie "kalorie" znajdują się164 z 169 wartości innych niż null. Oznacza to, że z jakiegoś powoduw kolumnie "kalorie" znajduje się 5 wierszy bez żadnej wartości. Puste wartości lub null mogą być nieprawidłowe podczas analizy danych, dlatego należy rozważyć usunięcie wierszy z pustymi wartościami. Jest to krok w kierunku tak zwanego czyszczenia danych.
 
+## Pandas - Czyszczenie danych
+
+Czyszczenie danych - oznacza naprawianie błędnych danych w zestawie danych. Złymi danymi mogą być:
+- puste komórki,
+- dane z złym formacie,
+- złe dane,
+- duplikaty.
+
+Nasz zestaw danych zawiera kilka pustych komórek(Data w wierszu 22 i kalorie w wierszu 18 i 28). Zbiór danych zawiera nieprawidłowy format (Data w wierszu 26). Zestaw danych zawiera błędne dane(czas trwania w wierszu 7). Zbiór danych zawiera duplikaty (wiersz 11 i 12).
+
+
 
