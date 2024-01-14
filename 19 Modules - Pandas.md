@@ -177,5 +177,17 @@ Czyszczenie danych - oznacza naprawianie błędnych danych w zestawie danych. Z�
 
 Nasz zestaw danych zawiera kilka pustych komórek(Data w wierszu 22 i kalorie w wierszu 18 i 28). Zbiór danych zawiera nieprawidłowy format (Data w wierszu 26). Zestaw danych zawiera błędne dane(czas trwania w wierszu 7). Zbiór danych zawiera duplikaty (wiersz 11 i 12).
 
+## Pandas - Czyszczenie pustych komórek
+Puste komurki mogą potencjalnie dać błędny wynik podczas analizy danych.
+Usuń wiersze - jednym ze sposobów radzenia sobie z pustymi komórkami jest usunięcie wierszy zawierających puste komórki. Zwykle jest to w porządku, ponieważ zbiory danych mogą być bardzo duże, a usunięcie kilku wierszy nie będzie miało dużego wpływu na wynik.
+```
+# Przykład: zwróć nową ramkę danych bez pustych komórek
+import pandas as pd
+df = pd.read_csv("data.csv")
+new_df = df.dropna()
+print(new_df.to_string())
+```
+Domyślnie dropna() zwraca nową ramkę DataFrame i nie zmienia orginału.
+Jeśli chcesz zmienić orginalną ramkę DataFrame, użyj argumentu inplace=True.
 
 
