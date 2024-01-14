@@ -106,6 +106,11 @@ data = {
 df = df.DataFrame(data, index=["day1", "day2", "day3"])
 print(df)
 ```
+Znajdź nazwane indeksy - użyj atrybutu loc, aby zwrócić określone wiersze.
+```
+print(df.loc["day2"])
+```
+Załaduj plik do DataFrame - jeśli twoje dane są przechowywane w pliku, możesz je załadować jako DataFrame.
 
 
 
