@@ -111,6 +111,26 @@ Znajdź nazwane indeksy - użyj atrybutu loc, aby zwrócić określone wiersze.
 print(df.loc["day2"])
 ```
 Załaduj plik do DataFrame - jeśli twoje dane są przechowywane w pliku, możesz je załadować jako DataFrame.
+```
+import pandas as pd
+df = pd.read_csv("data.csv")
+```
+
+## Pandas Read CSV
+Czytanie plików csv - prostym sposobem na przechowywanie dużych zbiorów danych są pliki csv. Zawierają one zwykły tekst i są dobrze znanym formatem, który może odczytać każdy.
+Załaduj pliki scv do DataFrame. Użyj to_string(), aby wydrukować całą ramkę.
+```
+import pandas as pd
+df = pd.read_csv("data.csv")
+print(df.to_string())
+```
+Jeśli masz dużą ramkę z danymi DF zwróci 5 pierwszych wierszy i 5 ostatnich.
+Max_rows - liczbę zwracanych wierszy definiuje się w ustawieniach opcjii Pandas. Możesz sprawdzić maksymalną liczbę wierszy w systemie za pomocą instrukcji pd.options.display.max_rows.
+```
+import pandas as pd
+print(pd.options.display.max_rows)
+```
+Za pomocą tej samej funkcji można zmienić ustawienia. Zwiększ maksymalną liczbę wierszy, tak aby wyświetlić całą ramkę danych.
 
 
 
