@@ -148,5 +148,17 @@ print(df.to_string())
 Użyj to_string() aby wydrukować całą ramkę danych DF.
 Obiekty JSON mają ten sam format co słowniki Pythona.
 
+## Pandas Analyzing DataFrame
+
+Przeglądanie danych - jedną z najczęściej używanych metod szybkiego podglądu ramki DataFrame jest metoda head(). Zwraca ona nagłówki i określa liczbę wierszy, zaczynając od góry.
+```
+import pandas as pd
+df = pd.read_csv("data.csv")
+print(df.head(10))
+```
+Istnieje również metoda tail() do przeglądania ostatnich wierszy ramki DataFrame. Metoda tail() zwraca nagłówek i określa liczbę wierszy, zaczynając od dołu.
+```
+print(df.tail())
+```
 
 
