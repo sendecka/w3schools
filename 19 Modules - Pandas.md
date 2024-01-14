@@ -160,5 +160,11 @@ Istnieje również metoda tail() do przeglądania ostatnich wierszy ramki DataFr
 ```
 print(df.tail())
 ```
+Informacje o danych - obiekt DataFrame posiada metodę o nazwie info(), która dostarcza więcej informacji o zbiorze danych.
+```
+print(df.info())
+```
+Wynik wyjaśniony - wynik mówi nam, że jest 169 wierszy i 4 kolumny oraz nazwa każdej z typem danych.
+Warości zerowe - metoda info() mówi nam również ile wartości innych niż null znajduje się w każdej kolumnie, a w naszym zestawie danych wygląda na to, że w kolumnie "kalorie" znajdują się164 z 169 wartości innych niż null. Oznacza to, że z jakiegoś powoduw kolumnie "kalorie" znajduje się 5 wierszy bez żadnej wartości. Puste wartości lub null mogą być nieprawidłowe podczas analizy danych, dlatego należy rozważyć usunięcie wierszy z pustymi wartościami. Jest to krok w kierunku tak zwanego czyszczenia danych.
 
 
