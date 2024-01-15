@@ -233,5 +233,20 @@ import pandas as pd
 x = df["calories"].mode()
 df["calories"].fillna(x, inplace=True)
 ```
+Czyszczenie danych w złym formacie - komórka zawierająca dane w złym formacie mogą utrudniać lub nawet uniemożliwić analizę danych. Aby to naprawić, masz dwie możliwości, usunąć wiersz lub przekonwertować komórki na sam format.
+Konwertuj na podobny format - w ramce danych mamy dwie komórki o niewłaściwym formacie. Spróbujemy przekonwertować wszystkie komórki "daty" na daty. Pandas mają na to metodę to_datetime()
+```
+# Przykład: konwertuj do daty
+import pandas as pd
+df = pd.read_csv("data.csv")
+df["date"] = pd.to_datetime(df["date"])
+print(df.to_string())
+```
+Jak widać z wyniku, data w wierszu 26 została naprawiona, ale pusta data w wierszu 22 otrzymała wartość (nie czas), innymi słowy wartość pustą. Jednym ze sposobów radzenia sobie z pustymi wartościami jest ich usunięcie.
+Usuwanie wierszy - wartość nał można traktować jako null, a za pomocą metody dropna() możemy usunąć wiersz.
+```
+# Przykład: usuń wiersz z null
+df.dropna(subset=["data"], inplace=True)
+
 
 
