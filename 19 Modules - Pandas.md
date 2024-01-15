@@ -189,5 +189,13 @@ print(new_df.to_string())
 ```
 Domyślnie dropna() zwraca nową ramkę DataFrame i nie zmienia orginału.
 Jeśli chcesz zmienić orginalną ramkę DataFrame, użyj argumentu inplace=True.
-
+```
+# Przykład: usuń wszystkie wiersze z wartością null
+import pandas as pd
+df = pd.read_csv("data.csv")
+df = df.dropna(inplace=True)
+print(df.to_string())
+```
+Teraz funkcja dropna (inplace=True) nie zwróci nowej ramki DataFrame ale usunie wszystkie wiersze zawierające wartość null z orginalnej ramki DataFrame.
+Zmień puste wartości -innym sposobem radzenia sobie z pustymi komórkami jest wstawienie nowej wartości. W ten sposób nie musisz usuwać wierszy tylko z powodu pustych komórek. Metoda fillna() pozwala zastąpić puste komórki wartością.
 
