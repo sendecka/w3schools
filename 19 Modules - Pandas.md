@@ -198,4 +198,40 @@ print(df.to_string())
 ```
 Teraz funkcja dropna (inplace=True) nie zwróci nowej ramki DataFrame ale usunie wszystkie wiersze zawierające wartość null z orginalnej ramki DataFrame.
 Zmień puste wartości -innym sposobem radzenia sobie z pustymi komórkami jest wstawienie nowej wartości. W ten sposób nie musisz usuwać wierszy tylko z powodu pustych komórek. Metoda fillna() pozwala zastąpić puste komórki wartością.
+```
+# Przykład: zamień wartość null na 130
+import pandas as pd
+df = pd.read_csv("data.csv")
+df.fillna(130, inplace=True)
+```
+Zmień tylko dla określonych kolumn - powyższy przykład zastępuje wszystkie puste miejsca w całej ramce danych. Aby zastąpić tylko puste wartości w jednej kolumnie, określ nazwę kolumny dla ramki DataFrame.
+```
+# Przykład: zamień wartość null w kolumnach "kalorie" na 130
+import pandas as pd
+df = pd.read_csv("data.csv")
+df["calories"].fillna(130, inplace=True)
+```
+Zastąp używając średniej, mediany lub mode - powsechnym sposobem zastępywania pustych komórek jest obliczenie wartości średniej, mediany, mody kolumny. Pandas używa metod mean(), median(), mode() do obliczenia tych wartości.
+mean()
+```
+# Przykład: oblicz średnią i zastąp nią puste wartości
+import pandas as pd
+x = df["calories"].mean()
+df["calories"].fillna(x, inplace=True)
+```
+median()
+```
+# Przykład: oblicz medianę i zastąp nią puste wartości
+import pandas as pd
+x = df["calories"].median()
+df["calories"].fillna(x, inplace=True)
+```
+mode()
+```
+# Przykład: oblicz medianę i zastąp nią puste wartości
+import pandas as pd
+x = df["calories"].mode()
+df["calories"].fillna(x, inplace=True)
+```
+
 
