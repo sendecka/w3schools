@@ -253,5 +253,10 @@ df.dropna(subset=["data"], inplace=True)
 Złe dane - "błędne dane" nie muszą oznaczać "pustych komórek" lub "złego formatu", mogą być po prostu błędne, tak jak gdyby ktoś zarejestrował 199 zamiast 1.99. Czasami możesz wykryć błędne dane, patrząc na zbiór danych, ponieważ masz oczekiwania dotyczące tego, jakie powinny być. Jeśli spojrzysz na nasz zbiór danych, że we wierszu 7 czas trwania wynosi 450, ale dla wszystkich pozostałych wierszy czas trwania wynosi 30 do 60. NIe musi to być błąd, ale biorąc pod uwagę, że jest to zbiór danych dotyczących czyichś treningów, wnioskujemy z tego, że ta osoba nie ćwiczyła przez 450 min.
 
 Zastępowanie wartości - jednym ze sposobów naprawienia błędnych wartości jest zastąpienie ich czymś innym. W naszym przykładzie jest to zapewne literówka i wartość powinna wynosić 45 zamiast 450.
+```
+# przykład: ustaw czas trwania na 45.
+df.loc[7, "duration"] = 45
+```
+W przypadku małych zbiorów danych można zastępować dane jedne po drugich, ale nie w przypadku dużych zbiorów danych. Aby zastąpić błędne dane większymi zbiorami danych, możesz stworzyć pewne reguły np.: ustalić
 
 
