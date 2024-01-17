@@ -247,6 +247,11 @@ Usuwanie wierszy - wartość nał można traktować jako null, a za pomocą meto
 ```
 # Przykład: usuń wiersz z null
 df.dropna(subset=["data"], inplace=True)
+```
+## Pandas - Naprawianie błędnych danych
 
+Złe dane - "błędne dane" nie muszą oznaczać "pustych komórek" lub "złego formatu", mogą być po prostu błędne, tak jak gdyby ktoś zarejestrował 199 zamiast 1.99. Czasami możesz wykryć błędne dane, patrząc na zbiór danych, ponieważ masz oczekiwania dotyczące tego, jakie powinny być. Jeśli spojrzysz na nasz zbiór danych, że we wierszu 7 czas trwania wynosi 450, ale dla wszystkich pozostałych wierszy czas trwania wynosi 30 do 60. NIe musi to być błąd, ale biorąc pod uwagę, że jest to zbiór danych dotyczących czyichś treningów, wnioskujemy z tego, że ta osoba nie ćwiczyła przez 450 min.
+
+Zastępowanie wartości - jednym ze sposobów naprawienia błędnych wartości jest zastąpienie ich czymś innym. W naszym przykładzie jest to zapewne literówka i wartość powinna wynosić 45 zamiast 450.
 
 
