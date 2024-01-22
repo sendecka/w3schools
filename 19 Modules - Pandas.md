@@ -257,6 +257,22 @@ Zastępowanie wartości - jednym ze sposobów naprawienia błędnych wartości j
 # przykład: ustaw czas trwania na 45.
 df.loc[7, "duration"] = 45
 ```
-W przypadku małych zbiorów danych można zastępować dane jedne po drugich, ale nie w przypadku dużych zbiorów danych. Aby zastąpić błędne dane większymi zbiorami danych, możesz stworzyć pewne reguły np.: ustalić
+W przypadku małych zbiorów danych można zastępować dane jedne po drugich, ale nie w przypadku dużych zbiorów danych. Aby zastąpić błędne dane większymi zbiorami danych, możesz stworzyć pewne reguły np.: ustalić pewne granice dla wartości i zastąpić wszelkie wartości, które są poza granicami.
+```
+# przykład: przejżyj w pętli wszystkie wartości w kolumnie "Czas trwania". Jeśli wartość jest większa niż 120 ustaw jąna 120.
+for x in df.index:
+    if df.loc[x, "Duration"] > 120:
+        df.loc[x, "Duration"] = 120
+```
+Usuwanie wierszy - inne postępowanie to usuwanie wierszy z błędami.
+```
+for x in df.index:
+    if df.loc[x, "Duration"] > 120:
+        df.drop(x, inplace = True)
+```
+
+## Pandas - Naprawianie usuwanie duplikatów
+
+Odkrywanie duplikatów - 
 
 
