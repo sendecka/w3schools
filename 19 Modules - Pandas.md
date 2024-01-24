@@ -271,8 +271,25 @@ for x in df.index:
         df.drop(x, inplace = True)
 ```
 
-## Pandas - Naprawianie usuwanie duplikatów
+## Pandas - Usuwanie duplikatów
 
-Odkrywanie duplikatów - 
-
+Odkrywanie duplikatów - zduplikowane wiersze to wiersze, które zostały zarejertrowane więcej niż jeden raz.
+Patrząc na nasz zestaw danych tekstowych, możemy zauważyć, że wiersze 11 i 12 są zduplikowane. Aby odkryć duplikaty, możemy skorzystać z metody duplicated(). Metoda ta zwraca wartość logiczną dla każdego wiersza
+```
+# przykład: Zwraca true każdy wiersz, który jest duplikatem, w przeciwnym razie jest false.
+print(df.duplicated())
+```
+Usuwanie duplikatów - aby usunąć duplikaty użyj drop_duplicates()
+```
+# Usuń wszystkie duplikaty
+print(df.drop_duplicated(inplace = True))
+```
+## Pandas - korelacja danych
+Znajdowanie relacji - świetnym aspektem modułu Pandas jest metoda corr(). oblicza ona relację między każdą kolumną w zestawie danych.
+```
+#Pokaż relację między kolumnami:
+df.corr()
+```
+Metoda corr()ignoruje kolumny nienumeryczne(). Wynikiem metody corr() jest tabela zawierająca wiele liczb, która reprezentuje stopień relacji między dwiema kolumnami. Liczba zmienia się od -1 do 1
+Wartość 1 oznacza, że istnieje koleracja 1 do 1 (doskonała), gdy wzrosła waro
 
