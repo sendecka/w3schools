@@ -291,5 +291,37 @@ Znajdowanie relacji - świetnym aspektem modułu Pandas jest metoda corr(). obli
 df.corr()
 ```
 Metoda corr()ignoruje kolumny nienumeryczne(). Wynikiem metody corr() jest tabela zawierająca wiele liczb, która reprezentuje stopień relacji między dwiema kolumnami. Liczba zmienia się od -1 do 1
-Wartość 1 oznacza, że istnieje koleracja 1 do 1 (doskonała), gdy wzrosła waro
+Wartość 1 oznacza, że istnieje koleracja 1 do 1 (doskonała), gdy wzrosła wartość w jednej kolumnie to w drugiej też. 0,9 to również dobra relacja, jedna wartośćrośnie to druga też. -0,9 również jest dobrą relacją, natomiast gdy jedna wartość wzrośnie druga spadnie. Wartość 0.2 nie oznacza dobrej relacji. Korelacją do 0,6 i -0,6 jest dobra.
+
+## Pandas - Plotting
+Plotting - pandas używa metody plot() do tworzenia diagramów. Do wizualizacji diagramu na ekranie możemy użyć modułu pyplot, biblioteki matplotlib.
+```
+Zaimportuj pyplot z Matplotlib i wizualizuj naszą ramkę DataFrame:
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('data.csv')
+df.plot()
+plt.show()
+```
+Wykres punktowy - jeśli chcesz używać wykresu punktowego uzyskaj go za pomocą argumentu kind: kind="scatter" Wykres będzie punktowy, wymaga osi x i y. W poniższym przykładzie użyjemy "czasu trwania" dla osi x i "kalorii" dla osi y. Dołącz argumenty x i y w następujący sposób: x = "Duration", y = "Calories"
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('data.csv')
+df.plot(kind = 'scatter', x = 'Duration', y = 'Calories')
+plt.show()
+```
+Utwórzmy kolejny wykres rozrzutu, na którym występuje zła koleracja z koleracją 0.009
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('data.csv')
+df.plot(kind = 'scatter', x = 'Duration', y = 'Maxpulse')
+plt.show()
+```
+Histogram - użyj argumentu kind = " hist" aby wyświetlić histogram. Histogram potrzebuje tylko jedną kolumnę.
+```
+df["Duration"].plot(kind = 'hist')
+```
+Histogram pokazuje nam, że odbyło się ponad 100 treningów trwających 50-60min.
 
