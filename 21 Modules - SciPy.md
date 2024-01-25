@@ -10,4 +10,15 @@ Jeśli masz już zainstalowany Python i pip w systemie, instalacja SciPy jest pr
 ```
 C:\Users\Your Name>pip install scipy
 ```
-Jeśli te polecenie się nie powiedzie, użyj dystrybucji Python, w której jest już zainstalowany SciPy
+Jeśli te polecenie się nie powiedzie, użyj dystrybucji Python, w której jest już zainstalowany SciPy.  Po zainstalowaniu SciPy zaimportuj moduł SciPy, który chcesz używać w swoich aplikacjach dodając instrukcję: from SciPy import moule.
+```
+from scipy import constants
+```
+Teraz zaimportowaliśmy modył i aplikacja jest gotowa do użycia.
+```
+# Przykład: Ile metrów sześciennych mieści się w jednym litrze?
+from scipy import constants
+
+print(constants.liter)
+```
+
