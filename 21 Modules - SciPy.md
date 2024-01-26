@@ -22,3 +22,19 @@ from scipy import constants
 print(constants.liter)
 ```
 
+Sprawdzenie wersji SciPy ciąg wersji jest przechowywany pod atrybutem __version__
+```
+import scipy
+print(scipy.__version__)
+```
+
+# SciPy Constans - stałe - ponieważ SciPy jest bardziej skupiony na wdrożeniach naukowych, zapewnia wiele wbudowanych stałych naukowych. Te stałe mogą być pomocne podczas pracy z Data Science.
+```
+Przykład: wydrukuj stałą wartość Pi
+
+from scipy import constants
+print(constants.pi)
+```
+
+Jednostki stałe - listę wszystkich jednostek w module stałych można wyświetlić za pomocą funkcji div().
+
