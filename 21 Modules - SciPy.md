@@ -37,4 +37,9 @@ print(constants.pi)
 ```
 
 Jednostki stałe - listę wszystkich jednostek w module stałych można wyświetlić za pomocą funkcji div().
-
+```
+Przykład: lista wszystkich stałych.
+from scipy import constants
+print(dir(constants))
+```
+Kategorie jednostek - jednostki są umieszczone w kategoriach:
