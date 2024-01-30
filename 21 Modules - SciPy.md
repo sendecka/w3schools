@@ -43,3 +43,36 @@ from scipy import constants
 print(dir(constants))
 ```
 Kategorie jednostek - jednostki są umieszczone w kategoriach:
+- Metryczny,
+- Dwujkowy,
+- Masa,
+- Kąt,
+- Czas,
+- Długość,
+- Ciśnienie,
+- Volumen,
+- Prędkość,
+- Temperatura,
+- Energia,
+- Moc,
+- Siła.
+
+Przedrostki metryczne (SI) - zwracają określoną jednostkę w metrach.
+Przedrostki binarne - zwracają określoną jednostkę w bajtach.
+Masa - zwróci określoną jednostkę w kg.
+Kąt - zwróci określoną jednostkę w radianach.
+Czas - zwróci określoną jednostkę w sekundach.
+Długość - zwraca określoną jednostkę w metrach.
+Ciśnienie - zwraca określoną jednostkę w paskalach.
+Obszar - zwróci określoną jednostkę w metrach kwadratowych.
+Volumen - zwróci określoną jednostkę w metrach sześciennych.
+Prędkość - zwraca jednostkę w metrach na sekundę.
+Temperatura - zwraca określoną jednostkę w Kelwinach.
+Energia - zwraca określonąjednostkę w dżulach.
+Moc - zwraca określoną jednostkę w watach.
+Siła - zwraca określoną jednoctkę w niutonach.
+
+# SciPy Optimizers
+Optymalizatory - to zestaw procedur zdefiniowanych w SciPy, które albo znajdują minimalną wartość funkcji albo pierwiadtek danych.
+Zasadniczo wszystkie algorytmy w uczeniu maszynowym to nic innego jak złożone równanie, które należy zminimalizować za pomocą danych.
+Pierwiastki równania - Numpy jest w stanie znaleźć pierwiastek wielomianów i równań liniowych, ale nie może znaleźć pierwiastków równań nieliniowych, takich jak to: 
