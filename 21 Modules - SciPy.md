@@ -76,3 +76,4 @@ Siła - zwraca określoną jednoctkę w niutonach.
 Optymalizatory - to zestaw procedur zdefiniowanych w SciPy, które albo znajdują minimalną wartość funkcji albo pierwiadtek danych.
 Zasadniczo wszystkie algorytmy w uczeniu maszynowym to nic innego jak złożone równanie, które należy zminimalizować za pomocą danych.
 Pierwiastki równania - Numpy jest w stanie znaleźć pierwiastek wielomianów i równań liniowych, ale nie może znaleźć pierwiastków równań nieliniowych, takich jak to: 
+
