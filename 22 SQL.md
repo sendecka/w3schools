@@ -22,3 +22,18 @@ Instrukcje SQL - większość działań, które należy wykonać na bazie danych
 ```
 SELECT * FROM Customers;
 ```
+
+# 3. SQL SELECT
+Słóży do wybierania danych z bazy danych. 
+```
+SELECT customerName, City
+FROM Customers;
+```
+Składnia:
+SELECT column1, column2, ...
+FROM teabel_name;
+Wybierz wszystkie kolumny
+```
+SELECT * FROM Customers;
+```
+
