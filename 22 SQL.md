@@ -37,3 +37,16 @@ Wybierz wszystkie kolumny
 SELECT * FROM Customers;
 ```
 
+# 4. SQL SELECT DISTINCT - zwraca wyłącznie różne wartości.
+```
+SELECT DISTINCT country FROM Customers;
+```
+Kolumna tabeli często zawiera wiele powtarzających się wartości, a czesem trzeba wyświetlić tylko różne (odrębne) wartości.
+Składnia:
+SELECT DISTINCT column1, column2...
+FROM tabel_name;
+
+Liczba odrębnych - używając DISTINCT w funkcji o nazwie COUNT, możemy zwrócić liczbę różnych krajów.
+```
+SELECT COUNT(DISTINCT Country) FROM Customer;
+
