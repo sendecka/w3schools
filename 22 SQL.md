@@ -37,7 +37,8 @@ Wybierz wszystkie kolumny
 SELECT * FROM Customers;
 ```
 
-# 4. SQL SELECT DISTINCT - zwraca wyłącznie różne wartości.
+# 4. SQL SELECT DISTINCT 
+Zwraca wyłącznie różne wartości.
 ```
 SELECT DISTINCT country FROM Customers;
 ```
@@ -49,4 +50,35 @@ FROM tabel_name;
 Liczba odrębnych - używając DISTINCT w funkcji o nazwie COUNT, możemy zwrócić liczbę różnych krajów.
 ```
 SELECT COUNT(DISTINCT Country) FROM Customer;
+```
+
+# 5. SQL WHERE 
+Służy do filtrowania rekordów.
+```
+SELECT * FROM Customer WHERE Country = "Mexico";
+```
+Składnia:
+SELECT column1, column2, ...
+FROM tebel_name
+WHERE condition
+Do filtrowania wyszukiwania możesz używać także innych operatorów.
+= Równe
+> Większe
+< Mniejsze
+>= Większe lub równe
+<= Mniejsze lub równe
+<> Nie równe !=
+BETWEEN Pomiędzy pewnymi zakresami
+LIKE Wyszukaj wzór
+IN Aby określić wiele możliwych wartości dla kolumn
+
+# 6. SQL ORDER BY
+Służy do sortowania w kolejności rosnącej lub malejącej.
+```
+SELECT * FROM Products OREDE BY Price;
+```
+Składnia:
+SELECT column1, column2, ...
+FROM tabel_name
+ORDER BY column1, column2, ...
 
