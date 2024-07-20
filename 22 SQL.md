@@ -80,5 +80,17 @@ SELECT * FROM Products OREDE BY Price;
 Składnia:
 SELECT column1, column2, ...
 FROM tabel_name
-ORDER BY column1, column2, ...
+ORDER BY column1, column2, ... ASC/DESC
+
+# 7. SQL AND
+Operator and służy do filtrowania rekordów na podstawie więcej niż jednego warónku.
+```
+SELECT *
+FROM Customers
+WHERE Country = 'Spain' AND 'Customer Name LIKE 'G%'
+```
+Składnia: SELECT column1, column2
+FROM tabel_name
+WHERE Condition1 AND condition2 ...
+
 
