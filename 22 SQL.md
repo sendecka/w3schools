@@ -87,10 +87,20 @@ Operator and służy do filtrowania rekordów na podstawie więcej niż jednego 
 ```
 SELECT *
 FROM Customers
-WHERE Country = 'Spain' AND 'Customer Name LIKE 'G%'
+WHERE Country = 'Spain' AND 'Customer Name LIKE 'G%';
 ```
 Składnia: SELECT column1, column2
 FROM tabel_name
 WHERE Condition1 AND condition2 ...
 
-
+# 8. SQL OR
+Operator OR służy do filtrowania rekordów na podstawie więcej niż jednego warunku.
+```
+SELECT *
+FROM Customers
+WHERE Country = 'Germany' OR Country = 'Spain';
+```
+Składnia: 
+SELECT column1, column2, ...
+FROM tebel_name
+WHERE condition1 OR condition2
