@@ -104,3 +104,14 @@ Składnia:
 SELECT column1, column2, ...
 FROM tebel_name
 WHERE condition1 OR condition2
+
+# 9. SQL NOT
+Operator jest używany z innymi operatorami w celu uzyskania wyniku przeciwnego, zwanego ujemnym.
+```
+SELECT * FROM Customers
+WHERE NOT Country = 'Spain';
+```
+Składnia: 
+SELECT column1, column2, ...
+FROM tabel_name
+WHERE NOT condition
