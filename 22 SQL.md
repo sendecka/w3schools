@@ -115,3 +115,17 @@ Składnia:
 SELECT column1, column2, ...
 FROM tabel_name
 WHERE NOT condition
+
+# 10. INSERT INTO SQL
+Służy do wstawiania nowych rekordów do tabeli.
+INSERT INTO można zapisać na dwa sposoby:
+- Określ nazwę kolumny i wartości, które mają zostać wstawione:
+```
+INSERT INTO tabel_name (column1, column2...)
+VALUES (value1, value2,...)
+```
+- Jeśli dostajesz wartość dla wszystkich kolumn w tabeli, nie musisz określać nazw kolumn w zapytaniu SQL.
+```
+INSERT INTO tabel_name
+VALUES (value1, value2, ...)
+```
