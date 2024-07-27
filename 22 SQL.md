@@ -129,3 +129,42 @@ VALUES (value1, value2,...)
 INSERT INTO tabel_name
 VALUES (value1, value2, ...)
 ```
+
+# 11. SQL NULL 
+Pole z wartością NULL jest polem bez wartości.
+Jeśli pole w tablei jest opcjonalne, możliwe jest wstawienie nowego rekordu bez dodawania wartości do tego pola. Następnie pole zostanie zapisane z wartością NULL.
+
+Wartość NULL różni się od wartości zerowej lub pola zawierającego spację. Pole z NULL to pole, które zostało pozostawione puste podczas tworzenia rekordu.
+
+Jak testować wartość NULL?
+Nie można sprawdzić wartości NULL za pomocą operatorów posównania, takich jak =, <, <>. Zamiast tego będziemy musieli używać operatorów IS NULL i IS NOT NULL.
+Składnia IS NULL:
+```
+SELECT column_names
+FROM tabel_name
+WHERE column_name IS NULL
+```
+Składnia IS NOT NULL:
+```
+SELECT column_names
+FROM tabel_name
+WHERE column_name IS NOT NULL
+```
+
+Operator IS NULL - służy do testowania pustych wartości (NULL).
+
+Przykład: Wyświetl listę wszystkich klientów, którzy mają wartość NULL w polu adres.
+```
+SELECT customerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+```
+
+Operator IS NOT NULL - służy do sprawdzania, czy wartości nie są puste.
+
+Przykład: Wyświetl listę wszystkich klientów, których pole 'Address' ma wartość.
+```
+SELECT customerName, ContactName, Address
+FROM Customers
+WHERE Address IS NOT NULL;
+```
