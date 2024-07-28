@@ -168,3 +168,21 @@ SELECT customerName, ContactName, Address
 FROM Customers
 WHERE Address IS NOT NULL;
 ```
+
+# 12. SQL UPDATE
+Służy do modyfikacji istniejących rekordów w tabeli.
+
+Składnia:
+```
+UPDATE tabel_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+```
+Jeśli pominiesz klauzurę WHERE to wszystkie rekordy w tabeli zostaną zaktualizowane.
+
+Przykład: Zaktualizuj pierwszego klienta, przypisując mu nową osobę kontaktową i nowe miasto.
+```
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City = 'Frankfurt'
+WHERE CustomerID = 1;
+```
