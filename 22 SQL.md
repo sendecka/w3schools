@@ -186,3 +186,9 @@ UPDATE Customers
 SET ContactName = 'Alfred Schmidt', City = 'Frankfurt'
 WHERE CustomerID = 1;
 ```
+
+# 13. SQL DELETE
+Służy do usuwania istniejących rekordów w tabeli.
+Składnia:
+```
+DELETE FROM tabel_name WHERE condition
