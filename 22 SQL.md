@@ -191,4 +191,20 @@ WHERE CustomerID = 1;
 Służy do usuwania istniejących rekordów w tabeli.
 Składnia:
 ```
-DELETE FROM tabel_name WHERE condition
+DELETE FROM tabel_name WHERE condition;
+```
+Zwróć uwagę na WHERE w DELETE, określa ona które rekordy powinny zostać usunięte. Jeśli ją pominiesz to wszystkie rekordy w tabeli zostaną usunięte.
+
+Przykład: usuń klienta, Alfred Futterkiste z tabeli klienci
+```
+DELETE FROM Customers WHERE CustomerName = 'Alfred Futterkiste';
+```
+Można usunąć wszystkie rekordy z tabeli, oznacza to, że struktura tabeli atrybuty i indeksy pozostaną nienaruszone.
+```
+DELETE FROM tabel_name;
+```
+Usuń tabelę - aby całkowicie usunąć tabelę, należy użyć polecenia DROP TABEL.
+Przykła: usuń tabelę klienci
+```
+DROP TABEL Customeers;
+```
