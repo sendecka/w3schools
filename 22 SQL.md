@@ -208,3 +208,12 @@ Przykła: usuń tabelę klienci
 ```
 DROP TABEL Customeers;
 ```
+
+# 14. SQL TOP
+SQL SELECT TOP - określa liczbę rekordów do zwrócenia, klauzura jest przydatna w przypadku dużych tabeli z tysiącami rekordów. Zwracanie dużej liczby rekordów może mieć wpływ na wydajność.
+Przykład: wybieram tylko 3 pierwsze rekordy w tabeli klienci
+```
+SELECT TOP 3 * FROM Customers;
+```
+Nie wszystkie systemy baz danych obsługują klauzulę SELECT TOP. MySQL obsługuje LIMIT, podczas gdy Oracle używa FETCH FIRST n ROWS ONLY ROWS
+
