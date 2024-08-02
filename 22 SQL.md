@@ -217,3 +217,7 @@ SELECT TOP 3 * FROM Customers;
 ```
 Nie wszystkie systemy baz danych obsługują klauzulę SELECT TOP. MySQL obsługuje LIMIT, podczas gdy Oracle używa FETCH FIRST n ROWS ONLY ROWS
 
+# 15. SQL funkcje agregujące
+Funkcje agregujące to funkcje, które wykonują obliczenia na zestawie wartości i zwracają pojedyńczą wartość.
+
+Funkcje agregujące są często używane z GRUP BY instrukcją. GROUP BY dzieli zestaw wyników na grupy wartości, a funkcja agregująca może być używana do zwracania pojedyńczych wartości dla każdej grupy.
