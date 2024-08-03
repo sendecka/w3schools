@@ -221,3 +221,12 @@ Nie wszystkie systemy baz danych obsługują klauzulę SELECT TOP. MySQL obsług
 Funkcje agregujące to funkcje, które wykonują obliczenia na zestawie wartości i zwracają pojedyńczą wartość.
 
 Funkcje agregujące są często używane z GRUP BY instrukcją. GROUP BY dzieli zestaw wyników na grupy wartości, a funkcja agregująca może być używana do zwracania pojedyńczych wartości dla każdej grupy.
+
+Najczęściej używanymi funkcjami agregującymi są:
+- MIN() zwraca najmniejszą wartość w wybranej kolumnie,
+- MAX() zwraca największąwartość w wybranej kolumnie,
+- COUNT() zwraca liczbę wierszy w zakresie,
+- SUM() zwraca całkowitą sumę kolumny liczbowej,
+- AVG() zwraca średnią wartość kolumny liczbowej.
+
+Funkcje agregujące ignorują wartość null (poza COUNT()).
