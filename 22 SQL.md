@@ -230,3 +230,35 @@ Najczęściej używanymi funkcjami agregującymi są:
 - AVG() zwraca średnią wartość kolumny liczbowej.
 
 Funkcje agregujące ignorują wartość null (poza COUNT()).
+
+# 16. SQL MIN() MAX()
+- MIN() - zwraca najmniejszą wartość z wybranej kolumny.
+Przykład: Znajdź najniższącenę.
+```
+SELECT MIN(Price)
+FROM Product;
+```
+Składnia: SELECT MIN(column_name) FROM tabel_name WHERE condition;
+
+- MAX() - zwraca największą wartość z wybranej kolumny.
+Przykład: Znajdź najwyższąwartość w kolumnie Cena.
+```
+SELECT MAX(Price)
+FROM Products;
+```
+Składnia: SELECT MAX(column_name) FROM tabel_name WHERE condition;
+
+Ustaw nazwę kolumny (alias)
+Gdy używasz MIN() lub MAX(), zwrócona kolumna nie będzie miała nazwy opisowej. Aby nadać kolumnie nazwę użyj AS.
+Przykład:
+```
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+```
+Użyj MIN() z GROUP BY, aby zwrócić najniższą cenę dla każdej kategorii w tabeli Produkty.
+```
+Przykład:
+SELECT MIN(Price) AS SmallestPrice, CategoryID
+FROM Products
+GROUP BY CategoryID;
+```
