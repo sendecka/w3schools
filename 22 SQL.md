@@ -262,3 +262,28 @@ SELECT MIN(Price) AS SmallestPrice, CategoryID
 FROM Products
 GROUP BY CategoryID;
 ```
+
+# 17. SQL COUNT()
+Zwraca liczbę wierszy spełniających określone kryteria.
+Przykład: Znajdź całkowitą liczbę wierszy w Products tabeli.
+```
+SELECT COUNT(*)
+FROM Products;
+```
+Składnia:
+SELECT COUNT(column_name)
+FROM tabel_name
+WHERE condition;
+Zamiast gwiazdki można podać nazwę kolumny, jeśli podasz nazwę kolumny zamiast *, wartość NULL nie będzie liczona.
+Przykład: Znajdź liczbę produktów dla której wartość ProductName jest rózna od NULL>
+```
+SELECT COUNT(ProductName)
+FROM Products;
+```
+Dodaj klauzulę WHERE aby dodać warunek.
+Przykład: Znajdź liczbę produktów, gdzie Price jest większa niż 20.
+```
+SELECT COUNT(productID)
+FROM Products
+WHERE Price > 20;
+```
