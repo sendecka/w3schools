@@ -287,3 +287,22 @@ SELECT COUNT(productID)
 FROM Products
 WHERE Price > 20;
 ```
+Ignoruj duplikaty stosując DISTINCT w COUNT(). W takim przypadku wiersze o tej samej wartości dla określonej kolumny będą liczone jako jeden wiersz.
+Przykład: Ile różnych cen jest w Products?
+```
+SELECT COUNT(DISTINCT Price)
+FROM Products;
+```
+Użyj aliasu - nadaj nazwę kolumnie, w której przeprowadzisz obliczenia używając AS.
+Przykład: Nadaj kolumnie nazwę liczba rrekordów.
+```
+SELECT COUNT(*) AS [Number of recerds]
+FROM Products;
+```
+Użyj COUNT() z GROUP BY()
+Możemy użyć COUNT() z GROUP BY(), aby zwrócić liczbę rekordów dla każdej kategorii w tabeli Produkty.
+```
+SELECT COUNT (*) AS [Number of products], CategoryID
+FROM Products
+GROUP BY CategoryID;
+```
