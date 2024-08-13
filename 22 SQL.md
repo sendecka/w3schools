@@ -306,3 +306,25 @@ SELECT COUNT (*) AS [Number of products], CategoryID
 FROM Products
 GROUP BY CategoryID;
 ```
+
+# 18. SQL SUM()
+Zwraca sumę całkowitą kolumny liczbowej.
+Przykład: Zwróć sumę wszystkich Quality pól w OrderDetails tabeli.
+```
+SELECT SUM(Quantity)
+FROM OrderDetails;
+```
+Składnia:
+```
+SELECT SUM(column_name)
+FROM tabel_name
+WHERE condition
+```
+Dodaj klauzulę WHERE określającą warunek.
+Przykład: Zwróć sumę pola Quantity dla produktu z ProductsID 11
+```
+SELECT SUM(Quantity)
+FROM OrderDetails
+WHERE ProductID = 11;
+```
+Użyj aliasu aby nadać kolumnie nazwę, używając AS.
