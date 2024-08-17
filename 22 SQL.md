@@ -328,3 +328,21 @@ FROM OrderDetails
 WHERE ProductID = 11;
 ```
 Użyj aliasu aby nadać kolumnie nazwę, używając AS.
+
+SUM() z wyrażeniem - parametr wewnątrz funkcji SUM() może być również wyrażeniem.
+Jeżeli przyjmujemy, że każdy produkt w kolumnie OrderDetails kosztuje 10 dolarów, możemy obliczyć całkowity przychód w dolarach, mnożąc każdą wartość przez 10.
+
+Przykład: Urzyj wyrażenia wewnątrz SUM() funkcji.
+```
+SELECT SUM(Quantity * 10)
+FROM Order Details
+```
+
+Możemy również połączyć OrderDetails tabelą z Product , aby poznać rzeczywistą kwoę, zamiast zakładać, że jest to 10 dolarów.
+
+Przykład: Połącz OrderDetails z Products i użyj SUM() aby znaleźć kwotę całkowitą. 
+```
+SELECT SUM(Price * Quantity)
+FROM OrderDetails
+LEFT JOIN Products ON OrderDetails.ProductsID = Product.ProductID;
+```
