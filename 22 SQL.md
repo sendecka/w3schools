@@ -386,3 +386,12 @@ SELECT AVG(Price) AS AverangePrice, CategoryID
 FROM Products
 GROUP BY CATEGORYID;
 ```
+
+# 20. SQL LIKE Operator
+
+Operator LIKE jest używany w WHERE klauzuli w celu wyszukiwania określonego wzorca w kolumnie.
+
+W powiązaniu z operatorem często stosuje się dwa symbole wieloznaczne LIKE:
+- znak procentu % oznacza zero, jeden lub wiele znaków.
+- znak podkreślenia _ oznacza jeden pojedyńczy znak.
+
