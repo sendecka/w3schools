@@ -346,3 +346,43 @@ SELECT SUM(Price * Quantity)
 FROM OrderDetails
 LEFT JOIN Products ON OrderDetails.ProductsID = Product.ProductID;
 ```
+
+# 19. SQL AVG() 
+Zwraca średnią wartość kolumny liczbowej.
+
+Przykład: Znajdź średnią cenę wszystkich produktów.
+```
+SELECT AVG(Price)
+FROM Products;
+```
+Wartość NULL są ignorowane.
+Dodaj nową klauzulę WHERE określającą warunek.
+
+Przykład: Zwróć średnią cenę produktów w kategorii 1.
+```
+SELECT AVG(Price)
+FROM Products
+WHERE CategoryID = 1;
+```
+Użyj aliasu - nadaj kolumnie AVG nazwę, używając AS słowa kluczowego.
+
+Przykład: Nadaj kolumnie nazwę średnia cena.
+```
+SELECT AVG(Price) AS [averange price]
+FROM Products;
+```
+Wyższy niż średnia - aby wyświetlić wszystkie rekordy z ceną wyższą od średniej, możemy użyć AVG() funkcji w podzapytaniu.
+
+Przykład: Zwróć wszystkie produkty z ceną wyższą niż średnią.
+```
+SELECT * FROM Products
+WHERE price > (SELECT AVG(price) FROM Products);
+```
+Użyj AVG() z GROUP BY - aby zwrócić średnią cenę dla każdej kategorii w tabeli Produkty.
+
+Przykład:
+```
+SELECT AVG(Price) AS AverangePrice, CategoryID
+FROM Products
+GROUP BY CATEGORYID;
+```
