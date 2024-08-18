@@ -395,3 +395,17 @@ W powiązaniu z operatorem często stosuje się dwa symbole wieloznaczne LIKE:
 - znak procentu % oznacza zero, jeden lub wiele znaków.
 - znak podkreślenia _ oznacza jeden pojedyńczy znak.
 
+Przykład: Zaznacz wszystkich klientów, których nazwa zaczyna się na literę "a".
+```
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+```
+
+Składnia: 
+```
+SELECT column1, column2, ...
+FROM tabel_name
+WHERE column LIKE pattern;
+```
+
+Symbol _ wieloznaczny
