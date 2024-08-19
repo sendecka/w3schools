@@ -428,4 +428,21 @@ SELECT * FROM Customers
 WHERE CustomerName LIKE 'La%';
 ```
 Możesz również łączyć dowolną liczbę warunków za pomocą operatorów AND lub OR.
-Przykład: Zwróć wszystkich klientów
+Przykład: Zwróć wszystkich klientów, których nazwa zaczyna się od 'a' lub zaczyna się od 'b'
+```
+SELECT * FROM Customers
+WHERE CUstomerName LIKE 'a%' OR CustomerName LIKE 'b%';
+```
+Aby zwrócić rekordy kończące się na określoną literę lub frazę, należy dodać % na początku litery lub frazy.
+Przykład: Zwróć wszystkich klientów, których nazwa kończy się na 'a'
+```
+SELECT * FROM Customers
+WHERE CUstomerName LIKE '%a';
+```
+Możesz również łączyć "zaczyna się na' i 'kończy się na'.
+Przykład: Zwróć wszystkich klientów, których nazwiska zaczynają się na 'b' i kończą na 's'.
+```
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'b%s';
+```
+
