@@ -408,4 +408,24 @@ FROM tabel_name
 WHERE column LIKE pattern;
 ```
 
-Symbol _ wieloznaczny
+Symbol _ wieloznaczny reprezentuje pojedyńczy znak. Może to być dowolny znak lub cyfra, ale każdy _ reprezentuje jeden i tylko jeden znak.
+
+Przykład: Zwróć wszystkich klientów z miast, którego nazwa zaczyna się od 'L', po którym następuje jeden symbol wieloznaczny, następnie 'nd' i dwa symbole wieloznaczne. 
+```
+SELECT * FROM Customers
+WHERE city LIKE 'L_nd_';
+```
+Symbol % wieloznaczny może zawierać dowolną liczbę znaków, nawet zero znaków.
+Przykład: Zwróć wszystkich klientów z miasta zawierającego literę 'L'
+```
+SELECT * FROM CUstomers
+WHERE City LIKE '%L%';
+```
+Aby zwrócić rekordy zaczynające się od określonej liczby lub frz należy dodać % na końcu litery lub frazy.
+Przykład: Zwróć wszystkich klientów, których nazwa zaczyna się od 'La', 
+```
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'La%';
+```
+Możesz również łączyć dowolną liczbę warunków za pomocą operatorów AND lub OR.
+Przykład: Zwróć wszystkich klientów
