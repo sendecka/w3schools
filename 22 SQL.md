@@ -446,3 +446,23 @@ SELECT * FROM Customers
 WHERE CustomerName LIKE 'b%s';
 ```
 
+Aby zwrócić rekordy zawierające określoną literę lub frazę, należy dodać % zarówno przed jak i po literze lub frazie.
+Przykład: Zwróć wszystkich klientów zawierających frazę 'lub'
+```
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%or%';
+```
+Połącz symbole wieloznaczne - każdy symbol wieloznaczny toki jak % lub _ może być używany w połączeniu z innymi symbolami wieloznacznymi.
+Przykład: Zwróć wszystkich klientów, których nazwa zaczyna się od 'a' i ma co najmniej 3 znaki długości.
+```
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a_%';
+```
+Jeśli nie określono symbolu wieloznacznego fraza musi być dokładnie dopasowana, aby zwrócić wynik.
+Przykład: Zwróć wszystkich klientów z Hiszpanii.
+```
+SELECT * FROM Customers
+WHERE Country LIKE 'Spain';
+```
+
+
