@@ -465,4 +465,27 @@ SELECT * FROM Customers
 WHERE Country LIKE 'Spain';
 ```
 
+# 21. SQL Symbole wieloznaczne - służą do zastąpienia jednego lub więcej zanków w ciągu. Znaki wieloznaczne są używane z operatorami. Operator jest używany w klauzuli w celu wyszukania określonego wzorca w kolumnie LIKE WHERE.
+Przykład: Zwróć wszystkich klientów, których nazwisko zaczyna się na literę 'a'.
+```
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+```
+
+Znaki wieloznaczne:
+- % reprezentuje zero lub więcej znaków,
+- _ Reprezentuje pojedyńczy znak
+- [] Reprezentuje wolny pojedyńczy znak w nawiasach,
+- ^ Reprezentuje dowolny znak nie znajdujący się w nawiasach,
+- - Reprezentuje dowolny pojedyńczy znak w określonym zbiorze,
+- {} Reprezentuje dowolny znak ucieczki.
+
+Korzystanie z symbolu wieloznacznego % - może on zawierać dowolną ilość znaków.
+
+PRzykład: Zwróć wszystkich klientów, których nazwa kończy się na 'es'.
+```
+SELECT * FROM Customers
+WHERE CustomerName LIKE '%es';
+```
+
 
