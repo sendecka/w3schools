@@ -482,10 +482,23 @@ Znaki wieloznaczne:
 
 Korzystanie z symbolu wieloznacznego % - może on zawierać dowolną ilość znaków.
 
-PRzykład: Zwróć wszystkich klientów, których nazwa kończy się na 'es'.
+Przykład: Zwróć wszystkich klientów, których nazwa kończy się na 'es'.
 ```
 SELECT * FROM Customers
 WHERE CustomerName LIKE '%es';
+```
+Korzystanie z symbolu wieloznacznego _ reprezentuje on pojedyńczy znak. Może to być dowolny znak lub cyfra. Każdy _ reprezentuje jeden i tylko jeden znak.
+
+Przykład: Zwróć wszystkich klientów zaczynających "City' od dowolnego znaku, po którym następuje 'ondon'.
+```
+SELECT * FROM Customers
+WHERE City LIKE '_ondon';
+```
+Używanie symbolu wieloznacznego [] zwraca on wynik jeśli którykolwiek ze znaków wewnątrz niego zostanie dopasowany.
+Przykład: Zwróć wszystkich klientów zaczynających sięna 'b', 's', 'p'.
+```
+SELECT * FROM Customers
+WHERE CustomerName LIKE '[bsp]%';
 ```
 
 
