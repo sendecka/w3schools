@@ -500,5 +500,23 @@ Przykład: Zwróć wszystkich klientów zaczynających sięna 'b', 's', 'p'.
 SELECT * FROM Customers
 WHERE CustomerName LIKE '[bsp]%';
 ```
+Korzystanie z symbolu wieloznacznego _, umożliwia on określenie zakresu znaków wewnątrz [].
+Przykład: Zwróć wszystkich klientów zaczynających się na litery 'a', 'b', 'c', 'd', 'e' lub 'f'.
+```
+SELECT * FROM Customers
+WHERE CustomerName LIKE '[a-f]%;
+```
+Połącz symbole wieloznaczne - każdy symbol wieloznaczny, może być używany z innymi symbolami wieloznacznymi.
+Przykład: Zwróć wszystkich klientów, których nazwa zaczyna się od 'a' i ma co najmniej 3 znaki długości.
+```
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a___%';
+```
+Bez symbolu wieloznacznego - fraza musi mieć dokładnie dopasowanie aby zwrócić wynik.
+Przykład: Zwróć dla wszystkich klientów z Hiszpanii
+```
+SELECT * FROM Customers
+WHERE Country LIKE 'Spain';
+```
 
 
