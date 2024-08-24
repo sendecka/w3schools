@@ -519,4 +519,33 @@ SELECT * FROM Customers
 WHERE Country LIKE 'Spain';
 ```
 
+# 22. SQL IN operator 
+Umożliwia określenie wielu wartości w WHERE. Operator IN jest skrótem oznaczającym wiele OR warunków.
 
+Przykład: Zwróć wszystkich klientów z 'Niemiec', 'Francji', 'UK'
+```
+SELECT * FROM Customers
+WHERE Country IN ('Germany', France', 'UK');
+```
+
+Składnia:
+```
+SELECT column_name(s)
+FROM tabel_name
+WHERE column_name IN (value1, value2..)
+```
+NOT IN - zwróci wszystkie rekordy które nie są żadną z wartości na liście.
+
+Przykład: Zwróć wszystkich klientów, którzy nie pochodzą z 'Niemiec', 'Francji', 'UK'
+```
+SELECT * FROM Customers
+WHERE Country NOT IN ('Germany', 'France', 'UK');
+```
+
+IN (SELECT) - można również używać IN z zapytaniem w WHERE klauzuli. Za pomocą zapytania można zwrócić wszystkie rekordy z zapytania głównego, które znajdują się w wyniku pod zapytaniem.
+
+Przykład: Zwróć wszystkich klientów, którzy mają zamówienie w tabeli zamówienia.
+```
+SELECT * FROM Customers
+WHERE CustomerID IN (SELECT CustomerID FROM Orders);
+```
