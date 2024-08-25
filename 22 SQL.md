@@ -549,3 +549,52 @@ Przykład: Zwróć wszystkich klientów, którzy mają zamówienie w tabeli zam�
 SELECT * FROM Customers
 WHERE CustomerID IN (SELECT CustomerID FROM Orders);
 ```
+
+# 23. SQL BETWEEN
+- Wybiera wartości w danym zakresie. Wartości mogą być liczbami, tekstem lub datami,
+- Jest inkluzywny uwzględnia wartość początkową i końcową.
+
+Przykład: Wybierz wszystkie produkty o cenie od 10 do 20.
+```
+SELECT * FRMO Products
+WHERE Price BETWEEN 10 AND 20;
+```
+
+Składnia:
+```
+SELECT column_name
+FROM tabel_name
+WHERE column_name BETWEEN value1, AND value2
+```
+
+NOT BETWEEN - aby wyświetlić produktty spoza zakresu podanego w poprzednim przykładzie, użyj NOT BETWEEN.
+
+Przykład: Pokaż produkty które nie są pomiędzy 10 i 20.
+```
+SELECT * FROM Products
+WHERE Price NOT BETWEEN 10 AND 20;
+```
+
+BETWEEn z IN - wybiera wszystkie produkty o cenie pomiędzy 10 a 20. Ponadto CategoryID musi wynosić 1,2 lub 3.
+
+Przykład:
+```
+SELECT * FROM Products
+WHERE Price BETWEEN 10 AND 20
+AND CategoryID IN (1,2,3);
+```
+BETWEEN z wartościami tekstowymi
+
+Przykład: Wybierz wszystkie produkty o nazwie ProductName w kolejności alfabetycznej pomiędzy Carnavvon Tigiers i Mozzarella di Giovanni.
+```
+SELECT * FROM Products
+WHERE ProductName BETWEEN 'Carnavvon Tigiers' AND 'Mozzarella di Giovorni'
+ORDER BY ProductName;
+```
+
+BETWEEN z datami
+Przytkład: Wybierz wszystkie zamówienia z datą pomiędzy 01. lipca 1996, a 31 lipca 1996
+```
+SELECT * FROM Orders
+WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';
+```
