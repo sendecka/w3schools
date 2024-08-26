@@ -598,3 +598,9 @@ Przytkład: Wybierz wszystkie zamówienia z datą pomiędzy 01. lipca 1996, a 31
 SELECT * FROM Orders
 WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';
 ```
+
+# 24. SQL Aliasy
+- Aliasy służą do nadawania tabeli lub kolumnie tymczasowej nazwy
+- Aliasy sączęsto używane w celu zwiększenia czytelności nazw kolumn
+- Aliasy istnieją tylko przez czas trwania danego zapytania
+- Aliasy tworzy sięza pomocą słowa kluczowego AS.
