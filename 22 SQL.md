@@ -604,3 +604,30 @@ WHERE OrderDate BETWEEN '1996-07-01' AND '1996-07-31';
 - Aliasy sączęsto używane w celu zwiększenia czytelności nazw kolumn
 - Aliasy istnieją tylko przez czas trwania danego zapytania
 - Aliasy tworzy sięza pomocą słowa kluczowego AS.
+
+Przykład:
+```
+SELECT CustomerID AS ID
+FROM Customers;
+```
+AS jest opcjonalne, można go pominąć i uzyska się ten sam wynik.
+
+Składnia: gdy alias jest używany w kolumnie
+```
+SELECT column_name AS alias_name
+FROM tabel_name
+```
+
+Składnia: gdy alias jest używany w tabeli
+```
+SELECT column_name
+FROM tabel_name AS alias_name;
+```
+
+Alias dla kilku kolumn - można stworzyć dwa aliasy, jeden dla kolumny CustomerID i jeden dla kolumny CustomerName.
+Przykład:
+```
+SELECT CustomerID AS ID, CustomerName AS Customer
+FROM Customers;
+```
+Używanie Aliasów ze znakiem spacji - jeśli chcesz aby Twój alias zawierał jedną lub więcej spacji np. 'my great products', umieść go w nawiasach kwadratowych lub cudzysłowach.
