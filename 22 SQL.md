@@ -631,3 +631,28 @@ SELECT CustomerID AS ID, CustomerName AS Customer
 FROM Customers;
 ```
 Używanie Aliasów ze znakiem spacji - jeśli chcesz aby Twój alias zawierał jedną lub więcej spacji np. 'my great products', umieść go w nawiasach kwadratowych lub cudzysłowach.
+
+Przykład:
+```
+SELECT ProductName AS [My Great Products]
+FROM Products;
+```
+Połącz kolumny - poniższy zapis tworzy alias o nazwie 'Adres', który łączy cztery kolumny (Adres, kod pocztowy, Miasto, Kraj)
+
+Przykład:
+```
+SELECT CustomerName, Address +', '+ PostalCode +' '+ City +' '+ Country'
+AS Address
+FROM Customers;
+```
+Alias dla tabel - te same zasady obowiązują, gdy chcesz użyć aliasu dla tabel.
+
+PRzykład: Zamiast tego odnoś się do tabeli klienci jako do Osób
+```
+SELECT * FROM Customers AS Person;
+```
+Aliasy mogą być przydatne gdy:
+- W zapytaniu bierze udział więcej niż jedna tabela
+- funkcje sąużywane w zapytaniu
+- nazwy kolumn są duże lub moło czytelne
+- łączy się dwie lub więcej kolumn
