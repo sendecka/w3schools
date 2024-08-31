@@ -647,7 +647,7 @@ FROM Customers;
 ```
 Alias dla tabel - te same zasady obowiązują, gdy chcesz użyć aliasu dla tabel.
 
-PRzykład: Zamiast tego odnoś się do tabeli klienci jako do Osób
+Przykład: Zamiast tego odnoś się do tabeli klienci jako do Osób
 ```
 SELECT * FROM Customers AS Person;
 ```
@@ -656,3 +656,20 @@ Aliasy mogą być przydatne gdy:
 - funkcje sąużywane w zapytaniu
 - nazwy kolumn są duże lub moło czytelne
 - łączy się dwie lub więcej kolumn
+
+# 25. SQL JOINS
+Klauzula JOINS służy do łączenia wierszy z dwóch lub więcej tabeli na podstawie powiązanej między nimi kolumny.
+Polecenie INNER JOIN - wybiera rekordy mające pasujące wartości w obu tabelach.
+Przykład: 
+```
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+```
+Różne typy połączeń SQL JOIN:
+- (INNER) JOIN: Zwraca rekordy, które mają posujące wartości w obu tabelacz,
+- LEFT (OUTER) JOIN: zwraca wszystkie rekordy z lewej tabeli i dopasowywuje rekordy z prawej,
+- RIGHT (OUTER) JOIN: zwraca wszystkie rekordy z prawej tabeli i dopasowywuje rekordy z lewej,
+- FULL (OUTER) JOIN: Zwraca wszystkie rekordy, jeśli istnieje dopasowanie w lewej lub prawej tabeli,
+
+
