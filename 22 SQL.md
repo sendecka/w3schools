@@ -671,7 +671,20 @@ Różne typy połączeń SQL JOIN:
 - LEFT (OUTER) JOIN: zwraca wszystkie rekordy z lewej tabeli i dopasowywuje rekordy z prawej,
 - RIGHT (OUTER) JOIN: zwraca wszystkie rekordy z prawej tabeli i dopasowywuje rekordy z lewej,
 - FULL (OUTER) JOIN: Zwraca wszystkie rekordy, jeśli istnieje dopasowanie w lewej lub prawej tabeli,
-- 
+
+# 26. SQL INNER JOIN
+Wybiera rekordy, które mają pasujące wartości w obu tabelach.
+Przykład: Połącz produkty i kategorie
+```
+SELECT ProductID, ProductName, CategoryName
+FROM Products
+INNER JOIN Categories ON Products.CategoryID = Categories.CategoryID
+```
+INNER JOIN zwraca tylko wiersze z dopasowaniem w obu tabelach. Oznacza to, że jeśli masz produkty bez CategoryID lub z CategoryID którego nie ma w tabeli Categories, ten rekord nie zostanie zwrócony w wyniku.
+
+Składnia: 
+```
+SELECT
 
 
 
