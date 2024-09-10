@@ -684,7 +684,12 @@ INNER JOIN zwraca tylko wiersze z dopasowaniem w obu tabelach. Oznacza to, że j
 
 Składnia: 
 ```
-SELECT
+SELECT column_name(s)
+FROM tabel1
+INNER JOIN tabel2
+On table1.column_name = tabel2.column_name
+```
+
 
 
 
