@@ -702,7 +702,19 @@ JOIN : INNER JOIN zwróci ten sam wynik. INNER jest domyślnym typem łączenia 
 
 Przykład: JOIN jest tym samym co INNER JOIN:
 ```
-SELECT Products.ProductsID
+SELECT Products.ProductsID, Products.ProductsName, Categories.CategoryName
+FROM Products
+JOIN Categories ON Products.CategoryID = Categories.CategoryID;
+```
+
+JOIN three tables - poniższe polecenie SQL wybiera wszystnie zamówienia zawierające informacje o klientach i spedytorze.
+Przykład: 
+```
+SELECT Orders.OrderID, CustomersCustomerName, Shippers.ShipperName
+FROM ((Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+INNER JOIN Shippers ON Orders.ShippersID = Shippers.ShippersID);
+```
 
 
 
