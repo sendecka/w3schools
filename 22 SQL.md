@@ -689,7 +689,20 @@ FROM tabel1
 INNER JOIN tabel2
 On table1.column_name = tabel2.column_name
 ```
+Nadawanie nazw kolumnom - dobrą praktyką jest uwzgędnienie nazwy tabeli podczas określania kolumn w poleceniu SQL.
+Przykład:
+```
+SELECT Products.ProductsID, Products.ProductsName, Categories.CategoryID;
+FROM Products
+INNER JOIN Categories ON Products.CategoriesID = Categories.CategoryID;
+```
+Powyższy przykład działa bez określania nazw tabeli, ponieważ żadna z określonych nazw kolumn, nie występuje w obu tabelach. Jeżeli spróbujesz uwzględnić CategoryID w SELECT poleceniu, otrzymasz błąd jeśli nie określisz nazwy tabeli (ponieważ CategoryID występuje w obu tabelach)
 
+JOIN : INNER JOIN zwróci ten sam wynik. INNER jest domyślnym typem łączenia dla JOIN więc gdy piszesz JOIN fraza ta faktycznie zapisuje INNER JOIN.
+
+Przykład: JOIN jest tym samym co INNER JOIN:
+```
+SELECT Products.ProductsID
 
 
 
