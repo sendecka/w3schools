@@ -731,9 +731,12 @@ Przykład: wybierz wszystkich klientów i wszystkie ich zamówienia
 ```
 SELECT Customers.CustomerName, Orders.OrderID
 FROM Customer
-FULL OUTER JOIN Orders ON Customers.CustomerID = Orders.CustomerID
-Order BY customers.CustomerName;
+LEFT JOIN Orders ON Customers.CustomerID = Orders.OrderID
+ORDER BY Customers.CustomerName;
 ```
+Słowo LEFT JOIN zwraca wszystkie rekordy z lewej tabeli (klienci), nawet jeśli nie ma żadnych dopasowań w prawej tabeli (zamówienia).
 
+# 28. SQL RIGHT JOIN
+Zwraca wszystkie rekordy z prawej strony i pasujące rekordy z lewej tabeli. Rezultatem jest  rekordów z lewej strony jeśli nie ma dopasowania.
 
 
