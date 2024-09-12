@@ -716,6 +716,24 @@ INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
 INNER JOIN Shippers ON Orders.ShippersID = Shippers.ShippersID);
 ```
 
+# 27. SQL LEFT JOIN
+Zwraca wszystkie rekordy z lewej tabeli i pasujące z prawej tabeli. Rezultatem jest 0 rekordów z prawej strony, jeśli nie ma dopasowania.
+
+Składnia
+```
+SELECT column_name(s)
+FROM tabel1
+LEFT JOIN table 2
+ON table1.column_name = table2.column_name;
+```
+Przykład lewego dołączenia SQL
+Przykład: wybierz wszystkich klientów i wszystkie ich zamówienia
+```
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customer
+FULL OUTER JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+Order BY customers.CustomerName;
+```
 
 
 
