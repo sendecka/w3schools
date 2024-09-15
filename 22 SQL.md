@@ -739,4 +739,20 @@ Słowo LEFT JOIN zwraca wszystkie rekordy z lewej tabeli (klienci), nawet jeśli
 # 28. SQL RIGHT JOIN
 Zwraca wszystkie rekordy z prawej strony i pasujące rekordy z lewej tabeli. Rezultatem jest  rekordów z lewej strony jeśli nie ma dopasowania.
 
+Składnia:
+```
+SELECT column_name(s)
+FROM tabel1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+Przykład: Zwróć listę wszystkich pracowników i wszelkie złożone przez nich zamówienia.
+```
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees ON Orders.EmploeesID = Emploees.EmployeeID
+Order BY Orders.OrderID;
+```
+RIGHT JOIN zwraca wszystkie rekordy z prawej tabeli (pracownicy) nawet jeśli nie ma żadnych dopasowań w lewej tabeli(Zamówienia).
+
 
