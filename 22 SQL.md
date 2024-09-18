@@ -755,4 +755,23 @@ Order BY Orders.OrderID;
 ```
 RIGHT JOIN zwraca wszystkie rekordy z prawej tabeli (pracownicy) nawet jeśli nie ma żadnych dopasowań w lewej tabeli(Zamówienia).
 
+# 29. SQL FULL OUTER JOIN
+zwraca wszystkie rekordy, jeśli znajdują się one w rekordach lewej lub prawej tabeli.
+Wskazówka: FULL OUTER JOIN i FULL JOIN są takie same.
+Składnia:
+```
+SELECT column_name(s)
+FROM tabel1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;
+```
+Przykład: Wybierz wszystkich klientów i wszystkie zamówienia.
+```
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL ORDER JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+Order BY Customers.CustomerName;
+```
+
 
