@@ -774,4 +774,24 @@ FULL ORDER JOIN Orders ON Customers.CustomerID = Orders.CustomerID
 Order BY Customers.CustomerName;
 ```
 
+# 30. SQL SELF JOIN 
+Połączenie własne jest zwykłym połączeniem ale tabela jest połączona sama ze sobą.
+Składnia:
+```
+SELECT column_name(s)
+FROM tabel1 T1, tabel2 T2
+WHERE condition;
+```
+T1 i T2 to aliasy tej samej tabeli.
+
+Przykład: dopasuj klientów pochodzących z teg samego miasta.
+```
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customer A, Customer B
+WHERE A.CustomerID <> B.CustomerID
+AND A.CITY = B.City
+ORDER BY A.City;
+```
+
+
 
