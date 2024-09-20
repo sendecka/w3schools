@@ -793,5 +793,61 @@ AND A.CITY = B.City
 ORDER BY A.City;
 ```
 
+# 31. SQL UNION
+Służy do łączenia zestawów wyników dwóch lub więcej SELECT poleceń.
+
+- Każde SELECT polecenie w ramach UNION musi mieć taką samą liczbę kolumn,
+- Kolumny musząmieć podobny typ danych,
+- Kolumny w każdym SELECT muszą być również w tej samej kolejności.
+
+Składnia (domyślnie wybiera tylko różne wartości):
+```
+SELECT column_name(s) FROM tabel1
+UNION
+SELECT column_name(s) FROM tabel2;
+```
+
+Składnia (UNION ALL aby pozwolić na duplikowanie wartości):
+```
+SELECT column_name(s) FROM tabel1
+UNION ALL
+SELECT column_name(s) FROM tabel2;
+```
+Przykład: SQL UNION zwróć miasta (tylko różne wartości) z tabeli Klienci i Dostawcy.
+```
+SELECT City FROM Customers
+UNION
+SELECT City FROM Suppliers
+ORDER BY City;
+```
+
+Przykład: SQL UNION ALL zwraca miasta, również te zduplikowane
+```
+SELECT City FROM Customers
+UNION ALL
+SELECT City FROM Suppliers
+ORDER BY City;
+```
+UNION z WHERE - zwraca miasta niemieckie (tylko różne wartości) z tabeli klienci i dostawcy
+Przykład:
+```
+SELECT City, Country FROM Customers
+WHERE Country = 'Germany'
+UNION
+SELECT City, Country FROM Suppliers
+WHERE Country = 'German'
+Order BY City;
+```
+
+UNION ALL z WHERE - zwraca miasta niemieckie (również zduplikowane wartości)
+Przykład: 
+```
+SELECT City, Country FROM Customers
+WHERE Country = 'Germany'
+UNION ALL
+SELECT City, Country FROM Suppliers
+WHERE Country = 'Germany'
+ORDER BY City;
+```
 
 
