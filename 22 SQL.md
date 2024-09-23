@@ -850,4 +850,32 @@ WHERE Country = 'Germany'
 ORDER BY City;
 ```
 
+# 32. SQL GROUP BY
+Instrukcja grupuje wiersze o tych samych wartościach w wiersze podsumowujące, na przykład 'znajdź liczbę klientów w każdym kraju'.
+
+Polecenie GROUP BY często używa się z funkcjami agregującymi COUNT(), MAX(), MIN(), SUM(), AVG() w celu grupowania zestawu wyników według jednej lub większej liczby kolumn.
+Składnia:
+```
+SELECT column_name(s)
+FROM tabel_name
+WHERE condition
+GROUP BY column_names(s)
+ORDER BY column_name(s);
+```
+
+Przykład: SQL GROUP BY wyświetl liczbę klientów w każdym kralu.
+```
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country;
+```
+
+Przykład: GROUP BY z JOIN wyświetl liczbę zamówień wysyłanych przez każdego sprzedającego.
+```
+SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
+LEFT JOIN Shippers ON Orders.ShippersID = Shippers.ShipperID
+GROUP BY ShipperName;
+```
+
+
 
