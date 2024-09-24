@@ -877,5 +877,25 @@ LEFT JOIN Shippers ON Orders.ShippersID = Shippers.ShipperID
 GROUP BY ShipperName;
 ```
 
+# 33. SQL HAVING Clause
+Dodano ją ponieważ WHERE słowa kluczowego nie można użyć z funkcjami agregującymi.
+
+Składnia:
+```
+SELECT column_name(s)
+FROM tabel_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_names(s);
+```
+Przykład: podaj liczbę klientów w każdym kraju. Uwzględnij tylko kraje z więcej niż 5 klientami.
+```
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5;
+```
+
 
 
