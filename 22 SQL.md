@@ -896,6 +896,24 @@ FROM Customers
 GROUP BY Country
 HAVING COUNT(CustomerID) > 5;
 ```
+# 34. SQL EXIST 
+- służy do sprawdzenia, czy w podzapytaniu istnieje jakiś rekord.
+- służy do zwracania wartości TRUE, jeśli podzapytanie zwróci jeden lub więcej rekordów.
+
+Składnia:
+```
+SELECT column_name(s)
+FROM tabel_name
+WHERE EXISTS
+(SELECT column_name FROM tabel_name WHERE condition);
+```
+
+Przykład: polecenie zwraca TRUE i wyświetla dostawców, których cena produktu jest < 20
+```
+SELECT SupplierName
+FROM Suppliers
+WHERE EXISTS (SELECT ProductName FROM Product WHERE Product.SupplierId = Suppliers.SupplierID AND Price < 20);
+```
 
 
 
