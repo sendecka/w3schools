@@ -915,5 +915,38 @@ FROM Suppliers
 WHERE EXISTS (SELECT ProductName FROM Product WHERE Product.SupplierId = Suppliers.SupplierID AND Price < 20);
 ```
 
+# 35. SQL ANY and ALL
+Umożliwia porównanie wartości pojedyńczych kolumn i zakresu innych wartości.
+
+SQL ANY:
+- zwraca wartość logiczną jako wynik,
+- zwraca wartość TRUE, jeśli którakolwiek z wartości podzapytania spełnia warunek.
+
+ANY oznacza, że warunek będzie prawdziwy, jeśli operacja okaże się prawdziwa dla dowolnej wartości w zakresie.
+
+Składnia:
+```
+SELECT column_name(s)
+FROM tabel_name
+WHERE column_name operator ANY
+(SELECT column_name
+FROM tabel_name
+WHERE condition);
+```
+SQL ALL:
+- zwraca wartość logiczną jako wynik,
+- zwraca wartość TRUE, jeśli wszystkie wartości podzapytania spełniają warunek,
+- jest używany z poleceniami SELECT, WHERE i HAVING
+
+ALL oznacza, że warunek będzie prawdziwy tylko wtedy, gdy operacja okaże się prawdziwa dla wszystkich wartości w zakresie.
+Składnia:
+```
+SELECT ALL column_name(s)
+FROM tabel_name
+WHERE condition;
+```
+
+Przykład: Ponższe polecenie SQL wyświetla ProductName, jeśli znajduje jakikolwiek rekord w tabeli. OrderDetails, który ma ilość równą 10. (zwróci wartość TRUE, ponieważ kolumna Ilość zawiera wartość 10).
+```
 
 
