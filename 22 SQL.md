@@ -948,5 +948,20 @@ WHERE condition;
 
 Przykład: Ponższe polecenie SQL wyświetla ProductName, jeśli znajduje jakikolwiek rekord w tabeli. OrderDetails, który ma ilość równą 10. (zwróci wartość TRUE, ponieważ kolumna Ilość zawiera wartość 10).
 ```
+SELECT ProductName
+FROM Products
+WHERE ProductID = ANY
+(SELECT ProductID
+FROM OrderDetails
+WHERE Quantity = 10);
+```
+
+Przykład: Poniższe polecenie SQL wyświetla wszystkie nazwy produktów.
+```
+SELECT ALL ProductName
+FROM Products
+WHERE TRUE;
+```
+
 
 
