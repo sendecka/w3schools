@@ -963,5 +963,27 @@ FROM Products
 WHERE TRUE;
 ```
 
+# 36 SQL SELECT INTO
+Kopiuje dane z jednej tabeli do nowej tabeli.
+Składnia: (Skopiuj wszystkie kolumny do nowej tabeli)
+```
+SELECT *
+INTO newtable [IN externaldb]
+FROM oldtabel
+WHERE condition;
+```
+Składnia: Skopiuj tylko niektóre kolumny do nowej tabeli)
+```
+SELECT column1, column2, column3, ...
+INTO newtabel [IN extermaldb]
+FROM oldtable
+WHERE condition;
+```
+
+Przykład: Stwórz kopię zapasową klientów:
+```
+SELECT * FROM CustomersBackup
+FROM customers;
+```
 
 
