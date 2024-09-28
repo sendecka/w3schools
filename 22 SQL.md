@@ -963,7 +963,7 @@ FROM Products
 WHERE TRUE;
 ```
 
-# 36 SQL SELECT INTO
+# 36. SQL SELECT INTO
 Kopiuje dane z jednej tabeli do nowej tabeli.
 Składnia: (Skopiuj wszystkie kolumny do nowej tabeli)
 ```
@@ -986,4 +986,29 @@ SELECT * FROM CustomersBackup
 FROM customers;
 ```
 
+# 37. SQL INSERT INTO SELECt
+- kopiuje dane z jednej tabeli i wstawia je do innej tabeli,
+- wymaga aby typy danych w tabeli żródłowej i docelowej były zgodne.
+
+
+Składnia: (kopiuj wszystkie kolumny z jednej tabeli do innej.)
+```
+INSERT INTO tabel2
+SELECT * FROM tabel1
+WHERE condition;
+```
+
+Składnia: (kopiuj tylko niektóre kolumny z jednej tabeli do innej).
+```
+SELECT INTO tabel2(column1, column2, column3,...)
+SELECT column1, column2, column3, ...
+FROM tabel1
+WHERE condition;
+```
+
+Przykład: kopiuj do klienci (kolumny, które nie są wypełnione danymi, będą zawierały NULL)
+```
+INSERT INTO Customers (CustomerName, City, Country)
+SELECT SUpplierName, City, Country FROM Supplies;
+```
 
