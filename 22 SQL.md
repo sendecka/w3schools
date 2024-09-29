@@ -1012,3 +1012,44 @@ INSERT INTO Customers (CustomerName, City, Country)
 SELECT SUpplierName, City, Country FROM Supplies;
 ```
 
+# 38. SQL CASE
+
+Wyrażenie CASE przechodzi przez warunki i zwraca wartość, gdy spełniony jest pierwszy warunek (jak instrukcja if - then - else). TAK więc gdy warunek jest prawdziwy, przestaje czytać i zwraca wynik. Jeżeli żaden warunek nie jest prawdziwy, zwraca wartość w klauzuli ELSE.
+
+Składnia:
+```
+CASE
+  WHEN condition1 THEN result1
+  WHEN condition2 THEN result2
+  WHEN conditionN THEN resultN
+  ELSE result
+END;
+```
+Przykład: 
+```
+CASE
+  WHEN Quantity > 30 THEN 'THE quantity is greater then 30'
+  WHEN Quantity = 30 THEN 'THE quantity is 30'
+  ELSE 'The quantity is under 30'
+END AS QuantityText
+FROM OrderDetails;
+```
+
+# 39. SQL NULL
+Funkcja SQL IFNULL(), ISNULL(), COALESCE() i NULL()
+Baza danych MySQL - funkcja IFNULL(), umożliwia zwrócenie wartości alternatywnej jeśli wyrażenie jest równe NULL.
+```
+SELECT ProductName, UnitPrice * (UnitsInStock + IFNULL (UnitsOnOrder, 0))
+FROM Products;
+```
+lub możemy użyć funkcji COALESCE()
+```
+SELECT ProductName, UnitPrice * (UnitsInStock + COALESCE(UnitsOnOrder, 0))
+FROM Products;
+```
+Server SQL - funkcja SQL ISNULL() umożliwia zwrócenie wartości alternatywnej gdy wyrażenie ma wartość null.
+```
+SELECT ProductName, UnitPrice * (UnitInStock + ISNULL (UnitsOnOrder, 0 ))
+FROM Products;
+```
+lub możemy użyć COALESCE()
