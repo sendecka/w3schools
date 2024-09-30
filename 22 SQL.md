@@ -1053,3 +1053,16 @@ SELECT ProductName, UnitPrice * (UnitInStock + ISNULL (UnitsOnOrder, 0 ))
 FROM Products;
 ```
 lub możemy użyć COALESCE()
+
+Funkcja programu MS ACCESS ISNULL() zwraca wartość TRUE(-1) jeśli wyrażenie jest wartością null, w przeciwnym razie zwraca wartość FALSE(0).
+```
+SELECT ProductName, UnitPrice * (UnitInStock + IIF (ISNULL(UnitOnOredrs), 0, UnitsOnOrders))
+FROM Products;
+```
+
+Funkcje Oracle NUL() osiąga ten sam wynik.
+```
+SELECT ProductName, UnitPrice * (UnitInStock + NUL(UnitsOnOrder, 0))
+FROM Products;
+```
+lub możemy użyć COALESCE() funkcji.
