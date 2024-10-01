@@ -1066,3 +1066,55 @@ SELECT ProductName, UnitPrice * (UnitInStock + NUL(UnitsOnOrder, 0))
 FROM Products;
 ```
 lub możemy użyć COALESCE() funkcji.
+
+# 40. SQL proceduryskładowania dla serwera SQL
+
+Procedury składowania to przygotowany kod SQL, który można zapisać, tak aby można go było wykorzystać wielokrotnie.
+
+Jeśli więc masz zapytanie SQL, które piszesz wielokrotnie, zapisz je jako procedurę składowania, a następnie po prostu ją wywołaj, aby je wykonać.
+
+Można również przekazywać parametry do procedury składowanej, tak aby mogła ona działać na podstawie przekazywanych wartości parametrów.
+Składnia:
+```
+CREATE PROCEDURE procedure_name
+AS
+sql_statement
+GO;
+```
+Wykonaj procedurę:
+```
+EXEC procedure_name
+```
+Przykład: Wybierz wszystkie rekordy z tabeli 'Customers'.
+```
+CREATE PROCEDURE SelectAllCustomers
+AS
+SELECT * FROM Customers
+GO;
+```
+Wykonanie procedury:
+```
+EXEC SelectAllCustomers;
+```
+Procedura składowania z jednym elementem.
+```
+CREATE PROCEDURE SelectAllCustomers @City nvarchar(30)
+AS
+SELECT * FROM Customers WHERE City = @City
+Go;
+```
+```
+EXEC SelectAllCustomers @City = 'London';
+```
+
+Procedura składowania z wieloma elementami
+```
+CREATE Procedure SelectAllCustomers @City nvarchar(30), @PortalCodenvarchar(10)
+AS
+SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode
+GO;
+```
+```
+EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';
+```
+
