@@ -1118,3 +1118,27 @@ GO;
 EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';
 ```
 
+# 41. SQL komentarze 
+Służą do wyjaśnienia fragmentu kodu.
+Komentarze jednowierszowe - zaczynają się od --. Każdy tekst między tym znakiem, a końcem wiersza zostanie zignorowany.
+Przykład:
+```
+-- SELECT all:
+SELECT * FROM Customers;
+```
+
+Przykład:
+```
+SELECT * FROM Customers -- Where City = 'Berlin';
+```
+Komentarze wielowierszowe - zaczynają sięod /* i kończą */ tekst po między zostanie zignorowany.
+
+Przykład:
+```
+/* SELECT ALL the columns
+of all the records
+in the Customer table:*/
+SELECT * FROM Customers;
+```
+
+
