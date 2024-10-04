@@ -1141,4 +1141,34 @@ in the Customer table:*/
 SELECT * FROM Customers;
 ```
 
+# 42. SQL Operators
+Operatory arytmetyczne: 
+- ( + ) Add Dodawanie
+- ( - ) Subtract Odejmowanie
+- ( * ) Multiply Mnożenie
+- ( / ) Divide Dzielenie
+- ( % ) Modulo Modulo
+
+Operatory bitowe:
+- & And
+- \ OR
+- ^ OR
+
+Operatory porównania SQL:
+- = Equal to równe
+- > Greater than większe
+- < Less than mniejsze
+- >= Greater than or equal to większe niż lub równe
+- <= Less than or Equal to mniejsze lub równe
+- <> Not equal to nie równe
+
+Operator złożeniowy SQL
+- +=
+- -=
+- *=
+- /=
+- %=
+- &=
+- ^--
+- \*=
 
