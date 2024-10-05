@@ -1172,3 +1172,13 @@ Operator złożeniowy SQL
 - ^--
 - \*=
 
+Operatory logiczne SQL:
+- ALL
+- AND
+- BETWEEN
+- EXISTS
+- IN
+- LIKE
+- NOT
+- OR
+- SOME
