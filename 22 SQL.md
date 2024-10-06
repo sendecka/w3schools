@@ -1173,12 +1173,13 @@ Operator złożeniowy SQL
 - \*=
 
 Operatory logiczne SQL:
-- ALL
-- AND
-- BETWEEN
-- EXISTS
-- IN
-- LIKE
-- NOT
-- OR
-- SOME
+- ALL      - TRUE - jeśli wszystkie wartości zapytania spełniają warunek,
+- AND      - TRUE - jeśli wszystkie warunki oddzielone znakiem AND są Prawdą,
+- ANY      - TRUE - jeśli którakolwiek z wartości podzapytania spełnia warunek,
+- BETWEEN  - TRUE - jeśli operand znajduje się w zakresie porównań,
+- EXISTS   - TRUE - jeśli podzapytanie zwraca jeden lub więcej rekordów,
+- IN       - TRUE - jeśli operand jest równy jednemu z listu wyrażeń,
+- LIKE     - TRUE - jeśli operand pasuje do wzorca,
+- NOT      - Wyświetla rekord jeśli warunek(y) nie są prawdziwe
+- OR       - TRUE - jeśli którykolwiek z warunków oddzielonych przez OR jest TRUE
+- SOME     - TRUE - jeśli którykolwiek z wartości podzapytania spełnia warunek.
