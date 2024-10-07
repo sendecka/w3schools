@@ -1142,6 +1142,7 @@ SELECT * FROM Customers;
 ```
 
 # 42. SQL Operators
+
 Operatory arytmetyczne: 
 - ( + ) Add Dodawanie
 - ( - ) Subtract Odejmowanie
@@ -1162,7 +1163,7 @@ Operatory porównania SQL:
 - <= Less than or Equal to mniejsze lub równe
 - <> Not equal to nie równe
 
-Operator złożeniowy SQL
+Operator złożeniowy SQL:
 - +=
 - -=
 - *=
