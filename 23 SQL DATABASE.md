@@ -12,4 +12,13 @@ CREATE DATABASE testDB;
 ```
 Upewnij się, że masz uprawnienia administratora przed utworzeniem jakiejkolwiek bazy danych. Po jej utworzeniu możesz sprawdzić ją na liście baz danych za pomocą polecenia: SHOW DATABASE.
 
-
+# 2. SQL DROP DATABASE
+Służy do usówania istniejącej bazy danych SQL.
+Składnia:
+```
+DROP DATABASE databasename;
+```
+Przykład: Usuń baze danych 'testDB'
+```
+DROP Database testDB;
+```
