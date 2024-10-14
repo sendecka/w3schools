@@ -26,3 +26,12 @@ Przykład: Usuń baze danych 'testDB'
 ```
 DROP Database testDB;
 ```
+
+# 3. SQL BACKUP DATABASE - służy do utworzenia pełnej kopii zapasowej istniejącej bazy danych SQL>
+
+Składnia:
+```
+BACKUP DATABASE databasename
+TO DISK = 'filepath';
+```
+Instrukcja SQL BACKUP DATABASE WITH DIFFERENTIAL - kopia zapasowa różnicowa obejmuje tylko te części bazy danych, które uległy zmianie od czasu ostatniej pełnej kopii zapasowej.
