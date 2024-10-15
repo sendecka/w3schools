@@ -35,3 +35,9 @@ BACKUP DATABASE databasename
 TO DISK = 'filepath';
 ```
 Instrukcja SQL BACKUP DATABASE WITH DIFFERENTIAL - kopia zapasowa różnicowa obejmuje tylko te części bazy danych, które uległy zmianie od czasu ostatniej pełnej kopii zapasowej.
+Składnia:
+```
+BACKUP DATABASE databasename
+TO DISK = 'filepath'
+WITH DIFFERENTIAL;
+```
