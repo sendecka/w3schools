@@ -41,3 +41,20 @@ BACKUP DATABASE databasename
 TO DISK = 'filepath'
 WITH DIFFERENTIAL;
 ```
+Przykład: Stwórz pełną kopię zapasową istniejącej bazy danych testDB.
+```
+BACKUP DATABASE testDB
+TO DISK = 'D:\backups\testDB.bak';
+```
+
+# 4. Instrukcja SQL CREATE TABLE - służy do tworzenia nowej tabeli w bazie danych.
+
+Składnia:
+```
+CREATE TABLE tabel_name (
+  column1 datatype,
+  column2 datatype,
+  column3 datatype,
+  ...
+);
+```
