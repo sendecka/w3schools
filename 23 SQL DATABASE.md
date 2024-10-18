@@ -71,4 +71,5 @@ CREATE TABLE Persons (
     City varchar(255)
 );
 ```
+
 Kolumna PersonID jest typu int i przechowuje liczbę całkowitą. Kolumny LastName, FirstName, Address i City są typu varchar i mogą zawierać znaki, a maksymalna długość tych pól wynosi 255 znaków.
