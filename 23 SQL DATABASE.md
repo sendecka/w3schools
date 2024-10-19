@@ -73,3 +73,38 @@ CREATE TABLE Persons (
 ```
 
 Kolumna PersonID jest typu int i przechowuje liczbę całkowitą. Kolumny LastName, FirstName, Address i City są typu varchar i mogą zawierać znaki, a maksymalna długość tych pól wynosi 255 znaków.
+
+Utwórz tabelę używając innej tabeli.
+Kopię istniejącej tabeli można również utworzyć za pomocą polecenia CREATE TABLE. Nowa tabela otrzymuje te same definicje kolumn. Można wybrać wszystkie kolumny lub określone kolumny.
+Jeśli utworzysz nową tabelę, używając istniejącej tabeli, nowa tabela zostanie wypełniona istniejącymi wartościami ze starej tabeli.
+
+Składnia:
+```
+CREATE TABLE new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....;
+```
+Przykład: Poniższy kod SQL tworzy nową tabelę o nazwie „TestTable” (która jest kopią tabeli „Customers”): 
+```
+CREATE TABLE TestTable AS
+SELECT customername, contactname
+FROM customers;
+```
+
+# 5. SQL DROP TABLE
+
+Polecenie DROP TABLEsłuży do usuwania istniejącej tabeli z bazy danych.
+Składnia:
+```
+DROP TABLE table_name;
+```
+Przykład: Poniższe polecenie SQL usuwa istniejącą tabelę „Shippers”:
+```
+DROP TABLE Shippers;
+```
+
+TABELA ODCINANIA SQL - Polecenie TRUNCATE TABLEto służy do usuwania danych z tabeli, ale nie samej tabeli.
+```
+TRUNCATE TABLE table_name;
+```
