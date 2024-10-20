@@ -108,3 +108,62 @@ TABELA ODCINANIA SQL - Polecenie TRUNCATE TABLEto służy do usuwania danych z t
 ```
 TRUNCATE TABLE table_name;
 ```
+
+# 6. ALTER TABLE
+Polecenie ALTER TABLEto służy do dodawania, usuwania lub modyfikowania kolumn w istniejącej tabeli. Tego ALTER TABLEpolecenia używa się również do dodawania i usuwania różnych ograniczeń w istniejącej tabeli.
+
+ALTER TABLE - DODAJ Kolumnę
+Aby dodać kolumnę do tabeli, użyj następującej składni:
+```
+ALTER TABLE table_name
+ADD column_name datatype;
+```
+Przykład: Poniższy kod SQL dodaje kolumnę „E-mail” do tabeli „Klienci”:
+```
+ALTER TABLE Customers
+ADD Email varchar(255);
+```
+ALTER TABELĘ - USUŃ KOLUMNĘ
+Aby usunąć kolumnę w tabeli, użyj następującej składni (należy pamiętać, że niektóre systemy baz danych nie pozwalają na usuwanie kolumn):
+```
+ALTER TABLE table_name
+DROP COLUMN column_name;
+```
+
+Przykład: Poniższy kod SQL usuwa kolumnę „E-mail” z tabeli „Klienci”:
+```
+ALTER TABLE Customers
+DROP COLUMN Email;
+```
+ALTER TABLE - ZMIEŃ NAZWĘ KOLUMNY
+Aby zmienić nazwę kolumny w tabeli, użyj następującej składni:
+```
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+```
+ALTER TABLE - ZMIEŃ/MODYFIKUJ TYP DANYCH
+Aby zmienić typ danych kolumny w tabeli, użyj następującej składni:
+
+Serwer SQL / MS Access:
+```
+ALTER TABLE table_name
+ALTER COLUMN column_name datatype;
+```
+Zmień przykład typu danych
+Teraz chcemy zmienić typ danych kolumny o nazwie „DateOfBirth” w tabeli „Persons”.
+
+Używamy następującego polecenia SQL:
+```
+ALTER TABLE Persons
+ALTER COLUMN DateOfBirth year;
+```
+Należy zauważyć, że kolumna „DateOfBirth” jest teraz typu „year” i będzie zawierać rok w formacie dwu- lub czterocyfrowym.
+
+Przykład DROP COLUMN
+Następnie chcemy usunąć kolumnę o nazwie „DateOfBirth” w tabeli „Persons”.
+
+Używamy następującego polecenia SQL:
+```
+ALTER TABLE Persons
+DROP COLUMN DateOfBirth;
+```
