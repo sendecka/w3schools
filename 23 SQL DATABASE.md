@@ -167,3 +167,36 @@ Używamy następującego polecenia SQL:
 ALTER TABLE Persons
 DROP COLUMN DateOfBirth;
 ```
+
+# 7. SQL Constraints
+Ograniczenia SQL służą do określania reguł dla danych w tabeli.
+
+Tworzenie ograniczeń SQL
+Ograniczenia można określić podczas tworzenia tabeli za pomocą CREATE TABLEpolecenia lub po utworzeniu tabeli za pomocą ALTER TABLEpolecenia.
+
+Składnia:
+```
+CREATE TABLE table_name (
+    column1 datatype constraint,
+    column2 datatype constraint,
+    column3 datatype constraint,
+    ....
+);
+```
+
+Ograniczenia SQL
+Ograniczenia SQL służą do określania reguł dla danych w tabeli.
+
+Ograniczenia służą do ograniczania typu danych, które mogą trafić do tabeli. Zapewnia to dokładność i niezawodność danych w tabeli. Jeśli istnieje jakiekolwiek naruszenie między ograniczeniem a działaniem danych, działanie jest przerywane.
+
+Ograniczenia mogą być na poziomie kolumny lub tabeli. Ograniczenia na poziomie kolumny dotyczą kolumny, a ograniczenia na poziomie tabeli dotyczą całej tabeli.
+
+W języku SQL powszechnie stosuje się następujące ograniczenia:
+
+NOT NULL- Zapewnia, że ​​kolumna nie może mieć wartości NULL
+UNIQUE- Zapewnia, że ​​wszystkie wartości w kolumnie są różne
+PRIMARY KEY- Kombinacja a NOT NULLi UNIQUE. Unikalnie identyfikuje każdy wiersz w tabeli
+FOREIGN KEY - Zapobiega działaniom, które mogłyby zniszczyć powiązania między tabelami
+CHECK- Zapewnia, że ​​wartości w kolumnie spełniają określony warunek
+DEFAULT- Ustawia wartość domyślną dla kolumny, jeśli nie określono żadnej wartości
+CREATE INDEX- Służy do bardzo szybkiego tworzenia i pobierania danych z bazy danych
