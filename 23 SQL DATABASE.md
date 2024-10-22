@@ -200,3 +200,18 @@ FOREIGN KEY - Zapobiega działaniom, które mogłyby zniszczyć powiązania mię
 CHECK- Zapewnia, że ​​wartości w kolumnie spełniają określony warunek
 DEFAULT- Ustawia wartość domyślną dla kolumny, jeśli nie określono żadnej wartości
 CREATE INDEX- Służy do bardzo szybkiego tworzenia i pobierania danych z bazy danych
+
+# 8. SQL NOT NULL
+Domyślnie kolumna może przechowywać wartości NULL. Ograniczenie NOT NULLto wymusza, aby kolumna NIE akceptowała wartości NULL. Wymusza to, aby pole zawsze zawierało wartość, co oznacza, że ​​nie można wstawić nowego rekordu ani zaktualizować rekordu bez dodania wartości do tego pola.
+
+SQL NOT NULL w CREATE TABLE
+Poniższy kod SQL zapewnia, że ​​kolumny „ID”, „LastName” i „FirstName” NIE przyjmą wartości NULL podczas tworzenia tabeli „Persons”:
+```
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255) NOT NULL,
+    Age int
+);
+```
+
