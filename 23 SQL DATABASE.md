@@ -215,3 +215,16 @@ CREATE TABLE Persons (
 );
 ```
 
+# 9. SQL UNIQUE ograniczenie 
+Ograniczenie to UNIQUEzapewnia, że ​​wszystkie wartości w kolumnie są różne. Zarówno ograniczenia, UNIQUEjak i PRIMARY KEYzapewniają gwarancję unikatowości kolumny lub zestawu kolumn. Ograniczenie PRIMARY KEYautomatycznie ma UNIQUEograniczenie. Można jednak mieć wiele UNIQUEograniczeń na tabelę, ale tylko jedno PRIMARY KEYograniczenie na tabelę.
+
+Ograniczenie SQL UNIQUE dla CREATE TABLE
+Poniższy kod SQL tworzy UNIQUEograniczenie dla kolumny „ID” podczas tworzenia tabeli „Osoby”:
+```
+CREATE TABLE Persons (
+    ID int NOT NULL UNIQUE,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+```
