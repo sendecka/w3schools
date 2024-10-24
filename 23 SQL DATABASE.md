@@ -228,3 +228,70 @@ CREATE TABLE Persons (
     Age int
 );
 ```
+
+# 10. PRIMARY KEY SQL 
+Ograniczenie klucza podstawowego SQL - Ograniczenie PRIMARY KEYjednoznacznie identyfikuje każdy rekord w tabeli. Klucze podstawowe muszą zawierać wartości UNIQUE i nie mogą zawierać wartości NULL. Tabela może mieć tylko JEDEN klucz podstawowy. W tabeli klucz podstawowy może składać się z jednej lub wielu kolumn (pól).
+
+Klucz podstawowy SQL w CREATE TABLE
+Poniższy kod SQL tworzy PRIMARY KEYkolumnę „ID” podczas tworzenia tabeli „Osoby”:
+MySQL:
+```
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (ID)
+);
+```
+Serwer SQL / Oracle / MS Access:
+```
+CREATE TABLE Persons (
+    ID int NOT NULL PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+```
+Aby umożliwić nazwanie PRIMARY KEYograniczenia i zdefiniowanie PRIMARY KEYograniczenia dla wielu kolumn, należy użyć następującej składni SQL:
+
+MySQL / SQL Server / Oracle / MS Access:
+```
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CONSTRAINT PK_Person PRIMARY KEY (ID,LastName)
+);
+```
+Uwaga: W powyższym przykładzie jest tylko JEDEN PRIMARY KEY(PK_Person). Jednak WARTOŚĆ klucza podstawowego składa się z DWÓCH KOLUMN (ID + Nazwisko).
+Klucz podstawowy SQL w ALTER TABLE
+Aby utworzyć PRIMARY KEYograniczenie dla kolumny „ID”, gdy tabela jest już utworzona, należy użyć następującego polecenia SQL:
+MySQL / SQL Server / Oracle / MS Access:
+```
+ALTER TABLE Persons
+ADD PRIMARY KEY (ID);
+```
+Aby umożliwić nazwanie PRIMARY KEYograniczenia i zdefiniowanie PRIMARY KEYograniczenia dla wielu kolumn, należy użyć następującej składni SQL:
+
+MySQL / SQL Server / Oracle / MS Access:
+```
+ALTER TABLE Persons
+ADD CONSTRAINT PK_Person PRIMARY KEY (ID,LastName);
+```
+Uwaga: Jeśli chcesz ALTER TABLEdodać klucz podstawowy, kolumna(y) klucza podstawowego musi zostać zadeklarowana w taki sposób, aby nie zawierała wartości NULL (podczas pierwszego tworzenia tabeli).
+USUŃ ograniczenie klucza podstawowego
+Aby usunąć PRIMARY KEYograniczenie, użyj następującego polecenia SQL:
+
+MySQL:
+```
+ALTER TABLE Persons
+DROP PRIMARY KEY;
+```
+Serwer SQL / Oracle / MS Access:
+```
+ALTER TABLE Persons
+DROP CONSTRAINT PK_Person;
+```
+
