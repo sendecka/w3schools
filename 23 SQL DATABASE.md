@@ -295,3 +295,69 @@ ALTER TABLE Persons
 DROP CONSTRAINT PK_Person;
 ```
 
+# 12. SQL FOREIGN KEY
+Ograniczenie FOREIGN KEYto służy zapobieganiu działaniom, które mogłyby zniszczyć powiązania między tabelami. A FOREIGN KEYto pole (lub zbiór pól) w jednej tabeli, które odwołuje się do pola PRIMARY KEYw innej tabeli.
+Tabelę zawierającą klucz obcy nazywa się tabelą podrzędną, a tabelę zawierającą klucz podstawowy nazywa się tabelą referencyjną lub nadrzędną.
+Klucz obcy SQL w CREATE TABLE
+Poniższy kod SQL tworzy FOREIGN KEYkolumnę „PersonID” podczas tworzenia tabeli „Orders”:
+MySQL:
+```
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
+```
+Serwer SQL / Oracle / MS Access:
+
+```
+CREATE TABLE Orders (
+    OrderID int NOT NULL PRIMARY KEY,
+    OrderNumber int NOT NULL,
+    PersonID int FOREIGN KEY REFERENCES Persons(PersonID)
+);
+```
+Aby umożliwić nazwanie FOREIGN KEYograniczenia i zdefiniowanie FOREIGN KEYograniczenia dla wielu kolumn, należy użyć następującej składni SQL:
+
+MySQL / SQL Server / Oracle / MS Access:
+```
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)
+    REFERENCES Persons(PersonID)
+);
+```
+Klucz obcy SQL w ALTER TABLE
+Aby utworzyć FOREIGN KEYograniczenie dla kolumny „PersonID”, gdy tabela „Orders” jest już utworzona, należy użyć następującego kodu SQL:
+
+MySQL / SQL Server / Oracle / MS Access:
+```
+ALTER TABLE Orders
+ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+```
+Aby umożliwić nazwanie FOREIGN KEYograniczenia i zdefiniowanie FOREIGN KEYograniczenia dla wielu kolumn, należy użyć następującej składni SQL:
+
+MySQL / SQL Server / Oracle / MS Access:
+```
+ALTER TABLE Orders
+ADD CONSTRAINT FK_PersonOrder
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+```
+USUŃ OGRANICZENIE KLUCZA OBCEGO
+Aby usunąć FOREIGN KEYograniczenie, użyj następującego polecenia SQL:
+
+MySQL:
+```
+ALTER TABLE Orders
+DROP FOREIGN KEY FK_PersonOrder;
+```
+Serwer SQL / Oracle / MS Access:
+```
+ALTER TABLE Orders
+DROP CONSTRAINT FK_PersonOrder;
+```
