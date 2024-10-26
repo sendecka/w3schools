@@ -361,3 +361,70 @@ Serwer SQL / Oracle / MS Access:
 ALTER TABLE Orders
 DROP CONSTRAINT FK_PersonOrder;
 ```
+
+# 13. SQL CHECK
+Ograniczenie SQL CHECK
+Ograniczenie CHECKto służy do określania zakresu wartości, jakie można umieścić w kolumnie. Jeśli zdefiniujesz CHECKograniczenie dla kolumny, będzie ono zezwalać tylko na określone wartości dla tej kolumny. Jeśli zdefiniujesz CHECKograniczenie dla tabeli, może ono ograniczyć wartości w określonych kolumnach na podstawie wartości w innych kolumnach w wierszu.
+
+SQL CHECK przy CREATE TABLE
+Poniższy kod SQL tworzy CHECKograniczenie w kolumnie „Wiek” podczas tworzenia tabeli „Osoby”. CHECKOgraniczenie to zapewnia, że ​​wiek osoby musi wynosić 18 lat lub więcej:
+
+MySQL:
+```
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    CHECK (Age>=18)
+);
+```
+Serwer SQL / Oracle / MS Access:
+```
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int CHECK (Age>=18)
+);
+```
+Aby umożliwić nazwanie CHECKograniczenia i zdefiniowanie CHECKograniczenia dla wielu kolumn, należy użyć następującej składni SQL:
+
+MySQL / SQL Server / Oracle / MS Access:
+```
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    City varchar(255),
+    CONSTRAINT CHK_Person CHECK (Age>=18 AND City='Sandnes')
+);
+```
+SQL CHECK dla ALTER TABLE
+Aby utworzyć CHECKograniczenie dla kolumny „Wiek”, gdy tabela jest już utworzona, należy użyć następującego polecenia SQL:
+
+MySQL / SQL Server / Oracle / MS Access:
+```
+ALTER TABLE Persons
+ADD CHECK (Age>=18);
+Aby umożliwić nazwanie CHECKograniczenia i zdefiniowanie CHECKograniczenia dla wielu kolumn, należy użyć następującej składni SQL:
+```
+MySQL / SQL Server / Oracle / MS Access:
+```
+ALTER TABLE Persons
+ADD CONSTRAINT CHK_PersonAge CHECK (Age>=18 AND City='Sandnes');
+```
+USUŃ ograniczenie CHECK
+Aby usunąć CHECKograniczenie, użyj następującego polecenia SQL:
+
+Serwer SQL / Oracle / MS Access:
+```
+ALTER TABLE Persons
+DROP CONSTRAINT CHK_PersonAge;
+```
+MySQL:
+```
+ALTER TABLE Persons
+DROP CHECK CHK_PersonAge;
+```
