@@ -428,3 +428,70 @@ MySQL:
 ALTER TABLE Persons
 DROP CHECK CHK_PersonAge;
 ```
+
+# 14. SQL DEFAULT
+Ograniczenie domyślne SQL - Ograniczenie DEFAULTsłuży do ustawienia wartości domyślnej dla kolumny.
+
+Wartość domyślna zostanie dodana do wszystkich nowych rekordów, jeśli nie określono innej wartości.
+
+SQL DEFAULT przy TWORZENIU TABELI
+Poniższy kod SQL ustawia DEFAULTwartość dla kolumny „Miasto” podczas tworzenia tabeli „Osoby”:
+
+Mój SQL / SQL Server / Oracle / MS Access:
+```
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    City varchar(255) DEFAULT 'Sandnes'
+);
+```
+
+Ograniczenie DEFAULTmożna również wykorzystać do wstawiania wartości systemowych, korzystając z funkcji takich jak : GETDATE()
+```
+CREATE TABLE Orders (
+    ID int NOT NULL,
+    OrderNumber int NOT NULL,
+    OrderDate date DEFAULT GETDATE()
+);
+```
+SQL DEFAULT w ALTER TABLE
+Aby utworzyć DEFAULTograniczenie dla kolumny „Miasto”, gdy tabela jest już utworzona, należy użyć następującego kodu SQL:
+
+MySQL:
+```
+ALTER TABLE Persons
+ALTER City SET DEFAULT 'Sandnes';
+Serwer SQL:
+```
+ALTER TABLE Persons
+```
+ADD CONSTRAINT df_City
+DEFAULT 'Sandnes' FOR City;
+```
+Dostęp MS:
+
+```
+ALTER TABLE Persons
+ALTER COLUMN City SET DEFAULT 'Sandnes';
+```
+
+Oracle:
+```
+ALTER TABLE Persons
+MODIFY City DEFAULT 'Sandnes';
+```
+USUŃ DOMYŚLNE OGRANICZENIE
+Aby usunąć DEFAULTograniczenie, użyj następującego polecenia SQL:
+
+MySQL:
+```
+ALTER TABLE Persons
+ALTER City DROP DEFAULT;
+```
+Serwer SQL / Oracle / MS Access:
+```
+ALTER TABLE Persons
+ALTER COLUMN City DROP DEFAULT;
+```
