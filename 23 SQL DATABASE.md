@@ -495,3 +495,13 @@ Serwer SQL / Oracle / MS Access:
 ALTER TABLE Persons
 ALTER COLUMN City DROP DEFAULT;
 ```
+
+# 15. Instrukcja SQL CREATE INDEX
+Polecenie CREATE INDEXsłuży do tworzenia indeksów w tabelach.
+
+Indeksy służą do szybszego pobierania danych z bazy danych niż w inny sposób. Użytkownicy nie widzą indeksów, służą one jedynie do przyspieszenia wyszukiwań/zapytań.
+
+Uwaga: Aktualizacja tabeli z indeksami zajmuje więcej czasu niż aktualizacja tabeli bez (ponieważ indeksy również wymagają aktualizacji). Dlatego twórz indeksy tylko dla kolumn, które będą często przeszukiwane.
+
+Składnia CREATE INDEX
+Tworzy indeks w tabeli. Dozwolone są duplikaty wartości:
