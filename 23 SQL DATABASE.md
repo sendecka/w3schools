@@ -505,3 +505,47 @@ Uwaga: Aktualizacja tabeli z indeksami zajmuje więcej czasu niż aktualizacja t
 
 Składnia CREATE INDEX
 Tworzy indeks w tabeli. Dozwolone są duplikaty wartości:
+```
+CREATE INDEX index_name
+ON table_name (column1, column2, ...);
+```
+UTWÓRZ UNIKALNY INDEKS Składnia
+Tworzy unikalny indeks w tabeli. Duplikaty wartości nie są dozwolone:
+```
+CREATE UNIQUE INDEX index_name
+ON table_name (column1, column2, ...);
+```
+Uwaga: Składnia tworzenia indeksów różni się w zależności od bazy danych. Dlatego: Sprawdź składnię tworzenia indeksów w swojej bazie danych.
+
+Przykład UTWÓRZ INDEKSU
+Poniższe polecenie SQL tworzy indeks o nazwie „idx_lastname” w kolumnie „LastName” w tabeli „Persons”:
+```
+CREATE INDEX idx_lastname
+ON Persons (LastName);
+```
+
+Jeśli chcesz utworzyć indeks dla kombinacji kolumn, możesz podać nazwy kolumn w nawiasach, rozdzielając je przecinkami:
+```
+CREATE INDEX idx_pname
+ON Persons (LastName, FirstName);
+```
+Instrukcja DROP INDEX
+Polecenie DROP INDEXsłuży do usuwania indeksu w tabeli.
+
+Dostęp MS:
+```
+DROP INDEX index_name ON table_name;
+```
+Serwer SQL:
+```
+DROP INDEX table_name.index_name;
+```
+DB2/Oracle:
+```
+DROP INDEX index_name;
+```
+MySQL:
+```
+ALTER TABLE table_name
+DROP INDEX index_name;
+```
