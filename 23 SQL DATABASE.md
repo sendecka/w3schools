@@ -549,3 +549,101 @@ MySQL:
 ALTER TABLE table_name
 DROP INDEX index_name;
 ```
+
+# 16. AUTO INCREMENT Field
+Pole AUTOMATYCZNEGO PRZYROSTU
+Funkcja autoinkrementacji umożliwia automatyczne generowanie unikalnego numeru przy wstawianiu nowego rekordu do tabeli. Często jest to pole klucza podstawowego, które chcielibyśmy, aby było tworzone automatycznie przy każdym wstawianiu nowego rekordu.
+
+Składnia dla MySQL
+Poniższe polecenie SQL definiuje kolumnę „Personid” jako pole klucza podstawowego z funkcją automatycznego zwiększania wartości w tabeli „Persons”:
+```
+CREATE TABLE Persons (
+    Personid int NOT NULL AUTO_INCREMENT,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (Personid)
+);
+```
+MySQL używa AUTO_INCREMENTsłowa kluczowego do wykonania funkcji automatycznego zwiększania wartości.
+
+Domyślnie wartość początkowa AUTO_INCREMENTwynosi 1 i będzie zwiększana o 1 dla każdego nowego rekordu.
+
+Aby AUTO_INCREMENTsekwencja zaczynała się od innej wartości, użyj następującego polecenia SQL:
+```
+ALTER TABLE Persons AUTO_INCREMENT=100;
+```
+Aby wstawić nowy rekord do tabeli „Osoby”, NIE będziemy musieli określać wartości dla kolumny „Personid” (unikalna wartość zostanie dodana automatycznie):
+```
+INSERT INTO Persons (FirstName,LastName)
+VALUES ('Lars','Monsen');
+```
+Powyższe polecenie SQL wstawi nowy rekord do tabeli „Persons”. Kolumnie „Personid” zostanie przypisana unikalna wartość. Kolumna „FirstName” zostanie ustawiona na „Lars”, a kolumna „LastName” zostanie ustawiona na „Monsen”.
+
+Składnia dla programu SQL Server
+Poniższe polecenie SQL definiuje kolumnę „Personid” jako pole klucza podstawowego z funkcją automatycznego zwiększania wartości w tabeli „Persons”:
+```
+CREATE TABLE Persons (
+    Personid int IDENTITY(1,1) PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+```
+Serwer MS SQL Server używa IDENTITYsłowa kluczowego w celu wykonania funkcji automatycznego zwiększania wartości.
+
+W powyższym przykładzie wartość początkowa IDENTITYwynosi 1 i będzie zwiększana o 1 dla każdego nowego rekordu.
+
+Wskazówka: Aby określić, że kolumna „Personid” ma zaczynać się od wartości 10 i zwiększać się o 5, zmień ją na IDENTITY(10,5).
+
+Aby wstawić nowy rekord do tabeli „Osoby”, NIE będziemy musieli określać wartości dla kolumny „Personid” (unikalna wartość zostanie dodana automatycznie):
+```
+INSERT INTO Persons (FirstName,LastName)
+VALUES ('Lars','Monsen');
+```
+Powyższe polecenie SQL wstawi nowy rekord do tabeli „Persons”. Kolumnie „Personid” zostanie przypisana unikalna wartość. Kolumna „FirstName” zostanie ustawiona na „Lars”, a kolumna „LastName” zostanie ustawiona na „Monsen”.
+
+Składnia dla Access
+Poniższe polecenie SQL definiuje kolumnę „Personid” jako pole klucza podstawowego z funkcją automatycznego zwiększania wartości w tabeli „Persons”:
+```
+CREATE TABLE Persons (
+    Personid AUTOINCREMENT PRIMARY KEY,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int
+);
+```
+W programie MS Access AUTOINCREMENTsłowo kluczowe jest używane do wykonywania funkcji automatycznego zwiększania wartości.
+
+Domyślnie wartość początkowa AUTOINCREMENTwynosi 1 i będzie zwiększana o 1 dla każdego nowego rekordu.
+
+Wskazówka: Aby określić, że kolumna „Personid” powinna zaczynać się od wartości 10 i zwiększać się o 5, zmień wartość autoinkrementacji na AUTOINCREMENT(10,5).
+
+Aby wstawić nowy rekord do tabeli „Osoby”, NIE będziemy musieli określać wartości dla kolumny „Personid” (unikalna wartość zostanie dodana automatycznie):
+```
+INSERT INTO Persons (FirstName,LastName)
+VALUES ('Lars','Monsen');
+```
+Powyższe polecenie SQL wstawi nowy rekord do tabeli „Persons”. Kolumnie „Personid” zostanie przypisana unikalna wartość. Kolumna „FirstName” zostanie ustawiona na „Lars”, a kolumna „LastName” zostanie ustawiona na „Monsen”.
+
+Składnia dla Oracle
+W Oracle kod jest nieco bardziej skomplikowany.
+
+Będziesz musiał utworzyć pole autoinkrementacji przy użyciu obiektu sekwencji (obiekt ten generuje sekwencję liczb).
+
+Użyj następującej CREATE SEQUENCEskładni:
+```
+CREATE SEQUENCE seq_person
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
+```
+Powyższy kod tworzy obiekt sekwencji o nazwie seq_person, który zaczyna się od 1 i będzie zwiększany o 1. Będzie on również buforował do 10 wartości dla wydajności. Opcja cache określa, ile wartości sekwencji będzie przechowywanych w pamięci dla szybszego dostępu.
+
+Aby wstawić nowy rekord do tabeli „Osoby”, będziemy musieli użyć funkcji nextval (funkcja ta pobiera następną wartość z sekwencji seq_person):
+```
+INSERT INTO Persons (Personid,FirstName,LastName)
+VALUES (seq_person.nextval,'Lars','Monsen');
+```
+Powyższe polecenie SQL wstawi nowy rekord do tabeli „Persons”. Kolumnie „Personid” zostanie przypisany kolejny numer z sekwencji seq_person. Kolumna „FirstName” zostanie ustawiona na „Lars”, a kolumna „LastName” zostanie ustawiona na „Monsen”.
