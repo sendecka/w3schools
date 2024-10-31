@@ -647,3 +647,39 @@ INSERT INTO Persons (Personid,FirstName,LastName)
 VALUES (seq_person.nextval,'Lars','Monsen');
 ```
 Powyższe polecenie SQL wstawi nowy rekord do tabeli „Persons”. Kolumnie „Personid” zostanie przypisany kolejny numer z sekwencji seq_person. Kolumna „FirstName” zostanie ustawiona na „Lars”, a kolumna „LastName” zostanie ustawiona na „Monsen”.
+
+# 17. SQL Dates
+Dopóki Twoje dane zawierają tylko część daty, Twoje zapytania będą działać zgodnie z oczekiwaniami. Jednak jeśli jest w to zaangażowana część czasu, robi się bardziej skomplikowanie.
+
+Typy danych daty SQL
+
+MySQL oferuje następujące typy danych umożliwiające przechowywanie daty lub wartości daty/godziny w bazie danych:
+
+- DATE- format RRRR-MM-DD
+- DATETIME- format: RRRR-MM-DD GG:MI:SS
+- TIMESTAMP- format: RRRR-MM-DD GG:MI:SS
+- YEAR- format RRRR lub RRRR
+- 
+W programie SQL Server dostępne są następujące typy danych umożliwiające przechowywanie daty lub wartości daty/godziny w bazie danych:
+
+- DATE- format RRRR-MM-DD
+- DATETIME- format: RRRR-MM-DD GG:MI:SS
+- SMALLDATETIME- format: RRRR-MM-DD GG:MI:SS
+- TIMESTAMP- format: unikalny numer
+
+Uwaga: Typy dat dla kolumny wybierane są podczas tworzenia nowej tabeli w bazie danych!
+
+Teraz chcemy wybrać z powyższej tabeli rekordy z datą zamówienia „2008-11-11”.
+
+Używamy następującego SELECToświadczenia:
+```
+SELECT * FROM Orders WHERE OrderDate='2008-11-11'
+```
+Załóżmy teraz, że tabela „Zamówienia” wygląda następująco (zwróć uwagę na dodany składnik czasu w kolumnie „Data zamówienia”):
+Jeżeli użyjemy tego samego SELECTstwierdzenia co powyżej:
+```
+SELECT * FROM Orders WHERE OrderDate='2008-11-11'
+```
+nie otrzymamy żadnego wyniku! Dzieje się tak, ponieważ zapytanie szuka tylko dat bez części czasowej.
+
+Wskazówka: Aby Twoje zapytania były proste i łatwe w obsłudze, nie używaj w datach elementów czasu, chyba że jest to konieczne!
