@@ -683,3 +683,86 @@ SELECT * FROM Orders WHERE OrderDate='2008-11-11'
 nie otrzymamy żadnego wyniku! Dzieje się tak, ponieważ zapytanie szuka tylko dat bez części czasowej.
 
 Wskazówka: Aby Twoje zapytania były proste i łatwe w obsłudze, nie używaj w datach elementów czasu, chyba że jest to konieczne!
+
+# 18. SQL Views
+Instrukcja SQL CREATE VIEW
+W języku SQL widok jest wirtualną tabelą opartą na zestawie wyników polecenia SQL.
+
+Widok zawiera wiersze i kolumny, tak jak prawdziwa tabela. Pola w widoku to pola z jednej lub więcej prawdziwych tabel w bazie danych.
+
+Do widoku można dodawać polecenia i funkcje SQL oraz prezentować dane tak, jakby pochodziły z jednej tabeli.
+
+Widok jest tworzony za pomocą CREATE VIEW polecenia. 
+
+Składnia polecenia UTWÓRZ WIDOK
+```
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+```
+Uwaga: Widok zawsze pokazuje aktualne dane! Silnik bazy danych odtwarza widok za każdym razem, gdy użytkownik go zapyta.
+
+Przykłady SQL CREATE VIEW
+Poniższy kod SQL tworzy widok pokazujący wszystkich klientów z Brazylii:
+
+PrzykładUzyskaj własny serwer SQL
+```
+CREATE VIEW [Brazil Customers] AS
+SELECT CustomerName, ContactName
+FROM Customers
+WHERE Country = 'Brazil';
+```
+Możemy zapytać o powyższy widok w następujący sposób:
+
+Przykład
+```
+SELECT * FROM [Brazil Customers];
+```
+Poniższy kod SQL tworzy widok wybierający wszystkie produkty w tabeli „Produkty”, których cena jest wyższa od średniej ceny:
+
+Przykład
+```
+CREATE VIEW [Products Above Average Price] AS
+SELECT ProductName, Price
+FROM Products
+WHERE Price > (SELECT AVG(Price) FROM Products);
+```
+Możemy zapytać o powyższy widok w następujący sposób:
+
+Przykład
+```
+SELECT * FROM [Products Above Average Price];
+```
+SQL Aktualizowanie widoku
+Widok można uaktualnić za pomocą CREATE OR REPLACE VIEWpolecenia.
+
+Składnia polecenia SQL CREATE OR REPLACE VIEW
+```
+CREATE OR REPLACE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+```
+Poniższy kod SQL dodaje kolumnę „Miasto” do widoku „Klienci z Brazylii”:
+
+Przykład
+```
+CREATE OR REPLACE VIEW [Brazil Customers] AS
+SELECT CustomerName, ContactName, City
+FROM Customers
+WHERE Country = 'Brazil';
+```
+Upuszczanie widoku w SQL
+Widok zostaje usunięty za pomocą DROP VIEW polecenia.
+
+Składnia SQL DROP VIEW
+```
+DROP VIEW view_name;
+```
+Poniższy kod SQL usuwa widok „Klienci z Brazylii”:
+
+Przykład
+```
+DROP VIEW [Brazil Customers];
+```
