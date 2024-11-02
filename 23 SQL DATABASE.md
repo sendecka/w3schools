@@ -766,3 +766,20 @@ Przykład
 ```
 DROP VIEW [Brazil Customers];
 ```
+
+# 19. SQL Injection
+Wstrzyknięcie SQL
+Wstrzyknięcie kodu SQL to technika wstrzykiwania kodu, która może zniszczyć Twoją bazę danych.
+
+Wstrzykiwanie kodu SQL jest jedną z najczęściej spotykanych technik hakerskich.
+
+Atak SQL Injection polega na umieszczaniu złośliwego kodu w poleceniach SQL za pośrednictwem danych wejściowych ze strony internetowej.
+
+SQL na stronach internetowych
+Atak typu SQL Injection ma miejsce zazwyczaj wtedy, gdy prosisz użytkownika o podanie danych, np. nazwy użytkownika/identyfikatora użytkownika, a zamiast nazwy/identyfikatora użytkownik podaje polecenie SQL, które nieświadomie uruchamiasz w swojej bazie danych.
+
+Spójrz na poniższy przykład, który tworzy SELECTinstrukcję poprzez dodanie zmiennej (txtUserId) do ciągu SELECT. Zmienna jest pobierana z danych wejściowych użytkownika (getRequestString):
+```
+txtUserId = getRequestString("UserId");
+txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
+```
