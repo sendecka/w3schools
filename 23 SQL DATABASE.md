@@ -783,3 +783,19 @@ Spójrz na poniższy przykład, który tworzy SELECTinstrukcję poprzez dodanie 
 txtUserId = getRequestString("UserId");
 txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
 ```
+
+# 20. SQL Hosting
+Hosting SQL
+Jeśli chcesz, aby Twoja witryna internetowa mogła przechowywać i pobierać dane z bazy danych, Twój serwer internetowy powinien mieć dostęp do systemu baz danych wykorzystującego język SQL. Jeśli Twój serwer WWW jest hostowany przez dostawcę usług internetowych (ISP), będziesz musiał poszukać planów hostingu SQL. Najpopularniejszymi bazami danych hostowanymi w SQL są MS SQL Server, Oracle, MySQL i MS Access.
+
+Serwer MS SQL
+Oprogramowanie SQL Server firmy Microsoft jest popularne w przypadku witryn internetowych, które generują duży ruch i korzystają z baz danych. SQL Server to bardzo wydajny, solidny i funkcjonalny system baz danych SQL.
+
+Oracle
+Oracle to również popularne oprogramowanie bazodanowe dla witryn internetowych, w których występuje duży ruch i które wykorzystują bazę danych. Oracle to bardzo wydajny, solidny i funkcjonalny system baz danych SQL.
+
+Baza danych MySQL
+MySQL to również popularne oprogramowanie bazodanowe dla stron internetowych. MySQL to bardzo wydajny, solidny i funkcjonalny system baz danych SQL. MySQL jest niedrogą alternatywą dla drogich rozwiązań Microsoft i Oracle.
+
+Dostęp MS
+Jeśli witryna internetowa wymaga jedynie prostej bazy danych, rozwiązaniem może być program Microsoft Access. MS Access nie nadaje się do obsługi dużego ruchu i nie jest tak wydajny jak MySQL, SQL Server czy Oracle.
