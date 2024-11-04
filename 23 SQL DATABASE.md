@@ -799,3 +799,12 @@ MySQL to również popularne oprogramowanie bazodanowe dla stron internetowych. 
 
 Dostęp MS
 Jeśli witryna internetowa wymaga jedynie prostej bazy danych, rozwiązaniem może być program Microsoft Access. MS Access nie nadaje się do obsługi dużego ruchu i nie jest tak wydajny jak MySQL, SQL Server czy Oracle.
+
+# 21. SQL Data Types
+
+Każda kolumna w tabeli bazy danych musi mieć nazwę i typ danych.
+
+Programista SQL musi zdecydować, jaki typ danych będzie przechowywany w każdej kolumnie podczas tworzenia tabeli. Typ danych to wytyczna dla SQL, aby zrozumieć, jaki typ danych jest oczekiwany w każdej kolumnie, a także identyfikuje, w jaki sposób SQL będzie oddziaływać z przechowywanymi danymi.
+
+Uwaga: Typy danych mogą mieć różne nazwy w różnych bazach danych. I nawet jeśli nazwa jest taka sama, rozmiar i inne szczegóły mogą być różne! Zawsze sprawdzaj dokumentację!
+
