@@ -34,6 +34,7 @@ Składnia:
 BACKUP DATABASE databasename
 TO DISK = 'filepath';
 ```
+
 Instrukcja SQL BACKUP DATABASE WITH DIFFERENTIAL - kopia zapasowa różnicowa obejmuje tylko te części bazy danych, które uległy zmianie od czasu ostatniej pełnej kopii zapasowej.
 Składnia:
 ```
@@ -807,4 +808,5 @@ Każda kolumna w tabeli bazy danych musi mieć nazwę i typ danych.
 Programista SQL musi zdecydować, jaki typ danych będzie przechowywany w każdej kolumnie podczas tworzenia tabeli. Typ danych to wytyczna dla SQL, aby zrozumieć, jaki typ danych jest oczekiwany w każdej kolumnie, a także identyfikuje, w jaki sposób SQL będzie oddziaływać z przechowywanymi danymi.
 
 Uwaga: Typy danych mogą mieć różne nazwy w różnych bazach danych. I nawet jeśli nazwa jest taka sama, rozmiar i inne szczegóły mogą być różne! Zawsze sprawdzaj dokumentację!
+
 
