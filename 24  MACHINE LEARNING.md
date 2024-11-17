@@ -113,3 +113,5 @@ print(x)
 ```
 Podsumowanie rozdziału
 Średnia, mediana i moda to techniki często stosowane w uczeniu maszynowym, dlatego ważne jest zrozumienie koncepcji, na których się opierają.
+
+#. 3 Machine Learning - Standard Deviation
