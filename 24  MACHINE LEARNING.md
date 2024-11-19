@@ -241,3 +241,38 @@ Wariancję często oznacza się symbolem sigma squared: σ 2
 
 Podsumowanie rozdziału
 Odchylenie standardowe i wariancja to terminy często używane w uczeniu maszynowym, dlatego ważne jest, aby zrozumieć, jak je uzyskać, a także jaka jest koncepcja, która się za nimi kryje.
+
+# 4. Machine Learning - Percentiles
+Czym są percentyle?
+Percentyle są stosowane w statystyce w celu przedstawienia wartości, od której dany procent wartości jest niższy.
+
+Przykład: Załóżmy, że mamy tablicę zawierającą wiek wszystkich osób mieszkających na danej ulicy.
+```
+ages = [5,31,43,48,50,41,7,11,15,39,80,82,32,2,8,6,25,36,27,61,31]
+```
+Jaki jest 75. percentyl? Odpowiedź to 43, co oznacza, że ​​75% ludzi ma 43 lata lub mniej.
+
+Moduł NumPy ma metodę znajdowania określonego percentyla:
+Przykład:
+Użyj metody NumPy, percentile()aby znaleźć percentyle:
+```
+import numpy
+
+ages = [5,31,43,48,50,41,7,11,15,39,80,82,32,2,8,6,25,36,27,61,31]
+
+x = numpy.percentile(ages, 75)
+
+print(x)
+
+```
+Przykład
+W jakim wieku jest 90% ludzi?
+```
+import numpy
+
+ages = [5,31,43,48,50,41,7,11,15,39,80,82,32,2,8,6,25,36,27,61,31]
+
+x = numpy.percentile(ages, 90)
+
+print(x)
+```
