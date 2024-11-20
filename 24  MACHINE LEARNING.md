@@ -276,3 +276,73 @@ x = numpy.percentile(ages, 90)
 
 print(x)
 ```
+
+# 5. Machine Learning - Data Distribution
+
+Dystrybucja danych
+Na początku tego samouczka pracowaliśmy w naszych przykładach na bardzo małej ilości danych, aby zrozumieć różne koncepcje.
+
+W świecie rzeczywistym zbiory danych są o wiele większe, ale zebranie rzeczywistych danych może być trudne, przynajmniej na wczesnym etapie projektu.
+
+Jak możemy uzyskać duże zbiory danych?
+Aby utworzyć duże zbiory danych na potrzeby testów, korzystamy z modułu Pythona o nazwie NumPy, który udostępnia szereg metod umożliwiających tworzenie losowych zbiorów danych dowolnej wielkości.
+
+Przykład:
+Utwórz tablicę zawierającą 250 losowych liczb zmiennoprzecinkowych pomiędzy 0 i 5:
+```
+import numpy
+
+x = numpy.random.uniform(0.0, 5.0, 250)
+
+print(x)
+```
+Histogram
+Aby zwizualizować zbiór danych, możemy narysować histogram zawierający zebrane dane.
+
+Do narysowania histogramu wykorzystamy moduł Pythona Matplotlib.
+
+Dowiedz się więcej o module Matplotlib w naszym samouczku Matplotlib .
+
+Przykład
+Narysuj histogram:
+```
+import numpy
+import matplotlib.pyplot as plt
+
+x = numpy.random.uniform(0.0, 5.0, 250)
+
+plt.hist(x, 5)
+plt.show()
+```
+Wyjaśnienie histogramu
+Używamy tablicy z powyższego przykładu, aby narysować histogram z 5 słupkami.
+
+Pierwszy pasek przedstawia liczbę wartości w tablicy mieszczących się w przedziale od 0 do 1.
+
+Drugi pasek przedstawia liczbę wartości pomiędzy 1 i 2.
+
+Itp.
+
+Co daje nam taki wynik:
+
+- 52 wartości mieszczą się w przedziale od 0 do 1
+- 48 wartości mieści się w przedziale od 1 do 2
+- 49 wartości mieści się pomiędzy 2 a 3
+- 51 wartości mieści się w przedziale od 3 do 4
+- 50 wartości mieści się w przedziale od 4 do 5
+
+Uwaga: Wartości tablicy są liczbami losowymi i nie pokażą dokładnie tego samego wyniku na Twoim komputerze.
+
+Dystrybucje Big Data
+Tablica zawierająca 250 wartości nie jest uważana za bardzo dużą, ale teraz wiesz, jak utworzyć losowy zestaw wartości, a zmieniając parametry, możesz utworzyć zestaw danych tak duży, jak chcesz.
+
+Przykład: Utwórz tablicę zawierającą 100000 liczb losowych i wyświetl je za pomocą histogramu ze 100 słupkami:
+```
+import numpy
+import matplotlib.pyplot as plt
+
+x = numpy.random.uniform(0.0, 5.0, 100000)
+
+plt.hist(x, 100)
+plt.show()
+```
