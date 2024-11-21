@@ -346,3 +346,35 @@ x = numpy.random.uniform(0.0, 5.0, 100000)
 plt.hist(x, 100)
 plt.show()
 ```
+
+# 6. Machine Learning - Normal Data Distribution
+Normalny rozkład danych
+W poprzednim rozdziale dowiedzieliśmy się, jak utworzyć całkowicie losową tablicę o zadanym rozmiarze i zawierającą dwie zadane wartości.
+
+W tym rozdziale nauczymy się, jak utworzyć tablicę, w której wartości będą skoncentrowane wokół danej wartości.
+
+W teorii prawdopodobieństwa ten rodzaj rozkładu danych nazywany jest normalnym rozkładem danych lub rozkładem danych Gaussa , na cześć matematyka Carla Friedricha Gaussa, który opracował wzór tego rozkładu danych.
+
+Przykład:
+Typowy rozkład normalny danych:
+```
+import numpy
+import matplotlib.pyplot as plt
+
+x = numpy.random.normal(5.0, 1.0, 100000)
+
+plt.hist(x, 100)
+plt.show()
+```
+
+Uwaga: Wykres rozkładu normalnego nazywany jest także krzywą dzwonową ze względu na charakterystyczny kształt dzwonu.
+
+Wyjaśnienie histogramu
+Używamy tablicy z numpy.random.normal() metody zawierającej 100000 wartości, aby narysować histogram ze 100 słupkami.
+
+Określamy, że średnia wartość wynosi 5,0, a odchylenie standardowe wynosi 1,0.
+
+Oznacza to, że wartości powinny koncentrować się wokół wartości 5,0 i rzadko odbiegać od średniej bardziej niż o 1,0.
+
+Jak widać na histogramie, większość wartości mieści się w przedziale od 4,0 do 6,0, przy czym najwyższa wartość wynosi około 5,0.
+
