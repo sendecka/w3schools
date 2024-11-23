@@ -378,3 +378,64 @@ Oznacza to, że wartości powinny koncentrować się wokół wartości 5,0 i rza
 
 Jak widać na histogramie, większość wartości mieści się w przedziale od 4,0 do 6,0, przy czym najwyższa wartość wynosi około 5,0.
 
+# 7. Machine Learning - Scatter Plot
+Wykres punktowy
+Wykres punktowy to diagram, na którym każda wartość w zestawie danych jest reprezentowana przez kropkę.
+Moduł Matplotlib ma metodę rysowania wykresów punktowych. Wymaga dwóch tablic o tej samej długości: jednej dla wartości osi x i jednej dla wartości osi y:
+```
+x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
+
+y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+```
+Tablica xreprezentuje wiek każdego samochodu.
+
+Tablica yprzedstawia prędkość każdego samochodu.
+
+Przykład:
+Użyj poniższej scatter()metody, aby narysować diagram punktowy:
+```
+import matplotlib.pyplot as plt
+
+x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
+y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+plt.scatter(x, y)
+plt.show()
+```
+Wyjaśnienie wykresu punktowego
+Oś x przedstawia wiek, a oś y przedstawia prędkość.
+
+Z diagramu możemy wyczytać, że dwa najszybsze samochody miały 2 lata, a najwolniejszy miał 12 lat.
+
+Uwaga: Wygląda na to, że im nowszy samochód, tym szybciej jeździ, ale to może być przypadek, wszak zarejestrowaliśmy tylko 13 samochodów.
+
+Losowe rozkłady danych
+W uczeniu maszynowym zbiory danych mogą zawierać tysiące, a nawet miliony wartości.
+
+Podczas testowania algorytmu może się zdarzyć, że nie będziesz mieć dostępu do rzeczywistych danych i będziesz musiał użyć losowo wygenerowanych wartości.
+
+Jak dowiedzieliśmy się w poprzednim rozdziale, moduł NumPy może nam w tym pomóc!
+
+Utwórzmy dwie tablice wypełnione po 1000 liczb losowych z rozkładu normalnego.
+
+Pierwsza tablica będzie miała średnią ustawioną na 5,0 i odchylenie standardowe wynoszące 1,0.
+
+Druga tablica będzie miała średnią ustawioną na 10,0 i odchylenie standardowe wynoszące 2,0:
+
+Przykład:
+Wykres punktowy z 1000 punktów:
+```
+import numpy
+import matplotlib.pyplot as plt
+
+x = numpy.random.normal(5.0, 1.0, 1000)
+y = numpy.random.normal(10.0, 2.0, 1000)
+
+plt.scatter(x, y)
+plt.show()
+```
+
+Wyjaśnienie wykresu punktowego
+Widzimy, że kropki koncentrują się wokół wartości 5 na osi x i 10 na osi y.
+
+Możemy również zauważyć, że rozrzut jest większy na osi Y niż na osi X.
