@@ -439,3 +439,181 @@ Wyjaśnienie wykresu punktowego
 Widzimy, że kropki koncentrują się wokół wartości 5 na osi x i 10 na osi y.
 
 Możemy również zauważyć, że rozrzut jest większy na osi Y niż na osi X.
+
+# 8. Machine Learning - Linear Regression
+Regresja
+Termin regresja jest używany, gdy próbujesz znaleźć związek pomiędzy zmiennymi.
+
+W uczeniu maszynowym i modelowaniu statystycznym zależność ta jest wykorzystywana do przewidywania wyników przyszłych zdarzeń.
+
+Regresja liniowa
+Regresja liniowa wykorzystuje relacje pomiędzy punktami danych, aby poprowadzić linię prostą przechodzącą przez wszystkie punkty.
+
+Za pomocą tego wiersza można przewidywać przyszłe wartości.
+W uczeniu maszynowym przewidywanie przyszłości jest bardzo istotne.
+
+Jak to działa?
+Python ma metody znajdowania relacji między punktami danych i rysowania linii regresji liniowej. Pokażemy Ci, jak używać tych metod zamiast przechodzić przez wzór matematyczny.
+
+W poniższym przykładzie oś x przedstawia wiek, a oś y przedstawia prędkość. Zarejestrowaliśmy wiek i prędkość 13 samochodów, gdy mijały bramkę poboru opłat. Sprawdźmy, czy zebrane dane można wykorzystać w regresji liniowej:
+Przykład:
+
+Zacznij od narysowania wykresu punktowego:
+```
+import matplotlib.pyplot as plt
+
+x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
+y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+plt.scatter(x, y)
+plt.show()
+```
+Przykład
+Zaimportuj scipyi narysuj linię regresji liniowej:
+```
+import matplotlib.pyplot as plt
+from scipy import stats
+
+x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
+y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+slope, intercept, r, p, std_err = stats.linregress(x, y)
+
+def myfunc(x):
+  return slope * x + intercept
+
+mymodel = list(map(myfunc, x))
+
+plt.scatter(x, y)
+plt.plot(x, mymodel)
+plt.show()
+```
+Przykład wyjaśniony
+Zaimportuj potrzebne moduły.
+
+Więcej informacji na temat modułu Matplotlib znajdziesz w naszym samouczku Matplotlib .
+
+Więcej informacji na temat modułu SciPy znajdziesz w naszym samouczku SciPy .
+```
+import matplotlib.pyplot as plt
+from scipy import stats
+```
+Utwórz tablice reprezentujące wartości osi x i y:
+```
+x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
+y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+```
+Wykonaj metodę zwracającą pewne ważne wartości kluczowe regresji liniowej:
+```
+slope, intercept, r, p, std_err = stats.linregress(x, y)
+```
+Utwórz funkcję, która używa wartości slopei interceptdo zwracania nowej wartości. Ta nowa wartość reprezentuje miejsce na osi y, w którym zostanie umieszczona odpowiadająca jej wartość x:
+```
+def myfunc(x):
+  return slope * x + intercept
+```
+Przeprowadź każdą wartość tablicy x przez funkcję. Spowoduje to utworzenie nowej tablicy z nowymi wartościami dla osi y:
+```
+mymodel = list(map(myfunc, x))
+```
+Narysuj oryginalny wykres punktowy:
+```
+plt.scatter(x, y)
+```
+Narysuj linię regresji liniowej:
+```
+plt.plot(x, mymodel)
+```
+Wyświetl diagram:
+```
+plt.show()
+```
+R jak związek
+Ważne jest, aby znać zależność pomiędzy wartościami na osi x i wartościami na osi y, ponieważ jeśli nie ma zależności, regresji liniowej nie można użyć do przewidywania czegokolwiek.
+
+Tę zależność, zwaną współczynnikiem korelacji, nazywamy r.
+
+Wartości rmieszczą się w przedziale od -1 do 1, gdzie 0 oznacza brak związku, a 1 (i -1) oznaczają 100% związku.
+
+Python i moduł Scipy obliczą tę wartość za Ciebie, jedyne co musisz zrobić to podać wartości x i y.
+
+Przykład
+Jak dobrze moje dane pasują do regresji liniowej?
+```
+from scipy import stats
+
+x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
+y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+slope, intercept, r, p, std_err = stats.linregress(x, y)
+
+print(r)
+```
+Uwaga: Wynik -0,76 pokazuje, że istnieje związek, nie jest on idealny, ale wskazuje, że w przyszłych przewidywaniach możemy zastosować regresję liniową.
+
+Przewidywanie przyszłych wartości
+Teraz możemy wykorzystać zebrane informacje do przewidywania przyszłych wartości.
+
+Przykład: Spróbujmy przewidzieć prędkość 10-letniego samochodu.
+
+Aby to zrobić, potrzebujemy tej samej myfunc()funkcji, co w przykładzie powyżej:
+```
+def myfunc(x):
+  return slope * x + intercept
+```
+Przykład
+Przewiduj prędkość 10-letniego samochodu:
+```
+from scipy import stats
+
+x = [5,7,8,7,2,17,2,9,4,11,12,9,6]
+y = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+
+slope, intercept, r, p, std_err = stats.linregress(x, y)
+
+def myfunc(x):
+  return slope * x + intercept
+
+speed = myfunc(10)
+
+print(speed)
+```
+Źle dopasowane?
+Stwórzmy przykład, w którym regresja liniowa nie będzie najlepszą metodą przewidywania przyszłych wartości.
+
+Przykład
+Te wartości dla osi x i y powinny skutkować bardzo złym dopasowaniem do regresji liniowej:
+```
+import matplotlib.pyplot as plt
+from scipy import stats
+
+x = [89,43,36,36,95,10,66,34,38,20,26,29,48,64,6,5,36,66,72,40]
+y = [21,46,3,35,67,95,53,72,58,10,26,34,90,33,38,20,56,2,47,15]
+
+slope, intercept, r, p, std_err = stats.linregress(x, y)
+
+def myfunc(x):
+  return slope * x + intercept
+
+mymodel = list(map(myfunc, x))
+
+plt.scatter(x, y)
+plt.plot(x, mymodel)
+plt.show()
+```
+A co rz związkiem?
+
+Przykład
+Powinieneś otrzymać bardzo niską rwartość.
+```
+import numpy
+from scipy import stats
+
+x = [89,43,36,36,95,10,66,34,38,20,26,29,48,64,6,5,36,66,72,40]
+y = [21,46,3,35,67,95,53,72,58,10,26,34,90,33,38,20,56,2,47,15]
+
+slope, intercept, r, p, std_err = stats.linregress(x, y)
+
+print(r)
+```
+Wynik: 0,013 wskazuje na bardzo złą zależność i mówi nam, że ten zestaw danych nie nadaje się do regresji liniowej.
