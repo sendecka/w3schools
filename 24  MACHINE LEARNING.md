@@ -617,3 +617,166 @@ slope, intercept, r, p, std_err = stats.linregress(x, y)
 print(r)
 ```
 Wynik: 0,013 wskazuje na bardzo złą zależność i mówi nam, że ten zestaw danych nie nadaje się do regresji liniowej.
+
+# 9. Machine Learning - Polynomial Regression
+Regresja wielomianowa
+Jeśli Twoje punkty danych wyraźnie nie pasują do regresji liniowej (linia prosta przechodząca przez wszystkie punkty danych), mogą okazać się idealnym rozwiązaniem w przypadku regresji wielomianowej.
+
+Regresja wielomianowa, podobnie jak regresja liniowa, wykorzystuje związek między zmiennymi x i y, aby znaleźć najlepszy sposób na przeprowadzenie linii przez punkty danych.
+
+Jak to działa?
+Python ma metody znajdowania relacji między punktami danych i rysowania linii regresji wielomianowej. Pokażemy Ci, jak używać tych metod zamiast przechodzić przez wzór matematyczny.
+
+W poniższym przykładzie zarejestrowaliśmy 18 samochodów przejeżdżających przez określoną bramkę poboru opłat.
+
+Zarejestrowaliśmy prędkość samochodu oraz porę dnia (godzinę), w której nastąpiło wyprzedzanie.
+
+Oś x przedstawia godziny dnia, a oś y przedstawia prędkość:
+Przykład:
+Zacznij od narysowania wykresu punktowego:
+```
+import matplotlib.pyplot as plt
+
+x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
+y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
+
+plt.scatter(x, y)
+plt.show()
+```
+Przykład
+Zaimportuj numpyi matplotlibnarysuj linię regresji wielomianowej:
+```
+import numpy
+import matplotlib.pyplot as plt
+
+x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
+y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
+
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+
+myline = numpy.linspace(1, 22, 100)
+
+plt.scatter(x, y)
+plt.plot(myline, mymodel(myline))
+plt.show()
+```
+Przykład wyjaśniony
+Zaimportuj potrzebne moduły.
+
+Więcej informacji na temat modułu NumPy znajdziesz w naszym samouczku NumPy .
+
+Więcej informacji na temat modułu SciPy znajdziesz w naszym samouczku SciPy .
+```
+import numpy
+import matplotlib.pyplot as plt
+```
+Utwórz tablice reprezentujące wartości osi x i y:
+```
+x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
+y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
+```
+NumPy ma metodę umożliwiającą utworzenie modelu wielomianowego:
+```
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+```
+Następnie określ, jak będzie wyświetlana linia. Zaczynamy od pozycji 1 i kończymy na pozycji 22:
+```
+myline = numpy.linspace(1, 22, 100)
+```
+Narysuj oryginalny wykres punktowy:
+```
+plt.scatter(x, y)
+```
+Narysuj linię regresji wielomianowej:
+```
+plt.plot(myline, mymodel(myline))
+```
+Wyświetl diagram:
+```
+plt.show()
+```
+R-kwadrat
+Ważne jest, aby wiedzieć, jak silna jest zależność pomiędzy wartościami osi x i y, ponieważ jeśli nie ma takiej zależności, regresji wielomianowej nie można wykorzystać do przewidywania czegokolwiek.
+
+Miarą tego związku jest wartość zwana r-kwadrat.
+
+Wartość r-kwadrat przyjmuje wartości od 0 do 1, gdzie 0 oznacza brak związku, a 1 oznacza 100% związku.
+
+Python i moduł Sklearn obliczą tę wartość za Ciebie, jedyne co musisz zrobić to wprowadzić tablice x i y:
+
+Przykład
+Jak dobrze moje dane pasują do regresji wielomianowej?
+```
+import numpy
+from sklearn.metrics import r2_score
+
+x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
+y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
+
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+
+print(r2_score(y, mymodel(x)))
+```
+Uwaga: Wynik 0,94 pokazuje, że istnieje bardzo dobra zależność i że w przyszłych przewidywaniach możemy stosować regresję wielomianową.
+
+Przewidywanie przyszłych wartości
+Teraz możemy wykorzystać zebrane informacje do przewidywania przyszłych wartości.
+
+Przykład: Spróbujmy przewidzieć prędkość samochodu, który przejeżdża obok punktu poboru opłat około godziny 17:00:
+
+Aby to zrobić, potrzebujemy tej samej mymodeltablicy, co w przykładzie powyżej:
+```
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+```
+Przykład
+Przewiduj prędkość samochodu przejeżdżającego o godzinie 17:00:
+```
+import numpy
+from sklearn.metrics import r2_score
+
+x = [1,2,3,5,6,7,8,9,10,12,13,14,15,16,18,19,21,22]
+y = [100,90,80,60,60,55,60,65,70,70,75,76,78,79,90,99,99,100]
+
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+
+speed = mymodel(17)
+print(speed)
+```
+W przykładzie przewidziano prędkość 88,87, co mogliśmy również odczytać z diagramu:
+
+Źle dopasowane?
+Stwórzmy przykład, w którym regresja wielomianowa nie będzie najlepszą metodą przewidywania przyszłych wartości.
+
+Przykład
+Te wartości dla osi x i y powinny skutkować bardzo złym dopasowaniem do regresji wielomianowej:
+```
+import numpy
+import matplotlib.pyplot as plt
+
+x = [89,43,36,36,95,10,66,34,38,20,26,29,48,64,6,5,36,66,72,40]
+y = [21,46,3,35,67,95,53,72,58,10,26,34,90,33,38,20,56,2,47,15]
+
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+
+myline = numpy.linspace(2, 95, 100)
+
+plt.scatter(x, y)
+plt.plot(myline, mymodel(myline))
+plt.show()
+```
+A wartość r-kwadrat?
+
+Przykład
+Powinieneś otrzymać bardzo niską wartość r-kwadrat.
+```
+import numpy
+from sklearn.metrics import r2_score
+
+x = [89,43,36,36,95,10,66,34,38,20,26,29,48,64,6,5,36,66,72,40]
+y = [21,46,3,35,67,95,53,72,58,10,26,34,90,33,38,20,56,2,47,15]
+
+mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
+
+print(r2_score(y, mymodel(x)))
+```
+Wynik: 0,00995 wskazuje na bardzo złą zależność i mówi nam, że ten zestaw danych nie nadaje się do regresji wielomianowej.
