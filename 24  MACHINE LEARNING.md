@@ -845,3 +845,72 @@ print(predictedCO2)
 ```
 [107.2087328]
 Przewidywaliśmy, że samochód z silnikiem o pojemności 1,3 litra i masie 2300 kg będzie emitował około 107 gramów CO2 na każdy przejechany kilometr.
+
+Współczynnik
+Współczynnik to czynnik opisujący związek ze zmienną nieznaną.
+
+Przykład: jeśli xjest zmienną, to 2xjest xdwa razy. xjest nieznaną zmienną, a liczba 2jest współczynnikiem.
+
+W tym przypadku możemy zapytać o wartość współczynnika wagi względem CO2 i objętości względem CO2. Odpowiedzi, które otrzymamy, mówią nam, co by się stało, gdybyśmy zwiększyli lub zmniejszyli jedną z niezależnych wartości.
+
+Przykład
+Wydrukuj wartości współczynników obiektu regresji:
+```
+import pandas
+from sklearn import linear_model
+
+df = pandas.read_csv("data.csv")
+
+X = df[['Weight', 'Volume']]
+y = df['CO2']
+
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+
+print(regr.coef_)
+```
+
+Wynik:
+[0,00755095 0,00780526]
+
+Wyjaśnienie wyniku
+Tablica wyników przedstawia wartości współczynników wagi i objętości.
+
+Waga: 0,00755095
+Objętość: 0,00780526
+
+Wartości te mówią nam, że wraz ze wzrostem masy o 1 kg emisja CO2 wzrasta o 0,00755095 g.
+
+A jeżeli wielkość silnika (objętość) wzrośnie o 1 cm3 , emisja CO2 wzrośnie o 0,00780526 g.
+
+Myślę, że to trafne przypuszczenie, ale sprawdźmy je!
+
+Już przewidzieliśmy, że jeśli samochód z silnikiem o pojemności 1300 cm3 waży 2300 kg, to emisja CO2 wyniesie około 107 g.
+
+A co jeśli zwiększymy ciężar o 1000 kg?
+
+Przykład
+Skopiuj przykład z poprzedniego, ale zmień wagę z 2300 na 3300:
+```
+import pandas
+from sklearn import linear_model
+
+df = pandas.read_csv("data.csv")
+
+X = df[['Weight', 'Volume']]
+y = df['CO2']
+
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+
+predictedCO2 = regr.predict([[3300, 1300]])
+
+print(predictedCO2)
+```
+Wynik:
+[114.75968007]
+Przewidywaliśmy, że samochód z silnikiem o pojemności 1,3 litra i masie 3300 kg będzie emitował około 115 gramów CO2 na każdy przejechany kilometr.
+
+Co pokazuje, że współczynnik 0,00755095 jest poprawny:
+
+107,2087328 + (1000 * 0,00755095) = 114,75968
