@@ -780,3 +780,68 @@ mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))
 print(r2_score(y, mymodel(x)))
 ```
 Wynik: 0,00995 wskazuje na bardzo złą zależność i mówi nam, że ten zestaw danych nie nadaje się do regresji wielomianowej.
+
+# 10. Machine Learning - Multiple Regression
+Multiple Regression
+Regresja wielokrotna
+Regresja wieloraka jest podobna do regresji liniowej , ale posiada więcej niż jedną niezależną wartość, co oznacza, że ​​staramy się przewidzieć wartość na podstawie dwóch lub więcej zmiennych.
+
+Jak to działa?
+W Pythonie mamy moduły, które wykonają pracę za nas. Zacznij od zaimportowania modułu Pandas.
+```
+import pandas
+```
+Dowiedz się więcej o module Pandas w naszym samouczku Pandas .
+
+Moduł Pandas umożliwia odczyt plików csv i zwracanie obiektu DataFrame.
+
+Plik jest przeznaczony wyłącznie do celów testowych, można go pobrać stąd: data.csv
+```
+df = pandas.read_csv("data.csv")
+```
+Następnie utwórz listę niezależnych wartości i nazwij tę zmienną X.
+
+Umieść wartości zależne w zmiennej o nazwie y.
+```
+X = df[['Weight', 'Volume']]
+y = df['CO2']
+```
+Wskazówka: Nazwę listy wartości niezależnych określa się wielką literą X, a listę wartości zależnych małą literą y.
+
+Wykorzystamy niektóre metody z modułu sklearn, dlatego będziemy musieli zaimportować również ten moduł:
+
+from sklearn import linear_model
+
+Z modułu sklearn wykorzystamy LinearRegression()metodę służącą do utworzenia obiektu regresji liniowej.
+
+Ten obiekt ma metodę o nazwie fit(), która przyjmuje wartości niezależne i zależne jako parametry i wypełnia obiekt regresji danymi opisującymi relację:
+```
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+```
+Teraz mamy obiekt regresji, który jest gotowy do przewidywania wartości CO2 na podstawie masy i objętości samochodu:
+```
+#predict the CO2 emission of a car where the weight is 2300kg, and the volume is 1300cm3:
+predictedCO2 = regr.predict([[2300, 1300]])
+```
+Przykład:
+Zobacz cały przykład w akcji:
+```
+import pandas
+from sklearn import linear_model
+
+df = pandas.read_csv("data.csv")
+
+X = df[['Weight', 'Volume']]
+y = df['CO2']
+
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+
+#predict the CO2 emission of a car where the weight is 2300kg, and the volume is 1300cm3:
+predictedCO2 = regr.predict([[2300, 1300]])
+
+print(predictedCO2)
+```
+[107.2087328]
+Przewidywaliśmy, że samochód z silnikiem o pojemności 1,3 litra i masie 2300 kg będzie emitował około 107 gramów CO2 na każdy przejechany kilometr.
