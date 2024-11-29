@@ -914,3 +914,81 @@ Przewidywaliśmy, że samochód z silnikiem o pojemności 1,3 litra i masie 3300
 Co pokazuje, że współczynnik 0,00755095 jest poprawny:
 
 107,2087328 + (1000 * 0,00755095) = 114,75968
+
+# 11. Machine Learning - Scale
+Funkcje skali
+Gdy Twoje dane mają różne wartości, a nawet różne jednostki miary, porównanie ich może być trudne. Czym są kilogramy w porównaniu do metrów? Albo wysokość w porównaniu do czasu?
+
+Odpowiedzią na ten problem jest skalowanie. Możemy skalować dane do nowych wartości, które są łatwiejsze do porównania.
+
+Przyjrzyj się poniższej tabeli. Jest to ten sam zestaw danych, którego użyliśmy w rozdziale poświęconym regresji wielorakiej , ale tym razem kolumna objętości zawiera wartości w litrach, a nie cm3 ( 1,0 zamiast 1000).
+Porównanie objętości 1,0 z wagą 790 może być trudne, ale jeśli przeskalujemy je do porównywalnych wartości, łatwo zobaczymy, jak bardzo jedna wartość ma się do drugiej.
+
+Istnieją różne metody skalowania danych. W tym samouczku wykorzystamy metodę zwaną standaryzacją.
+
+Metoda standaryzacji wykorzystuje następujący wzór:
+
+z = (x - u) / s
+
+Gdzie zjest nową wartością, xjest wartością oryginalną, ujest średnią, a sjest odchyleniem standardowym.
+
+Jeśli weźmiemy kolumnę wagi z powyższego zestawu danych, pierwsza wartość to 790, a skalowana wartość będzie wynosić:
+
+(790 - 1292.23) / 238.74 = -2.1
+Jeśli weźmiemy kolumnę wolumenu z powyższego zestawu danych, pierwsza wartość to 1,0, a skalowana wartość będzie wynosić:
+
+(1.0 - 1.61) / 0.38 = -1.59
+
+Teraz możesz porównywać -2,1 z -1,59 zamiast porównywać 790 z 1,0.
+
+Nie musisz tego robić ręcznie, moduł Python sklearn ma metodę StandardScaler() zwracającą obiekt Scaler z metodami do transformacji zestawów danych.
+
+Przykład:
+Skaluj wszystkie wartości w kolumnach Waga i Objętość:
+```
+import pandas
+from sklearn import linear_model
+from sklearn.preprocessing import StandardScaler
+scale = StandardScaler()
+
+df = pandas.read_csv("data.csv")
+
+X = df[['Weight', 'Volume']]
+
+scaledX = scale.fit_transform(X)
+
+print(scaledX)
+```
+Wynik:
+Należy zauważyć, że pierwsze dwie wartości to -2,1 i -1,59, co odpowiada naszym obliczeniom
+
+Przewidywanie wartości CO2
+Zadanie w rozdziale poświęconym regresji wielorakiej polegało na przewidzeniu emisji CO2 przez samochód, znając jedynie jego masę i objętość.
+
+Gdy zbiór danych zostanie skalowany, będziesz musiał użyć skali podczas przewidywania wartości:
+
+Przykład:
+Przewiduj emisję CO2 z samochodu o pojemności 1,3 litra i wadze 2300 kilogramów:
+```
+import pandas
+from sklearn import linear_model
+from sklearn.preprocessing import StandardScaler
+scale = StandardScaler()
+
+df = pandas.read_csv("data.csv")
+
+X = df[['Weight', 'Volume']]
+y = df['CO2']
+
+scaledX = scale.fit_transform(X)
+
+regr = linear_model.LinearRegression()
+regr.fit(scaledX, y)
+
+scaled = scale.transform([[2300, 1.3]])
+
+predictedCO2 = regr.predict([scaled[0]])
+print(predictedCO2)
+```
+Wynik:
+[107.2087328]
