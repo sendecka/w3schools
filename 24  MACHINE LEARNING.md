@@ -992,3 +992,176 @@ print(predictedCO2)
 ```
 Wynik:
 [107.2087328]
+
+# 12. Machine Learning - Train/Test
+Oceń swój model
+W uczeniu maszynowym tworzymy modele, które pozwalają nam przewidywać wyniki pewnych zdarzeń, tak jak w poprzednim rozdziale, gdzie przewidywaliśmy emisję CO2 samochodu, gdy znaliśmy jego masę i pojemność silnika.
+
+Aby sprawdzić, czy model jest wystarczająco dobry, możemy posłużyć się metodą Trenuj/Testuj.
+Czym jest Train/Test
+Trening/Test to metoda pomiaru dokładności modelu.
+
+Ta metoda nazywa się „Trenuj/Testuj”, ponieważ dzieli zestaw danych na dwa zestawy: zestaw treningowy i zestaw testowy.
+
+80% na szkolenia i 20% na testy.
+
+Model jest trenowany za pomocą zestawu treningowego.
+
+Testujesz model za pomocą zestawu testowego .
+
+Trenowanie modelu oznacza tworzenie modelu.
+
+Testowanie modelu oznacza testowanie dokładności modelu.
+Zacznij od zestawu danych
+Zacznij od zestawu danych, który chcesz przetestować.
+
+Nasz zbiór danych przedstawia 100 klientów w sklepie i ich zwyczaje zakupowe.
+
+Przykład:
+```
+import numpy
+import matplotlib.pyplot as plt
+numpy.random.seed(2)
+
+x = numpy.random.normal(3, 1, 100)
+y = numpy.random.normal(150, 40, 100) / x
+
+plt.scatter(x, y)
+plt.show()
+```
+Wynik:
+Oś x przedstawia liczbę minut przed dokonaniem zakupu.
+
+Oś Y przedstawia kwotę wydaną na zakup.
+
+Podzielone na Trening/Test
+Zbiór treningowy powinien być losowo wybranym zestawem 80% oryginalnych danych.
+
+Zestaw testowy powinien obejmować pozostałe 20%.
+```
+train_x = x[:80]
+train_y = y[:80]
+
+test_x = x[80:]
+test_y = y[80:]
+```
+Wyświetl zestaw treningowy
+Wyświetl ten sam wykres punktowy z zestawem treningowym:
+
+Przykład:
+```
+plt.scatter(train_x, train_y)
+plt.show()
+```
+Wyświetl zestaw testowy
+Aby mieć pewność, że zestaw testowy nie jest zupełnie inny, przyjrzymy się mu również.
+
+Przykład:
+```
+plt.scatter(test_x, test_y)
+plt.show()
+```
+Dopasuj zestaw danych
+Jak wygląda zbiór danych? Moim zdaniem, myślę, że najlepszym rozwiązaniem byłaby regresja wielomianowa , więc narysujmy linię regresji wielomianowej.
+
+Aby narysować linię przechodzącą przez punkty danych, używamy plot()metody modułu matplotlib:
+
+Przykład
+Narysuj linię regresji wielomianowej przechodzącą przez punkty danych:
+```
+import numpy
+import matplotlib.pyplot as plt
+numpy.random.seed(2)
+
+x = numpy.random.normal(3, 1, 100)
+y = numpy.random.normal(150, 40, 100) / x
+
+train_x = x[:80]
+train_y = y[:80]
+
+test_x = x[80:]
+test_y = y[80:]
+
+mymodel = numpy.poly1d(numpy.polyfit(train_x, train_y, 4))
+
+myline = numpy.linspace(0, 6, 100)
+
+plt.scatter(train_x, train_y)
+plt.plot(myline, mymodel(myline))
+plt.show()
+```
+Wynik może poprzeć moją sugestię, że zbiór danych pasuje do regresji wielomianowej, nawet jeśli dałoby nam to dziwne wyniki, gdybyśmy próbowali przewidzieć wartości poza zbiorem danych. Przykład: linia wskazuje, że klient spędzający 6 minut w sklepie dokonałby zakupu o wartości 200. To prawdopodobnie oznaka nadmiernego dopasowania.
+
+Ale co z wynikiem R-kwadrat? Wynik R-kwadrat jest dobrym wskaźnikiem tego, jak dobrze mój zestaw danych pasuje do modelu.
+
+R2
+Pamiętasz R2, znany również jako R-kwadrat?
+
+Mierzy on związek pomiędzy osią x i osią y, a wartości mieszczą się w zakresie od 0 do 1, gdzie 0 oznacza brak związku, a 1 oznacza całkowity związek.
+
+Moduł sklearn ma metodę r2_score() , która pomoże nam znaleźć tę zależność.
+
+W tym przypadku chcielibyśmy zmierzyć zależność między liczbą minut spędzonych przez klienta w sklepie a kwotą pieniędzy, jaką wydaje.
+
+Przykład:
+Jak dobrze moje dane treningowe pasują do regresji wielomianowej?
+```
+import numpy
+from sklearn.metrics import r2_score
+numpy.random.seed(2)
+
+x = numpy.random.normal(3, 1, 100)
+y = numpy.random.normal(150, 40, 100) / x
+
+train_x = x[:80]
+train_y = y[:80]
+
+test_x = x[80:]
+test_y = y[80:]
+
+mymodel = numpy.poly1d(numpy.polyfit(train_x, train_y, 4))
+
+r2 = r2_score(train_y, mymodel(train_x))
+
+print(r2)
+```
+Uwaga: Wynik 0,799 pokazuje, że istnieje prawidłowa relacja.
+
+Wnieś zestaw testowy
+Teraz stworzyliśmy model, który jest w porządku, przynajmniej jeśli chodzi o dane treningowe.
+
+Teraz chcemy przetestować model również przy użyciu danych testowych i sprawdzić, czy da nam taki sam wynik.
+
+Przykład
+Znajdźmy wynik R2 przy użyciu danych testowych:
+```
+import numpy
+from sklearn.metrics import r2_score
+numpy.random.seed(2)
+
+x = numpy.random.normal(3, 1, 100)
+y = numpy.random.normal(150, 40, 100) / x
+
+train_x = x[:80]
+train_y = y[:80]
+
+test_x = x[80:]
+test_y = y[80:]
+
+mymodel = numpy.poly1d(numpy.polyfit(train_x, train_y, 4))
+
+r2 = r2_score(test_y, mymodel(test_x))
+
+print(r2)
+```
+Uwaga: Wynik 0,809 pokazuje, że model jest zgodny również ze zbiorem testowym i jesteśmy pewni, że możemy go wykorzystać do przewidywania przyszłych wartości.
+
+Przewidywanie wartości
+Teraz, gdy ustaliliśmy, że nasz model jest prawidłowy, możemy zacząć przewidywać nowe wartości.
+Przykład
+Ile pieniędzy wyda klient, jeśli zostanie w sklepie 5 minut?
+```
+print(mymodel(5))
+```
+W przykładzie przewidziano, że klient wyda 22,88 dolarów, co wydaje się odpowiadać diagramowi:
+
