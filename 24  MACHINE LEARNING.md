@@ -1165,3 +1165,42 @@ print(mymodel(5))
 ```
 W przykładzie przewidziano, że klient wyda 22,88 dolarów, co wydaje się odpowiadać diagramowi:
 
+# 13. Machine Learning - Decision Tree
+Drzewo decyzyjne
+W tym rozdziale pokażemy Ci, jak stworzyć „Drzewo decyzyjne”. Drzewo decyzyjne to diagram przepływu, który może pomóc Ci podejmować decyzje na podstawie wcześniejszych doświadczeń.
+
+W tym przykładzie osoba będzie próbowała podjąć decyzję, czy powinna pójść na pokaz komediowy, czy nie.
+
+Na szczęście nasza przykładowa osoba rejestrowała się za każdym razem, gdy w mieście odbywał się występ komediowy, a także zamieszczała informacje o komiku, a także informację, czy w nim uczestniczył, czy nie.
+Jak to działa?
+Najpierw odczytaj zbiór danych za pomocą pandas:
+
+Przykład:
+Odczytaj i wydrukuj zbiór danych:
+```
+import pandas
+
+df = pandas.read_csv("data.csv")
+
+print(df)
+```
+Aby stworzyć drzewo decyzyjne, wszystkie dane muszą mieć postać liczbową.
+
+Musimy zamienić kolumny nie będące liczbami „Narodowość” i „Go” na wartości liczbowe.
+
+Pandas ma map()metodę, która przyjmuje słownik zawierający informacje o tym, jak konwertować wartości.
+
+{'UK': 0, 'USA': 1, 'N': 2}
+
+Oznacza konwersję wartości „UK” na 0, „USA” na 1 i „N” na 2.
+
+Przykład:
+Zmień wartości łańcuchowe na wartości liczbowe:
+```
+d = {'UK': 0, 'USA': 1, 'N': 2}
+df['Nationality'] = df['Nationality'].map(d)
+d = {'YES': 1, 'NO': 0}
+df['Go'] = df['Go'].map(d)
+
+print(df)
+```
