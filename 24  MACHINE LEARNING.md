@@ -1204,3 +1204,45 @@ df['Go'] = df['Go'].map(d)
 
 print(df)
 ```
+Następnie musimy oddzielić kolumny funkcji od kolumny docelowej .
+
+Kolumny funkcji to kolumny, na podstawie których próbujemy przewidzieć wartości , a kolumna docelowa to kolumna zawierająca wartości, które próbujemy przewidzieć.
+
+Przykład
+Xto kolumny funkcji, yto kolumna docelowa:
+```
+features = ['Age', 'Experience', 'Rank', 'Nationality']
+
+X = df[features]
+y = df['Go']
+
+print(X)
+print(y)
+```
+Teraz możemy stworzyć rzeczywiste drzewo decyzyjne, dopasować je do naszych szczegółów. Zacznijmy od zaimportowania potrzebnych nam modułów:
+
+Przykład
+Utwórz i wyświetl drzewo decyzyjne:
+```
+import pandas
+from sklearn import tree
+from sklearn.tree import DecisionTreeClassifier
+import matplotlib.pyplot as plt
+
+df = pandas.read_csv("data.csv")
+
+d = {'UK': 0, 'USA': 1, 'N': 2}
+df['Nationality'] = df['Nationality'].map(d)
+d = {'YES': 1, 'NO': 0}
+df['Go'] = df['Go'].map(d)
+
+features = ['Age', 'Experience', 'Rank', 'Nationality']
+
+X = df[features]
+y = df['Go']
+
+dtree = DecisionTreeClassifier()
+dtree = dtree.fit(X, y)
+
+tree.plot_tree(dtree, feature_names=features)
+```
