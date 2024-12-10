@@ -1246,3 +1246,108 @@ dtree = dtree.fit(X, y)
 
 tree.plot_tree(dtree, feature_names=features)
 ```
+Wyjaśnienie wyniku
+Drzewo decyzyjne wykorzystuje Twoje wcześniejsze decyzje, aby obliczyć prawdopodobieństwo, że będziesz chciał pójść na występ komika, czy nie.
+Stopień
+Rank <= 6.5oznacza, że ​​każdy komik o randze 6,5 lub niższej podąży za Truestrzałką (w lewo), a pozostali podążą za Falsestrzałką (w prawo).
+
+gini = 0.497odnosi się do jakości podziału i zawsze jest liczbą pomiędzy 0,0 a 0,5, gdzie 0,0 oznacza, że ​​wszystkie próbki otrzymały ten sam wynik, a 0,5 oznacza, że ​​podział został wykonany dokładnie w połowie.
+
+samples = 13oznacza, że ​​na tym etapie decyzji pozostało 13 komików, czyli wszyscy, ponieważ jest to pierwszy krok.
+
+value = [6, 7]oznacza, że ​​z tych 13 komików, 6 otrzyma odpowiedź „NIE”, a 7 otrzyma odpowiedź „START”.
+
+Gini
+Istnieje wiele sposobów podziału próbek, w tym samouczku wykorzystamy metodę GINI.
+
+Metoda Giniego wykorzystuje następujący wzór:
+
+Gini = 1 - (x/n)2 - (y/n)2
+
+Gdzie xjest liczbą pozytywnych odpowiedzi („GO”), njest liczbą próbek, a yjest liczbą negatywnych odpowiedzi („NO”), co daje nam następujące obliczenie:
+
+1 - (7 / 13)2 - (6 / 13)2 = 0.497
+Następny krok zawiera dwa pola: jedno pole dla komików z „Rangą” równą lub niższą niż 6,5 i jedno pole z pozostałymi.
+
+Prawda - 5 komików kończy tutaj:
+gini = 0.0oznacza, że ​​wszystkie próbki dały ten sam wynik.
+
+samples = 5oznacza, że ​​w tej gałęzi pozostało 5 komików (5 komików z rangą 6,5 lub niższą).
+
+value = [5, 0]oznacza, że ​​5 otrzyma odpowiedź „NIE”, a 0 otrzyma odpowiedź „GO”.
+
+Fałsz - 8 komików kontynuuje:
+Narodowość
+Nationality <= 0.5oznacza, że ​​komicy, których wartość narodowości jest mniejsza niż 0,5, podążą za strzałką po lewej stronie (co oznacza wszystkich z Wielkiej Brytanii), a pozostali podążą za strzałką po prawej stronie.
+
+gini = 0.219oznacza, że ​​około 22% próbek poszłoby w jednym kierunku.
+
+samples = 8oznacza, że ​​w tej gałęzi pozostało 8 komików (8 komików z rangą wyższą niż 6,5).
+
+value = [1, 7]oznacza, że ​​z tych 8 komików 1 otrzyma odpowiedź „NIE”, a 7 otrzyma odpowiedź „START”.
+Prawda - 4 komików kontynuuje:
+Wiek
+Age <= 35.5oznacza, że ​​komicy w wieku 35,5 lat lub młodsi podążą za strzałką po lewej stronie, a pozostali – za strzałką po prawej stronie.
+
+gini = 0.375oznacza, że ​​około 37,5% próbek poszłoby w jednym kierunku.
+
+samples = 4oznacza, że ​​w tej branży pozostało 4 komików (4 komików z Wielkiej Brytanii).
+
+value = [1, 3]oznacza, że ​​z tych 4 komików 1 otrzyma odpowiedź „NIE”, a 3 otrzyma odpowiedź „START”.
+
+Fałsz - 4 komików kończy tutaj:
+gini = 0.0oznacza, że ​​wszystkie próbki dały ten sam wynik.
+
+samples = 4oznacza, że ​​w tej branży pozostało 4 komików (4 komików spoza Wielkiej Brytanii).
+
+value = [0, 4]oznacza, że ​​spośród tych 4 komików 0 otrzyma odpowiedź „NIE”, a 4 otrzyma odpowiedź „START”.
+
+Prawda - 2 komików kończy tutaj:
+gini = 0.0oznacza, że ​​wszystkie próbki dały ten sam wynik.
+
+samples = 2oznacza, że ​​w tej branży pozostało 2 komików (2 komików w wieku 35,5 lat lub młodszych).
+
+value = [0, 2]oznacza, że ​​z tych 2 komików 0 otrzyma odpowiedź „NIE”, a 2 otrzyma odpowiedź „START”.
+
+Fałsz - 2 komików kontynuuje:
+Doświadczenie
+Experience <= 9.5oznacza, że ​​komicy z 9,5-letnim lub krótszym stażem będą podążać za strzałką po lewej stronie, a pozostali – za strzałką po prawej stronie.
+
+gini = 0.5oznacza, że ​​50% próbek podążałoby w jednym kierunku.
+
+samples = 2oznacza, że ​​w tej gałęzi pozostało 2 komików (2 komików starszych niż 35,5 roku życia).
+
+value = [1, 1]oznacza, że ​​z tych dwóch komików, 1 otrzyma odpowiedź „NIE”, a 1 otrzyma odpowiedź „START”.
+
+Prawda - 1 Komik kończy tutaj:
+gini = 0.0oznacza, że ​​wszystkie próbki dały ten sam wynik.
+
+samples = 1oznacza, że ​​w tej branży pozostał 1 komik (1 komik ze stażem 9,5 roku lub mniejszym).
+
+value = [0, 1]oznacza, że ​​0 otrzyma odpowiedź „NIE”, a 1 otrzyma odpowiedź „GO”.
+
+Fałsz - 1 Komik kończy tutaj:
+gini = 0.0oznacza, że ​​wszystkie próbki dały ten sam wynik.
+
+samples = 1oznacza, że ​​w tej branży pozostał 1 komik (1 komik z doświadczeniem dłuższym niż 9,5 roku).
+
+value = [1, 0]oznacza, że ​​1 otrzyma odpowiedź „NIE”, a 0 otrzyma odpowiedź „GO”.
+
+Przewidywanie wartości
+Za pomocą drzewa decyzyjnego możemy przewidywać nowe wartości.
+
+Przykład: Czy powinienem wybrać się na przedstawienie, w którym występuje 40-letni amerykański komik z 10-letnim doświadczeniem i 7-punktową oceną w rankingu komediowym?
+Przykład
+Użyj metody predict(), aby przewidzieć nowe wartości:
+```
+print(dtree.predict([[40, 10, 7, 1]]))
+```
+Przykład
+Jaka byłaby odpowiedź, gdyby ocena komedii wynosiła 6?
+```
+print(dtree.predict([[40, 10, 6, 1]]))
+```
+Różne wyniki
+Zobaczysz, że Drzewo Decyzyjne daje różne wyniki, jeśli uruchomisz je wystarczająco dużo razy, nawet jeśli wprowadzisz do niego te same dane.
+
+Dzieje się tak, ponieważ Drzewo Decyzyjne nie daje nam 100% pewnej odpowiedzi. Opiera się na prawdopodobieństwie wyniku, a odpowiedź będzie się różnić.
