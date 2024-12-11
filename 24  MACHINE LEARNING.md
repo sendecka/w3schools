@@ -1351,3 +1351,72 @@ Różne wyniki
 Zobaczysz, że Drzewo Decyzyjne daje różne wyniki, jeśli uruchomisz je wystarczająco dużo razy, nawet jeśli wprowadzisz do niego te same dane.
 
 Dzieje się tak, ponieważ Drzewo Decyzyjne nie daje nam 100% pewnej odpowiedzi. Opiera się na prawdopodobieństwie wyniku, a odpowiedź będzie się różnić.
+
+# 13. Machine Learning - Confusion Matrix
+Czym jest macierz pomyłek?
+Jest to tabela używana w problemach klasyfikacyjnych do oceny, gdzie w modelu popełniono błędy.
+
+Wiersze przedstawiają rzeczywiste klasy, w których powinny być wyniki. Kolumny przedstawiają nasze przewidywania. Używając tej tabeli łatwo zobaczyć, które przewidywania są błędne.
+
+Tworzenie macierzy pomyłek
+Macierze pomyłek można tworzyć w oparciu o przewidywania uzyskane za pomocą regresji logistycznej.
+
+Na razie wygenerujemy rzeczywiste i przewidywane wartości wykorzystując NumPy:
+```
+import numpy
+```
+Następnie musimy wygenerować liczby dla wartości „rzeczywistych” i „przewidywanych”.
+```
+actual = numpy.random.binomial(1, 0.9, size = 1000)
+predicted = numpy.random.binomial(1, 0.9, size = 1000)
+```
+Aby utworzyć macierz pomyłek musimy zaimportować metryki z modułu sklearn.
+```
+from sklearn import metrics
+```
+Po zaimportowaniu danych możemy zastosować funkcję macierzy pomyłek do wartości rzeczywistych i prognozowanych.
+```
+confusion_matrix = metrics.confusion_matrix(actual, predicted)
+```
+Aby utworzyć łatwiejszą do zinterpretowania prezentację wizualną, musimy przekształcić tabelę w macierz pomyłek.
+```
+cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix, display_labels = [0, 1])
+```
+Aby wyświetlić obraz, musimy zaimportować pyplot z matplotlib.
+```
+import matplotlib.pyplot as plt
+```
+Na koniec, aby wyświetlić wykres możemy skorzystać z funkcji plot() i show() z pyplot.
+```
+cm_display.plot()
+plt.show()
+```
+Zobacz cały przykład w akcji:
+PrzykładZdobądź własny serwer Python
+```
+import matplotlib.pyplot as plt
+import numpy
+from sklearn import metrics
+
+actual = numpy.random.binomial(1,.9,size = 1000)
+predicted = numpy.random.binomial(1,.9,size = 1000)
+
+confusion_matrix = metrics.confusion_matrix(actual, predicted)
+
+cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix, display_labels = [0, 1])
+
+cm_display.plot()
+
+plt.show()
+```
+Wyjaśnienie wyników
+Stworzona Macierz Pomyłek składa się z czterech różnych kwadrantów:
+
+Prawdziwie negatywne (lewy górny kwadrant)
+Fałszywie pozytywne (prawy górny kwadrant)
+Fałszywie negatywne (lewy dolny kwadrant)
+Prawdziwie pozytywne (prawy dolny kwadrant)
+
+Prawda oznacza, że ​​wartości zostały dokładnie przewidziane. Fałsz oznacza, że ​​wystąpił błąd lub przewidywanie było błędne.
+
+Teraz, gdy stworzyliśmy macierz pomyłek, możemy obliczyć różne miary, aby określić jakość modelu. Najpierw przyjrzyjmy się dokładności.
