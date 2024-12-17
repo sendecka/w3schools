@@ -1566,3 +1566,14 @@ Przykład
 ```
 print({"Accuracy":Accuracy,"Precision":Precision,"Sensitivity_recall":Sensitivity_recall,"Specificity":Specificity,"F1_score":F1_score})
 ```
+
+# 15. Machine Learning - Hierarchical Clustering
+Klastrowanie hierarchiczne
+Klastrowanie hierarchiczne to metoda uczenia się bez nadzoru do grupowania punktów danych. Algorytm buduje klastry, mierząc różnice między danymi. Uczenie się bez nadzoru oznacza, że ​​model nie musi być trenowany i nie potrzebujemy zmiennej „docelowej”. Tę metodę można stosować do dowolnych danych w celu wizualizacji i interpretacji relacji między poszczególnymi punktami danych.
+
+W tym artykule wykorzystamy klasterowanie hierarchiczne do grupowania punktów danych i wizualizacji klastrów przy użyciu dendrogramu i wykresu punktowego.
+
+Jak to działa?
+Użyjemy aglomeracyjnego klastrowania, typu hierarchicznego klastrowania, które podąża za podejściem oddolnym. Zaczynamy od traktowania każdego punktu danych jako osobnego klastra. Następnie łączymy klastry, które mają najkrótszą odległość między nimi, aby utworzyć większe klastry. Ten krok jest powtarzany, aż powstanie jeden duży klaster zawierający wszystkie punkty danych.
+
+Klastrowanie hierarchiczne wymaga od nas podjęcia decyzji zarówno o odległości, jak i metodzie łączenia. Użyjemy odległości euklidesowej i metody łączenia Warda, która próbuje zminimalizować wariancję między klastrami.
