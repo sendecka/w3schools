@@ -1577,3 +1577,108 @@ Jak to działa?
 Użyjemy aglomeracyjnego klastrowania, typu hierarchicznego klastrowania, które podąża za podejściem oddolnym. Zaczynamy od traktowania każdego punktu danych jako osobnego klastra. Następnie łączymy klastry, które mają najkrótszą odległość między nimi, aby utworzyć większe klastry. Ten krok jest powtarzany, aż powstanie jeden duży klaster zawierający wszystkie punkty danych.
 
 Klastrowanie hierarchiczne wymaga od nas podjęcia decyzji zarówno o odległości, jak i metodzie łączenia. Użyjemy odległości euklidesowej i metody łączenia Warda, która próbuje zminimalizować wariancję między klastrami.
+
+Przykład:
+Zacznij od wizualizacji kilku punktów danych:
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = [4, 5, 10, 4, 3, 11, 14 , 6, 10, 12]
+y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+
+plt.scatter(x, y)
+plt.show()
+```
+Teraz obliczamy sprzężenie Warda, korzystając z odległości euklidesowej i wizualizujemy je za pomocą dendrogramu:
+Przykład:
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.cluster.hierarchy import dendrogram, linkage
+
+x = [4, 5, 10, 4, 3, 11, 14 , 6, 10, 12]
+y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+
+data = list(zip(x, y))
+
+linkage_data = linkage(data, method='ward', metric='euclidean')
+dendrogram(linkage_data)
+
+plt.show()
+```
+Tutaj robimy to samo z biblioteką Pythona scikit-learn. Następnie wizualizujemy na dwuwymiarowym wykresie:
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import AgglomerativeClustering
+
+x = [4, 5, 10, 4, 3, 11, 14 , 6, 10, 12]
+y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+
+data = list(zip(x, y))
+
+hierarchical_cluster = AgglomerativeClustering(n_clusters=2, affinity='euclidean', linkage='ward')
+labels = hierarchical_cluster.fit_predict(data)
+
+plt.scatter(x, y, c=labels)
+plt.show()
+```
+Przykład wyjaśniony
+Zaimportuj potrzebne moduły.
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.cluster.hierarchy import dendrogram, linkage
+from sklearn.cluster import AgglomerativeClustering
+```
+Więcej informacji na temat modułu Matplotlib znajdziesz w naszym „Samouczku Matplotlib” .
+
+Więcej informacji na temat modułu SciPy znajdziesz w naszym samouczku SciPy .
+
+NumPy to biblioteka do pracy z tablicami i macierzami w Pythonie. Więcej informacji na temat modułu NumPy znajdziesz w naszym samouczku NumPy .
+
+scikit-learn to popularna biblioteka do uczenia maszynowego.
+
+Utwórz tablice przypominające dwie zmienne w zestawie danych. Zwróć uwagę, że chociaż tutaj używamy tylko dwóch zmiennych, ta metoda będzie działać z dowolną liczbą zmiennych:
+```
+x = [4, 5, 10, 4, 3, 11, 14 , 6, 10, 12]
+y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+```
+Przekształć dane w zbiór punktów:
+```
+data = list(zip(x, y))
+print(data)
+```
+Wynik:
+```
+[(4, 21), (5, 19), (10, 24), (4, 17), (3, 16), (11, 25), (14, 24), (6, 22), (10, 21), (12, 21)]
+```
+Oblicz powiązanie między wszystkimi różnymi punktami. Tutaj używamy prostej miary odległości euklidesowej i powiązania Warda, które ma na celu zminimalizowanie wariancji między klastrami.
+```
+linkage_data = linkage(data, method='ward', metric='euclidean')
+```
+Na koniec nanieś wyniki na dendrogram. Ten wykres pokaże nam hierarchię klastrów od dołu (poszczególne punkty) do góry (pojedynczy klaster składający się ze wszystkich punktów danych).
+```
+plt.show()pozwala nam zwizualizować dendrogram zamiast samych surowych danych sprzężenia.
+
+dendrogram(linkage_data)
+plt.show()
+```
+Biblioteka scikit-learn pozwala nam używać hierarchicznego klastrowania w inny sposób. Najpierw inicjujemy AgglomerativeClusteringklasę 2 klastrami, używając tej samej odległości euklidesowej i wiązania Warda.
+```
+hierarchical_cluster = AgglomerativeClustering(n_clusters=2, affinity='euclidean', linkage='ward')
+```
+Tę .fit_predictmetodę można wywołać dla naszych danych, aby obliczyć klastry, używając zdefiniowanych parametrów w wybranej liczbie klastrów.
+```
+labels = hierarchical_cluster.fit_predict(data) print(labels)
+```
+Wynik:
+```
+[0 0 1 0 0 1 1 0 1 1]
+```
+Na koniec, jeśli naniesiemy te same dane na wykres i pokolorujemy punkty, używając etykiet przypisanych do każdego indeksu metodą hierarchicznego grupowania, możemy zobaczyć klaster, do którego przypisano każdy punkt:
+```
+plt.scatter(x, y, c=labels)
+plt.show()
+```
