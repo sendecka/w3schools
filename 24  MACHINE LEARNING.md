@@ -1774,3 +1774,75 @@ Wynik
 ```
  [4.03541657]
 ```
+Oznacza to, że wraz ze wzrostem wielkości guza o 1 mm prawdopodobieństwo, że jest to nowotwór złośliwy, wzrasta czterokrotnie.
+
+Prawdopodobieństwo
+Wartości współczynnika i punktu przecięcia można wykorzystać do określenia prawdopodobieństwa, że ​​każdy guz jest nowotworem złośliwym.
+
+Utwórz funkcję, która używa współczynnika modelu i wartości przecięcia, aby zwrócić nową wartość. Ta nowa wartość reprezentuje prawdopodobieństwo, że dana obserwacja jest guzem:
+
+```
+def logit2prob(logr,x):
+  log_odds = logr.coef_ * x + logr.intercept_
+  odds = numpy.exp(log_odds)
+  probability = odds / (1 + odds)
+  return(probability)
+```
+Wyjaśnienie funkcji
+Aby znaleźć logarytm szans dla każdej obserwacji, musimy najpierw utworzyć wzór podobny do wzoru regresji liniowej, wyodrębniając współczynnik i przecięcie.
+```
+log_odds = logr.coef_ * x + logr.intercept_
+```
+Aby następnie zamienić logarytmiczne szanse na szanse, musimy je wynieść do postaci wykładniczej.
+```
+odds = numpy.exp(log_odds)
+```
+Teraz, gdy znamy już szanse, możemy zamienić je na prawdopodobieństwo, dzieląc je przez 1 i dodając szanse.
+```
+probability = odds / (1 + odds)
+```
+Wykorzystajmy teraz funkcję z tym, czego się dowiedzieliśmy, aby obliczyć prawdopodobieństwo, że każdy guz jest złośliwy.
+
+Przykład:
+Zobacz cały przykład w akcji:
+```
+import numpy
+from sklearn import linear_model
+
+X = numpy.array([3.78, 2.44, 2.09, 0.14, 1.72, 1.65, 4.92, 4.37, 4.96, 4.52, 3.69, 5.88]).reshape(-1,1)
+y = numpy.array([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1])
+
+logr = linear_model.LogisticRegression()
+logr.fit(X,y)
+
+def logit2prob(logr, X):
+  log_odds = logr.coef_ * X + logr.intercept_
+  odds = numpy.exp(log_odds)
+  probability = odds / (1 + odds)
+  return(probability)
+
+print(logit2prob(logr, X))
+```
+Wynik
+```
+  [[0,60749955]
+   [0,19268876]
+   [0,12775886]
+   [0,00955221]
+   [0,08038616]
+   [0,07345637]
+   [0,88362743]
+   [0,77901378]
+   [0,88924409]
+   [0,81293497]
+   [0,57719129]
+   [0,96664243]]
+   ```
+Wyjaśnienie wyników:
+
+
+3,78 0,61 Prawdopodobieństwo, że guz o wielkości 3,78 cm jest nowotworem złośliwym wynosi 61%.
+
+2,44 0,19 Prawdopodobieństwo, że guz o wielkości 2,44 cm jest nowotworem złośliwym wynosi 19%.
+
+2,09 0,13 Prawdopodobieństwo, że guz o wielkości 2,09 cm jest nowotworem złośliwym wynosi 13%.
