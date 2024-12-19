@@ -1682,3 +1682,95 @@ Na koniec, jeśli naniesiemy te same dane na wykres i pokolorujemy punkty, używ
 plt.scatter(x, y, c=labels)
 plt.show()
 ```
+
+# 16. Machine Learning - Logistic Regression
+Regresja logistyczna
+Regresja logistyczna ma na celu rozwiązanie problemów klasyfikacyjnych. Robi to poprzez przewidywanie wyników kategorycznych, w przeciwieństwie do regresji liniowej, która przewiduje wynik ciągły.
+
+W najprostszym przypadku istnieją dwa wyniki, które nazywane są dwumianowymi, a przykładem tego jest przewidywanie, czy guz jest złośliwy czy łagodny. Inne przypadki mają więcej niż dwa wyniki do sklasyfikowania, w tym przypadku nazywa się to wielomianowym. Typowym przykładem wielomianowej regresji logistycznej byłoby przewidywanie klasy kwiatu irysa między 3 różnymi gatunkami.
+
+Tutaj będziemy używać podstawowej regresji logistycznej do przewidywania zmiennej dwumianowej. Oznacza to, że ma ona tylko dwa możliwe wyniki.
+Jak to działa?
+W Pythonie mamy moduły, które wykonają pracę za nas. Zacznij od zaimportowania modułu NumPy.
+```
+import numpy
+```
+Przechowuj zmienne niezależne w X.
+
+Zapisz zmienną zależną w y.
+
+Poniżej znajduje się przykładowy zestaw danych:
+```
+#X represents the size of a tumor in centimeters.
+X = numpy.array([3.78, 2.44, 2.09, 0.14, 1.72, 1.65, 4.92, 4.37, 4.96, 4.52, 3.69, 5.88]).reshape(-1,1)
+
+#Note: X has to be reshaped into a column from a row for the LogisticRegression() function to work.
+#y represents whether or not the tumor is cancerous (0 for "No", 1 for "Yes").
+y = numpy.array([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1])
+```
+Wykorzystamy metodę z modułu sklearn, więc będziemy musieli zaimportować również ten moduł:
+```
+from sklearn import linear_model
+```
+Z modułu sklearn użyjemy metody LogisticRegression() w celu utworzenia obiektu regresji logistycznej.
+
+Ten obiekt ma metodę o nazwie fit(), która przyjmuje wartości niezależne i zależne jako parametry i wypełnia obiekt regresji danymi opisującymi relację:
+```
+logr = linear_model.LogisticRegression()
+logr.fit(X,y)
+```
+Teraz mamy obiekt regresji logistycznej, który jest gotowy do określenia, czy guz jest rakowy na podstawie jego rozmiaru:
+```
+#predict if tumor is cancerous where the size is 3.46mm:
+predicted = logr.predict(numpy.array([3.46]).reshape(-1,1))
+```
+Przykład:
+Zobacz cały przykład w akcji:
+```
+import numpy
+from sklearn import linear_model
+
+#Reshaped for Logistic function.
+X = numpy.array([3.78, 2.44, 2.09, 0.14, 1.72, 1.65, 4.92, 4.37, 4.96, 4.52, 3.69, 5.88]).reshape(-1,1)
+y = numpy.array([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1])
+
+logr = linear_model.LogisticRegression()
+logr.fit(X,y)
+
+#predict if tumor is cancerous where the size is 3.46mm:
+predicted = logr.predict(numpy.array([3.46]).reshape(-1,1))
+print(predicted)
+```
+Wynik
+```
+ [0]
+```
+Przewidywaliśmy, że guz o wielkości 3,46 mm nie będzie nowotworem złośliwym.
+
+Współczynnik
+W regresji logistycznej współczynnik jest oczekiwaną zmianą logarytmu szansy na zmianę wyniku na jednostkę w X.
+
+Nie jest to zbyt intuicyjne, więc wykorzystajmy to, aby stworzyć coś, co będzie miało więcej sensu, szanse.
+
+Przykład:
+Zobacz cały przykład w akcji:
+```
+import numpy
+from sklearn import linear_model
+
+#Reshaped for Logistic function.
+X = numpy.array([3.78, 2.44, 2.09, 0.14, 1.72, 1.65, 4.92, 4.37, 4.96, 4.52, 3.69, 5.88]).reshape(-1,1)
+y = numpy.array([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1])
+
+logr = linear_model.LogisticRegression()
+logr.fit(X,y)
+
+log_odds = logr.coef_
+odds = numpy.exp(log_odds)
+
+print(odds)
+```
+Wynik
+```
+ [4.03541657]
+```
