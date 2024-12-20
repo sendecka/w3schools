@@ -1846,3 +1846,9 @@ Wyjaśnienie wyników:
 2,44 0,19 Prawdopodobieństwo, że guz o wielkości 2,44 cm jest nowotworem złośliwym wynosi 19%.
 
 2,09 0,13 Prawdopodobieństwo, że guz o wielkości 2,09 cm jest nowotworem złośliwym wynosi 13%.
+
+# 17 Machine Learning - Grid Search
+Wyszukiwanie w siatce
+Większość modeli uczenia maszynowego zawiera parametry, które można dostosować, aby zmienić sposób uczenia się modelu. Na przykład model regresji logistycznej z sklearn, ma parametr C, który kontroluje regularizację, co wpływa na złożoność modelu.
+
+Jak wybrać najlepszą wartość dla C? Najlepsza wartość zależy od danych użytych do trenowania modelu.
