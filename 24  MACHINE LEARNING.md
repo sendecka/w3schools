@@ -1852,3 +1852,58 @@ Wyszukiwanie w siatce
 Większość modeli uczenia maszynowego zawiera parametry, które można dostosować, aby zmienić sposób uczenia się modelu. Na przykład model regresji logistycznej z sklearn, ma parametr C, który kontroluje regularizację, co wpływa na złożoność modelu.
 
 Jak wybrać najlepszą wartość dla C? Najlepsza wartość zależy od danych użytych do trenowania modelu.
+
+Jak to działa?
+Jedną z metod jest wypróbowanie różnych wartości, a następnie wybranie wartości, która daje najlepszy wynik. Ta technika jest znana jako wyszukiwanie siatki . Gdybyśmy musieli wybrać wartości dla dwóch lub więcej parametrów, ocenilibyśmy wszystkie kombinacje zestawów wartości, tworząc w ten sposób siatkę wartości.
+
+Zanim przejdziemy do przykładu, dobrze jest wiedzieć, co robi parametr, który zmieniamy. Wyższe wartości mówią Cmodelowi, że dane treningowe przypominają informacje ze świata rzeczywistego, kładą większy nacisk na dane treningowe. Podczas gdy niższe wartości Crobią odwrotnie.
+
+Korzystanie z domyślnych parametrów
+Najpierw sprawdźmy, jakie wyniki możemy wygenerować bez przeszukiwania siatki, wykorzystując jedynie parametry bazowe.
+
+Aby rozpocząć, musimy najpierw załadować zestaw danych, z którym będziemy pracować.
+```
+from sklearn import datasets
+iris = datasets.load_iris()
+```
+Następnie, aby utworzyć model, musimy mieć zbiór zmiennych niezależnych X i zmienną zależną y.
+```
+X = iris['data']
+y = iris['target']
+```
+Teraz załadujemy model logistyczny do klasyfikacji kwiatów irysów.
+```
+from sklearn.linear_model import LogisticRegression
+```
+Tworzenie modelu i ustawienie parametru max_iter na wyższą wartość w celu zapewnienia znalezienia wyniku przez model.
+
+Należy pamiętać, że domyślna wartość Cw modelu regresji logistycznej wynosi 1, porównamy ją później.
+
+W poniższym przykładzie przyjrzymy się zestawowi danych tęczówki i spróbujemy wytrenować model przy użyciu różnych wartości Cw regresji logistycznej.
+```
+logit = LogisticRegression(max_iter = 10000)
+```
+Po utworzeniu modelu musimy dopasować go do danych.
+```
+print(logit.fit(X,y))
+```
+Aby ocenić model stosujemy metodę punktacji.
+```
+print(logit.score(X,y))
+```
+Przykład:
+```
+from sklearn import datasets
+from sklearn.linear_model import LogisticRegression
+
+iris = datasets.load_iris()
+
+X = iris['data']
+y = iris['target']
+
+logit = LogisticRegression(max_iter = 10000)
+
+print(logit.fit(X,y))
+```
+
+print(logit.score(X,y))
