@@ -1907,3 +1907,83 @@ print(logit.fit(X,y))
 ```
 
 print(logit.score(X,y))
+Przy ustawieniu domyślnym C = 1uzyskaliśmy wynik 0.973.
+
+Sprawdźmy, czy możemy uzyskać lepsze wyniki, stosując przeszukiwanie siatki z wartościami różnicy wynoszącymi 0,973.
+
+Implementacja wyszukiwania siatki
+Powtórzymy te same kroki, co poprzednio, z tą różnicą, że tym razem ustawimy zakres wartości dla C.
+
+Aby określić, jakie wartości należy ustawić dla wyszukiwanych parametrów, potrzebna jest wiedza specjalistyczna i praktyka.
+
+Ponieważ wartością domyślną Cjest 1, ustawimy zakres wartości ją otaczających.
+```
+C = [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]
+```
+Następnie utworzymy pętlę for, aby zmieniać wartości Cmodelu i oceniać je po każdej zmianie.
+
+Najpierw utworzymy pustą listę, w której zapiszemy wynik.
+```
+scores = []
+```
+Aby zmienić wartości, Cmusimy przejść pętlą przez zakres wartości i za każdym razem aktualizować parametr.
+```
+for choice in C:
+  logit.set_params(C=choice)
+  logit.fit(X, y)
+  scores.append(logit.score(X, y))
+```
+Mając wyniki zapisane na liście, możemy ocenić, który wybór Cjest najlepszy.
+```
+print(scores)
+```
+Przykład
+```
+from sklearn import datasets
+from sklearn.linear_model import LogisticRegression
+
+iris = datasets.load_iris()
+
+X = iris['data']
+y = iris['target']
+
+logit = LogisticRegression(max_iter = 10000)
+
+C = [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]
+
+scores = []
+
+for choice in C:
+  logit.set_params(C=choice)
+  logit.fit(X, y)
+  scores.append(logit.score(X, y))
+
+print(scores)
+```
+Wyjaśnienie wyników
+Możemy zobaczyć, że niższe wartości Cdawały gorsze wyniki niż parametr bazowy 1. Jednak wraz ze wzrostem wartości , Cmodel 1.75doświadczył zwiększonej dokładności.
+
+Wydaje się, że zwiększenie wartości Cponad tę wartość nie przyczynia się do zwiększenia dokładności modelu.
+
+Uwaga dotycząca najlepszych praktyk
+Oceniliśmy nasz model regresji logistycznej, używając tych samych danych, które zostały użyte do jego wytrenowania. Jeśli model odpowiada zbyt ściśle tym danym, może nie być świetny w przewidywaniu niewidzianych danych. Ten błąd statystyczny jest znany jako nadmierne dopasowanie .
+
+Aby uniknąć wprowadzenia w błąd przez wyniki danych treningowych, możemy odłożyć część naszych danych i użyć ich specjalnie do testowania modelu. Zapoznaj się z wykładem na temat podziału tren/test, aby uniknąć wprowadzenia w błąd i nadmiernego dopasowania.
+
+# 18. Preprocessing - Categorical Data
+
+Na tej stronie W3schools.com współpracuje z NYC Data Science Academy w celu dostarczania naszym uczniom cyfrowych treści szkoleniowych.
+
+Dane kategoryczne
+Jeśli Twoje dane zawierają kategorie reprezentowane przez ciągi znaków, trudno będzie ich użyć do trenowania modeli uczenia maszynowego, które często akceptują wyłącznie dane liczbowe.
+
+Zamiast ignorować dane kategoryczne i wykluczać informacje z naszego modelu, możesz przekształcić dane tak, aby możliwe było ich wykorzystanie w Twoich modelach.
+
+Przyjrzyj się poniższej tabeli. Jest to ten sam zestaw danych, którego użyliśmy w rozdziale poświęconym regresji wielorakiej .
+Przykład:
+```
+import pandas as pd
+
+cars = pd.read_csv('data.csv')
+print(cars.to_string())
+```
