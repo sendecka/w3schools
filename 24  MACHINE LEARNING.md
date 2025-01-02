@@ -1987,3 +1987,106 @@ import pandas as pd
 cars = pd.read_csv('data.csv')
 print(cars.to_string())
 ```
+Wynik
+```
+  Model samochodu Objętość Waga CO2
+  0 Toyota Aygo 1000 790 99
+  1 Mitsubishi Space Star 1200 1160 95
+  2 Skoda Citigo 1000 929 95
+  3 Fiata 500 900 865 90
+  4 Mini Cooper 1500 1140 105
+  5 VW Up! 1000 929 105
+  6 Skoda Fabia 1400 1109 90
+```
+W rozdziale poświęconym regresji wielorakiej próbowaliśmy przewidzieć ilość emitowanego CO2 na podstawie objętości silnika i masy samochodu, ale pominęliśmy informacje o marce i modelu samochodu.
+
+Informacje o marce lub modelu samochodu mogą pomóc nam lepiej przewidzieć ilość emitowanego CO2.
+
+Jedno gorące kodowanie
+Nie możemy wykorzystać kolumny Car lub Model w naszych danych, ponieważ nie są one numeryczne. Nie można ustalić liniowej zależności między zmienną kategoryjną Car lub Model a zmienną numeryczną CO2.
+
+Aby rozwiązać ten problem, musimy mieć numeryczną reprezentację zmiennej kategorycznej. Jednym ze sposobów, aby to zrobić, jest posiadanie kolumny reprezentującej każdą grupę w kategorii.
+
+Dla każdej kolumny wartości będą wynosić 1 lub 0, gdzie 1 oznacza włączenie grupy, a 0 oznacza wykluczenie. Ta transformacja jest nazywana kodowaniem one hot.
+
+Nie musisz tego robić ręcznie, moduł Python Pandas ma funkcję, get_dummies()która wykonuje jedno gorące kodowanie.
+
+Dowiedz się więcej o module Pandas w naszym samouczku Pandas .
+Przykład
+Jedna kolumna „Kodowanie na gorąco” w samochodzie:
+```
+import pandas as pd
+
+cars = pd.read_csv('data.csv')
+ohe_cars = pd.get_dummies(cars[['Car']])
+
+print(ohe_cars.to_string())
+```
+Wyniki
+Dla każdej marki samochodu w kolumnie Samochód utworzono kolumnę.
+
+Przewidywanie CO2
+Możemy wykorzystać te dodatkowe informacje wraz z objętością i wagą do przewidywania stężenia CO2
+
+Aby połączyć informacje, możemy skorzystać z concat()funkcji z pakietu pandas.
+
+Najpierw musimy zaimportować kilka modułów.
+
+Zaczniemy od zaimportowania Pand.
+```
+import pandas
+```
+Moduł pandas umożliwia nam odczyt plików csv i manipulowanie obiektami DataFrame:
+```
+cars = pandas.read_csv("data.csv")
+```
+Umożliwia nam to również tworzenie zmiennych fikcyjnych:
+```
+ohe_cars = pandas.get_dummies(cars[['Car']])
+```
+Następnie musimy wybrać zmienne niezależne (X) i dodać zmienne fikcyjne kolumnowo.
+
+Przechowuj również zmienną zależną w y.
+```
+X = pandas.concat([cars[['Volume', 'Weight']], ohe_cars], axis=1)
+y = cars['CO2']
+```
+Musimy również zaimportować metodę ze sklearn, aby utworzyć model liniowy
+
+Dowiedz się więcej o regresji liniowej .
+
+from sklearn import linear_model
+
+Teraz możemy dopasować dane do regresji liniowej:
+```
+regr = linear_model.LinearRegression()
+regr.fit(X,y)
+```
+Wreszcie możemy przewidzieć emisję CO2 na podstawie masy samochodu, jego objętości i producenta.
+```
+##predict the CO2 emission of a VW where the weight is 2300kg, and the volume is 1300cm3:
+predictedCO2 = regr.predict([[2300, 1300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]])
+```
+Przykład
+```
+import pandas
+from sklearn import linear_model
+
+cars = pandas.read_csv("data.csv")
+ohe_cars = pandas.get_dummies(cars[['Car']])
+
+X = pandas.concat([cars[['Volume', 'Weight']], ohe_cars], axis=1)
+y = cars['CO2']
+
+regr = linear_model.LinearRegression()
+regr.fit(X,y)
+
+##predict the CO2 emission of a VW where the weight is 2300kg, and the volume is 1300cm3:
+predictedCO2 = regr.predict([[2300, 1300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0]])
+
+print(predictedCO2)
+```
+Wynik
+```
+[122.45153299]
+```
