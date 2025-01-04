@@ -2090,3 +2090,65 @@ Wynik
 ```
 [122.45153299]
 ```
+
+Mamy teraz współczynnik dla objętości, wagi i każdej marki samochodu w zestawie danych
+
+Udawanie
+Nie jest konieczne tworzenie jednej kolumny dla każdej grupy w Twojej kategorii. Informacje mogą być przechowywane przy użyciu 1 kolumny mniej niż liczba grup, które posiadasz.
+
+Na przykład masz kolumnę reprezentującą kolory, a w tej kolumnie masz dwa kolory: czerwony i niebieski.
+
+Przykład
+```
+import pandas as pd
+
+colors = pd.DataFrame({'color': ['blue', 'red']})
+
+print(colors)
+```
+Wynik
+```
+    kolor
+  0 niebieski
+  1 czerwony
+```
+Możesz utworzyć 1 kolumnę o nazwie czerwony, gdzie 1 oznacza kolor czerwony, a 0 oznacza kolor nie-czerwony, czyli niebieski.
+
+Aby to zrobić, możemy użyć tej samej funkcji, której użyliśmy do kodowania one hot, get_dummies, a następnie usunąć jedną z kolumn. Istnieje argument drop_first, który pozwala nam wykluczyć pierwszą kolumnę z wynikowej tabeli.
+
+Przykład:
+```
+import pandas as pd
+
+colors = pd.DataFrame({'color': ['blue', 'red']})
+dummies = pd.get_dummies(colors, drop_first=True)
+
+print(dummies)
+```
+Wynik
+```
+     kolor_czerwony
+  0 0
+  1 1
+```
+Co jeśli masz więcej niż 2 grupy? Jak można przedstawić wiele grup za pomocą 1 kolumny mniej?
+
+Załóżmy, że tym razem mamy trzy kolory: czerwony, niebieski i zielony. Kiedy get_dummies podczas usuwania pierwszej kolumny, otrzymamy następującą tabelę.
+
+Przykład:
+```
+import pandas as pd
+
+colors = pd.DataFrame({'color': ['blue', 'red', 'green']})
+dummies = pd.get_dummies(colors, drop_first=True)
+dummies['color'] = colors['color']
+
+print(dummies)
+```
+Wynik
+```
+     kolor_zielony kolor_czerwony kolor
+  0 0 0 niebieski
+  1 0 1 czerwony
+```
+  2 1 0 zielony
