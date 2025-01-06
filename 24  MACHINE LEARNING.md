@@ -2152,3 +2152,10 @@ Wynik
   1 0 1 czerwony
 ```
   2 1 0 zielony
+
+# Machine Learning - K-means
+
+K-oznacza
+K-means to nienadzorowana metoda uczenia się do grupowania punktów danych. Algorytm iteracyjnie dzieli punkty danych na K klastrów, minimalizując wariancję w każdym klastrze.
+
+Pokażemy tutaj, jak oszacować najlepszą wartość K, stosując metodę łokcia, a następnie jak użyć klasteryzacji K-średnich, aby pogrupować punkty danych w klastry.
