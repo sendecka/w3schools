@@ -2159,3 +2159,21 @@ K-oznacza
 K-means to nienadzorowana metoda uczenia się do grupowania punktów danych. Algorytm iteracyjnie dzieli punkty danych na K klastrów, minimalizując wariancję w każdym klastrze.
 
 Pokażemy tutaj, jak oszacować najlepszą wartość K, stosując metodę łokcia, a następnie jak użyć klasteryzacji K-średnich, aby pogrupować punkty danych w klastry.
+
+Jak to działa?
+Najpierw każdy punkt danych jest losowo przypisywany do jednego z K klastrów. Następnie obliczamy centroid (funkcjonalnie środek) każdego klastra i ponownie przypisujemy każdy punkt danych do klastra z najbliższym centroidem. Powtarzamy ten proces, aż przypisania klastrów dla każdego punktu danych przestaną się zmieniać.
+
+Klastrowanie metodą K-means wymaga od nas wybrania K, liczby klastrów, w które chcemy grupować dane. Metoda łokcia pozwala nam wykreślić bezwładność (metrykę opartą na odległości) i zwizualizować punkt, w którym zaczyna ona maleć liniowo. Ten punkt jest nazywany „łokciem” i jest dobrym szacunkiem najlepszej wartości dla K na podstawie naszych danych.
+
+Przykład:
+
+Zacznij od wizualizacji kilku punktów danych:
+```
+import matplotlib.pyplot as plt
+
+x = [4, 5, 10, 4, 3, 11, 14 , 6, 10, 12]
+y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+
+plt.scatter(x, y)
+plt.show()
+```
