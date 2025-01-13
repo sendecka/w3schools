@@ -2177,3 +2177,80 @@ y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
 plt.scatter(x, y)
 plt.show()
 ```
+Teraz wykorzystamy metodę łokciową do wizualizacji bezwładności dla różnych wartości K:
+
+Przykład:
+```
+from sklearn.cluster import KMeans
+
+data = list(zip(x, y))
+inertias = []
+
+for i in range(1,11):
+    kmeans = KMeans(n_clusters=i)
+    kmeans.fit(data)
+    inertias.append(kmeans.inertia_)
+
+plt.plot(range(1,11), inertias, marker='o')
+plt.title('Elbow method')
+plt.xlabel('Number of clusters')
+plt.ylabel('Inertia')
+plt.show()
+```
+Metoda łokcia pokazuje, że 2 jest dobrą wartością K, więc ponownie uczymy i wizualizujemy wynik:
+
+Przykład:
+```
+kmeans = KMeans(n_clusters=2)
+kmeans.fit(data)
+
+plt.scatter(x, y, c=kmeans.labels_)
+plt.show()
+```
+Przykład wyjaśniony
+Zaimportuj potrzebne moduły.
+```
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+```
+Więcej informacji na temat modułu Matplotlib znajdziesz w naszym „Samouczku Matplotlib” .
+```
+scikit-learn to popularna biblioteka do uczenia maszynowego.
+```
+Utwórz tablice przypominające dwie zmienne w zestawie danych. Zwróć uwagę, że chociaż tutaj używamy tylko dwóch zmiennych, ta metoda będzie działać z dowolną liczbą zmiennych:
+```
+x = [4, 5, 10, 4, 3, 11, 14 , 6, 10, 12]
+y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+```
+Przekształć dane w zbiór punktów:
+```
+data = list(zip(x, y))
+print(data)
+```
+Wynik:
+```
+[(4, 21), (5, 19), (10, 24), (4, 17), (3, 16), (11, 25), (14, 24), (6, 22), (10, 21), (12, 21)]
+```
+Aby znaleźć najlepszą wartość dla K, musimy uruchomić K-means w naszych danych dla zakresu możliwych wartości. Mamy tylko 10 punktów danych, więc maksymalna liczba klastrów wynosi 10. Więc dla każdej wartości K w zakresie (1,11) trenujemy model K-means i kreślimy intertia dla tej liczby klastrów:
+```
+inertias = []
+
+for i in range(1,11):
+    kmeans = KMeans(n_clusters=i)
+    kmeans.fit(data)
+    inertias.append(kmeans.inertia_)
+
+plt.plot(range(1,11), inertias, marker='o')
+plt.title('Elbow method')
+plt.xlabel('Number of clusters')
+plt.ylabel('Inertia')
+plt.show()
+```
+Możemy zobaczyć, że „łokieć” na powyższym wykresie (gdzie interakcja staje się bardziej liniowa) znajduje się przy K=2. Następnie możemy dopasować nasz algorytm K-means jeszcze raz i narysować różne klastry przypisane do danych:
+```
+kmeans = KMeans(n_clusters=2)
+kmeans.fit(data)
+
+plt.scatter(x, y, c=kmeans.labels_)
+plt.show()
+```
