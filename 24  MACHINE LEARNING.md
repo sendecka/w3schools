@@ -2153,7 +2153,7 @@ Wynik
 ```
   2 1 0 zielony
 
-# Machine Learning - K-means
+# 19. Machine Learning - K-means
 
 K-oznacza
 K-means to nienadzorowana metoda uczenia się do grupowania punktów danych. Algorytm iteracyjnie dzieli punkty danych na K klastrów, minimalizując wariancję w każdym klastrze.
@@ -2253,4 +2253,42 @@ kmeans.fit(data)
 
 plt.scatter(x, y, c=kmeans.labels_)
 plt.show()
+```
+# 20. Machine Learning - Bootstrap Aggregation (Bagging)
+
+Metody takie jak drzewa decyzyjne mogą być podatne na nadmierne dopasowanie do zbioru treningowego, co może prowadzić do błędnych prognoz na podstawie nowych danych.
+
+Agregacja Bootstrap (bagging) to metoda ensemblingu, która próbuje rozwiązać problem nadmiernego dopasowania w przypadku problemów klasyfikacji lub regresji. Bagging ma na celu poprawę dokładności i wydajności algorytmów uczenia maszynowego. Robi to poprzez losowe podzbiory oryginalnego zestawu danych z zamianą i dopasowuje klasyfikator (w przypadku klasyfikacji) lub regresor (w przypadku regresji) do każdego podzbioru. Następnie prognozy dla każdego podzbioru są agregowane poprzez głosowanie większościowe w przypadku klasyfikacji lub uśrednianie w przypadku regresji, co zwiększa dokładność prognoz.
+Ocena klasyfikatora bazowego
+
+Aby zobaczyć, jak bagging może poprawić wydajność modelu, musimy zacząć od oceny, jak klasyfikator bazowy działa w zestawie danych. Jeśli nie wiesz, czym są drzewa decyzyjne, przejrzyj lekcję o drzewach decyzyjnych, zanim przejdziesz dalej, ponieważ bagging jest kontynuacją tej koncepcji.
+
+Będziemy chcieli zidentyfikować różne klasy win znajdujące się w zbiorze danych o winach Sklearn.
+
+Zacznijmy od zaimportowania niezbędnych modułów.
+```
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
+```
+Następnie musimy załadować dane i zapisać je w X (cechy wejściowe) i y (cecha docelowa). Parametr as_frame jest ustawiony na True, więc nie tracimy nazw cech podczas ładowania danych. ( sklearnwersja starsza niż 0.23 musi pominąć as_frameargument, ponieważ nie jest obsługiwany)
+```
+data = datasets.load_wine(as_frame = True)
+
+X = data.data
+y = data.target
+```
+Aby właściwie ocenić nasz model na podstawie niewidzianych danych, musimy podzielić X i y na zestawy treningowe i testowe. Aby uzyskać informacje na temat dzielenia danych, zobacz lekcję Trenuj/Testuj.
+```
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 22)
+```
+Mając przygotowane dane, możemy teraz utworzyć instancję klasyfikatora bazowego i dopasować go do danych treningowych.
+```
+dtree = DecisionTreeClassifier(random_state = 22)
+dtree.fit(X_train,y_train)
+```
+Wynik:
+```
+DecisionTreeClassifier(random_state=22)
 ```
