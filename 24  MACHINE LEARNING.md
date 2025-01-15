@@ -2292,3 +2292,143 @@ Wynik:
 ```
 DecisionTreeClassifier(random_state=22)
 ```
+Teraz możemy przewidzieć klasę wina na podstawie niewidzianego zestawu testowego i ocenić wydajność modelu.
+```
+y_pred = dtree.predict(X_test)
+
+print("Train data accuracy:",accuracy_score(y_true = y_train, y_pred = dtree.predict(X_train)))
+print("Test data accuracy:",accuracy_score(y_true = y_test, y_pred = y_pred))
+```
+Wynik:
+```
+Train data accuracy: 1.0
+Test data accuracy: 0.8222222222222222
+```
+Przykład: Zaimportuj niezbędne dane i oceń wydajność klasyfikatora podstawowego.
+```
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
+
+data = datasets.load_wine(as_frame = True)
+
+X = data.data
+y = data.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 22)
+
+dtree = DecisionTreeClassifier(random_state = 22)
+dtree.fit(X_train,y_train)
+
+y_pred = dtree.predict(X_test)
+
+print("Train data accuracy:",accuracy_score(y_true = y_train, y_pred = dtree.predict(X_train)))
+print("Test data accuracy:",accuracy_score(y_true = y_test, y_pred = y_pred))
+```
+Podstawowy klasyfikator działa całkiem dobrze na zbiorze danych, osiągając 82% dokładności w zbiorze danych testowych przy użyciu bieżących parametrów (jeśli nie ustawiono random_stateparametrów, mogą wystąpić odmienne wyniki).
+
+Mając teraz dokładność bazową dla zestawu danych testowych, możemy sprawdzić, jak klasyfikator Bagging przewyższa pojedynczy klasyfikator drzewa decyzyjnego.
+
+Tworzenie klasyfikatora Bagging
+W celu przeprowadzenia operacji bagging musimy ustawić parametr n_estimators. Jest to liczba klasyfikatorów bazowych, które nasz model będzie agregował.
+
+W przypadku tego przykładowego zestawu danych liczba estymatorów jest stosunkowo niska, często zdarza się, że eksplorowane są znacznie większe zakresy. Strojenie hiperparametrów jest zwykle wykonywane za pomocą wyszukiwania siatki , ale na razie użyjemy wybranego zestawu wartości dla liczby estymatorów.
+
+Zaczynamy od zaimportowania niezbędnego modelu.
+```
+from sklearn.ensemble import BaggingClassifier
+```
+Teraz utwórzmy zakres wartości reprezentujący liczbę estymatorów, których chcemy użyć w każdym zespole.
+```
+estimator_range = [2,4,6,8,10,12,14,16]
+```
+Aby zobaczyć, jak klasyfikator Bagging Classifier działa z różnymi wartościami n_estimators, potrzebujemy sposobu na iterację w zakresie wartości i przechowywanie wyników z każdego zespołu. W tym celu utworzymy pętlę for, przechowując modele i wyniki na oddzielnych listach do późniejszych wizualizacji.
+
+Uwaga: Domyślnym parametrem dla klasyfikatora bazowego BaggingClassifierjest , DicisionTreeClassifierdlatego nie musimy go ustawiać podczas tworzenia instancji modelu bagging.
+```
+models = []
+scores = []
+
+for n_estimators in estimator_range:
+
+    # Create bagging classifier
+    clf = BaggingClassifier(n_estimators = n_estimators, random_state = 22)
+
+    # Fit the model
+    clf.fit(X_train, y_train)
+
+    # Append the model and score to their respective list
+    models.append(clf)
+    scores.append(accuracy_score(y_true = y_test, y_pred = clf.predict(X_test)))
+```
+Po zapisaniu modeli i wyników możemy teraz zwizualizować poprawę wydajności modelu.
+```
+import matplotlib.pyplot as plt
+
+# Generate the plot of scores against number of estimators
+plt.figure(figsize=(9,6))
+plt.plot(estimator_range, scores)
+
+# Adjust labels and font (to make visable)
+plt.xlabel("n_estimators", fontsize = 18)
+plt.ylabel("score", fontsize = 18)
+plt.tick_params(labelsize = 16)
+
+# Visualize plot
+plt.show()
+```
+Przykład
+Zaimportuj niezbędne dane i oceń BaggingClassifierwydajność.
+```
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.ensemble import BaggingClassifier
+
+data = datasets.load_wine(as_frame = True)
+
+X = data.data
+y = data.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 22)
+
+estimator_range = [2,4,6,8,10,12,14,16]
+
+models = []
+scores = []
+
+for n_estimators in estimator_range:
+
+    # Create bagging classifier
+    clf = BaggingClassifier(n_estimators = n_estimators, random_state = 22)
+
+    # Fit the model
+    clf.fit(X_train, y_train)
+
+    # Append the model and score to their respective list
+    models.append(clf)
+    scores.append(accuracy_score(y_true = y_test, y_pred = clf.predict(X_test)))
+
+# Generate the plot of scores against number of estimators
+plt.figure(figsize=(9,6))
+plt.plot(estimator_range, scores)
+
+# Adjust labels and font (to make visable)
+plt.xlabel("n_estimators", fontsize = 18)
+plt.ylabel("score", fontsize = 18)
+plt.tick_params(labelsize = 16)
+
+# Visualize plot
+plt.show()
+```
+Wyjaśnienie wyników
+Poprzez iterację przez różne wartości dla liczby estymatorów możemy zobaczyć wzrost wydajności modelu z 82,2% do 95,5%. Po 14 estymatorach dokładność zaczyna spadać, ponownie, jeśli ustawisz inną wartość, random_statewartości, które zobaczysz, będą się różnić. Dlatego najlepszą praktyką jest stosowanie walidacji krzyżowej w celu zapewnienia stabilnych wyników.
+
+W tym przypadku widzimy 13,3% wzrost dokładności identyfikacji rodzaju wina.
+
+Inna forma oceny
+Ponieważ bootstrapping wybiera losowe podzbiory obserwacji w celu utworzenia klasyfikatorów, istnieją obserwacje, które są pomijane w procesie selekcji. Te obserwacje „out-of-bag” można następnie wykorzystać do oceny modelu, podobnie jak w przypadku zestawu testowego. Należy pamiętać, że estymacja out-of-bag może przeszacować błąd w problemach klasyfikacji binarnej i powinna być stosowana wyłącznie jako uzupełnienie innych metryk.
+
+W poprzednim ćwiczeniu widzieliśmy, że 12 estymatorów dało najwyższą dokładność, więc wykorzystamy to do stworzenia naszego modelu. Tym razem ustawiając parametr oob_scorena true, aby ocenić model z wynikiem out-of-bag.
