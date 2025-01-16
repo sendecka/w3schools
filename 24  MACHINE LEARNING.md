@@ -2432,3 +2432,55 @@ Inna forma oceny
 Ponieważ bootstrapping wybiera losowe podzbiory obserwacji w celu utworzenia klasyfikatorów, istnieją obserwacje, które są pomijane w procesie selekcji. Te obserwacje „out-of-bag” można następnie wykorzystać do oceny modelu, podobnie jak w przypadku zestawu testowego. Należy pamiętać, że estymacja out-of-bag może przeszacować błąd w problemach klasyfikacji binarnej i powinna być stosowana wyłącznie jako uzupełnienie innych metryk.
 
 W poprzednim ćwiczeniu widzieliśmy, że 12 estymatorów dało najwyższą dokładność, więc wykorzystamy to do stworzenia naszego modelu. Tym razem ustawiając parametr oob_scorena true, aby ocenić model z wynikiem out-of-bag.
+
+Przykład
+Utwórz model z metryką out-of-bag.
+```
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import BaggingClassifier
+
+data = datasets.load_wine(as_frame = True)
+
+X = data.data
+y = data.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 22)
+
+oob_model = BaggingClassifier(n_estimators = 12, oob_score = True,random_state = 22)
+
+oob_model.fit(X_train, y_train)
+
+print(oob_model.oob_score_)
+```
+Ponieważ próbki użyte w OOB i zestawie testowym są różne, a zbiór danych jest stosunkowo mały, istnieje różnica w dokładności. Rzadko się zdarza, aby były dokładnie takie same, ponownie OOB powinno być używane jako szybki sposób szacowania błędu, ale nie jest to jedyna metryka oceny.
+
+Generowanie drzew decyzyjnych z klasyfikatora Bagging
+Jak widać w lekcji Drzewo decyzyjne , możliwe jest przedstawienie graficzne drzewa decyzyjnego utworzonego przez model. Możliwe jest również zobaczenie poszczególnych drzew decyzyjnych, które trafiły do ​​zagregowanego klasyfikatora. Pomaga nam to uzyskać bardziej intuicyjne zrozumienie tego, w jaki sposób model baggingu dochodzi do swoich przewidywań.
+
+Uwaga: Ta metoda działa tylko w przypadku mniejszych zbiorów danych, w których drzewa są stosunkowo płytkie i wąskie, co ułatwia ich wizualizację.
+
+Będziemy musieli zaimportować plot_treefunkcję z sklearn.tree. Różne drzewa mogą być wykreślone poprzez zmianę estymatora, który chcesz zwizualizować.
+
+Przykład
+Generuj drzewa decyzyjne z klasyfikatora Bagging
+```
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import BaggingClassifier
+from sklearn.tree import plot_tree
+
+X = data.data
+y = data.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 22)
+
+clf = BaggingClassifier(n_estimators = 12, oob_score = True,random_state = 22)
+
+clf.fit(X_train, y_train)
+
+plt.figure(figsize=(30, 20))
+
+plot_tree(clf.estimators_[0], feature_names = X.columns)
+```
+Tutaj możemy zobaczyć tylko pierwsze drzewo decyzyjne, które zostało użyte do głosowania nad ostateczną prognozą. Ponownie, zmieniając indeks klasyfikatora, możesz zobaczyć każde z drzew, które zostały zagregowane.
