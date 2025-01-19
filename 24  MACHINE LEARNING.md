@@ -2484,3 +2484,74 @@ plt.figure(figsize=(30, 20))
 plot_tree(clf.estimators_[0], feature_names = X.columns)
 ```
 Tutaj możemy zobaczyć tylko pierwsze drzewo decyzyjne, które zostało użyte do głosowania nad ostateczną prognozą. Ponownie, zmieniając indeks klasyfikatora, możesz zobaczyć każde z drzew, które zostały zagregowane.
+
+# 21. Machine Learning - Cross Validation
+Walidacja krzyżowa
+Podczas dostosowywania modeli dążymy do zwiększenia ogólnej wydajności modelu na niewidzianych danych. Strojenie hiperparametrów może prowadzić do znacznie lepszej wydajności na zestawach testowych. Jednak optymalizacja parametrów zestawu testowego może prowadzić do wycieku informacji, powodując, że model będzie działał gorzej na niewidzianych danych. Aby to skorygować, możemy przeprowadzić walidację krzyżową.
+
+Aby lepiej zrozumieć CV, będziemy wykonywać różne metody na zbiorze danych iris. Najpierw załadujmy i oddzielmy dane.
+```
+from sklearn import datasets
+
+X, y = datasets.load_iris(return_X_y=True)
+```
+Istnieje wiele metod walidacji krzyżowej, zaczniemy od omówienia k-krotnej walidacji krzyżowej.
+K -Skład
+Dane treningowe używane w modelu są dzielone na k mniejszych zestawów, które mają być użyte do walidacji modelu. Następnie model jest trenowany na k-1 fałdach zestawu treningowego. Pozostały fałd jest następnie używany jako zestaw walidacyjny do oceny modelu.
+
+Ponieważ będziemy próbować klasyfikować różne gatunki kwiatów irysa, będziemy musieli zaimportować model klasyfikatora. W tym ćwiczeniu użyjemy pliku DecisionTreeClassifier. Będziemy również musieli zaimportować moduły CV z pliku sklearn.
+```
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import KFold, cross_val_score
+```
+Po załadowaniu danych możemy teraz utworzyć i dopasować model do oceny.
+```
+clf = DecisionTreeClassifier(random_state=42)
+```
+Teraz przeanalizujmy nasz model i sprawdźmy, jak działa dla każdego k -foldu.
+```
+k_folds = KFold(n_splits = 5)
+
+scores = cross_val_score(clf, X, y, cv = k_folds)
+```
+Dobrą praktyką jest również sprawdzenie, jak CV wypadło ogólnie, poprzez uśrednienie wyników dla wszystkich fałd.
+
+Przykład: Uruchom k-fold CV:
+```
+from sklearn import datasets
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import KFold, cross_val_score
+
+X, y = datasets.load_iris(return_X_y=True)
+
+clf = DecisionTreeClassifier(random_state=42)
+
+k_folds = KFold(n_splits = 5)
+
+scores = cross_val_score(clf, X, y, cv = k_folds)
+
+print("Cross Validation Scores: ", scores)
+print("Average CV Score: ", scores.mean())
+print("Number of CV Scores used in Average: ", len(scores))
+```
+Warstwowy K-Fold
+W przypadkach, gdy klasy są niezrównoważone, potrzebujemy sposobu na uwzględnienie braku równowagi zarówno w zestawach treningowych, jak i walidacyjnych. Aby to zrobić, możemy stratyfikować klasy docelowe, co oznacza, że ​​oba zestawy będą miały równą proporcję wszystkich klas.
+
+Przykład
+```
+from sklearn import datasets
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import StratifiedKFold, cross_val_score
+
+X, y = datasets.load_iris(return_X_y=True)
+
+clf = DecisionTreeClassifier(random_state=42)
+
+sk_folds = StratifiedKFold(n_splits = 5)
+
+scores = cross_val_score(clf, X, y, cv = sk_folds)
+
+print("Cross Validation Scores: ", scores)
+print("Average CV Score: ", scores.mean())
+print("Number of CV Scores used in Average: ", len(scores))
+```
