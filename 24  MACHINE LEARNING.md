@@ -2555,3 +2555,81 @@ print("Cross Validation Scores: ", scores)
 print("Average CV Score: ", scores.mean())
 print("Number of CV Scores used in Average: ", len(scores))
 ```
+Podczas gdy liczba fałdów jest taka sama, średni współczynnik CV wzrasta od podstawowego k-fałdu, gdy upewnimy się, że istnieją klasy stratyfikowane.
+
+Zostaw-Jedną-Na Zewnątrz (LOO)
+Zamiast wybierać liczbę podziałów w zestawie danych treningowych, jak k-fold LeaveOneOut, wykorzystaj 1 obserwację do walidacji i n-1 obserwacji do trenowania. Ta metoda jest techniką wyczerpującą.
+
+Przykład
+Uruchom LOO CV:
+```
+from sklearn import datasets
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import LeaveOneOut, cross_val_score
+
+X, y = datasets.load_iris(return_X_y=True)
+
+clf = DecisionTreeClassifier(random_state=42)
+
+loo = LeaveOneOut()
+
+scores = cross_val_score(clf, X, y, cv = loo)
+
+print("Cross Validation Scores: ", scores)
+print("Average CV Score: ", scores.mean())
+print("Number of CV Scores used in Average: ", len(scores))
+```
+Możemy zauważyć, że liczba wykonanych wyników walidacji krzyżowej jest równa liczbie obserwacji w zestawie danych. W tym przypadku w zestawie danych iris znajduje się 150 obserwacji.
+
+Średni wynik CV wynosi 94%.
+
+Pozostaw-P-Out (LPO)
+Leave-P-Out to po prostu niuansowa różnica w stosunku do idei Leave-One-Out, polegająca na tym, że możemy wybrać liczbę p, które mają zostać użyte w zestawie walidacyjnym.
+
+Przykład
+Uruchom CV LPO:
+```
+from sklearn import datasets
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import LeavePOut, cross_val_score
+
+X, y = datasets.load_iris(return_X_y=True)
+
+clf = DecisionTreeClassifier(random_state=42)
+
+lpo = LeavePOut(p=2)
+
+scores = cross_val_score(clf, X, y, cv = lpo)
+
+print("Cross Validation Scores: ", scores)
+print("Average CV Score: ", scores.mean())
+print("Number of CV Scores used in Average: ", len(scores))
+```
+
+Jak widać, jest to wyczerpująca metoda, która pozwala obliczyć znacznie więcej wyników niż Leave-One-Out, nawet przy ap = 2, a mimo to pozwala uzyskać mniej więcej taki sam średni wynik CV.
+
+Shuffle Split
+W przeciwieństwie do KFold, ShuffleSplitpomija procent danych, które nie będą używane w zestawach pociągowych lub walidacyjnych. Aby to zrobić, musimy zdecydować, jakie są rozmiary pociągu i testu, a także liczba podziałów.
+
+Przykład
+Uruchom Shuffle Split CV:
+```
+from sklearn import datasets
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import ShuffleSplit, cross_val_score
+
+X, y = datasets.load_iris(return_X_y=True)
+
+clf = DecisionTreeClassifier(random_state=42)
+
+ss = ShuffleSplit(train_size=0.6, test_size=0.3, n_splits = 5)
+
+scores = cross_val_score(clf, X, y, cv = ss)
+
+print("Cross Validation Scores: ", scores)
+print("Average CV Score: ", scores.mean())
+print("Number of CV Scores used in Average: ", len(scores))
+```
+Uwagi końcowe
+To tylko kilka metod CV, które można stosować do modeli. Istnieje wiele innych klas walidacji krzyżowej, przy czym większość modeli ma własną klasę. Sprawdź skearns cross validation, aby uzyskać więcej opcji CV.
+
