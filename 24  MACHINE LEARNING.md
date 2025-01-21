@@ -2633,3 +2633,70 @@ print("Number of CV Scores used in Average: ", len(scores))
 Uwagi końcowe
 To tylko kilka metod CV, które można stosować do modeli. Istnieje wiele innych klas walidacji krzyżowej, przy czym większość modeli ma własną klasę. Sprawdź skearns cross validation, aby uzyskać więcej opcji CV.
 
+# 22. Machine Learning - AUC - ROC Curve
+AUC-krzywa ROC
+W klasyfikacji istnieje wiele różnych metryk oceny. Najpopularniejszą jest dokładność , która mierzy, jak często model jest poprawny. Jest to świetna metryka, ponieważ jest łatwa do zrozumienia, a uzyskanie jak największej liczby prawidłowych zgadywań jest często pożądane. Istnieją przypadki, w których możesz rozważyć użycie innej metryki oceny.
+
+Innym powszechnym wskaźnikiem jest AUC , obszar pod krzywą charakterystyki operacyjnej odbiornika ( ROC ). Krzywa charakterystyki operacyjnej odbiornika przedstawia współczynnik prawdziwie dodatnich ( TP ) w porównaniu ze współczynnikiem fałszywie dodatnich ( FP ) przy różnych progach klasyfikacji. Progi to różne odcięcia prawdopodobieństwa, które oddzielają dwie klasy w klasyfikacji binarnej. Wykorzystuje prawdopodobieństwo, aby powiedzieć nam, jak dobrze model oddziela klasy.
+
+Niezrównoważone dane
+Załóżmy, że mamy niezrównoważony zestaw danych, w którym większość naszych danych ma jedną wartość. Możemy uzyskać wysoką dokładność dla modelu, przewidując klasę większościową.
+
+Przykład:
+```
+import numpy as np
+from sklearn.metrics import accuracy_score, confusion_matrix, roc_auc_score, roc_curve
+
+n = 10000
+ratio = .95
+n_0 = int((1-ratio) * n)
+n_1 = int(ratio * n)
+
+y = np.array([0] * n_0 + [1] * n_1)
+# below are the probabilities obtained from a hypothetical model that always predicts the majority class
+# probability of predicting class 1 is going to be 100%
+y_proba = np.array([1]*n)
+y_pred = y_proba > .5
+
+print(f'accuracy score: {accuracy_score(y, y_pred)}')
+cf_mat = confusion_matrix(y, y_pred)
+print('Confusion matrix')
+print(cf_mat)
+print(f'class 0 accuracy: {cf_mat[0][0]/n_0}')
+print(f'class 1 accuracy: {cf_mat[1][1]/n_1}')
+```
+Chociaż uzyskujemy bardzo wysoką dokładność, model nie dostarcza żadnych informacji o danych, więc nie jest przydatny. Dokładnie przewidujemy klasę 1 w 100% przypadków, podczas gdy nieprawidłowo przewidujemy klasę 0 w 0% przypadków. Kosztem dokładności lepiej byłoby mieć model, który może w pewnym stopniu oddzielić te dwie klasy.
+
+Przykład:
+```
+# below are the probabilities obtained from a hypothetical model that doesn't always predict the mode
+y_proba_2 = np.array(
+    np.random.uniform(0, .7, n_0).tolist() +
+    np.random.uniform(.3, 1, n_1).tolist()
+)
+y_pred_2 = y_proba_2 > .5
+
+print(f'accuracy score: {accuracy_score(y, y_pred_2)}')
+cf_mat = confusion_matrix(y, y_pred_2)
+print('Confusion matrix')
+print(cf_mat)
+print(f'class 0 accuracy: {cf_mat[0][0]/n_0}')
+print(f'class 1 accuracy: {cf_mat[1][1]/n_1}')
+```
+
+W przypadku drugiego zestawu prognoz nie mamy tak wysokiej oceny dokładności jak w przypadku pierwszego, ale dokładność dla każdej klasy jest bardziej zrównoważona. Używając dokładności jako metryki oceny ocenilibyśmy pierwszy model wyżej niż drugi, mimo że nie mówi nam on nic o danych.
+
+W takich przypadkach lepszym rozwiązaniem byłoby zastosowanie innego wskaźnika oceny, np. AUC.
+```
+import matplotlib.pyplot as plt
+
+def plot_roc_curve(true_y, y_prob):
+    """
+    plots the roc curve based of the probabilities
+    """
+
+    fpr, tpr, thresholds = roc_curve(true_y, y_prob)
+    plt.plot(fpr, tpr)
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+```
