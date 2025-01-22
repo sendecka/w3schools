@@ -2700,3 +2700,58 @@ def plot_roc_curve(true_y, y_prob):
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
 ```
+Przykład
+Model 1:
+```
+plot_roc_curve(y, y_proba)
+print(f'model 1 AUC score: {roc_auc_score(y, y_proba)}')
+```
+Przykład
+Model 2:
+```
+plot_roc_curve(y, y_proba_2)
+print(f'model 2 AUC score: {roc_auc_score(y, y_proba_2)}')
+```
+Wynik AUC wynoszący około 0,5 oznaczałby, że model nie jest w stanie rozróżnić dwóch klas i krzywa wyglądałaby jak linia o nachyleniu 1. Wynik AUC bliższy 1 oznacza, że ​​model jest w stanie oddzielić dwie klasy i krzywa znalazłaby się bliżej lewego górnego rogu wykresu.
+
+Prawdopodobieństwa
+Ponieważ AUC jest metryką wykorzystującą prawdopodobieństwo przewidywań klas, możemy być bardziej pewni modelu o wyższym wyniku AUC niż modelu o niższym wyniku, nawet jeśli mają podobną dokładność.
+
+W poniższych danych mamy dwa zestawy prawdopodobieństw z hipotetycznych modeli. Pierwszy ma prawdopodobieństwa, które nie są tak „pewne” przy przewidywaniu dwóch klas (prawdopodobieństwa są bliskie 0,5). Drugi ma prawdopodobieństwa, które są bardziej „pewne” przy przewidywaniu dwóch klas (prawdopodobieństwa są bliskie ekstremów 0 lub 1).
+
+Przykład:
+```
+import numpy as np
+
+n = 10000
+y = np.array([0] * n + [1] * n)
+#
+y_prob_1 = np.array(
+    np.random.uniform(.25, .5, n//2).tolist() +
+    np.random.uniform(.3, .7, n).tolist() +
+    np.random.uniform(.5, .75, n//2).tolist()
+)
+y_prob_2 = np.array(
+    np.random.uniform(0, .4, n//2).tolist() +
+    np.random.uniform(.3, .7, n).tolist() +
+    np.random.uniform(.6, 1, n//2).tolist()
+)
+
+print(f'model 1 accuracy score: {accuracy_score(y, y_prob_1>.5)}')
+print(f'model 2 accuracy score: {accuracy_score(y, y_prob_2>.5)}')
+
+print(f'model 1 AUC score: {roc_auc_score(y, y_prob_1)}')
+print(f'model 2 AUC score: {roc_auc_score(y, y_prob_2)}')
+```
+Przykład
+Model fabuły 1:
+```
+plot_roc_curve(y, y_prob_1)
+```
+Przykład
+Model fabuły 2:
+```
+fpr, tpr, thresholds = roc_curve(y, y_prob_2)
+plt.plot(fpr, tpr)
+```
+Mimo że dokładność obu modeli jest podobna, model z wyższym wynikiem AUC będzie bardziej niezawodny, ponieważ uwzględnia przewidywane prawdopodobieństwo. Bardziej prawdopodobne jest, że zapewni Ci on większą dokładność podczas przewidywania przyszłych danych.
