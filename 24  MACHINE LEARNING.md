@@ -2764,3 +2764,117 @@ Pokażemy tutaj, jak wdrożyć algorytm KNN do klasyfikacji i jak różne warto�
 
 Jak to działa?
 K to liczba najbliższych sąsiadów do wykorzystania. Do klasyfikacji, głosowanie większościowe jest używane do określenia, do której klasy należy nowa obserwacja. Większe wartości K są często bardziej odporne na wartości odstające i dają bardziej stabilne granice decyzyjne niż bardzo małe wartości ( K=3 byłoby lepsze niż K=1 , co mogłoby dawać niepożądane rezultaty).
+
+Przykład:
+Zacznij od wizualizacji kilku punktów danych:
+```
+import matplotlib.pyplot as plt
+
+x = [4, 5, 10, 4, 3, 11, 14 , 8, 10, 12]
+y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+classes = [0, 0, 1, 0, 0, 1, 1, 0, 1, 1]
+
+plt.scatter(x, y, c=classes)
+plt.show()
+```
+Teraz dopasowujemy algorytm KNN z K=1:
+```
+from sklearn.neighbors import KNeighborsClassifier
+
+data = list(zip(x, y))
+knn = KNeighborsClassifier(n_neighbors=1)
+
+knn.fit(data, classes)
+```
+I użyj go do sklasyfikowania nowego punktu danych:
+Przykład
+```
+new_x = 8
+new_y = 21
+new_point = [(new_x, new_y)]
+
+prediction = knn.predict(new_point)
+
+plt.scatter(x + [new_x], y + [new_y], c=classes + [prediction[0]])
+plt.text(x=new_x-1.7, y=new_y-0.7, s=f"new point, class: {prediction[0]}")
+plt.show()
+```
+Teraz robimy to samo, ale z wyższą wartością K, co zmienia prognozę:
+
+Przykład
+```
+knn = KNeighborsClassifier(n_neighbors=5)
+
+knn.fit(data, classes)
+
+prediction = knn.predict(new_point)
+
+plt.scatter(x + [new_x], y + [new_y], c=classes + [prediction[0]])
+plt.text(x=new_x-1.7, y=new_y-0.7, s=f"new point, class: {prediction[0]}")
+plt.show()
+```
+Przykład wyjaśniony
+Zaimportuj potrzebne moduły.
+
+Więcej informacji na temat modułu Matplotlib znajdziesz w naszym „Samouczku Matplotlib” .
+
+scikit-learn to popularna biblioteka do uczenia maszynowego w Pythonie.
+```
+import matplotlib.pyplot as plt
+from sklearn.neighbors import KNeighborsClassifier
+```
+Utwórz tablice przypominające zmienne w zestawie danych. Mamy dwie cechy wejściowe ( xi y), a następnie klasę docelową ( class). Cechy wejściowe, które są wstępnie oznaczone naszą klasą docelową, zostaną użyte do przewidywania klasy nowych danych. Należy zauważyć, że chociaż tutaj używamy tylko dwóch cech wejściowych, ta metoda będzie działać z dowolną liczbą zmiennych:
+```
+x = [4, 5, 10, 4, 3, 11, 14 , 8, 10, 12]
+y = [21, 19, 24, 17, 16, 25, 24, 22, 21, 21]
+classes = [0, 0, 1, 0, 0, 1, 1, 0, 1, 1]
+```
+Przekształć cechy wejściowe w zbiór punktów:
+```
+data = list(zip(x, y))
+print(data)
+```
+Wynik:
+```
+[(4, 21), (5, 19), (10, 24), (4, 17), (3, 16), (11, 25), (14, 24), (8, 22), (10, 21), (12, 21)]
+```
+Wykorzystując cechy wejściowe i klasę docelową, dopasowujemy model KNN do modelu, używając 1 najbliższego sąsiada:
+```
+knn = KNeighborsClassifier(n_neighbors=1)
+knn.fit(data, classes)
+```
+Następnie możemy użyć tego samego obiektu KNN, aby przewidzieć klasę nowych, nieprzewidzianych punktów danych. Najpierw tworzymy nowe funkcje x i y, a następnie wywołujemy knn.predict()nowy punkt danych, aby uzyskać klasę 0 lub 1:
+```
+new_x = 8
+new_y = 21
+new_point = [(new_x, new_y)]
+prediction = knn.predict(new_point)
+print(prediction)
+```
+Wynik:
+```
+[0]
+```
+Gdy naniesiemy wszystkie dane wraz z nowym punktem i klasą, możemy zobaczyć, że zostały oznaczone na niebiesko wraz z klasą 1. Adnotacja tekstowa służy jedynie do wyróżnienia lokalizacji nowego punktu:
+```
+plt.scatter(x + [new_x], y + [new_y], c=classes + [prediction[0]])
+plt.text(x=new_x-1.7, y=new_y-0.7, s=f"new point, class: {prediction[0]}")
+plt.show()
+```
+Jednak gdy zmienimy liczbę sąsiadów na 5, liczba punktów użytych do klasyfikowania naszego nowego punktu ulega zmianie. W rezultacie zmienia się również klasyfikacja nowego punktu:
+```
+knn = KNeighborsClassifier(n_neighbors=5)
+knn.fit(data, classes)
+prediction = knn.predict(new_point)
+print(prediction)
+```
+Wynik:
+```
+[1]
+```
+Gdy nanosimy klasę nowego punktu na starsze punkty, zauważamy, że kolor zmienił się na podstawie powiązanej etykiety klasy:
+```
+plt.scatter(x + [new_x], y + [new_y], c=classes + [prediction[0]])
+plt.text(x=new_x-1.7, y=new_y-0.7, s=f"new point, class: {prediction[0]}")
+plt.show()
+```
