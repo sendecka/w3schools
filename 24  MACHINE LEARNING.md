@@ -2755,3 +2755,12 @@ fpr, tpr, thresholds = roc_curve(y, y_prob_2)
 plt.plot(fpr, tpr)
 ```
 Mimo że dokładność obu modeli jest podobna, model z wyższym wynikiem AUC będzie bardziej niezawodny, ponieważ uwzględnia przewidywane prawdopodobieństwo. Bardziej prawdopodobne jest, że zapewni Ci on większą dokładność podczas przewidywania przyszłych danych.
+
+# 23. Machine Learning - K-nearest neighbors (KNN)
+KNN
+KNN to prosty, nadzorowany algorytm uczenia maszynowego (ML), który można wykorzystać do zadań klasyfikacji lub regresji — a także jest często używany w imputacji wartości brakujących. Opiera się na idei, że obserwacje najbliższe danemu punktowi danych są najbardziej „podobnymi” obserwacjami w zestawie danych, dlatego możemy klasyfikować nieprzewidziane punkty na podstawie wartości najbliższych istniejących punktów. Wybierając K , użytkownik może wybrać liczbę pobliskich obserwacji do wykorzystania w algorytmie.
+
+Pokażemy tutaj, jak wdrożyć algorytm KNN do klasyfikacji i jak różne wartości K wpływają na wyniki.
+
+Jak to działa?
+K to liczba najbliższych sąsiadów do wykorzystania. Do klasyfikacji, głosowanie większościowe jest używane do określenia, do której klasy należy nowa obserwacja. Większe wartości K są często bardziej odporne na wartości odstające i dają bardziej stabilne granice decyzyjne niż bardzo małe wartości ( K=3 byłoby lepsze niż K=1 , co mogłoby dawać niepożądane rezultaty).
