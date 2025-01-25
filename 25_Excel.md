@@ -1,9 +1,9 @@
-# Excel Tutorial
+### Excel Tutorial
 
 Excel jest najczęściej używanym na świecie arkuszem kalkulacyjnym.
 Excel to potężne narzędzie do wykonywania funkcji matematycznych.
 
-# 1. Excel Introduction
+### 1. Excel Introduction
 Czym jest Excel?
 Excel wymawia się „Eks - sel”
 
