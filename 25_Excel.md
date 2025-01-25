@@ -1,9 +1,9 @@
-### Excel Tutorial
+# Excel Tutorial
 
 Excel jest najczęściej używanym na świecie arkuszem kalkulacyjnym.
 Excel to potężne narzędzie do wykonywania funkcji matematycznych.
 
-### 1. Excel Introduction
+# 1. Excel Introduction
 Czym jest Excel?
 Excel wymawia się „Eks - sel”
 
@@ -11,7 +11,7 @@ Jest to arkusz kalkulacyjny opracowany przez Microsoft. Excel organizuje dane w 
 
 Pierwsza wersja została wydana w 1985 roku i przeszła kilka zmian na przestrzeni lat. Jednak główna funkcjonalność pozostała w większości taka sama.
 
-# Program Excel jest zazwyczaj używany do:
+## Program Excel jest zazwyczaj używany do:
 
 Analiza
 Wprowadzanie danych
@@ -24,7 +24,7 @@ Programowanie
 Modelowanie finansowe
 I wiele, wiele więcej!
 
-# Dlaczego warto używać programu Excel?
+## Dlaczego warto używać programu Excel?
 
 Jest to najpopularniejszy na świecie program do obsługi arkuszy kalkulacyjnych.
 Łatwo się go nauczyć i zacząć.
