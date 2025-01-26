@@ -38,3 +38,21 @@ Rozpocznij
 W tym samouczku nauczysz się podstaw programu Excel.
 
 Nie jest wymagane wcześniejsze doświadczenie w korzystaniu z arkuszy kalkulacyjnych ani programowaniu.
+
+# 2. Excel Get Started
+Biuro 365
+Najłatwiejszym sposobem rozpoczęcia pracy z programem Excel jest skorzystanie z pakietu Office 365.
+Office 365 nie wymaga pobierania i instalowania programu. Po prostu działa w przeglądarce.
+W naszym samouczku wykorzystamy pakiet Office 365, do którego można uzyskać dostęp ze strony www.office.com .
+Widok programu Excel zawiera kolumny i wiersze, podobnie jak w zeszycie ćwiczeń z matematyki kwadratowej.
+
+Nie martw się, jeśli funkcjonalność na początku wydaje się przytłaczająca. Przyzwyczaisz się, gdy dowiesz się więcej w kolejnych rozdziałach.
+
+Na razie skup się na wierszach, kolumnach i komórkach.
+
+Ok. Stwórzmy funkcję!
+
+Najpierw kliknij dwukrotnie komórkę A1oznaczoną na obrazku zielonym prostokątem.
+Po drugie, wpisz =1+1.
+Po trzecie, naciśnij przycisk Enter.
+Gratulacje! Wpisałeś swoją pierwszą funkcję, 1+1=2 .
