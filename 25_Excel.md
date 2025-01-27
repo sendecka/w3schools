@@ -56,3 +56,69 @@ Najpierw kliknij dwukrotnie komórkę A1oznaczoną na obrazku zielonym prostoką
 Po drugie, wpisz =1+1.
 Po trzecie, naciśnij przycisk Enter.
 Gratulacje! Wpisałeś swoją pierwszą funkcję, 1+1=2 .
+
+
+# 3. Excel Overview
+Przegląd
+Ten rozdział ma na celu dać Ci przegląd programu Excel. Struktura programu Excel składa się z dwóch części, wstążki i arkusza .
+Spójrz na poniższy obrazek. Wstążka jest oznaczona czerwonym prostokątem, a Arkusz żółtym prostokątem:
+
+Wyjaśnienie wstążki
+Wstążka udostępnia skróty do poleceń programu Excel. Polecenie to działanie, które pozwala na zrobienie czegoś. Może to być na przykład: wstawienie tabeli, zmiana rozmiaru czcionki lub zmiana koloru komórki.
+Ribbon może na początku wydawać się zatłoczony i trudny do zrozumienia. Nie bój się, będzie łatwiej nawigować i korzystać z niego , gdy dowiesz się więcej. Zazwyczaj używamy tych samych funkcjonalności raz po raz.
+Wstążka składa się z programu uruchamiającego aplikacje , kart , grup i poleceń . W tej sekcji wyjaśnimy różne części Wstążki .
+U
+ruchamianie aplikacji
+Ikona App Launcher ma dziewięć kropek i nazywa się paskiem nawigacyjnym Office 365. Umożliwia dostęp do różnych części pakietu Office 365, takich jak Word, PowerPoint i Outlook. App Launcher można używać do płynnego przełączania się między aplikacjami Office 365.
+
+Karty
+Karta to menu z podpodziałami posortowanymi w grupy. Karty pozwalają użytkownikom na szybkie poruszanie się między opcjami menu, które wyświetlają różne grupy funkcjonalności.
+
+Grupy
+Grupy są zestawami powiązanych poleceń. Grupy są rozdzielone cienkim pionowym podziałem wiersza.
+
+Polecenia
+Polecenia to przyciski, których używasz do wykonywania czynności.
+
+Teraz przyjrzyjmy się Arkuszowi . Wkrótce będziesz w stanie zrozumieć związek między Wstążką a Arkuszem i będziesz mógł sprawić, że rzeczy się zdarzą.
+
+Arkusz wyjaśniony
+Arkusz to zestaw wierszy i kolumn. Tworzy ten sam wzór, który mamy w zeszytach ćwiczeń matematycznych, prostokątne pola utworzone przez wzór nazywane są komórkami .
+
+Wartości można wpisać do komórek.
+
+Wartości mogą być zarówno liczbami, jak i literami:
+Każda komórka ma swoje unikalne odniesienie, czyli współrzędne. To właśnie tam przecinają się kolumny i wiersze.
+
+Podzielmy to na części i wyjaśnijmy na przykładzie
+
+Spójrz na poniższy obrazek. Hello world zostało wpisane w komórce C4. Odniesienie można znaleźć, klikając na odpowiednią komórkę i sprawdzając odniesienie w polu nazwy po lewej stronie, co informuje, że odniesieniem komórki jest C4.
+
+Innym sposobem znalezienia odniesienia jest najpierw znalezienie kolumny, w tym przypadku C, a następnie mapowanie jej na wiersz, w tym przypadku 4, co daje nam odniesienie do C4.
+
+Uwaga: Odniesieniem komórki są jej współrzędne. Na przykład, C4ma współrzędne kolumny Ci wiersza 4. Znajdziesz komórkę na przecięciu tych dwóch. Litera jest zawsze kolumną, a liczba zawsze wierszem.
+
+Wiele arkuszy
+Domyślnie zaczynasz od jednego arkusza , gdy tworzysz nowy skoroszyt. W skoroszycie może być wiele arkuszy. Nowe arkusze mogą być dodawane i usuwane. Arkusze mogą być nazywane, aby ułatwić pracę z zestawami danych.
+
+Czy jesteś gotowy na wyzwanie? Utwórzmy dwa nowe arkusze i nadajmy im przydatne nazwy.
+
+Najpierw kliknij ikonę plusa, pokazaną na poniższym obrazku i utwórz dwa nowe arkusze:
+Wskazówka: Możesz użyć skrótu Shift + F11 , aby utworzyć nowe arkusze. Wypróbuj!
+
+Po drugie, kliknij prawym przyciskiem myszy odpowiedni arkusz i kliknij opcję Zmień nazwę:
+W tym przykładzie użyliśmy nazw Data Visualization , Data Structure i Raw Data . Jest to typowa struktura, gdy pracujesz z danymi.
+
+Dobra robota! Stworzyłeś swój pierwszy skoroszyt z trzema nazwanymi arkuszami!
+
+Podsumowanie rozdziału
+Skoroszyt składa się z dwóch głównych komponentów: Wstążki i Arkusza .
+
+Wstążka służy do nawigacji i uzyskiwania dostępu do poleceń .
+
+Arkusz składa się z kolumn i wierszy, które tworzą komórki.
+
+Każda komórka ma swoje unikalne odniesienie. Możesz dodać nowe arkusze do skoroszytu i nadać im nazwy.
+
+W kolejnych rozdziałach dowiesz się więcej o arkuszu, formułach, zakresach i funkcjach.
+
