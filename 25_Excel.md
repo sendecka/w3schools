@@ -122,3 +122,63 @@ Każda komórka ma swoje unikalne odniesienie. Możesz dodać nowe arkusze do sk
 
 W kolejnych rozdziałach dowiesz się więcej o arkuszu, formułach, zakresach i funkcjach.
 
+# 4. Excel Syntax
+Składnia
+Formuła w programie Excel służy do wykonywania obliczeń matematycznych. Formuły zawsze zaczynają się od znaku równości =wpisanego w komórce, po którym następuje Twoje obliczenie.
+
+Uwaga: Aby rościć sobie prawo do komórki, zaznacz ją i wpisz znak równości ( =).
+
+Tworzenie formuł krok po kroku
+Wybierz komórkę
+Wpisz znak równości (=)
+Wybierz komórkę lub wpisz wartość
+Wprowadź operator arytmetyczny
+Wybierz inną komórkę lub wpisz wartość
+Wciśnij enter
+Na przykład =1+1wzór na obliczenie 1+1=2
+
+Korzystanie z formuł z komórkami
+Możesz wpisać wartości do komórek i używać ich w formułach.
+
+Wpiszmy jakieś fikcyjne wartości, aby zacząć. Kliknij dwukrotnie komórki, aby wpisać do nich wartości. Kontynuuj i wpisz:
+
+A1(309)
+A2(320)
+B1(39)
+B2(35)
+
+Uwaga: Wpisz wartości, wybierając komórkę, zgłoś ją, wpisując znak równości ( =), a następnie wpisz swoją wartość. Na przykład =309.
+
+Dobra robota! Udało Ci się wpisać wartości do komórek i teraz możemy ich użyć do tworzenia formuł.
+
+Oto instrukcja krok po kroku, jak to zrobić.
+
+Wybierz komórkęC1
+Wpisz znak równości ( =)
+Kliknij lewym przyciskiem myszy na A1komórkę, która ma (309)wartość
+Wpisz znak minus ( -)
+Kliknij lewym przyciskiem myszy na B2komórkę, która ma (35)wartość
+Wciśnij enter
+Wskazówka: Formułę można wpisać bezpośrednio, bez klikania komórek. Wpisana formuła będzie taka sama jak wartość w C1 (=A1-B2).
+
+Inny przykład
+Spróbujmy jeszcze jednego przykładu, tym razem utwórzmy formułę =A2-B1.
+
+Oto instrukcja krok po kroku, jak to zrobić.
+
+Wybierz komórkęC2
+Wpisz znak równości ( =)
+Kliknij lewym przyciskiem myszy A2, aby wybrać komórkę, która ma (320)wartość
+Wpisz znak minus ( -)
+Kliknij lewym przyciskiem myszy B1, aby wybrać komórkę, która ma (39)wartość
+Naciśnij przycisk Enter
+
+Uwaga: Można tworzyć formuły obejmujące wszystkie cztery działania arytmetyczne, takie jak dodawanie (+), odejmowanie (-), mnożenie (*) i dzielenie (/).
+
+Oto kilka przykładów:
+
+=2+4 gives you 6
+=4-2 gives you 2
+=2*4 gives you 8
+=2/4 gives you 0.5
+W następnym rozdziale dowiesz się o zakresach i o tym, jak można przenosić dane w Arkuszu .
