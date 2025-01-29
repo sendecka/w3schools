@@ -182,3 +182,82 @@ Oto kilka przykładów:
 =2*4 gives you 8
 =2/4 gives you 0.5
 W następnym rozdziale dowiesz się o zakresach i o tym, jak można przenosić dane w Arkuszu .
+
+# 5. Excel Ranges
+
+Zakresy
+Zakres stanowi ważną część programu Excel, ponieważ umożliwia pracę z zaznaczonymi komórkami.
+
+Istnieją cztery różne operacje wyboru;
+
+Wybieranie komórki
+Zaznaczanie wielu komórek
+Wybieranie kolumny
+Wybieranie wiersza
+Zanim przyjrzymy się różnym operacjom wyboru, przedstawimy Pole nazwy.
+
+Pole nazwy
+Pole Nazwa pokazuje odniesienie do wybranej komórki lub zakresu. Można go również użyć do zaznaczenia komórek lub zakresów poprzez wpisanie ich wartości.
+Wybieranie komórki
+Wyboru komórek dokonuje się poprzez kliknięcie ich lewym przyciskiem myszy lub przejście do nich za pomocą strzałek klawiatury.
+
+Najłatwiej jest zaznaczyć komórki za pomocą myszy.
+
+Aby wybrać komórkę A1, kliknij ją
+
+Wybieranie wielu komórek
+Można wybrać więcej niż jedną komórkę, naciskając i przytrzymując CTRL lub Command i klikając komórki lewym przyciskiem myszy. Po zakończeniu wybierania możesz puścić CTRL lub Command .
+
+Spróbujmy podać przykład : zaznacz komórki A1, A7, i .C1C7B4
+
+Czy wyglądało to tak, jak na zdjęciu poniżej?
+
+Wybieranie kolumny
+Kolumny są wybierane poprzez kliknięcie lewym przyciskiem myszy. Spowoduje to zaznaczenie wszystkich komórek w arkuszu powiązanych z kolumną.
+
+Aby wybrać kolumnę A , kliknij literę A na pasku kolumn:
+
+Wybieranie wiersza
+Wiersze są wybierane poprzez kliknięcie lewym przyciskiem myszy. Spowoduje to zaznaczenie wszystkich komórek w arkuszu powiązanych z tym wierszem.
+
+Aby wybrać wiersz 1 , kliknij jego numer na pasku wiersza:
+
+Zaznaczanie całego arkusza
+Można zaznaczyć cały arkusz kalkulacyjny, klikając trójkąt w lewym górnym rogu arkusza kalkulacyjnego:
+
+Uwaga: Możesz też zaznaczyć cały arkusz kalkulacyjny, naciskając . Ctrl+Aw systemie Windows lub . Cmd+Aw systemie MacOS
+
+Wybór zakresów
+Wybór zakresów komórek ma wiele zastosowań i jest jednym z najważniejszych pojęć programu Excel. Nie myśl zbyt wiele o tym, jak jest on używany z wartościami. Dowiesz się o tym w kolejnym rozdziale. Na razie skupmy się na tym, jak wybierać zakresy.
+
+Istnieją dwa sposoby zaznaczenia zakresu komórek
+
+Pole nazwy
+Przeciągnij, aby zaznaczyć zakres.
+Najłatwiejszym sposobem jest przeciągnięcie i zaznaczenie. Utrzymajmy prostotę i zacznijmy od tego.
+
+Jak przeciągnąć i zaznaczyć zakres, krok po kroku:
+
+Wybierz komórkę
+Kliknij lewym przyciskiem myszy i przytrzymaj przycisk myszy
+Przesuń wskaźnik myszy nad zakres, który chcesz wybrać. Zaznaczony zakres stanie się szary.
+Puść przycisk myszy po zaznaczeniu zakresu
+Przyjrzyjmy się przykładowi, jak oznaczyć zakres A1:E10.
+
+Uwaga: Po tym przykładzie dowiesz się, dlaczego zakres jest wywoływany A1:E10.
+
+Naciśnij i przytrzymaj A1lewy przycisk myszy. Przesuń wskaźnik myszy, aby zaznaczyć zakres wyboru. Szary obszar pomaga nam zobaczyć objęty zakres.
+
+Puść lewy przycisk myszy po zaznaczeniu zakresu A1:E10:
+
+Wybór zakresu został dokonany pomyślnie A1:E10. Gratulacje!
+
+Drugim sposobem na wybranie zakresu jest wprowadzenie wartości zakresu w polu Nazwa. Zakres jest ustawiany przez wprowadzenie najpierw odniesienia komórki dla lewego górnego rogu, a następnie prawego dolnego rogu. Zakres jest tworzony przy użyciu tych dwóch współrzędnych. Dlatego zakres komórek ma odniesienie do dwóch komórek i : pomiędzy nimi.
+
+Odniesienie do lewego górnego rogu: Odniesienie do prawego dolnego rogu
+
+Zakres pokazany na rysunku ma wartość A1:E10:
+
+Na chwilę obecną najlepszym sposobem jest skorzystanie z metody „przeciągnij i zaznacz”, gdyż jest łatwiejsza i bardziej wizualna.
+
+W następnym rozdziale dowiesz się, jak wypełniać i jak to ma zastosowanie do zakresów, które właśnie poznaliśmy.
