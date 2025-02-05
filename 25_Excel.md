@@ -261,3 +261,101 @@ Zakres pokazany na rysunku ma wartość A1:E10:
 Na chwilę obecną najlepszym sposobem jest skorzystanie z metody „przeciągnij i zaznacz”, gdyż jest łatwiejsza i bardziej wizualna.
 
 W następnym rozdziale dowiesz się, jak wypełniać i jak to ma zastosowanie do zakresów, które właśnie poznaliśmy.
+
+# 6. Excel Fill
+
+Funkcja wypełniania ułatwia życie i służy do wypełniania zakresów wartościami, dzięki czemu nie musisz wpisywać danych ręcznie.
+
+Wypełnienie można stosować do:
+
+Biurowy
+Sekwencje
+Daty
+Funkcje (*)
+Na razie nie myśl o funkcjach. Omówimy to w następnym rozdziale.
+
+Jak wypełnić
+Wypełnianie odbywa się poprzez zaznaczenie komórki, kliknięcie ikony wypełniania i zaznaczenie zakresu metodą „przeciągnij i zaznacz”, przytrzymując jednocześnie lewy przycisk myszy.
+
+Ikona wypełnienia znajduje się w prawym dolnym rogu komórki i ma ikonę małego kwadratu. Po najechaniu na nią kursorem myszy wskaźnik zmieni swoją ikonę na cienki krzyżyk.
+
+Kliknij ikonę wypełniania, przytrzymaj lewy przycisk myszy, przeciągnij i zaznacz zakres, który chcesz pokryć.
+
+W tym przykładzie A1wybrano komórkę i A1:A10zaznaczono zakres.
+eraz, gdy nauczyliśmy się wypełniać, przyjrzyjmy się, jak kopiować za pomocą funkcji wypełniania.
+
+Wypełnij kopie
+Wypełnienie może być użyte do kopiowania. Może być użyte zarówno do liczb, jak i słów.
+
+Przyjrzyjmy się najpierw liczbom.
+
+W tym przykładzie wpisaliśmy wartość A1(1):
+Wypełnienie zakresu A1:A10tworzy dziesięć kopii 1 :
+
+Ta sama zasada dotyczy tekstu.
+
+W tym przykładzie wpisaliśmy A1(Hello World).
+
+Wypełnienie zakresu A1:A10spowoduje utworzenie dziesięciu kopii „Hello World”:
+
+Teraz nauczyłeś się, jak wypełniać i używać go do kopiowania zarówno liczb, jak i słów. Przyjrzyjmy się sekwencjom.
+Wypełnij sekwencje
+Wypełnianie może być używane do tworzenia sekwencji. Sekwencja to kolejność lub wzór. Możemy użyć funkcji wypełniania, aby kontynuować kolejność, która została ustawiona.
+
+Sekwencje można stosować na przykład w odniesieniu do liczb i dat.
+
+Zacznijmy od nauki liczenia od 1 do 10.
+
+Ten przykład różni się od poprzedniego tym, że tym razem nie chcemy kopiować, ale liczyć od 1 do 10.
+
+Zacznij od wpisania A1(1):
+
+Najpierw pokażemy przykład, który nie działa, a potem zrobimy przykład działający. Gotowy?
+
+Wpiszmy wartość ( 1) do komórki A2, którą mamy w A1. Teraz mamy te same wartości w obu A1i A2.
+
+Użyjmy funkcji fill from, A1:A10aby zobaczyć, co się stanie. Pamiętaj, aby oznaczyć obie wartości przed wypełnieniem zakresu.
+
+Stało się tak, że otrzymaliśmy te same wartości, co przy kopiowaniu. Dzieje się tak, ponieważ funkcja wypełniania zakłada, że ​​chcemy utworzyć kopie, ponieważ mieliśmy dwie takie same wartości w obu komórkach A1(1)i A2(1).
+
+Zmień wartość A2(1)na A2(2). Teraz mamy dwie różne wartości w komórkach A1(1)i A2(2). Teraz wypełnij A1:A10 ponownie. Pamiętaj, aby zaznaczyć obie wartości (przytrzymując Shift) przed wypełnieniem zakresu:
+
+Gratulacje! Teraz policzyłeś od 1 do 10.
+
+Funkcja wypełniania rozpoznaje wzór wpisany w komórkach i kontynuuje go dla nas.
+
+Dlatego utworzyło kopie, gdy wprowadziliśmy wartość ( 1) w obu komórkach, ponieważ nie widziało żadnego wzorca. Gdy wprowadziliśmy ( 1) i ( 2) w komórkach, było w stanie zrozumieć wzorzec i że następna komórka A3powinna być ( 3).
+
+Stwórzmy inną sekwencję. Wpisz A1(2)i A2(4):
+
+Teraz wypełnij A1:A10:
+
+Liczy się od 2 to 20zakresu A1:A10.
+
+Dzieje się tak, ponieważ utworzyliśmy zamówienie z A1(2)i A2(4).
+
+Następnie wypełnia kolejne komórki, A3(6), i A4(8)tak A5(10)dalej. Funkcja wypełniania rozumie wzór i pomaga nam go kontynuować.
+
+Kolejność dat
+Funkcji wypełniania można używać również do wypełniania dat.
+
+Uwaga: Format daty zależy od ustawień języka regionalnego .
+
+Na przykład 14.03.2023vs.3/14/2023
+
+Sprawdź to wpisując A1(29.07.2021):
+I wypełnij zakres A1:A10:
+
+Funkcja wypełnienia wypełniła 10 dni od A1(29.07.2021)do A10(07.08.2021).
+
+Zauważ, że w komórce przełączył się z lipca na sierpień A4. Zna kalendarz i będzie liczyć prawdziwe daty.
+
+Łączenie słów i liter
+Słowa i litery można również łączyć.
+
+Wpisz A1(Hello 1)i A2(Hello 2):
+Następnie wypełnij A1:A10i zobacz, co się stanie:
+Wynik jest taki, że liczy od A1(Hello 1)do A10(Hello 10). Zmieniły się tylko liczby.
+
+Rozpoznał wzór liczb i kontynuował go dla nas. Słowa i liczby można łączyć, o ile używasz rozpoznawalnego wzoru dla liczb.
+
