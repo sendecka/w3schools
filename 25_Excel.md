@@ -359,3 +359,55 @@ Wynik jest taki, że liczy od A1(Hello 1)do A10(Hello 10). Zmieniły się tylko 
 
 Rozpoznał wzór liczb i kontynuował go dla nas. Słowa i liczby można łączyć, o ile używasz rozpoznawalnego wzoru dla liczb.
 
+# 7. Excel Move Cells
+
+Ruchome komórki
+Komórki można przenosić na dwa sposoby: poprzez przeciąganie i upuszczanie lub kopiowanie i wklejanie .
+
+Przeciągnij i upuść
+Zacznijmy od wpisania lub skopiowania kilku wartości, z którymi możemy pracować:
+Następnie zacznij od oznaczenia obszaru A1:B4
+Możesz przeciągać i upuszczać zakres, naciskając i przytrzymując lewy przycisk myszy na granicy. Kursor myszy zmieni się w symbol ruchu, gdy najedziesz kursorem na granicę.
+
+Przeciągnij i upuść, gdy zobaczysz symbol .
+
+Przesuń zakres tak, B2:C5jak pokazano na rysunku:
+
+Świetnie! Teraz stworzyłeś więcej miejsca, więc mamy miejsce na więcej danych.
+
+Uwaga: Ważne jest, aby nadać danym kontekst, dzięki czemu arkusz kalkulacyjny będzie łatwy do zrozumienia. Można to zrobić, dodając tekst wyjaśniający dane.
+
+Przejdźmy dalej i nadajmy danym więcej kontekstu. Wpisz lub skopiuj następujące wartości:
+Tak, to prawda, patrzymy na Pokemony! Nadanie kontekstu danym jest zawsze pomocne.
+
+Następnie zobaczmy, jak można przenosić dane za pomocą operacji „kopiuj-wklej”.
+Wytnij i wklej
+Zakresy można przenosić poprzez kopiowanie i wklejanie wartości z jednego miejsca do drugiego.
+
+Wskazówka: Możesz wycinać za pomocą skrótu CTRL+X i wklejać za pomocą CTRL+V. Oszczędzi Ci to czasu.
+
+Zaznacz zakresA1:C5
+
+Kliknij prawym przyciskiem myszy zaznaczony obszar i kliknij polecenie „Wytnij”, którego ikoną są nożyczki:
+Cięcie sprawia, że ​​zakres jest biało-szary z przerywanymi krawędziami. Oznacza to, że zakres jest cięty i gotowy do wklejenia.
+Kliknij prawym przyciskiem myszy miejsce wklejenia B6i kliknij lewym przyciskiem myszy ikonę wklejania.
+Pomyślnie wyciąłeś i wkleiłeś zakres od A1:C5do B6:D10.
+
+Kopiuj i wklej
+Kopiuj i wklej działa tak samo jak wytnij i wklej. Różnica polega na tym, że nie usuwa oryginalnych komórek.
+
+Skopiujmy komórki z powrotem z B6:D10do A1:C5.
+
+Wskazówka: Możesz kopiować za pomocą skrótu CTRL+C i wklejać za pomocą CTRL+V. To oszczędza czas. Spróbuj!
+
+Zaznacz zakres B6:D10.
+
+Kliknij prawym przyciskiem myszy zaznaczony obszar i kliknij polecenie „Kopiuj”, którego ikona przedstawia dwa papiery.
+Kopiowanie daje zakresowi kropkowaną zieloną ramkę. Oznacza to, że zakres jest skopiowany i gotowy do wklejenia.
+Kliknij prawym przyciskiem myszy miejsce wklejania A1i lewym przyciskiem myszy kliknij ikonę wklejania:
+Różnica między cięciem i kopiowaniem polega na tym, że cięcie usuwa oryginały, podczas gdy kopiowanie je pozostawia.
+
+Następnie usuńmy oryginalne dane i zachowajmy dane w tym A1:C5zakresie.
+
+Usuń dane
+Zaznacz oryginalne komórki i usuń je, naciskając przycisk „Usuń” na klawiaturze:
