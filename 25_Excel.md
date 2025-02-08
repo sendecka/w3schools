@@ -405,9 +405,28 @@ Zaznacz zakres B6:D10.
 Kliknij prawym przyciskiem myszy zaznaczony obszar i kliknij polecenie „Kopiuj”, którego ikona przedstawia dwa papiery.
 Kopiowanie daje zakresowi kropkowaną zieloną ramkę. Oznacza to, że zakres jest skopiowany i gotowy do wklejenia.
 Kliknij prawym przyciskiem myszy miejsce wklejania A1i lewym przyciskiem myszy kliknij ikonę wklejania:
+
 Różnica między cięciem i kopiowaniem polega na tym, że cięcie usuwa oryginały, podczas gdy kopiowanie je pozostawia.
 
 Następnie usuńmy oryginalne dane i zachowajmy dane w tym A1:C5zakresie.
 
 Usuń dane
 Zaznacz oryginalne komórki i usuń je, naciskając przycisk „Usuń” na klawiaturze:
+
+# 8. Excel Add Cells
+
+Dodawanie nowych kolumn
+Kolumny można dodawać i usuwać. Dostęp do menu uzyskuje się, klikając prawym przyciskiem myszy literę kolumny. Nowe kolumny są dodawane w tym samym miejscu, w którym kliknięto.
+
+Spróbujmy utworzyć nową kolumnę B.
+
+Kliknij prawym przyciskiem myszy na kolumnę i wybierz „Wstaw kolumny”:
+I tworzona jest nowa kolumna:
+
+Następnie musimy tam umieścić kilku trenerów Pokemonów. Wpisz lub skopiuj następujące dane w nowej kolumnie B:
+
+Dodawanie nowych wierszy
+Wiersze można również dodawać i usuwać. Dostęp do menu uzyskuje się, klikając prawym przyciskiem myszy numer wiersza. Nowe wiersze są dodawane w tym samym miejscu, w którym kliknięto.
+
+Spróbujmy utworzyć nowy wiersz 4.
+Zapomnieliśmy dodać Pokemona Ivy, Marowaka . Dodajmy jego dane do nowego wiersza 4, wpisując lub kopiując następujące wartości:
