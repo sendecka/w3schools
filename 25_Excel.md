@@ -430,3 +430,16 @@ Wiersze można również dodawać i usuwać. Dostęp do menu uzyskuje się, klik
 
 Spróbujmy utworzyć nowy wiersz 4.
 Zapomnieliśmy dodać Pokemona Ivy, Marowaka . Dodajmy jego dane do nowego wiersza 4, wpisując lub kopiując następujące wartości:
+
+# 9. Excel Delete Cells
+
+Usuń komórki
+Komórki można usunąć poprzez ich zaznaczenie i naciśnięcie przycisku Usuń.
+
+Uwaga: Funkcja usuwania nie usuwa formatowania komórki, a jedynie jej wartość.
+
+Przyjrzyjmy się trzem przykładom.
+
+Należy pamiętać, że usuwane są tylko wartości w komórkach, a nie formatowanie (kolor).
+
+Uwaga: Więcej informacji na temat formatowania i stylizowania komórek znajdziesz w kolejnym rozdziale.
