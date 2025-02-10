@@ -443,3 +443,36 @@ Przyjrzyjmy się trzem przykładom.
 Należy pamiętać, że usuwane są tylko wartości w komórkach, a nie formatowanie (kolor).
 
 Uwaga: Więcej informacji na temat formatowania i stylizowania komórek znajdziesz w kolejnym rozdziale.
+
+# 10. Excel Undo and Redo
+
+Funkcja Cofnij umożliwia cofnięcie wykonanej czynności.
+
+Funkcja Cofnij jest pomocna, gdy żałujesz podjętej czynności i chcesz powrócić do stanu sprzed jej wykonania.
+
+Przykłady użycia
+
+Cofnij usunięcie formuły
+Cofnij dodanie kolumny
+Cofnij usunięcie wiersza
+Uwaga: Nie możesz Cofnąć czynności, które wykonujesz w menu Plik, takich jak usuwanie arkusza, zapisywanie arkusza kalkulacyjnego lub zmiana opcji. Zasada jest taka, że ​​możesz Cofnąć czynności, które wykonujesz w swoim arkuszu.
+
+Istnieją dwa sposoby uzyskania dostępu do polecenia Cofnij.
+
+1) Naciśnięcie przycisku Cofnij na Wstążce:
+
+2) 2) Używając skrótu klawiaturowego CTRL + Z / Command + Z
+
+Przyjrzyjmy się przykładowi:
+Funkcja Ponów ma efekt odwrotny do funkcji Cofnij – odwraca działanie funkcji Cofnij.
+
+Funkcja Ponów jest pomocna, jeśli żałujesz użycia opcji Cofnij.
+
+Uwaga: Polecenie Ponów jest dostępne tylko jeśli użyto polecenia Cofnij.
+
+Istnieją dwa sposoby uzyskania dostępu do polecenia Ponów.
+
+1) Naciśnięcie przycisku Ponów na Wstążce:
+2) 2) Używając skrótu klawiaturowego CTRL + Y / Command + Y
+
+Wskazówka: Ćwicz samodzielnie, aby zapoznać się z funkcjami Cofnij i Ponów.
