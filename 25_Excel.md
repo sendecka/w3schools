@@ -476,3 +476,130 @@ Istnieją dwa sposoby uzyskania dostępu do polecenia Ponów.
 2) 2) Używając skrótu klawiaturowego CTRL + Y / Command + Y
 
 Wskazówka: Ćwicz samodzielnie, aby zapoznać się z funkcjami Cofnij i Ponów.
+
+# 11. Excel Formulas
+
+Formuły
+Formuła w programie Excel służy do wykonywania obliczeń matematycznych. Formuły zawsze zaczynają się od znaku równości ( =) wpisanego w komórce, po którym następuje Twoje obliczenie.
+
+Do obliczeń można stosować następujące wzory:
+
+=1+1
+=2*2
+=4/2=2
+Można go również używać do obliczania wartości, wykorzystując komórki jako dane wejściowe.
+
+Przyjrzyjmy się przykładowi.
+
+Wpisz lub skopiuj następujące wartości:
+
+Teraz chcemy wykonać obliczenia przy użyciu tych wartości.
+
+Krok po kroku:
+
+Wybierz C1i wpisz ( =)
+Kliknij lewym przyciskiem myszyA1
+Typ ( +)
+Kliknij lewym przyciskiem myszyA2
+Wciśnij enter
+
+Masz to! Udało Ci się obliczyć A1(2) + A2(4) = C1(6).
+
+Uwaga: Korzystanie z komórek do wykonywania obliczeń jest ważną częścią programu Excel i będziesz z tego często korzystać w miarę uczenia się.
+
+Zmieńmy dodawanie na mnożenie, zastępując (+) przez (*). Teraz powinno być =A1*A2, naciśnij enter, aby zobaczyć, co się stanie.
+Masz C1(8), prawda? Dobra robota!
+Excel jest pod tym względem świetny. Pozwala dodawać wartości do komórek i wykonywać na nich obliczenia.
+
+Teraz spróbuj zamienić mnożenie ( *) na odejmowanie ( -) i dzielenie ( /).
+
+Po wypróbowaniu różnych kombinacji usuń wszystkie wartości w arkuszu.
+
+Dodajmy nowe dane do następnego przykładu, w którym pomożemy trenerom Pokemonów liczyć ich Pokeballe.
+
+Wpisz lub skopiuj następujące wartości:
+
+Dane wyjaśniają:
+
+Kolumna A: Trenerzy Pokemonów
+Rząd 1: Rodzaje Pokeballi
+Zasięg B2:D4: Ilość Pokeballi, Wielkich Kul i Ultra Kul
+Uwaga: Ważne jest ćwiczenie czytania danych, aby zrozumieć ich kontekst. W tym przykładzie powinieneś skupić się na trenerach i ich Pokeballach, które mają trzy różne typy: Pokeball, Great ball i Ultra ball.
+
+Pomóżmy Ivie policzyć jej Pokeballe. Ivę znajdziesz w A2(Iva). Wartości w row 2 B2(2), C2(3), D2(1)należą do niej.
+
+Policz Pokeballe krok po kroku:
+
+Zaznacz komórkę E2i wpisz ( =)
+Kliknij lewym przyciskiem myszyB2
+Typ ( +)
+Kliknij lewym przyciskiem myszyC2
+Typ ( +)
+Kliknij lewym przyciskiem myszyD2
+Wciśnij enter
+
+Czy otrzymałeś wartość E2(6)? Dobra robota! Pomogłeś Ivie policzyć jej Pokeballe.
+
+Teraz pomóżmy Liamowi i Adorze policzyć ich pieniądze.
+
+Czy pamiętasz funkcję fill , o której uczyliśmy się wcześniej? Można jej używać do kontynuowania obliczeń w bok, w dół i w górę. Spróbujmy!
+
+Użyjmy funkcji wypełnienia, aby kontynuować formułę krok po kroku:
+
+WybieraćE2
+WypełnićE2:E4
+
+To jest fajne, prawda? Funkcja wypełnienia kontynuowała obliczenia, których użyłeś dla Ivy i była w stanie zrozumieć, że chcesz policzyć również komórki w kolejnych wierszach.
+
+Teraz policzyliśmy Pokeballe wszystkich trzech postaci: Ivy( 6), Liama( 12) i Adory( 15).
+
+Zobaczmy, ile Pokeballi mają w sumie Iva, Liam i Adora.
+
+Sumę tę w programie Excel nazywa się SUMA .
+
+Istnieją dwa sposoby obliczenia SUMY .
+
+Dodawanie komórek
+Funkcja SUMA
+Excel ma wiele gotowych funkcji dostępnych do użycia. Funkcja SUMA jest jedną z najczęściej używanych. Więcej o funkcjach dowiesz się w następnym rozdziale.
+
+Wypróbujmy oba podejścia.
+
+Uwaga: Możesz przejść do komórek za pomocą strzałek klawiatury zamiast klikać je lewym przyciskiem myszy. Spróbuj!
+
+Sumowanie poprzez dodawanie komórek, krok po kroku:
+
+Zaznacz komórkę E5 i wpisz=
+Kliknij lewym przyciskiem myszyE2
+Typ ( +)
+Kliknij lewym przyciskiem myszyE3
+Typ ( +)
+Kliknij lewym przyciskiem myszyE4
+Wciśnij enter
+
+Wynik jest następujący E5(33).
+
+Wypróbujmy funkcję SUMA .
+
+Pamiętaj, aby usunąć wartości, które obecnie masz w E5.
+
+Funkcja SUMA , krok po kroku:
+
+TypE5(=)
+Napisz SUMA
+Kliknij dwukrotnie SUMA w menu
+Zaznacz zakresE2:E4
+Wciśnij enter
+
+Świetna robota! Udało Ci się obliczyć SUM za pomocą funkcji SUM .
+
+Iva, Liam i Adora mają 33w sumie Pokeballe.
+
+Zmieńmy wartość, aby zobaczyć, co się stanie. Wpisz B2(7):
+
+Wartość w komórce B2została zmieniona z 2na 7. Zauważ, że formuły wykonują obliczenia, gdy zmieniamy wartość w komórkach, a SUMA jest aktualizowana z 33na 38. Pozwala nam to zmienić wartości używane przez formuły, a obliczenia pozostają.
+
+Podsumowanie rozdziału
+Wartości używane w formułach można wpisywać bezpośrednio i za pomocą komórek. Formuła aktualizuje wynik, jeśli zmienisz wartość komórek, która jest używana w formule. Funkcja wypełniania może być używana do kontynuowania formuł w górę, w dół i na boki. Excel ma wbudowane funkcje, takie jak SUMA .
+
+W następnym rozdziale poznasz odwołania względne i bezwzględne.
