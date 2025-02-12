@@ -603,3 +603,44 @@ Podsumowanie rozdziału
 Wartości używane w formułach można wpisywać bezpośrednio i za pomocą komórek. Formuła aktualizuje wynik, jeśli zmienisz wartość komórek, która jest używana w formule. Funkcja wypełniania może być używana do kontynuowania formuł w górę, w dół i na boki. Excel ma wbudowane funkcje, takie jak SUMA .
 
 W następnym rozdziale poznasz odwołania względne i bezwzględne.
+
+# 12. Excel Relative References
+
+Odwołania względne i bezwzględne
+Komórki w programie Excel mają unikalne odwołania, które określają ich lokalizację.
+
+Odwołania są używane we wzorach do wykonywania obliczeń, a funkcja wypełniania może być używana do kontynuowania formuł w poziomie, w dół i w górę.
+
+W programie Excel istnieją dwa typy odwołań:
+
+Odniesienia względne
+Odniesienia absolutne
+Odwołanie absolutne to wybór, którego dokonujemy. Jest to polecenie, które nakazuje programowi Excel zablokowanie odwołania.
+
+Znak dolara ( $) służy do oznaczenia odniesień jako bezwzględnych.
+
+Przykład odniesienia względnego:A1
+
+Przykład odniesienia bezwzględnego:$A$1
+
+Odniesienie względne
+Odwołania są domyślnie względne i nie zawierają znaku dolara ($).
+
+Odniesienie względne sprawia, że ​​komórki odwołują się swobodnie. Daje to funkcji wypełniania swobodę kontynuowania zamówienia bez ograniczeń.
+
+Przyjrzyjmy się przykładowi odniesienia względnego, który pomoże trenerom Pokemonów liczyć Pokéballe ( B2:B7) i Wielkie kule ( C2:C7).
+
+Wynik jest następujący D2(5):
+Następnie wypełnij zakres D2:D7:
+Ponieważ odwołania są względne, funkcja wypełniania może kontynuować formułę dla wierszy w dół.
+
+Spójrz na formuły w D2:D7. Zauważ, że oblicza następny wiersz podczas wypełniania.
+
+Przykład niedziałający
+Spróbujmy przykładu , który nie zadziała .
+
+Wypełnij D2:G2, wypełniając w prawo zamiast w dół. Rezultatem są dziwne liczby:
+Przyjrzyj się wzorom.
+Zakłada się, że obliczenia wykonujemy w poziomie, a nie w dół.
+
+Liczby, które chcemy obliczyć, muszą mieć ten sam kierunek, w jakim je wypełniamy.
