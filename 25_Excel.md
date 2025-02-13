@@ -644,3 +644,49 @@ Przyjrzyj się wzorom.
 Zakłada się, że obliczenia wykonujemy w poziomie, a nie w dół.
 
 Liczby, które chcemy obliczyć, muszą mieć ten sam kierunek, w jakim je wypełniamy.
+
+# 13. Excel Absolute References
+
+> Odniesienia absolutne
+Odniesienie bezwzględne ma miejsce, gdy odniesienie ma znak dolara ( $).
+Blokuje odniesienie w formule.
+Dodaj $do formuły, aby użyć odwołań bezwzględnych.
+
+Znak dolara może przybierać trzy różne stany:
+
+- Absolute dla kolumny i wiersza. Odwołanie jest absolutnie zablokowane.
+Przykład=$A$1
+
+- Absolute dla kolumny. Odwołanie jest zablokowane do tej kolumny. Wiersz pozostaje względny.
+Przykład=$A1
+
+- Absolute dla wiersza. Odwołanie jest zablokowane do tego wiersza. Kolumna pozostaje względna.
+Przykład=A$1
+
+Przyjrzyjmy się przykładowi, który pomoże trenerom Pokemonów obliczyć ceny Pokeballi
+
+Wpisz lub skopiuj następujące dane:
+
+Wyjaśnienie danych
+
+Jest 6 trenerów: Iva, Liam, Adora, Jenny, Iben i Kasper.
+Mają różną ilość Pokeballi w swoim koszyku sklepowym
+Cena za Pokeball wynosi 2 monety
+Pomóż im obliczyć ceny Pokeballi.
+
+Cena odniesienia jest taka B11, nie chcemy, aby funkcja wypełnienia tego zmieniała, więc ją blokujemy.
+
+Odniesienie jest całkowicie zablokowane za pomocą formuły $B$11.
+
+Jak to zrobić, krok po kroku:
+
+TypC2(=)
+WybieraćB11
+Wpisz ( $) przed Bi 11( $B$11)
+Typ ( *)
+WybieraćB2
+Wciśnij enter
+Automatyczne wypełnianieC2:C7
+
+Gratulacje! Udało Ci się obliczyć ceny Pokeballi, używając absolutnego odniesienia.
+
