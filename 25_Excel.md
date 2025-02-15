@@ -647,7 +647,7 @@ Liczby, które chcemy obliczyć, muszą mieć ten sam kierunek, w jakim je wype�
 
 # 13. Excel Absolute References
 
-> Odniesienia absolutne
+Odniesienia absolutne
 Odniesienie bezwzględne ma miejsce, gdy odniesienie ma znak dolara ( $).
 Blokuje odniesienie w formule.
 Dodaj $do formuły, aby użyć odwołań bezwzględnych.
@@ -690,3 +690,96 @@ Automatyczne wypełnianieC2:C7
 
 Gratulacje! Udało Ci się obliczyć ceny Pokeballi, używając absolutnego odniesienia.
 
+# 14. Excel Addition Operator
+
+Operator dodawania
+Dodawanie +w programie Excel oznacza się symbolem plus .
+
+Istnieją dwa sposoby dodawania w programie Excel. Albo używając +symbolu w formule, albo używając funkcji SUMA .
+
+Jak dodać komórki:
+
+Wybierz komórkę i wpisz ( =)
+Wybierz komórkę
+Typ ( +)
+Wybierz inną komórkę
+Wciśnij enter
+Możesz dodać więcej komórek do formuły, wpisując (+) pomiędzy komórkami.
+
+Przyjrzyjmy się kilku przykładom.
+
+Dodawanie dwóch wpisów ręcznych
+TypA1(=)
+Typ5+5
+Wciśnij enter
+
+Gratulacje! Dodałeś pomyślnie 5+5=10.
+
+Dodawanie dwóch komórek
+Najpierw dodajmy kilka liczb do pracy. Wpisz następujące wartości:
+
+Jak to zrobić, krok po kroku:
+
+TypB1(=)
+WybieraćA1
+Typ ( +)
+WybieraćA2
+Wciśnij enter
+
+Świetnie! 30 to wynik dodania A1i A2.
+
+Dodawanie kilku komórek
+Najpierw dodajmy kilka liczb do pracy. Wpisz następujące wartości:
+
+Krok po kroku, aby dodać kilka komórek:
+
+TypB1(=)
+WybieraćA1
+Typ ( +)
+WybieraćA2
+Typ ( +)
+WybieraćA3
+Typ ( +)
+WybieraćA4
+Typ ( +)
+WybieraćA5
+Wciśnij enter
+
+Dobra robota! Udało Ci się dodać pięć komórek!
+
+Dodawanie za pomocą SUMY
+Zachowajmy liczby z ostatniego ćwiczenia. Jeśli wykonałeś ostatnie ćwiczenie, usuń wartość w B1.
+
+Krok po kroku dodawanie za pomocą SUMY:
+
+TypB1(=SUM)
+Kliknij dwukrotnie SUMpolecenie
+Zaznacz zakresA1:A5
+Wciśnij enter
+
+Uwaga: SUM oszczędza Twój czas! Ćwicz tę funkcję.
+
+Dodawanie przy użyciu odniesienia bezwzględnego
+Możesz także zablokować komórkę i dodać ją do innych komórek.
+
+Jak to zrobić, krok po kroku:
+
+Wybierz komórkę i wpisz ( =)
+Wybierz komórkę, którą chcesz zablokować, dodaj dwa znaki dolara ( $) przed kolumną i wierszem
+Typ ( +)
+Wypełnij zakres
+Przyjrzyjmy się przykładowi, w którym dodajemy B(5)do zakresu, A1:A10korzystając z odwołania bezwzględnego i funkcji wypełniania.
+
+Wpisz wartości:
+
+Krok po kroku:
+
+TypC1(=)
+WybieraćB1
+Wpisz znak dolara przed kolumną i wierszem$B$1
+Typ ( +)
+WybieraćA1
+Wciśnij enter
+Wypełnij zakresC1:C10
+
+Świetnie! Udało Ci się użyć odniesienia absolutnego do dodania B1(5)z zakresem A1:A10.
