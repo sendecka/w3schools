@@ -1,43 +1,35 @@
 # Excel Tutorial
 
-Excel jest najczęściej używanym na świecie arkuszem kalkulacyjnym.
-Excel to potężne narzędzie do wykonywania funkcji matematycznych.
+Excel jest najczęściej używanym na świecie arkuszem kalkulacyjnym. <br>
+Excel to potężne narzędzie do wykonywania funkcji matematycznych. <br>
 
-# 1. Excel Introduction
-Czym jest Excel?
-Excel wymawia się „Eks - sel”
+# 1. Excel Introduction <br>
+### Czym jest Excel? <br>
+Excel wymawia się „Eks - sel” <br>
+<br>
+Jest to arkusz kalkulacyjny opracowany przez Microsoft. Excel organizuje dane w kolumnach i wierszach i umożliwia wykonywanie funkcji matematycznych. Działa w systemach Windows, macOS, Android i iOS. <br>
+Pierwsza wersja została wydana w 1985 roku i przeszła kilka zmian na przestrzeni lat. Jednak główna funkcjonalność pozostała w większości taka sama. <br>
+<br>
+### Program Excel jest zazwyczaj używany do:
+<br>
+- Analiza
+- Wprowadzanie danych
+- Zarządzanie danymi
+- Księgowość
+- Asygnowanie
+- Analiza danych
+- Wizualizacje i wykresy
+- Programowanie
+- Modelowanie finansowe
+- I wiele, wiele więcej!
 
-Jest to arkusz kalkulacyjny opracowany przez Microsoft. Excel organizuje dane w kolumnach i wierszach i umożliwia wykonywanie funkcji matematycznych. Działa w systemach Windows, macOS, Android i iOS.
-
-Pierwsza wersja została wydana w 1985 roku i przeszła kilka zmian na przestrzeni lat. Jednak główna funkcjonalność pozostała w większości taka sama.
-
-## Program Excel jest zazwyczaj używany do:
-
-Analiza
-Wprowadzanie danych
-Zarządzanie danymi
-Księgowość
-Asygnowanie
-Analiza danych
-Wizualizacje i wykresy
-Programowanie
-Modelowanie finansowe
-I wiele, wiele więcej!
-
-## Dlaczego warto używać programu Excel?
-
-Jest to najpopularniejszy na świecie program do obsługi arkuszy kalkulacyjnych.
-Łatwo się go nauczyć i zacząć.
-Pułap umiejętności jest wysoki, co oznacza, że ​​możesz wykonywać bardziej zaawansowane czynności, gdy staniesz się lepszy
-Można go używać zarówno w pracy, jak i w życiu codziennym, np. do tworzenia budżetu rodzinnego
-Ma ogromne poparcie społeczności
-Jest on stale wspierany przez firmę Microsoft
-Szablony i struktury mogą być ponownie wykorzystywane przez Ciebie i innych, co obniża koszty tworzenia
-
-Rozpocznij
-W tym samouczku nauczysz się podstaw programu Excel.
-
-Nie jest wymagane wcześniejsze doświadczenie w korzystaniu z arkuszy kalkulacyjnych ani programowaniu.
+### Dlaczego warto używać programu Excel?
+<br>
+Jest to najpopularniejszy na świecie program do obsługi arkuszy kalkulacyjnych. Łatwo się go nauczyć i zacząć. Pułap umiejętności jest wysoki, co oznacza, że ​​możesz wykonywać bardziej zaawansowane czynności, gdy staniesz się lepszy. Można go używać zarówno w pracy, jak i w życiu codziennym, np. do tworzenia budżetu rodzinnego. Ma ogromne poparcie społeczności. Jest on stale wspierany przez firmę Microsoft. Szablony i struktury mogą być ponownie wykorzystywane przez Ciebie i innych, co obniża koszty tworzenia.
+<br>
+W tym samouczku nauczysz się podstaw programu Excel. <br>
+<br>
+Nie jest wymagane wcześniejsze doświadczenie w korzystaniu z arkuszy kalkulacyjnych ani programowaniu. <br>
 
 # 2. Excel Get Started
 Biuro 365
@@ -783,3 +775,90 @@ Wciśnij enter
 Wypełnij zakresC1:C10
 
 Świetnie! Udało Ci się użyć odniesienia absolutnego do dodania B1(5)z zakresem A1:A10.
+
+# 15. Excel Subtraction Operator
+
+### Operator odejmowania <br>
+Do odejmowania używa się ( - ) symbolu, znanego również jako minus. <br>
+Jak odjąć komórki: <br>
+<br>
+- Wybierz komórkę i wpisz ( =)
+- Wybierz minendę
+- Typ ( -)
+- Wybierz odjemnik
+- Wciśnij enter
+<br>
+> [!NOTE]
+> Uwaga: Minuenda to liczba, od której odejmujemy odjemnik.
+<br>
+Możesz dodać więcej komórek do formuły, wpisując ( - ) pomiędzy komórkami. <br>
+
+Przyjrzyjmy się kilku przykładom.
+
+### Odejmowanie dwóch wpisów ręcznych <br>
+Zacznijmy od dodania formuły. Zacznijmy od czystej karty <br>
+
+Krok po kroku: <br>
+<br>
+- TypA1(=)
+- Typ100-50
+- Wciśnij enter
+
+> [!IMPORTANT]
+> Wskazówka: Możesz dodać więcej wartości do formuły, wpisując ( - ) pomiędzy komórkami.
+
+### Odejmowanie przy użyciu dwóch komórek
+Dodajmy kilka liczb do pracy. Wpisz następujące wartości:
+Odejmowanie przy użyciu dwóch komórek, krok po kroku:
+
+TypA3(=)
+WybieraćA1
+Typ ( -)
+WybieraćA2
+Wciśnij enter
+Odejmowanie przy użyciu wielu komórek
+Odejmujmy używając wielu komórek. Najpierw wpisz następujące wartości:
+
+Krok po kroku:
+
+TypB1(=)
+WybieraćA1
+Typ ( -)
+WybieraćA2
+Typ ( -)
+WybieraćA3
+Typ ( -)
+WybieraćA4
+Typ ( -)
+WybieraćA5
+Wciśnij enter
+
+Odejmowanie przy użyciu odniesienia bezwzględnego
+Możesz zablokować komórkę i odjąć ją od innych komórek.
+
+Jak to zrobić, krok po kroku:
+
+Wybierz komórkę i wpisz ( =)
+Wybierz minendę
+Typ ( -)
+Wybierz odjemnik i dodaj dwa znaki dolara ( $) przed kolumną i wierszem
+Wciśnij enter
+Wypełnij zakres
+
+> [!NOTE]
+> Uwaga: Minuenda to liczba, od której odejmujemy odjemnik.
+
+Przyjrzyjmy się przykładowi, w którym odejmujemy B(5)od zakresu, A1:A10korzystając z odniesienia bezwzględnego i funkcji wypełnienia.
+
+Wpisz wartości:
+
+Krok po kroku:
+
+TypC1(=)
+WybieraćA1
+Typ ( -)
+Wybierz B1i wpisz znak dolara przed kolumną i wierszem$B$1
+Wciśnij enter
+WypełnićC1:C10
+
+Udało Ci się! Udało Ci się użyć odniesienia bezwzględnego do odjęcia B1(5)od zakresu minuend A1:A10.
