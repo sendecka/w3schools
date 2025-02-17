@@ -12,16 +12,16 @@ Pierwsza wersja została wydana w 1985 roku i przeszła kilka zmian na przestrze
 <br>
 ### Program Excel jest zazwyczaj używany do:
 <br>
-- Analiza
-- Wprowadzanie danych
-- Zarządzanie danymi
-- Księgowość
-- Asygnowanie
-- Analiza danych
-- Wizualizacje i wykresy
-- Programowanie
-- Modelowanie finansowe
-- I wiele, wiele więcej!
+- Analiza <br>
+- Wprowadzanie danych <br>
+- Zarządzanie danymi <br>
+- Księgowość <br> 
+- Asygnowanie <br>
+- Analiza danych <br>
+- Wizualizacje i wykresy <br>
+- Programowanie <br>
+- Modelowanie finansowe <br>
+- I wiele, wiele więcej! <br>
 
 ### Dlaczego warto używać programu Excel?
 <br>
