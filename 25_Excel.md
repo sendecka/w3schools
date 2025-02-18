@@ -862,3 +862,64 @@ Wciśnij enter
 WypełnićC1:C10
 
 Udało Ci się! Udało Ci się użyć odniesienia bezwzględnego do odjęcia B1(5)od zakresu minuend A1:A10.
+
+# 16. Excel Multiplication Operator <br>
+<br>
+### Operator mnożenia <br>
+W programie Excel mnożenie odbywa się za pomocą ( * ) symbolu. <br>
+<br>
+Jak mnożyć komórki: <br>
+<br>
+- Wybierz komórkę i wpisz ( = ) <br>
+- Wybierz komórkę <br>
+- Typ ( * ) <br>
+- Wybierz inną komórkę <br>
+- Wciśnij enter <br>
+Możesz dodać więcej komórek do formuły, wpisując ( * ) pomiędzy komórkami. <br>
+<br>
+Przyjrzyjmy się kilku przykładom. <br>
+<br>
+### Mnożenie wpisów ręcznych <br>
+Zacznijmy od dodania formuły. Zacznijmy od czystej karty. <br>
+<br>
+Krok po kroku: <br>
+<br>
+- TypA1(=) <br>
+- Typ2*2 <br>
+- Wciśnij enter <br>
+
+### Mnożenie dwóch komórek <br>
+Dodajmy kilka liczb do pracy. Wpisz następujące wartości: <br>
+Krok po kroku: <br>
+<br>
+- TypA3(=) <br>
+- WybieraćA1 <br>
+- Typ ( *) <br>
+- WybieraćA2 <br>
+- Wciśnij enter <br>
+<br>
+### Mnożenie przy użyciu odniesienia bezwzględnego <br>
+Możesz zablokować komórkę i pomnożyć ją przez inne komórki. <br>
+<br>
+Jak to zrobić, krok po kroku: <br>
+<br>
+- Wybierz komórkę i wpisz ( = )  <br> 
+- Wybierz komórkę, którą chcesz zablokować i dodaj dwa znaki dolara ( $) przed kolumną i wierszem <br>
+- Typ ( * ) <br>
+- Wybierz inną komórkę <br>
+- Wciśnij enter <br>
+- Wypełnij zakres <br>
+<br>
+Przyjrzyjmy się przykładowi, w którym mnożymy B(5)przez zakres, A1:A10używając odniesienia bezwzględnego i funkcji wypełniania.<br>
+<br>
+Wpisz wartości: <br>
+Krok po kroku: <br>
+<br>
+- TypC1(=) <br>
+- Wybierz B1typ znaku dolara przed kolumną i wierszem$B$1 <br>
+- Typ ( * ) <br>
+- WybieraćA1 <br>
+- Wciśnij enter <br>
+- WypełnićC1:C10 <br>
+<br>
+Udało Ci się! Udało Ci się użyć odniesienia bezwzględnego do pomnożenia B1(5)z zakresem A1:A10. <br>
