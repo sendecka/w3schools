@@ -923,3 +923,69 @@ Krok po kroku: <br>
 - WypełnićC1:C10 <br>
 <br>
 Udało Ci się! Udało Ci się użyć odniesienia bezwzględnego do pomnożenia B1(5)z zakresem A1:A10. <br>
+
+# 17. Excel Division Operator
+<br>
+### Operator dzielenia
+Dzielenie używa ( / ) symbolu w programie Excel. <br>
+<br>
+Jak dokonać podziału komórek: <br>
+<br>
+- Wybierz komórkę i wpisz ( = ) <br>
+- Wybierz komórkę <br>
+- Typ ( / ) <br>
+- Wybierz inną komórkę <br>
+- Wciśnij enter <br>
+Możesz dodać więcej komórek do formuły, wpisując ( /) pomiędzy komórkami. <br>
+<br>
+Przyjrzyjmy się kilku przykładom. <br>
+<br>
+### Podział wpisów ręcznych 
+Zacznijmy od dodania formuły. Zacznijmy od czystej karty. <br>
+<br>
+Krok po kroku: <br>
+<br>
+- TypA1(=)
+- Typ4/2
+- Wciśnij enter
+
+### Podział dwóch komórek
+Dodajmy kilka liczb do pracy. Wpisz następujące wartości: <br>
+<br>
+Krok po kroku: <br>
+<br>
+- TypA3(=) <br>
+- WybieraćA1 <br>
+- Typ ( /) <br>
+- WybieraćA2 <br>
+- Wciśnij enter <br>
+<br>
+### Dzielenie z użyciem odniesienia bezwzględnego
+Możesz zablokować komórkę i podzielić ją na inne komórki. <br>
+<br>
+Jak to zrobić, krok po kroku: <br>
+<br>
+- Wybierz komórkę i wpisz ( =)
+- Wybierz dywidendę
+- Typ ( /)
+- Wybierz blokadę dzielnika i dodaj dwa znaki dolara ( $) przed kolumną i wierszem
+- Wciśnij enter
+- Wypełnij zakres
+<br>
+> [!NOTE]
+> Uwaga: Dzielna to liczba dzielona przez dzielnik.
+<br>
+Przyjrzyjmy się przykładowi, w którym dzielimy B(5)przez zakres, A1:A10korzystając z odniesienia bezwzględnego i funkcji wypełnienia.
+<br>
+Wpisz wartości: <br>
+
+Krok po kroku: <br>
+<br> 
+- TypC1(=) <br>
+- WybieraćA1 <br>
+- Typ ( /) <br>
+- Wybierz B1typ znaku dolara przed kolumną i wierszem$B$1 <br>
+- Wciśnij enter <br>
+- WypełnićC1:C10 <br>
+<br>
+Goob job! Udało ci się użyć odniesienia absolutnego do podzielenia B1(5)z zakresem A1:A10. <br>
