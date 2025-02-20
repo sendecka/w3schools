@@ -945,10 +945,10 @@ Zacznijmy od dodania formuły. Zacznijmy od czystej karty. <br>
 <br>
 Krok po kroku: <br>
 <br>
-- TypA1(=)
-- Typ4/2
-- Wciśnij enter
-
+- TypA1(=) <br>
+- Typ4/2 <br>
+- Wciśnij enter <br>
+<br>
 ### Podział dwóch komórek
 Dodajmy kilka liczb do pracy. Wpisz następujące wartości: <br>
 <br>
@@ -989,3 +989,67 @@ Krok po kroku: <br>
 - WypełnićC1:C10 <br>
 <br>
 Goob job! Udało ci się użyć odniesienia absolutnego do podzielenia B1(5)z zakresem A1:A10. <br>
+
+# 18. Excel Parentheses
+### Nawiasy w Excel
+Nawiasów ()używa się do zmiany kolejności wykonywania działań. <br>
+<br>
+Użycie nawiasów powoduje, że program Excel najpierw wykonuje obliczenia dla liczb w nawiasach, a dopiero potem oblicza resztę formuły. <br>
+<br>
+Nawiasy dodaje się wpisując je ()po obu stronach liczb, np (1+2). <br>
+<br>
+Przykłady <br>
+Bez nawiasów <br>
+```
+=10+5*2
+```
+Wynik jest taki 20, ponieważ oblicza ( 10+10) <br>
+<br>
+Z nawiasami <br>
+```
+=(10+5)*2
+```
+Wynik jest taki 30, ponieważ oblicza(15)*2 <br>
+<br>
+Formuły mogą zawierać grupy nawiasów. <br>
+```
+=(10+5)+(2*4)+(4/2)
+```
+> [!NOTE]
+> Uwaga: Komórki mogą być używane jako wartości w formułach w nawiasach, takich jak =(A1+A2)*B5. W naszych przykładach użyliśmy wpisów ręcznych, aby zachować prostotę.
+<br>
+Przyjrzyjmy się kilku prawdziwym przykładom w programie Excel. <br>
+
+### Bez nawiasów 
+Wynikiem jest 17, obliczenie wynosi 2+15. Używa się 15ponieważ 3*5=15. <br>
+<br>
+### Z jednym nawiasem
+Wynik jest 25, obliczenie jest 5*5. Używa, 5ponieważ najpierw ma obliczone liczby wewnątrz nawiasów (2+3)=5.  <br>
+### Z wieloma nawiasami <br>
+Wynik to 17, obliczenie to 5+8+4. Liczby w nawiasach są obliczane jako pierwsze. <br>
+<br>
+Zagnieżdżanie nawiasów <br>
+Podczas korzystania z bardziej zaawansowanych formuł może być konieczne zagnieżdżanie nawiasów. Można to porównać do cebuli, która ma wiele warstw. Excel najpierw obliczy liczby wewnątrz nawiasów, warstwa po warstwie, zaczynając od warstwy wewnętrznej.
+ <br>
+Przykład bez zagnieżdżania <br>
+```
+=2*2+3*4+5*5*2
+```
+Oblicza wartości w sposób płaski, tak jak zrobiłbyś to za pomocą kalkulatora. <br>
+<br>
+Przykład zagnieżdżania <br>
+```
+=((2*2)+(3*4)+(5*5))*2
+```
+Wyjaśnijmy to dokładniej. <br>
+<br>
+Zagnieżdżanie tworzy warstwy jak cebula. Możesz mieć wiele warstw. W tym przykładzie użyto dwóch, wewnętrznej i zewnętrznej warstwy. <br>
+Zaczynamy od obliczenia liczb w warstwie wewnętrznej: <br>
+```
+=((2*2)+(3*4)+(5*5))*2
+=((4)+(12)+25))*2 Oblicza warstwę wewnętrzną
+=(41)*2 Oblicza warstwę zewnętrzną
+82
+```
+### Podsumowanie rozdziału
+Nawiasy mogą być używane do zmiany kolejności operacji. Liczby wewnątrz nawiasów są obliczane jako pierwsze. Formuła może mieć zestawy nawiasów. Bardziej zaawansowane formuły mogą używać zagnieżdżania do tworzenia warstw operacji, jak cebula. Najpierw oblicza warstwę wewnętrzną, potem kolejną i tak dalej.
