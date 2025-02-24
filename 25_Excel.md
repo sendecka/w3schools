@@ -1053,3 +1053,18 @@ Zaczynamy od obliczenia liczb w warstwie wewnętrznej: <br>
 ```
 ### Podsumowanie rozdziału
 Nawiasy mogą być używane do zmiany kolejności operacji. Liczby wewnątrz nawiasów są obliczane jako pierwsze. Formuła może mieć zestawy nawiasów. Bardziej zaawansowane formuły mogą używać zagnieżdżania do tworzenia warstw operacji, jak cebula. Najpierw oblicza warstwę wewnętrzną, potem kolejną i tak dalej.
+
+# 19. Excel Functions
+
+Funkcje
+W programie Excel dostępnych jest wiele gotowych formuł, nazywanych funkcjami .
+
+Funkcje są wpisywane za pomocą znaków =i nazwy funkcji.
+
+Na przykład=SUM
+
+Po wpisaniu nazwy funkcji należy zastosować ją do zakresu.
+
+Na przykład=SUM(A1:A5)
+
+Zakres jest zawsze podany w nawiasach.
