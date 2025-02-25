@@ -1056,15 +1056,47 @@ Nawiasy mogą być używane do zmiany kolejności operacji. Liczby wewnątrz naw
 
 # 19. Excel Functions
 
-Funkcje
-W programie Excel dostępnych jest wiele gotowych formuł, nazywanych funkcjami .
-
-Funkcje są wpisywane za pomocą znaków =i nazwy funkcji.
-
-Na przykład=SUM
-
-Po wpisaniu nazwy funkcji należy zastosować ją do zakresu.
-
-Na przykład=SUM(A1:A5)
-
-Zakres jest zawsze podany w nawiasach.
+### Funkcje
+W programie Excel dostępnych jest wiele gotowych formuł, nazywanych funkcjami. <br>
+<br>
+Funkcje są wpisywane za pomocą znaków =i nazwy funkcji. <br>
+ <br>
+Na przykład=SUM <br>
+ <br>
+Po wpisaniu nazwy funkcji należy zastosować ją do zakresu. <br>
+ <br>
+Na przykład=SUM(A1:A5) <br>
+<br>
+Zakres jest zawsze podany w nawiasach. <br>
+<br>
+| Function	| Description
+| =AND	| Returns TRUE or FALSE based on two or more conditions
+| =AVERAGE	| Calculates the average (arithmetic mean)
+| =AVERAGEIF	| Calculates the average of a range based on a TRUE or FALSE condition
+| =AVERAGEIFS	| Calculates the average of a range based on one or more TRUE/FALSE conditions
+| =CONCAT	| Links together the content of multiple cells
+| =COUNT	| Counts cells with numbers in a range
+| =COUNTA	| Counts all cells in a range that has values, both numbers and letters
+| =COUNTBLANK	| Counts blank cells in a range
+| =COUNTIF	| Counts cells as specified
+| =COUNTIFS	| Counts cells in a range based on one or more TRUE or FALSE condition
+| =IF	| Returns values based on a TRUE or FALSE condition
+| =IFS	| Returns values based on one or more TRUE or FALSE conditions
+| =LEFT	| Returns values from the left side of a cell
+| =LOWER	| Reformats content to lowercase
+| =MAX	| Returns the highest value in a range
+| =MEDIAN	| Returns the middle value in the data
+| =MIN	| Returns the lowest value in a range
+| =MODE	| Finds the number seen most times. The function always returns a single number
+| =NPV	| The NPV function is used to calculate the Net Present Value (NPV)
+| =OR	| Returns TRUE or FALSE based on two or more conditions
+| =RAND	| Generates a random number
+| =RIGHT	| Returns values from the right side of a cell
+| =STDEV.P	| Calculates the Standard Deviation (Std) for the entire population
+| =STDEV.S	| Calculates the Standard Deviation (Std) for a sample
+| =SUM	| Adds together numbers in a range
+| =SUMIF	| Calculates the sum of values in a range based on a TRUE or FALSE condition
+| =SUMIFS	| Calculates the sum of a range based on one or more TRUE or FALSE condition
+| =TRIM	| Removes irregular spacing, leaving one space between each value
+| =VLOOKUP	| Allows vertical searches for values in a table
+| =XOR	| Returns TRUE or FALSE based on two or more conditions
