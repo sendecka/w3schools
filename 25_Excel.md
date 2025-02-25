@@ -1070,6 +1070,7 @@ Na przykład=SUM(A1:A5) <br>
 Zakres jest zawsze podany w nawiasach. <br>
 <br>
 | Function	| Description
+|----------|-----------|------------|
 | =AND	| Returns TRUE or FALSE based on two or more conditions
 | =AVERAGE	| Calculates the average (arithmetic mean)
 | =AVERAGEIF	| Calculates the average of a range based on a TRUE or FALSE condition
