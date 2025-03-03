@@ -1101,3 +1101,26 @@ Zakres jest zawsze podany w nawiasach. <br>
 | =TRIM	| Removes irregular spacing, leaving one space between each value
 | =VLOOKUP	| Allows vertical searches for values in a table
 | =XOR	| Returns TRUE or FALSE based on two or more conditions
+
+# 20. Formatowanie programu Excel
+<br>
+### Formatowanie
+W programie Excel istnieje wiele sposobów formatowania i stylizowania arkusza kalkulacyjnego. <br>
+<br>
+Dlaczego warto formatować i stylizować arkusz kalkulacyjny? <br>
+- Ułatw czytanie i zrozumienie <br>
+- Uczyń to delikatniejszym <br>
+<br>
+Stylizacja polega na zmianie wyglądu komórek, na przykład kolorów, czcionki, rozmiarów czcionek, obramowań, formatów liczb itd. <br>
+Najczęściej używane funkcje stylizacji to: <br>
+<br>
+- Zabarwienie <br>
+- Czcionki <br>
+- Granice <br>
+- Formaty liczb <br>
+- Siatki <br>
+- Istnieją dwa sposoby dostępu do poleceń stylizacji w programie Excel: <br>
+ <br>
+Wstążka <br>
+Menu formatowania, klikając prawym przyciskiem myszy komórki <br>
+Więcej informacji na temat Wstążki można znaleźć w rozdziale Przegląd programu Excel. <br>
