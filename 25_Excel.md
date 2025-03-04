@@ -1104,7 +1104,7 @@ Zakres jest zawsze podany w nawiasach. <br>
 
 # 20. Formatowanie programu Excel
 <br>
-### Formatowanie
+### Formatowanie <br>
 W programie Excel istnieje wiele sposobów formatowania i stylizowania arkusza kalkulacyjnego. <br>
 <br>
 Dlaczego warto formatować i stylizować arkusz kalkulacyjny? <br>
@@ -1124,3 +1124,40 @@ Najczęściej używane funkcje stylizacji to: <br>
 Wstążka <br>
 Menu formatowania, klikając prawym przyciskiem myszy komórki <br>
 Więcej informacji na temat Wstążki można znaleźć w rozdziale Przegląd programu Excel. <br>
+
+# 21. Malarz formatów Excela
+<br>
+### Malarz formatów <br>
+Malarz formatów to polecenie umożliwiające kopiowanie formatowania z jednej komórki do drugiej. To świetne narzędzie, które pozwoli Ci zaoszczędzić mnóstwo czasu! Za pomocą malarza formatów można kopiować do pojedynczych komórek lub zakresów. Aby uruchomić Malarza formatów, kliknij jego przycisk na Wstążce, w grupie Schowek. <br>
+<br>
+### Jak korzystać z malarza formatów <br>
+<br>
+- Wybierz komórkę, którą chcesz skopiować <br>
+- Kliknij przycisk Malarz formatów <br>
+- Wybierz komórkę lub zakres <br> 
+Wypróbujmy kilka przykładów i skopiujmy formaty z kolorami i cechami czcionek, takimi jak pogrubienie, kursywa i podkreślenie: <br>
+Skopiuj kolor czerwony z A1do B1. <br>
+
+Krok po kroku: <br>
+ <br>
+- WybieraćA1 <br>
+- Kliknij przycisk Malarz formatów <br>
+WybieraćB1 <br>
+Zwróć uwagę na przerywaną obwódkę wokół A1. Oznacza to, że format jest skopiowany i gotowy do wklejenia. Wklejmy go do B1!
+
+Kopiowanie i wklejanie kolorów do wielu komórek
+Kopiuj B2do C2. Tak, spróbujmy wkleić do zakresu dwóch komórek!
+
+WybieraćA2
+Kliknij przycisk Malarz formatów
+Wybierz B2i przytrzymaj, a następnie przeciągnij, abyC2
+Tak właśnie jest! Format painter może być używany do pojedynczych komórek i zakresów.
+
+Skopiuj cechy czcionki
+Ostatni przykład. Skopiuj Charakterystykę Czcionki z A4:A6do B4:B6.
+
+Krok po kroku:
+
+OcenaA4:A6
+Kliknij przycisk Malarz formatów
+Przeciągnij i zaznaczB4:B6
