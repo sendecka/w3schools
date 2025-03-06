@@ -1161,3 +1161,79 @@ Krok po kroku:
 OcenaA4:A6
 Kliknij przycisk Malarz formatów
 Przeciągnij i zaznaczB4:B6
+
+# 22. Formatowanie kolorów
+Zabarwienie
+Kolory określa się poprzez wybór lub za pomocą kodów szesnastkowych i RGB.
+
+Wskazówka: Więcej na temat kolorów możesz dowiedzieć się w naszym samouczku dotyczącym kolorów HTML/CSS.
+
+Motyw i standardowe kolory
+Excel ma zestaw motywów i standardowych kolorów dostępnych do użycia. Wybierasz kolor, klikając go:
+
+Opcja „ Więcej kolorów ” umożliwia wybranie niestandardowych kolorów poprzez wprowadzenie kodu RGB lub HEX.
+Kolory szesnastkowe
+Program Excel obsługuje wartości kolorów szesnastkowych
+
+Kolor szesnastkowy określa się za pomocą: .#RRGGBB
+
+RR (czerwony), GG (zielony) i BB (niebieski) to szesnastkowe liczby całkowite z zakresu od 00 do FF określające intensywność koloru.
+
+Na przykład #0000FF jest wyświetlane jako niebieskie, ponieważ niebieski komponent jest ustawiony na najwyższą wartość (FF), a pozostałe są ustawione na 00.
+
+Kolory RGB
+Program Excel obsługuje wartości kolorów RGB.
+
+Wartość koloru RGB określana jest za pomocą: .rgb( RED , GREEN , BLUE )
+
+Każdy parametr definiuje intensywność koloru jako liczbę całkowitą od 0 do 255.
+
+Na przykład rgb(0,0,255) jest renderowane jako niebieskie, ponieważ parametr niebieski jest ustawiony na najwyższą wartość (255), a pozostałe są ustawione na 0.
+Stosowanie kolorów
+Kolory można stosować do komórek, tekstu i obramowań.
+
+Kolory do komórek stosuje się za pomocą funkcji „ Wypełnij kolorem ”.
+
+Jak stosować kolory w komórkach:
+
+Wybierz kolor
+Wybierz zakres
+Kliknij przycisk Wypełnij kolorem
+Przycisk „ Kolor wypełnienia ” zapamiętuje kolor użyty ostatnio.
+Opcje kolorów można sprawdzić, klikając ikonę strzałki w dół ( ) obok polecenia Kolor wypełnienia:
+Opcja ta umożliwia wybór kolorów motywu, kolorów standardowych lub użycie kodów HEX lub RGB poprzez kliknięcie opcji Więcej kolorów:
+Kolory składają się z czerwonego, zielonego, niebieskiego i są uniwersalne. Wpisanie koloru w jeden sposób da Ci kod w drugi. Na przykład, jeśli wpiszesz kod HEX, da Ci kod RGB dla tego samego koloru.
+
+Przyjrzyjmy się kilku przykładom.
+
+Zaczynając od motywu i standardowych kolorów:
+Świetnie!
+
+Spróbuj zastosować następujące kolory:
+
+Kolor motywu niebieski (akcent 5) do A3:F3.
+Kolor przewodni zielony (akcent 6) i A5:F5.
+Udało ci się?
+
+Zastosujmy kolory korzystając z kodów HEX i RGB.
+
+Zastosuj kod HEX #ffcb05 do A7:F7:
+
+Krok po kroku:
+
+WybieraćA7:F7
+Otwórz opcje kolorów
+Kliknij Więcej kolorów
+Wstaw #ffcb05w polu wprowadzania HEX
+Wciśnij enter
+Zwróć uwagę, że zastosowanie kodu HEX daje kod RGB dla tego samego koloru i pokazuje, gdzie ten kolor jest umieszczony na mapie kolorów.
+Zastosuj kod RGB 60, 90, 166doA9:F9
+
+Krok po kroku:
+
+WybieraćA9:F9
+Otwórz opcje kolorów
+Kliknij Więcej kolorów
+Wstaw 60, 90, 166w polu wejściowym RGB
+Wciśnij enter
+Zwróć uwagę, że wprowadzenie kodu RGB powoduje również podanie kodu HEX oraz pokazuje położenie koloru na mapie kolorów.
