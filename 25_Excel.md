@@ -1237,3 +1237,73 @@ Kliknij Więcej kolorów
 Wstaw 60, 90, 166w polu wejściowym RGB
 Wciśnij enter
 Zwróć uwagę, że wprowadzenie kodu RGB powoduje również podanie kodu HEX oraz pokazuje położenie koloru na mapie kolorów.
+
+# 23. Czcionki w Excel
+Formatuj czcionki
+Czcionki można formatować na cztery różne sposoby: według koloru, nazwy czcionki, rozmiaru i innych cech.
+
+Kolor czcionki
+Domyślnym kolorem czcionek jest czarny.
+
+Kolory czcionek stosuje się za pomocą funkcji „ Kolor czcionki ”.
+
+Jak stosować kolory do czcionek
+
+Wybierz komórkę
+Wybierz kolor czcionki
+Wpisz tekst
+Kolor czcionki dotyczy zarówno liczb, jak i tekstu.
+
+Polecenie Kolor czcionki zapamiętuje kolor użyty ostatnio.
+Spróbujmy przedstawić to krok po kroku:
+
+Wybierz standardowy kolor czcionki Czerwony
+Wpisz A1(Witaj)
+Wciśnij enter
+Wybierz standardowy kolor czcionki Zielony
+Typ B1(Świat!)
+Wciśnij enter
+
+Nazwa czcionki
+Domyślną czcionką w programie Excel jest Calibri .
+
+Nazwę czcionki można zmienić zarówno w przypadku liczb, jak i tekstu.
+
+Po co zmieniać nazwę czcionki w programie Excel?
+
+Ułatw odczyt danych
+Uczyń prezentację bardziej atrakcyjną
+Jak zmienić nazwę czcionki:
+
+Wybierz zakres
+Kliknij menu rozwijane z nazwą czcionki
+Wybierz czcionkę
+Przyjrzyjmy się przykładowi.
+
+WybieraćA1:C4
+Kliknij menu rozwijane z nazwą czcionki
+Wybierz Arial
+Przykład zawiera zarówno tekst ( A1:B1), jak i liczby ( A4:C4)
+
+Dobra robota! Udało Ci się zmienić czcionki z Calibri na Arial dla zakresu A1:C4.
+
+Rozmiar czcionki
+Aby zmienić rozmiar czcionki , wystarczy kliknąć na rozwijane menu rozmiaru czcionki:
+Charakterystyka czcionki
+Do czcionek można stosować różne cechy, takie jak:
+
+Pogrubiony
+italski
+Podkreślono
+Uderz jednak
+Polecenia można znaleźć pod menu rozwijanym nazw czcionek:
+Pogrubienie można zastosować, klikając ikonę Pogrubienie (B) na wstążce lub używając skrótu klawiaturowego CTRL + B lub Command + B
+
+Kursywę stosuje się, klikając ikonę Kursywy (I) lub używając skrótu klawiaturowego CTRL + I lub Command + I
+
+Podkreślenie stosuje się poprzez kliknięcie ikony Podkreślenie (U) lub za pomocą skrótu klawiaturowego CTRL + U lub Command + U
+
+Przekreślenie stosuje się poprzez kliknięcie ikony Przekreślenie (ab) lub za pomocą skrótu klawiaturowego CTRL + 5 lub Command + Shift + X
+
+Podsumowanie rozdziału
+Czcionki można zmieniać na cztery różne sposoby: kolor, nazwę czcionki, rozmiar i inne cechy. Czcionki są zmieniane, aby arkusz kalkulacyjny był bardziej czytelny i delikatny.
