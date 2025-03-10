@@ -1307,3 +1307,48 @@ Przekreślenie stosuje się poprzez kliknięcie ikony Przekreślenie (ab) lub za
 
 Podsumowanie rozdziału
 Czcionki można zmieniać na cztery różne sposoby: kolor, nazwę czcionki, rozmiar i inne cechy. Czcionki są zmieniane, aby arkusz kalkulacyjny był bardziej czytelny i delikatny.
+
+# 24. Obramowania w Excel
+Formatuj obramowania
+Obramowania można dodawać i usuwać. Kolory i styl można zmieniać.
+
+Dlaczego warto formatować obramowania?
+
+Uczyń dokument bardziej czytelnym i zrozumiałym
+Podkreślanie kluczowych punktów
+Do menu Obramowanie można uzyskać dostęp na Wstążce, w grupie Czcionka.
+
+Przycisk zapamiętuje obramowanie, którego użyłeś ostatnio.
+
+Dodawanie obramowań
+Obramowania dodaje się poprzez kliknięcie przycisku Obramowania .
+
+Domyślną ramką jest czarne podkreślenie.
+
+Zmiana rodzaju, stylu i koloru obramowania jest decyzją, którą podejmujesz.
+
+Przycisk opcji obok polecenia Obramowanie udostępnia opcje dotyczące większej liczby typów obramowań.
+
+Kliknięcie przycisku opcji powoduje wyświetlenie przeglądu różnych opcji obramowania.
+Kolory obramowania
+Kolorowe obramowania dodaje się poprzez wybranie koloru przed dodaniem obramowania.
+
+Kolor można zmienić w menu Kolor obramowania:
+
+Styl obramowania
+Style obramowań można zmieniać.
+
+Dostęp do menu można uzyskać w menu Styl obramowania.
+
+Program Excel oferuje 6 różnych stylów obramowania:
+
+Linia ciągła
+Linia przerywana
+Linia przerywana
+Średnia linia
+Gruba linia
+Podwójna linia
+Podsumowanie rozdziału
+Obramowania można dodawać w różnych kolorach i stylach. Przycisk obramowania zapamiętuje ustawienia obramowania używane ostatnio. Opcje są dostępne z przycisku opcji obramowania, obok przycisku obramowania.
+
+W następnym rozdziale poznasz formaty liczb.
