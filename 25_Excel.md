@@ -1352,3 +1352,42 @@ Podsumowanie rozdziału
 Obramowania można dodawać w różnych kolorach i stylach. Przycisk obramowania zapamiętuje ustawienia obramowania używane ostatnio. Opcje są dostępne z przycisku opcji obramowania, obok przycisku obramowania.
 
 W następnym rozdziale poznasz formaty liczb.
+
+# 25. Formaty liczb w programie Excel
+Formaty liczb
+Domyślny format liczbowy to Ogólny .
+
+Po co zmieniać formaty liczb?
+
+Uczyń dane zrozumiałymi
+Przygotuj dane dla funkcji, aby program Excel rozumiał, z jakim rodzajem danych pracujesz.
+Przykłady formatów liczb:
+
+Ogólny
+Numer
+Waluta
+Czas
+Formaty liczb można zmienić, klikając menu rozwijane Format liczb dostępne na Wstążce w grupie Liczby.
+
+
+
+Uwaga: Aby uzyskać dostęp do większej liczby opcji formatowania liczb, można przełączyć widok wstążki.
+Przykład
+
+W tym przykładzie mamy komórki reprezentujące ceny, które można sformatować jako Waluta.
+
+Spróbujmy zmienić format cen na format „Liczba walut”.
+
+Krok po kroku:
+
+Zaznacz zakresB2:C8
+Kliknij menu rozwijane Format liczb
+Kliknij format Waluta
+To wszystko! Format liczb został zmieniony z Ogólnego na Walutę .
+
+Uwaga: Domyślnie używana będzie Twoja lokalna waluta.
+
+Teraz zrób to samo dla B10, B11i B13:
+Uwaga: Walutę można zmienić. Na przykład zamiast używać USD jak w przykładzie możesz zdecydować się na $ lub EUR . Zmianę można wykonać w menu rozwijanym, klikając Więcej formatów liczb na dole menu. Następnie klikając Waluta .
+
+Zauważ, że liczby wyglądają jak bałagan. Rozwiążmy to, zmniejszając liczbę miejsc po przecinku. To pomoże uczynić prezentację bardziej przejrzystą.
