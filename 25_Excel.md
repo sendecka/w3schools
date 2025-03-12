@@ -1391,3 +1391,18 @@ Teraz zrób to samo dla B10, B11i B13:
 Uwaga: Walutę można zmienić. Na przykład zamiast używać USD jak w przykładzie możesz zdecydować się na $ lub EUR . Zmianę można wykonać w menu rozwijanym, klikając Więcej formatów liczb na dole menu. Następnie klikając Waluta .
 
 Zauważ, że liczby wyglądają jak bałagan. Rozwiążmy to, zmniejszając liczbę miejsc po przecinku. To pomoże uczynić prezentację bardziej przejrzystą.
+
+# 26. Siatki w formacie Excel
+Siatki
+Domyślnie w programie Excel wyświetlane są linie siatki.
+
+Siatki można jednak usunąć.
+
+Po co usuwać siatki?
+
+Uczyń arkusz kalkulacyjny bardziej czytelnym
+Uczyń arkusz kalkulacyjny bardziej delikatnym
+Jak usunąć siatki
+
+Kliknij opcję Widok na pasku nawigacyjnym wstążki
+Odznacz linie siatki
