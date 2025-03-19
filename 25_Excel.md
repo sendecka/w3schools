@@ -1406,3 +1406,140 @@ Jak usunąć siatki
 
 Kliknij opcję Widok na pasku nawigacyjnym wstążki
 Odznacz linie siatki
+
+# 27. Ustawienia formatu regionalnego programu Excel
+Ustawienia formatu regionalnego
+Program Excel udostępnia ustawienia formatowania regionalnego dla różnych języków i stylów prezentacji informacji.
+
+Ustawienia regionalne mają wpływ na wiele rzeczy, takich jak:
+
+Formatowanie daty kalendarzowej
+Liczby dziesiętne
+Domyślny format waluty
+Ograniczniki formuł
+Ograniczniki formuł to symbole używane do oddzielania argumentów w funkcji.
+
+Najczęściej używanymi symbolami są przecinek ,i średnik;
+
+Na przykład w ustawieniu języka regionalnego dla języka angielskiego używa się przecinków:
+```
+=AND([logical1], [logical2], ...)
+```
+
+Nawiasy w programie Excel
+Funkcje programu Excel
+
+Formatowanie Excela
+Formatowanie Excela
+Malarz formatów Excela
+Kolory w formacie Excela
+Czcionki w formacie Excel
+Obramowania w formacie Excel
+Formatowanie liczb w programie Excel
+Siatki w formacie Excel
+Ustawienia formatu Excela
+
+Analiza danych w programie Excel
+Sortowanie w programie Excel
+Filtr programu Excel
+Tabele Excela
+Format warunkowy programu Excel
+Reguły wyróżniania komórek w programie Excel
+Reguły góra-dół w programie Excel
+Paski danych programu Excel
+Skala kolorów programu Excel
+Zestawy ikon programu Excel
+Zarządzanie regułami programu Excel (CF)
+Wykresy Excela
+
+Tabela przestawna
+Wprowadzenie do tabeli przestawnej
+
+Przypadek Excela
+Przypadek: Poke Mart
+Przypadek: Poke Mart, Stylizacja
+
+Funkcje programu Excel
+I
+PRZECIĘTNY
+ŚREDNIAJĄCA JEŻELI
+UŚREDNIONE
+KONTAKT
+LICZYĆ
+HRABA
+LICZ PUSTE
+LICZ.JEŻELI
+LICZ.JEŻELI
+JEŚLI
+Jeżeli
+LEWY
+NIŻEJ
+MAKS
+MEDIANA
+MIN
+TRYB
+Aktualna wartość netto
+LUB
+SKRAJ
+PRAWIDŁOWY
+Odchylenie standardowe
+Odchylenie standardowe
+SUMA
+SUMA.JEŻELI
+SUMA.FS
+PRZYCINAĆ
+WYSZUKAJ PIONOWO
+XOR
+
+Jak korzystać z programu Excel
+Przelicz czas na sekundy
+Różnica między czasami
+NPV (wartość bieżąca netto)
+Usuń duplikaty
+
+Przykłady Excela
+Ćwiczenia z Excela
+Program nauczania programu Excel
+Plan nauki programu Excel
+Certyfikat Excela
+Szkolenie Excel
+
+Odniesienia do programu Excel
+Skróty klawiaturowe programu Excel
+
+
+
+
+Ustawienia formatu regionalnego programu Excel
+Ustawienia formatu regionalnego
+Program Excel udostępnia ustawienia formatowania regionalnego dla różnych języków i stylów prezentacji informacji.
+
+Ustawienia regionalne mają wpływ na wiele rzeczy, takich jak:
+
+Formatowanie daty kalendarzowej
+Liczby dziesiętne
+Domyślny format waluty
+Ograniczniki formuł
+Ograniczniki formuł to symbole używane do oddzielania argumentów w funkcji.
+
+Najczęściej używanymi symbolami są przecinek ,i średnik;
+
+Na przykład w ustawieniu języka regionalnego dla języka angielskiego używa się przecinków:
+
+=AND([logical1], [logical2], ...)
+W ustawieniach regionalnego języka niemieckiego zastosowano średniki:
+```
+=AND([logical1]; [logical2]; ...)
+```
+Przykładowe ustawienia formatu regionalnego
+Poniżej przedstawiono ograniczniki daty, liczb dziesiętnych i formuły wyświetlane przy ustawieniach angielskich (USA) :
+W ustawieniach regionalnego języka niemieckiego zastosowano średniki:
+Poniżej przedstawiono ograniczniki daty, liczb dziesiętnych i formuł pokazane przy użyciu ustawień niemieckich :
+Należy zauważyć, że w formacie angielskim (USA) daty kalendarzowe są formatowane w formacie miesiąc/dzień/rok, a w formacie niemieckim jest to dzień.miesiąc.rok.
+
+W formacie angielskim (USA) .symbol dziesiętny jest zastępowany kropką ( ), a w formatowaniu niemieckim stosuje się przecinek ( ,).
+
+Uwaga: Zmiana ustawień formatu regionalnego spowoduje automatyczną konwersję wszelkich istniejących wartości i formuł w arkuszu kalkulacyjnym.
+Zmiana ustawień formatu regionalnego
+Zmiana ustawień formatu regionalnego jest dostępna w części Opcje menu Plik :
+Wybranie tej opcji spowoduje otwarcie okna dialogowego, w którym można wybrać preferowane ustawienia języka regionalnego:
