@@ -1543,3 +1543,59 @@ Uwaga: Zmiana ustawień formatu regionalnego spowoduje automatyczną konwersję 
 Zmiana ustawień formatu regionalnego
 Zmiana ustawień formatu regionalnego jest dostępna w części Opcje menu Plik :
 Wybranie tej opcji spowoduje otwarcie okna dialogowego, w którym można wybrać preferowane ustawienia języka regionalnego:
+
+# Analiza danych w programie Excel
+
+# 1. Sortowanie w programie Excel
+Sortowanie w programie Excel
+Zakresy można sortować za pomocą poleceń Sortuj rosnąco i Sortuj malejąco .
+
+Sortuj rosnąco : od najmniejszego do największego.
+
+Sortuj malejąco : od największego do najmniejszego.
+
+Polecenia sortowania działają również dla tekstu, używając kolejności alfabetycznej (AZ).
+
+Uwaga: Aby posortować zakres, który ma więcej niż jedną kolumnę, należy wybrać cały zakres. Sortowanie tylko jednej kolumny może zerwać relację między kolumnami.
+
+Przykład ten zostanie przedstawiony później w tym rozdziale.
+
+Polecenia znajdziesz na wstążce w menu Sortowanie i filtrowanie ( ).
+Przykład sortowania (tekst)
+Posortuj Pokemony w zakresie A2:A21 według nazwy , od najmniejszego do największego (AZ).
+
+Wybierz A2:A21
+Otwórz menu Sortuj i filtruj
+Kliknij Sortuj rosnąco
+Uwaga: A1 nie jest uwzględnione, ponieważ jest nagłówkiem kolumny. To jest wiersz dedykowany filtrowi. Jego uwzględnienie spowoduje połączenie go z resztą.
+Funkcja Sortuj rosnąco posortowała Pokemony według ich nazw od A do Z.
+
+Spróbuj ponownie, tym razem wybierając opcję Sortuj malejąco, aby zobaczyć, jak to wygląda!
+Przykład sortowania (liczby)
+Sortuj Pokemony według ich statystyk rosnąco , od najmniejszego do największego.
+
+Wybierz A2:A21
+Otwórz menu Sortuj i filtruj
+Kliknij Sortuj rosnąco
+Świetnie! Pokemony zostały pomyślnie posortowane według ich statystyk całkowitych od najmniejszego do największego. Polecenia sortowania działają zarówno dla tekstu, jak i liczb.
+
+Przykład niedziałający (sortowanie jednej kolumny w zakresie)
+W tym przykładzie mamy dwie kolumny z powiązanymi danymi. Kolumna A to nazwy Pokemonów , a Kolumna B to ich statystyki całkowite . Spróbuj posortować tylko jedną z kolumn ( A2:A21 ) rosnąco według ich nazw .
+
+Próba sortowania kończy się ostrzeżeniem.
+Nie zaleca się sortowania wyłącznie według nazw, ponieważ spowoduje to zerwanie powiązania między nazwami Pokemonów i ich całkowitymi statystykami .
+
+Kliknij „Po prostu sortuj”, aby zobaczyć, co się stanie.
+To przerywa relację z kolumnami A i B. Pokemony mają teraz błędne statystyki całkowite.
+
+Kliknięcie innej opcji w ostrzeżeniu „Rozwiń i sortuj” powoduje, że funkcja sortowania obejmuje Kolumnę B i sortuje je względem siebie.
+
+Sortowanie więcej niż jednej kolumny
+Wybierz cały zakres podczas sortowania zakresów zawierających więcej niż jedną kolumnę.
+
+Uwaga: Sortowanie wielu kolumn zawsze będzie odbywać się według pierwszej kolumny (najbardziej po lewej).
+Zaznacz A2:B21 i posortuj zakres rosnąco.
+
+Wybierając zakres A2:B21 sortowanie odbywa się prawidłowo, przy zachowaniu relacji między danymi (kolumna A i B ).
+
+W następnym rozdziale poznasz Filtr .
