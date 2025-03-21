@@ -1599,3 +1599,85 @@ Zaznacz A2:B21 i posortuj zakres rosnąco.
 Wybierając zakres A2:B21 sortowanie odbywa się prawidłowo, przy zachowaniu relacji między danymi (kolumna A i B ).
 
 W następnym rozdziale poznasz Filtr .
+
+# 2. Filtr programu Excel
+Filtr programu Excel
+Filtry można stosować do sortowania i ukrywania danych. Ułatwia to analizę danych.
+
+Uwaga: Filtrowanie jest podobne do formatowania tabeli, ale można je stosować i dezaktywować.
+
+Dostęp do menu można uzyskać w domyślnym widoku wstążki lub w sekcji Dane na pasku nawigacyjnym.
+
+Stosowanie filtra
+Filtry stosuje się poprzez zaznaczenie zakresu i kliknięcie polecenia Filtruj .
+
+Ważne jest, aby mieć rząd nagłówków podczas stosowania filtrów. Posiadanie nagłówków jest przydatne, aby uczynić dane zrozumiałymi.
+
+Uwaga: Filtry są stosowane do górnego wiersza zakresu.
+
+Tak jak w poniższym przykładzie, dedykowanym wierszem jest wiersz 1 .
+
+Zastosujmy filtry do zestawu danych krok po kroku.
+
+Wybierz zakres A1:E1
+
+Kliknij menu Sortuj i filtruj
+
+Kliknij polecenie Filtruj
+
+Dodano nowe przyciski do komórek w górnym rzędzie. Oznacza to, że filtr został pomyślnie zastosowany. Przyciski można kliknąć, aby uzyskać dostęp do różnych opcji sortowania i filtrowania .
+
+Przykład niedziałający
+Usuńmy wiersz 1 (wiersz nagłówka) i zastosujmy filtry do nowego wiersza 1 , aby zobaczyć, co się stanie.
+Filtr został zastosowany i zastąpił wiersz nagłówka. Ważne jest, aby poświęcić wiersz nagłówka dla filtra.
+
+Opcje filtrowania
+Opcje filtrowania umożliwiają sortowanie i filtrowanie.
+
+Zastosowanie filtra zachowuje relację między kolumnami podczas sortowania i filtrowania
+Kliknięcie przycisku opcji otwiera menu.
+
+Sortowanie
+Zakresy można sortować, zachowując jednocześnie relacje między kolumnami.
+
+Sortuj rosnąco (AZ) od najmniejszej do największej.
+
+Sortowanie malejące (ZA) sortuje od największego do najmniejszego.
+
+Więcej na temat sortowania możesz przeczytać w poprzednim rozdziale .
+
+Filtracja
+Filtry można stosować w celu ukrywania i sortowania danych.
+
+Jest to przydatne podczas analizy, ponieważ pozwala wybrać dane, które chcemy zobaczyć lub nie.
+
+
+Przykładowy filtr
+Użyj opcji filtra, aby filtrować Pokemony typu 1, czyli Bug .
+
+Krok po kroku
+
+Kliknij menu rozwijane na C1 ( ) i wybierz opcję Filtr . To jest kolumna, która zawiera dane typu 1 .
+
+Uwaga: „Elementy” to różne kategorie w tej kolumnie; Trawa, Ogień, Woda itd.
+
+Wszystkie elementy są domyślnie zaznaczone. Zaznaczone elementy są wyświetlane. Odznacz, aby ukryć.
+
+Odznacz wszystkie elementy oprócz Bug , który jest typem, który chcemy wyświetlić.
+Kliknij OK
+
+Dobra robota! Zakres został pomyślnie posortowany według typu 1, Bug . Wszystkie pokazane Pokemony są typu Bug .
+
+Uwaga: Niezaznaczone wiersze są ukryte, a nie usunięte.
+
+Wyjaśnia się to, patrząc na numery wierszy. Numery skaczą od 1 do 11 i od 16 do 22. Wiersze pomiędzy nimi są ukryte.
+
+Inny przykład
+Użyj opcji filtra, aby filtrować Pokemony, które mają Typ 1 ( Błąd) i Typ 2 ( Trucizna) .
+
+Kliknij opcję filtru w D1
+Odznacz wszystkie elementy oprócz Trucizny
+Kliknij OK
+
+To jest na miejscu! Posortowaliśmy zakres na podstawie Type 1 , Bug i Type 2 , Poison . Opcja filtrowania jest pomocna, aby zakresy były łatwiejsze do analizy.
+
