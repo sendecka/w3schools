@@ -1681,3 +1681,38 @@ Kliknij OK
 
 To jest na miejscu! Posortowaliśmy zakres na podstawie Type 1 , Bug i Type 2 , Poison . Opcja filtrowania jest pomocna, aby zakresy były łatwiejsze do analizy.
 
+# 3. Tabele Excela
+Tabela
+Zakresy można przekształcić w tabele.
+
+Tabele ułatwiają strukturyzację i organizację danych.
+
+Uwaga: Funkcja filtra jest podobna do tabeli. Filtr może być lepiej wykorzystany, jeśli jedyną potrzebną funkcją jest sortowanie i filtrowanie danych.
+
+Tabele łączą komórki w zakresie i umieszczają je w ustalonej strukturze.
+
+Komórki w zakresie tabeli mają takie samo formatowanie.
+
+Uwaga: Tabele można wykorzystać do przygotowania danych do wykresów i tabel przestawnych.
+
+Tabele umożliwiają takie opcje jak:
+
+Sortuj i filtruj
+Formatowanie
+Automatyczne wypełnianie
+Uwaga: Tabele można ponownie przekonwertować na zakresy .
+Przykład
+Sformatowanie zakresu w tabeli nada mu nową formę ze stałą strukturą. Tabele otwierają dostęp do nowych funkcji, takich jak: filtrowanie, automatyzacja i stylizacja.
+Przykład (konwersja zakresu na tabelę)
+Jak krok po kroku przekonwertować zakres na tabelę.
+
+Skopiuj wartości, aby kontynuować:
+Wybierz zakresA1:F22
+Kliknij Wstaw , a następnie Tabela ( ) na Wstążce.
+Kliknij OK
+Uwaga: Zakres ( A1:F22) ma już nagłówki w wierszu 1. Odznaczenie opcji „Moja tabela ma nagłówki” umożliwia utworzenie dedykowanego nagłówka, jeśli go jeszcze nie masz.
+Zakres A1:F22został pomyślnie przekonwertowany z zakresu na tabelę.
+
+Zakres ma teraz stałą strukturę tabeli i włączono nowe opcje, takie jak sortowanie i filtrowanie.
+
+Zastosowanie filtra zachowuje relację między kolumnami podczas sortowania i filtrowania.
