@@ -1716,3 +1716,30 @@ Zakres A1:F22został pomyślnie przekonwertowany z zakresu na tabelę.
 Zakres ma teraz stałą strukturę tabeli i włączono nowe opcje, takie jak sortowanie i filtrowanie.
 
 Zastosowanie filtra zachowuje relację między kolumnami podczas sortowania i filtrowania.
+
+# 4. Projektowanie tabeli w programie Excel
+
+Projekt stołu
+Tabele można dostosować i wystylizować kilkoma kliknięciami.
+
+Konwersja zakresu do tabeli otwiera dostęp do menu o nazwie „Projekt tabeli”.
+Menu pojawia się po zaznaczeniu komórki w zakresie tabeli.
+
+W tym menu znajdują się opcje i polecenia takie jak:
+
+Zmień rozmiar
+Usuń duplikaty
+Konwertuj do zakresu
+Opcje stylu (wiersz ogółem, wiersz nagłówka, wiersz paskowy itd.)
+Formatowanie
+Nazwa tabeli
+Program Excel nadaje tabelom domyślne nazwy, takie jak: Tabela 1, Tabela 2, Tabela 3 i tak dalej.
+
+Uwaga: W wersji online programu Excel nie można zmieniać nazw tabel.
+
+Nazwę tabeli można znaleźć w zakładce Projekt tabeli
+
+Wybierz tabelę
+Kliknij menu Projekt tabeli
+Zobacz pole wprowadzania nazwy
+Uwaga: Znajomość nazw tabel może okazać się przydatna, jeśli w skoroszycie znajduje się wiele tabel i odwołujesz się do nich w formułach.
