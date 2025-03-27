@@ -1737,9 +1737,103 @@ Program Excel nadaje tabelom domyślne nazwy, takie jak: Tabela 1, Tabela 2, Tab
 
 Uwaga: W wersji online programu Excel nie można zmieniać nazw tabel.
 
+# 5. Zmiana rozmiaru tabeli w programie Excel
+
+Zmiana rozmiaru tabeli
+Rozmiar tabeli można zmienić.
+
+Zmiana rozmiaru polega na zwiększeniu lub zmniejszeniu zakresu tabeli.
+
+Istnieją trzy sposoby zmiany rozmiaru tabeli
+
+Polecenie zmiany rozmiaru tabeli
+Przeciągnij, aby zmienić rozmiar
+Dodawanie nagłówków
+Uwaga: Zmiana rozmiaru będzie nadal formatować i stosować formuły. Zostanie to omówione w późniejszym rozdziale.
+
+Polecenie Zmień rozmiar tabeli
+Polecenie zmiany rozmiaru tabeli umożliwia zmianę rozmiaru tabeli poprzez podanie zakresu.
+
+Na przykład wpisując A1:D10.
+
+Polecenie znajdziesz na Wstążce, w zakładce Projektowanie tabeli.
+Przekształć zakres w tabelę.
+
+Zmieńmy rozmiar tabeli z zakresu A1:F12naA1:F20
+Wybierz tabelę
+Kliknij menu Projekt tabeli
+Kliknij polecenie Zmień rozmiar tabeli ( )
+Kliknięcie polecenia Zmień rozmiar tabeli umożliwia ustawienie nowego zakresu dla tabeli.
+
+Kliknij pole wprowadzania zakresu
+Wpisz nowy zakres,A1:F20
+Kliknij OK
+Przeciągnij, aby zmienić rozmiar
+Rozmiar tabeli można zmienić przeciągając jej róg.
+Przykład - przeciąganie w celu zmiany rozmiaru, pomniejszenia
+Zmień rozmiar tabeli z A1:F12naA1:D5
+
+Naciśnij i przytrzymaj prawy dolny róg tabeli ( )
+Przesuń wskaźnik, zaznaczając zakresA1:D5
+Zakres tabeli został zmieniony z A1:F12na A1:D5.
+
+Uwaga: Komórki spoza zakresu tabeli nie są już uwzględniane w tabeli. Połączenie między komórkami utworzonymi przez tabelę jest zerwane i nie mają już formatowania tabeli.
+
+Spróbujmy posortować Pokemony według ich nazw i zobaczmy, co się stanie.
+
+Kliknij opcję filtru wA1
+Sortuj rosnąco (AZ)
+
+Opcja filtru obejmuje tylko Pokemony w zakresie tabel ( A1:A5). Połączenie z komórkami poza tabelą jest zerwane.
+
+Zmieńmy rozmiar jeszcze raz, tym razem na większy.
+
+Przykład - przeciąganie w celu zmiany rozmiaru, powiększenia
+Zmień rozmiar tabeli z A1:D5naA1:G13
+
+Naciśnij i przytrzymaj prawy dolny róg tabeli ( )
+Przesuń wskaźnik, aby zaznaczyćA1:G13
+
+
 Nazwę tabeli można znaleźć w zakładce Projekt tabeli
 
 Wybierz tabelę
 Kliknij menu Projekt tabeli
+
+Zakres tabeli został zmieniony z A1:D5na A1:G13.
+
+Pozostałe komórki są teraz ponownie uwzględnione, a połączenie między nimi zostało przywrócone.
+
+Spróbujmy filtrować Pokemony według ich nazw, aby zobaczyć, co się stanie.
+
+Kliknij opcję filtru wA1
+Sortuj rosnąco (AZ)
+
+Świetnie! Tabela pomyślnie posortowała Pokemony w zakresie A1:A12według ich nazw.
+
+GOch, czekaj. Coś się zmieniło. Pojawiła się nowa kolumna ( )...
+
+
 Zobacz pole wprowadzania nazwy
 Uwaga: Znajomość nazw tabel może okazać się przydatna, jeśli w skoroszycie znajduje się wiele tabel i odwołujesz się do nich w formułach.
+
+Zwiększenie rozmiaru tabeli spowoduje kontynuację formatowania, formuł i dodanie nowych kolumn.
+
+Uwaga: Nie nadpisze nazwy istniejących nagłówków. Użyje wartości wpisanej w komórce nagłówka.
+
+Nazwę nagłówka można zmienić.
+
+Kliknij dwukrotnieG1
+Usuń tekst
+Wpisz „Mighty”, aby G1
+Inny przykład – zmiana rozmiaru poprzez dodanie kolumn
+Tabela jest automatycznie powiększana w momencie dodania nowych nagłówków obok tabeli.
+
+Wpisz „Mew”, aby H1
+Wciśnij enter
+Wpisz „Dwa”, abyI1
+Wciśnij enter
+
+Nowe kolumny z odpowiednimi wierszami są dodawane automatycznie po wpisaniu nowych nagłówków.
+
+W następnym rozdziale dowiesz się, jak usuwać duplikaty.
