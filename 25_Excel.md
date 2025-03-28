@@ -1837,3 +1837,34 @@ Wciśnij enter
 Nowe kolumny z odpowiednimi wierszami są dodawane automatycznie po wpisaniu nowych nagłówków.
 
 W następnym rozdziale dowiesz się, jak usuwać duplikaty.
+
+# 6. Excel Usuwanie duplikatów
+Usuwanie duplikatów
+W programie Excel znajduje się polecenie umożliwiające usuwanie duplikatów w tabelach.
+
+Uwaga: Duplikaty są dodatkowymi kopiami wartości.
+
+Usuwanie duplikatów jest pomocne, gdy oczyszczasz zbiór danych i nie chcesz uwzględniać kopii.
+
+Funkcję Usuń duplikaty znajdziesz na Wstążce, w zakładce Projekt tabeli.
+
+Polecenie umożliwia określenie kolumny, w której chcesz znaleźć i usunąć duplikaty.
+
+Po zastosowaniu zwrócona zostanie liczba usuniętych wartości i liczba pozostałych unikalnych wartości.
+
+Uwaga: polecenie remove duplicate nie zapyta, które duplikaty usunąć. Upewnij się, że nie usunie przydatnych danych.
+
+Przykłady - polecenie Usuń duplikaty
+Spróbujmy przykładu usuwania duplikatów Pokemonów w zakresieA1:E13
+Przekształć zakres w tabelę.
+
+Wybierz tabelę
+Kliknij kartę Projekt tabeli ( )
+Kliknij polecenie Usuń duplikaty ( )
+Pozostaw wszystkie kolumny zaznaczone
+Kliknij OK
+Uwaga: Odznaczenie kolumny oznacza, że ​​nie zostaną usunięte duplikaty w tej kolumnie.
+Polecenie zwraca liczbę znalezionych i usuniętych duplikatów, a także liczbę pozostałych unikatowych elementów.
+
+Kliknij OK
+Polecenie remove duplicates pomyślnie usunęło 9 duplikatów Pokemonów z zakresu, a tabela została odpowiednio zmieniona. Pozostałe 3 wartości są unikalne.
