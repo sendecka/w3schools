@@ -1868,3 +1868,19 @@ Polecenie zwraca liczbę znalezionych i usuniętych duplikatów, a także liczb�
 
 Kliknij OK
 Polecenie remove duplicates pomyślnie usunęło 9 duplikatów Pokemonów z zakresu, a tabela została odpowiednio zmieniona. Pozostałe 3 wartości są unikalne.
+
+# 7. Konwersja tabeli do zakresu w programie Excel
+
+Tabele można odwracać i ponownie konwertować na zakresy.
+
+Tabele można przekonwertować na zakresy, zaznaczając komórkę w zakresie tabeli i klikając polecenie Konwertuj na zakres.
+
+Polecenie konwersji na zakres znajdziesz na karcie Projektowanie tabeli, w grupie Narzędzia.
+Przykład - Konwersja tabeli na zakres
+Wpisz lub skopiuj wartości, aby śledzić przykład.
+Przekształć zakres w tabelę.
+
+Wybierz komórkę w zakresie tabeli ( A1:F16)
+Kliknij kartę Tabela projektowa ( )
+Kliknij polecenie Konwertuj na zakres ( )
+Tabela została teraz przekształcona w zakres i nie ma już dostępnych opcji tabeli.
