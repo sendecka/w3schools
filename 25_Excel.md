@@ -1884,3 +1884,42 @@ Wybierz komórkę w zakresie tabeli ( A1:F16)
 Kliknij kartę Tabela projektowa ( )
 Kliknij polecenie Konwertuj na zakres ( )
 Tabela została teraz przekształcona w zakres i nie ma już dostępnych opcji tabeli.
+
+# 8. Styl tabeli programu Excel
+Styl tabeli
+W programie Excel dostępnych jest wiele gotowych stylów, które można zastosować do tabel.
+
+Style tabeli umożliwiają zmianę wyglądu tabeli.
+
+Można to zmienić na:
+
+Ułatw czytanie i zrozumienie
+Spraw, żeby wyglądało lepiej
+Styl tabeli jest domyślnie niebieski, a styl tabeli średni 2 .
+
+Przykład: Niebieski, Styl tabeli Średni 2 , czyli tak wygląda ustawienie domyślne.
+W programie Excel istnieją trzy główne kategorie stylów tabel:
+
+Światło; Jasne kolory, więcej białej przestrzeni
+Średnie; Średnie kolory, średnia przestrzeń biała
+Ciemny; Ciemne kolory, mniej białej przestrzeni
+Styl tabeli można zastosować w kilku krokach.
+
+Przykład - Stosowanie stylu światła
+Wpisz lub skopiuj wartości, aby kontynuować:
+
+Przekształć zakres w tabelę.
+
+Wybierz komórkę w zakresie tabeli
+Kliknij kartę Tabela projektowa ( )
+Kliknij przycisk opcji Style tabeli
+Uwaga: Styl tabeli, który jest już zastosowany, ma zielony prostokąt wokół siebie. W tym przypadku Niebieski, styl tabeli Średni 2.
+
+Kliknięcie przycisku opcji Styl tabeli otwiera menu z różnymi opcjami stylu.
+
+Tutaj przedstawiono trzy kategorie: Jasny, Średni i Ciemny.
+
+Kliknij na Światło , Zielony , Styl stołu Światło 21. Znajduje się w kategorii Światło.
+Dobra robota! Formatowanie tabeli zostało zmienione na styl jasnozielony.
+
+Zastosuj kolor szary, styl tabeli ciemny 4. Znaleziono w kategorii Ciemny.
