@@ -1923,3 +1923,40 @@ Kliknij na Światło , Zielony , Styl stołu Światło 21. Znajduje się w kateg
 Dobra robota! Formatowanie tabeli zostało zmienione na styl jasnozielony.
 
 Zastosuj kolor szary, styl tabeli ciemny 4. Znaleziono w kategorii Ciemny.
+
+# 9. Formatowanie warunkowe w programie Excel
+
+Formatowanie warunkowe
+Formatowanie warunkowe służy do zmiany wyglądu komórek w zakresie na podstawie określonych warunków .
+
+Warunki to reguły bazujące na określonych wartościach liczbowych lub pasującym tekście.
+
+Zmiana wyglądu komórek pozwala wizualnie wyróżnić interesujące punkty danych do analizy.
+
+Wersja przeglądarkowa programu Excel oferuje szereg wbudowanych warunków i wyglądów:
+Uwaga: Wersja programu Excel dostępna w przeglądarce internetowej oferuje wyłącznie wybór wbudowanych opcji formatowania warunkowego.
+
+Aplikacja Excel daje możliwość tworzenia w pełni dostosowanych reguł formatowania warunkowego.
+
+Przykład formatowania warunkowego
+Tutaj wartości prędkości każdego pokemona są sformatowane za pomocą skali kolorów :
+Uwaga: program Excel umożliwia wybór spośród kilku różnych skal kolorów.
+Przykład formatowania skali kolorów
+Podświetl wartości prędkości każdego Pokemona za pomocą warunkowego formatowania skali kolorów .
+Formatowanie warunkowe krok po kroku:
+
+Wybierz zakres wartości prędkościC2:C9
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz Skale kolorów z menu rozwijanego
+Dostępnych jest 12 opcji skali kolorów z różnymi wariantami kolorystycznymi.
+
+Kolor na górze ikony będzie dotyczył najwyższych wartości.
+
+Kliknij ikonę „Skala kolorów zielony-żółty-czerwony”
+Teraz komórki z wartością prędkości będą miały kolorowe tło podświetlane:
+Ciemnozielony kolor jest używany dla najwyższych wartości, a ciemnoczerwony dla najniższych wartości.
+
+Charizard ma najwyższą wartość szybkości (100), a Squirtle najniższą (43).
+
+Wszystkie komórki w tym zakresie stopniowo zmieniają kolor z zielonego, żółtego, pomarańczowego, a następnie czerwonego.
+
