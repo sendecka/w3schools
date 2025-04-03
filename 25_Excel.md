@@ -1960,3 +1960,57 @@ Charizard ma najwyższą wartość szybkości (100), a Squirtle najniższą (43)
 
 Wszystkie komórki w tym zakresie stopniowo zmieniają kolor z zielonego, żółtego, pomarańczowego, a następnie czerwonego.
 
+# 10. Reguły wyróżniania komórek w programie Excel
+
+Podświetl zasady komórek
+Reguły wyróżniania komórek to gotowy typ formatowania warunkowego w programie Excel służący do zmiany wyglądu komórek w zakresie na podstawie określonych warunków .
+
+Warunki to reguły bazujące na określonych wartościach liczbowych, pasującym tekście, datach kalendarzowych lub zduplikowanych i unikatowych wartościach.
+
+Oto część „Reguły wyróżniania komórek” menu formatowania warunkowego:
+Opcje wyglądu
+Wersja programu Excel w przeglądarce internetowej oferuje następujące opcje wyglądu komórek sformatowanych warunkowo:
+
+Wypełnienie jasnoczerwone z ciemnoczerwonym tekstem
+Wypełnienie żółte z ciemnożółtym tekstem
+Wypełnienie zielone z ciemnozielonym tekstem
+Wypełnienie jasnoczerwone
+Czerwony tekst
+Czerwona granica
+Oto jak opcje wyglądają w arkuszu kalkulacyjnym:
+
+Typy reguł komórkowych
+Program Excel oferuje następujące typy reguł komórek:
+
+Większy niż...
+Mniej niż...
+Między...
+Równy...
+Tekst zawierający...
+Data, która ma miejsce...
+Duplikaty/Unikatowe wartości
+Przykład reguły wyróżniania komórek
+Reguła wyróżniania komórek „Równe...” wyróżni komórkę za pomocą jednej z opcji wyglądu na podstawie tego, czy wartość komórki jest równa określonej wartości.
+
+Podana wartość może być konkretną liczbą lub konkretnym tekstem.
+
+W tym przykładzie określona wartość będzie wynosić „48”.
+
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wszystkich wartości statystyk.
+
+Reguła wyróżniania komórek „Równe...”, krok po kroku:
+
+Wybierz zakres C2:H8dla wszystkich wartości statystyk
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz Równe... z menu
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wpisz 48w pole wejściowe
+Wybierz opcję wyglądu „Żółte wypełnienie z ciemnożółtym tekstem” z menu rozwijanego
+
+Teraz komórki z wartościami równymi „48” zostaną podświetlone na żółto:
+
+Wszystkie wartości statystyk Ditto wynoszą 48, dlatego są podświetlone.
