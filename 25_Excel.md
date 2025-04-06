@@ -2047,3 +2047,36 @@ Z menu rozwijanego wybierz opcję wyglądu „Zielone wypełnienie z ciemnozielo
 Teraz komórki z wartościami większymi niż „65” zostaną podświetlone na zielono:
 
 Gyarados, Lapras i Vaporeon mają wartości HP większe niż 65, dlatego są podświetlone.
+
+# 12. Excel HCR - Większy niż
+Podświetl reguły komórek - Większe niż
+Reguły wyróżniania komórek to gotowy typ formatowania warunkowego w programie Excel, który umożliwia zmianę wyglądu komórek w zakresie na podstawie określonych warunków .
+
+Większe niż... jest jedną z opcji tego warunku.
+
+Oto część „Reguły wyróżniania komórek” menu formatowania warunkowego:
+
+Reguła wyróżniania komórek – przykład „większe niż”
+Reguła wyróżniania komórek „Większe niż...” wyróżni komórkę za pomocą jednej z opcji wyglądu na podstawie tego, czy wartość komórki jest większa od określonej wartości.
+
+Podana wartość jest zazwyczaj liczbą, ale można ją podać również w postaci wartości tekstowej.
+
+W tym przykładzie określona wartość będzie wynosić „65”.
+
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wartości HP.
+
+Reguła „Większe niż...” dla wyróżniających się komórek, krok po kroku:
+
+Wybierz zakres C2:C8wartości HP
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz opcję Większe niż... z menu
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wpisz 65w pole wejściowe
+Z menu rozwijanego wybierz opcję wyglądu „Zielone wypełnienie z ciemnozielonym tekstem”
+Teraz komórki z wartościami większymi niż „65” zostaną podświetlone na zielono:
+
+Gyarados, Lapras i Vaporeon mają wartości HP większe niż 65, dlatego są podświetlone.
