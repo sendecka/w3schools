@@ -2080,3 +2080,39 @@ Z menu rozwijanego wybierz opcję wyglądu „Zielone wypełnienie z ciemnozielo
 Teraz komórki z wartościami większymi niż „65” zostaną podświetlone na zielono:
 
 Gyarados, Lapras i Vaporeon mają wartości HP większe niż 65, dlatego są podświetlone.
+
+Reguła wyróżniania komórek - przykład „większe niż” (z tekstem)
+Reguła wyróżniania komórek „Większe niż...” działa również w przypadku wartości tekstowych.
+
+Program Excel użyje kolejności alfabetycznej (AZ) w celu wyróżnienia wartości tekstowych zaczynających się od litery, która jest późniejsza w alfabecie niż określona wartość.
+
+W tym przykładzie określoną wartością tekstową będzie „Gyarados”.
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wartości nazwy.
+
+Reguła „Większe niż...” dla wyróżniających się komórek, krok po kroku:
+
+Wybierz zakres A2:A8dla wartości nazwy
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz opcję Większe niż... z menu
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wpisz Gyaradosw pole wejściowe
+Wybierz opcję wyglądu „Żółte wypełnienie z ciemnożółtym tekstem” z menu rozwijanego
+Teraz komórki z wartościami tekstowymi znajdującymi się później w alfabecie niż „Gyarados” zostaną podświetlone na żółto:
+Magikarp zaczyna się na „M”, Lapras na „L”, Vaporeon na „V”, a Jolteon na „J”.
+
+„M”, „L”, „V” i „J” występują później w alfabecie niż „G”, od którego zaczyna się Gyarados, dlatego wszystkie są podświetlone.
+
+A co z pozostałymi literami w wartości tekstowej?
+
+Zobaczmy, co się stanie, jeśli dodamy fikcyjnego pokemona z nową nazwą:
+Zwróć uwagę, że fikcyjny „Gzarados” jest podświetlony.
+
+Warunek programu Excel sprawdza każdą literę w określonej wartości tekstowej od lewej do prawej.
+
+Ponieważ litera „z” w słowie „G z arados” pojawia się później w alfabecie niż „y” w słowie „G y arados”, jest ona uznawana za większą i jest podświetlona.
+
+# 13. Excel HCR - Mniej niż
