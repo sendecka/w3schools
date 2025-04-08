@@ -2116,3 +2116,71 @@ Warunek programu Excel sprawdza każdą literę w określonej wartości tekstowe
 Ponieważ litera „z” w słowie „G z arados” pojawia się później w alfabecie niż „y” w słowie „G y arados”, jest ona uznawana za większą i jest podświetlona.
 
 # 13. Excel HCR - Mniej niż
+Podświetl reguły komórek - Mniej niż
+Reguły wyróżniania komórek to gotowy typ formatowania warunkowego w programie Excel, który umożliwia zmianę wyglądu komórek w zakresie na podstawie określonych warunków .
+
+Mniej niż... jest jedną z opcji tego warunku.
+
+Oto część „Reguły wyróżniania komórek” menu formatowania warunkowego:
+
+Reguła wyróżniania komórek – przykład „mniejsze niż”
+Reguła wyróżniania komórek „Mniejsze niż...” wyróżni komórkę za pomocą jednej z opcji wyglądu na podstawie wartości komórki mniejszej od określonej wartości.
+
+Podana wartość jest zazwyczaj liczbą, ale można ją podać również w postaci wartości tekstowej.
+
+W tym przykładzie określona wartość będzie wynosić „55”.
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wartości ataku.
+
+Reguła wyróżniania komórek „Mniej niż...”, krok po kroku:
+
+Wybierz zakres D2:D8wartości ataku
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz opcję Mniej niż... z menu
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wpisz 55w pole wejściowe
+Wybierz opcję wyglądu „Jasnoczerwone wypełnienie z ciemnoczerwonym tekstem” z menu rozwijanego
+Teraz komórki z wartościami mniejszymi niż „55” zostaną podświetlone na czerwono:
+Tylko Magikarp i Ditto mają wartości ataku mniejsze niż 55, dlatego te wartości są podświetlone.
+
+Reguła wyróżniania komórek – przykład „mniej niż” (z tekstem)
+Zasada wyróżniania komórek „Mniejsze niż...” działa również w przypadku wartości tekstowych.
+
+Program Excel użyje kolejności alfabetycznej (AZ), aby wyróżnić wartości tekstowe rozpoczynające się od litery, która jest wcześniejsza w alfabecie niż określona wartość
+
+W tym przykładzie określona wartość tekstowa będzie brzmiała „Elektryczny”.
+
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wartości typu 1.
+
+Reguła wyróżniania komórek „Mniej niż...”, krok po kroku:
+
+Wybierz zakres B2:B8dla wartości typu 1
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz opcję Mniej niż... z menu
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wpisz Electricw pole wejściowe
+Wybierz opcję wyglądu „Żółte wypełnienie z ciemnożółtym tekstem” z menu rozwijanego
+Teraz komórki z wartościami tekstowymi znajdującymi się wcześniej w alfabecie niż „Elektryczne” zostaną podświetlone na żółto:
+Wygląda na to, że nic się nie zmieniło!
+
+Woda zaczyna się na "W", a Normal na "N".
+
+„W” i „N” występują później w alfabecie niż „E”, od którego zaczyna się nazwa Electric, dlatego żadna z nich nie została podświetlona.
+
+Uwaga: Sama określona wartość „Elektryczna” również nie jest wyróżniona , ponieważ reguła wyróżnia tylko wartości tekstowe znajdujące się wcześniej w alfabecie.
+
+A co z pozostałymi literami w wartości tekstowej?
+
+Zobaczmy, co się stanie, jeśli dodamy fikcyjnego pokemona z nową nazwą i typem:
+Należy zauważyć, że fikcyjny „Ficteon” ma typ „eklektyczny”, który jest podświetlony.
+
+Warunek programu Excel sprawdza każdą literę w określonej wartości tekstowej od lewej do prawej.
+
+Ponieważ litera „c” w słowie „ Eclectic ” pojawia się wcześniej w alfabecie niż „l” w słowie „E l ectric”, jest ona uważana za mniejszą i jest podświetlona.
