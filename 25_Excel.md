@@ -2184,3 +2184,34 @@ Należy zauważyć, że fikcyjny „Ficteon” ma typ „eklektyczny”, który 
 Warunek programu Excel sprawdza każdą literę w określonej wartości tekstowej od lewej do prawej.
 
 Ponieważ litera „c” w słowie „ Eclectic ” pojawia się wcześniej w alfabecie niż „l” w słowie „E l ectric”, jest ona uważana za mniejszą i jest podświetlona.
+
+# 14. Excel HCR - Równe
+Podświetl reguły komórek - Równe
+Reguły wyróżniania komórek to gotowy typ formatowania warunkowego w programie Excel służący do zmiany wyglądu komórek w zakresie na podstawie określonych warunków .
+
+Równe... jest jedną z opcji warunku.
+
+Oto część „Reguły wyróżniania komórek” menu formatowania warunkowego:
+Reguła wyróżniania komórek - przykład równy (z liczbami)
+Reguła wyróżniania komórek „Równe...” wyróżni komórkę za pomocą jednej z opcji wyglądu na podstawie tego, czy wartość komórki jest równa określonej wartości.
+
+Podana wartość może być konkretną liczbą lub konkretnym tekstem.
+
+W tym przykładzie określona wartość będzie wynosić „48”.
+
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wszystkich wartości statystyk.
+
+Reguła wyróżniania komórek „Równe...”, krok po kroku:
+
+Wybierz zakres C2:H8dla wszystkich wartości statystyk
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz Równe... z menu
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wpisz 48w pole wejściowe
+Wybierz opcję wyglądu „Żółte wypełnienie z ciemnożółtym tekstem” z menu rozwijanego
+Teraz komórki z wartościami równymi „48” zostaną podświetlone na żółto:
+Wszystkie wartości statystyk Ditto wynoszą 48, dlatego są podświetlone.
