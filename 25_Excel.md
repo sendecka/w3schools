@@ -2215,3 +2215,96 @@ Wpisz 48w pole wejściowe
 Wybierz opcję wyglądu „Żółte wypełnienie z ciemnożółtym tekstem” z menu rozwijanego
 Teraz komórki z wartościami równymi „48” zostaną podświetlone na żółto:
 Wszystkie wartości statystyk Ditto wynoszą 48, dlatego są podświetlone.
+
+# 15. Excel HCR - Tekst zawierający
+
+Reguły wyróżniania komórek — tekst zawierający
+Reguły wyróżniania komórek to gotowy typ formatowania warunkowego w programie Excel, który umożliwia zmianę wyglądu komórek w zakresie na podstawie określonych warunków .
+
+Tekst zawierający... jest jedną z opcji warunku.
+
+Oto część „Reguły wyróżniania komórek” menu formatowania warunkowego:
+
+Reguła wyróżniania komórek - tekst zawierający przykład (z tekstem)
+Reguła wyróżniania komórek „Tekst zawierający...” wyróżni komórkę za pomocą jednej z opcji wyglądu na podstawie części wartości komórki zawierającej określoną wartość.
+
+Podana wartość jest zazwyczaj tekstem, ale można ją również podać jako wartość liczbową.
+
+W tym przykładzie określoną wartością będzie „Pidge”.
+
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wartości nazwy.
+
+Reguła wyróżniania komórek „Tekst zawierający...”, krok po kroku:
+
+Wybierz zakres A2:A8dla wartości nazwy
+
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz z menu opcję Tekst zawierający...
+
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wpisz Pidgew pole wejściowe
+Wybierz opcję wyglądu „Żółte wypełnienie z ciemnożółtym tekstem” z menu rozwijanego
+Teraz komórki z wartościami Tekst zawierający "Pidge" zostaną podświetlone na żółto:
+Nazwy „Pidgey”, „Pidgeot” i „Pidgeotto” zaczynają się od „Pidge”, dlatego wszystkie te komórki są podświetlone.
+
+Uwaga: Reguła „ Tekst zawierający” działa na dowolną część wartości komórki.
+
+Jak w przykładzie poniżej:
+
+Reguła wyróżniania komórek - tekst zawierający przykład 2 (z tekstem)
+Reguła wyróżniania komórek „Tekst zawierający...” wyróżni komórkę za pomocą jednej z opcji wyglądu na podstawie części wartości komórki zawierającej określoną wartość.
+
+Podana wartość jest zazwyczaj tekstem, ale można ją również podać jako wartość liczbową.
+
+W tym przykładzie określoną wartością będzie „wiersz”.
+
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wartości nazwy.
+
+Reguła wyróżniania komórek „Tekst zawierający...”, krok po kroku:
+
+Wybierz zakres A2:A8dla wartości nazwy
+
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz z menu opcję Tekst zawierający...
+
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wpisz roww pole wejściowe
+Wybierz opcję wyglądu „Żółte wypełnienie z ciemnożółtym tekstem” z menu rozwijanego
+Teraz komórki z wartościami Tekst zawierający „wiersz” zostaną podświetlone na żółto:
+
+Nazwy „Spearow” i „Fearow” kończą się na „row”, dlatego obie komórki są podświetlone.
+
+Uwaga: Możesz usunąć reguły wyróżniania komórek za pomocą opcji Zarządzaj regułami .
+
+Reguła wyróżniania komórek — tekst zawierający przykład (z liczbami)
+Zasada wyróżniania komórek „Tekst zawierający...” działa również w przypadku liczb.
+
+W tym przykładzie określona wartość tekstowa będzie wynosić „7”.
+
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wszystkich różnych wartości statystyk.
+
+Reguła wyróżniania komórek „Tekst zawierający...”, krok po kroku:
+
+Wybierz zakres C2:H8dla wszystkich wartości statystyk
+
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz z menu opcję Tekst zawierający...
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wpisz 7w pole wejściowe
+Z menu rozwijanego wybierz opcję wyglądu „Zielone wypełnienie z ciemnozielonym tekstem”
+Teraz komórki zawierające gdziekolwiek wartości zawierające „7” zostaną podświetlone na zielono:
+Uwaga: Reguła „ Tekst zawierający... ” wyróżni komórki, które zawierają wartości, których jakakolwiek część odpowiada określonej wartości.
+
+Za pomocą reguły Równe... można wyróżnić komórki, które dokładnie odpowiadają określonej wartości.
