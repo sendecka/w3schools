@@ -2308,3 +2308,5 @@ Teraz komórki zawierające gdziekolwiek wartości zawierające „7” zostaną
 Uwaga: Reguła „ Tekst zawierający... ” wyróżni komórki, które zawierają wartości, których jakakolwiek część odpowiada określonej wartości.
 
 Za pomocą reguły Równe... można wyróżnić komórki, które dokładnie odpowiadają określonej wartości.
+
+# Excel HCR - Data występująca
