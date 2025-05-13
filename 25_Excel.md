@@ -2310,3 +2310,52 @@ Uwaga: Reguła „ Tekst zawierający... ” wyróżni komórki, które zawieraj
 Za pomocą reguły Równe... można wyróżnić komórki, które dokładnie odpowiadają określonej wartości.
 
 # Excel HCR - Data występująca
+
+Podświetl reguły komórek - data wystąpienia
+Reguły wyróżniania komórek to gotowy typ formatowania warunkowego w programie Excel, który umożliwia zmianę wyglądu komórek w zakresie na podstawie określonych warunków .
+
+Data wystąpienia... jest jedną z opcji tego warunku.
+
+Oto część „Reguły wyróżniania komórek” menu formatowania warunkowego:
+
+Reguła wyróżniania komórek — przykład wystąpienia daty
+Reguła wyróżniania komórek „Data wystąpienia...” podświetla komórkę za pomocą jednej z opcji wyglądu na podstawie wartości komórki względem określonego przedziału czasu.
+
+Okres czasu może być następujący:
+
+Wczoraj
+Dzisiaj
+Jutro
+W ciągu ostatnich 7 dni
+Ostatni tydzień
+W tym tygodniu
+Przyszły tydzień
+Ostatni miesiąc
+W tym miesiącu
+Przyszły miesiąc
+W tym przykładzie podany przedział czasowy to „następny miesiąc”.
+
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wartości urodzin.
+
+„Data wystąpienia...” Reguła wyróżniania komórek, krok po kroku:
+
+Wybierz zakres C2:C19wartości urodzin
+
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz datę wystąpienia... z menu
+
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wybierz „Następny miesiąc” z menu rozwijanego
+Wybierz opcję wyglądu „Żółte wypełnienie z ciemnożółtym tekstem” z menu rozwijanego
+
+Teraz komórki z wartościami Data występująca w przyszłym miesiącu zostaną podświetlone na żółto:
+
+Uwaga: W tym przykładzie następnym miesiącem jest wrzesień .
+
+Turtwig, Chimchar, Piplup, Snivy, Tepig i Oshawott obchodzą urodziny we wrześniu, więc ich komórki są podświetlone.
+
+Uwaga: Możesz usunąć reguły wyróżniania komórek za pomocą opcji Zarządzaj regułami .
