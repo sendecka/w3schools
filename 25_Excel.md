@@ -2309,7 +2309,7 @@ Uwaga: Reguła „ Tekst zawierający... ” wyróżni komórki, które zawieraj
 
 Za pomocą reguły Równe... można wyróżnić komórki, które dokładnie odpowiadają określonej wartości.
 
-# Excel HCR - Data występująca
+# 16. Excel HCR - Data występująca
 
 Podświetl reguły komórek - data wystąpienia
 Reguły wyróżniania komórek to gotowy typ formatowania warunkowego w programie Excel, który umożliwia zmianę wyglądu komórek w zakresie na podstawie określonych warunków .
@@ -2359,3 +2359,62 @@ Uwaga: W tym przykładzie następnym miesiącem jest wrzesień .
 Turtwig, Chimchar, Piplup, Snivy, Tepig i Oshawott obchodzą urodziny we wrześniu, więc ich komórki są podświetlone.
 
 Uwaga: Możesz usunąć reguły wyróżniania komórek za pomocą opcji Zarządzaj regułami .
+
+$ 17. Excel HCR - Duplikaty i unikalne wartości
+
+Reguły wyróżniania komórek – wartości zduplikowane i unikalne
+Reguły wyróżniania komórek to gotowy typ formatowania warunkowego w programie Excel, który umożliwia zmianę wyglądu komórek w zakresie na podstawie określonych warunków .
+
+Duplikaty wartości to jedna z opcji warunku, która umożliwia sprawdzenie zarówno duplikatów , jak i unikatowych wartości.
+
+Oto część „Reguły wyróżniania komórek” menu formatowania warunkowego:
+Reguła wyróżniania komórek — przykład wartości duplikatów
+Reguła wyróżniania komórek „Duplikujące się wartości...” wyróżni komórkę za pomocą jednej z opcji wyglądu, jeśli wartość komórki jest taka sama jak wartość innych komórek w zakresie.
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wszystkich wartości komórek.
+
+„Duplikujące się wartości...” Reguła wyróżniania komórek, krok po kroku:
+
+Wybierz zakresA2:H8Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz Duplikaty wartości... z menu
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wybierz Duplikuj
+Wybierz opcję wyglądu „Żółte wypełnienie z ciemnożółtym tekstem” z menu rozwijanego
+
+Teraz wszystkie komórki w zakresie, które mają taką samą wartość jak inna komórka, są podświetlone na żółto:
+Wszystkie statystyki Ditto wynoszą 48, a wszystkie statystyki Mew wynoszą 100, dlatego wszystkie są podświetlone.
+
+Wszystkie wartości Ditto i Normal Type są również podświetlone.
+
+Uwaga: Możesz usunąć reguły wyróżniania komórek za pomocą opcji Zarządzaj regułami .
+
+Reguła wyróżniania komórek — przykład wartości unikatowej
+Reguła wyróżniania komórek „Duplikujące się wartości...” umożliwia również wyszukiwanie i wyróżnianie unikatowych wartości .
+
+Zastosujmy to do tego samego zestawu danych:
+
+Możesz wybrać dowolny zakres , w którym reguła Highlight Cell Rule powinna być stosowana. Może to być kilka komórek, pojedyncza kolumna, pojedynczy wiersz lub kombinacja wielu komórek, wierszy i kolumn.
+
+Zastosujmy regułę do wszystkich wartości komórek.
+
+„Duplikujące się wartości...” Reguła wyróżniania komórek, krok po kroku:
+
+Wybierz zakresA2:H8
+
+Kliknij ikonę Formatowanie warunkowe na wstążce w menu Narzędzia główne
+Wybierz opcję Reguły wyróżniania komórek z menu rozwijanego
+Wybierz Duplikaty wartości... z menu
+
+Spowoduje to otwarcie okna dialogowego, w którym można określić wartość oraz opcję wyglądu.
+
+Wybierz opcję Unikatowy z menu rozwijanego
+Z menu rozwijanego wybierz opcję wyglądu „Zielone wypełnienie z ciemnozielonym tekstem”
+
+Teraz komórki z unikalnymi wartościami zostaną podświetlone na zielono:
+
+Zdolność Mew i Psychic pojawia się w zakresie tylko raz, dlatego te wartości są podświetlone.
+
+Uwaga: Możesz usunąć niechciane duplikaty z tabeli za pomocą funkcji Usuwanie duplikatów .
